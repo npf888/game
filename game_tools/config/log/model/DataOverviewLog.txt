@@ -1,0 +1,6 @@
+message com.logserver.model.DataOverviewLog(
+    long value; //数量
+    int age; //年龄
+    String ipCountries; // 国家
+    int girl; //1 是男，0是女
+)

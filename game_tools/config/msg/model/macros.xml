@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<macros xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message ./macros.xsd">
+
+	<macro id="PlayerInfoData" comment="玩家信息">
+		<field type="Long" name="playerId" comment="玩家id" />
+		<field type="String" name="name" comment="名字" />
+		<field type="String" name="img" comment="图片" />
+		<field type="Long" name="gold" comment="玩家筹码" />
+		<field type="Long" name="diamond" comment="钻石" />
+		<field type="Long" name="charm" comment="玩家筹码" />
+		<field type="Long" name="level" comment="等级" />
+		<field type="Integer" name="sex" comment="性别" />
+		<field type="Integer" name="viplevel" comment="vip等级" />
+		<field type="String" name="countries" comment="国籍"/>
+		<field type="Integer" name="age" comment="年龄" />
+		<field type="Long" name="slotRotate" comment="总转次数" />
+		<field type="Long" name="slotWin" comment="总赢得分" />
+		<field type="Long" name="slotSingleWin" comment="单次赢取最大" />
+		<field type="Long" name="slotWinNum" comment="玩家总胜利次数" />
+		<field type="Long" name="integral" comment="排行榜积分" />
+		<field type="Integer" name="isRequest" comment="是否已经申请添加好友 0:未申请,1:已申请 " />
+		<field type="Integer" name="newGuyGift" comment="新手大礼包:1已购买，0 未购买" />
+		
+		<field type="String" name="clubId" comment="俱乐部id，空字符串表示未加入俱乐部"/>
+		<field type="Integer" name="clubIco" comment="俱乐部图标"/>
+		<field type="Integer" name="clubInvitedTimes" comment="被俱乐部邀请次数，0为未被邀请"/>
+		
+		<field type="String" name="achieveRate" comment="无双吹牛 成就  完成个数/总个数" />
+	</macro>
+	<macro id="BazooPersonalInfo" comment="玩家信息之 无双吹牛信息">
+		<field type="Integer" name="modeType" comment="性别" />
+		<field type="Integer" name="numberOfGame" comment="所有模式:局数" />
+		
+		<field type="Long" name="singleTopGold" comment="吹牛模式:单局最高"/>
+		<field type="Integer" name="rateOfWinning" comment="吹牛模式:胜率" />
+		<field type="Integer" name="aWinningStreak" comment="吹牛模式:连胜" />
+		
+		<field type="Integer" name="passToKill" comment="牛牛模式:通杀" />
+		<field type="String" name="bigPatterns" comment="牛牛模式:最大牌型" />
+		
+		<field type="Integer" name="pantherNumber" comment="梭哈模式:豹子数" />
+		
+		<field type="Integer" name="threeKill" comment="三杀" />
+		<field type="Integer" name="fourKill" comment="四杀" />
+		<field type="Integer" name="fiveKill" comment="五杀" /> 
+		
+		<field type="Long" name="dayProfit" comment="每天的盈利" />
+		<field type="Long" name="weekProfit" comment="每周的盈利" />
+		<field type="Long" name="monthProfit" comment="每月的盈利"/>
+	</macro>
+
+	<macro id="HumanInfoData" comment="玩家角色详细信息">
+		<field type="Long" name="roleId" comment="人物角色UUID" />
+		<field type="String" name="name" comment="名字" />
+		<field type="Integer" name="sex" comment="性别" />
+		<field type="Long" name="level" comment="级别" />
+		<field type="Long" name="vipLevel" comment="VIP 等级" />
+		<field type="Long" name="diamond" comment="钻石" />
+		<field type="Long" name="gold" comment="金币" />
+		<field type="Long" name="curExp" comment="经验"></field>
+		<field type="Long" name="maxExp" comment="经验上限"></field>
+		<field type="Long" name="charm" comment="魅力值"></field>
+		<field type="Integer" name="sceneId" comment="当前所在城镇ID" />
+		<field type="String" name="gvfirst" comment="gameview首次充值记录" />
+		<field type="String" name="newguide" comment="0 大礼包 1 百家乐 2 德州 3 老虎" />
+		<field type="Integer" name="watchNum" comment="视频观看次数" />
+		<field type="String" name="countries" comment="国籍"/>
+		<field type="Long" name="integral" comment="排行榜积分"/>
+		<field type="Integer" name="newGuyGift" comment="新手大礼包:1已购买，0 未购买 "/>
+		<field type="Integer" name="todayView" comment="1 当天已经显示，0 当天未显示"/>
+		<field type="String" name="bazooNewGuyProcess" comment="新手的进度({classicCompleted:0, niuniuCompleted:0, showhandCompleted:0, redblackCompleted:0})"/>
+		
+		<field type="Long" name="bazooGold" comment="无双吹牛 用户金币的数量"/>
+		<field type="String" name="bazooRoom" comment="无双吹牛   用户所在的房间" />
+	</macro>
+
+	<macro id="RoleInfo" comment="角色信息">
+		<field type="Long" name="roleUUID" comment="角色id" />
+		<field type="Integer" name="vocation" comment="职业类型" />
+		<field type="String" name="name" comment="名字" />
+		<field type="Integer" name="level" comment="级别" />
+		<field type="Integer" name="equipquality" comment="装备品质 "></field>
+	</macro>
+
+
+	<macro id="TexasRoomTypeInfoData" comment="德州房间类型数据 ">
+		<field type="Integer" name="typeId" comment="房间类型id" />
+		<field type="Integer" name="roomTag" comment="房间标签" />
+		<field type="Integer" name="openUp" comment="开启" />
+		<field type="Integer" name="smallBlind" comment="小盲注" />
+		<field type="Integer" name="minCarry" comment="最小携带量" />
+		<field type="Integer" name="maxCarry" comment="最大携带量" />
+		<field type="Integer" name="roomNum" comment="人数" />
+		<field type="Integer" name="totalNum" comment="总人数" />
+		<field type="Integer" name="openLv" comment="进入等级" />
+		<field type="Integer" name="list" comment="显示类型 1 2 3 4" />
+		<field type="Long" name="handsel" comment="彩金" />
+	</macro>
+
+	<macro id="TexasRoomPlayerInfoData" comment="德州房间类型数据 ">
+		<field type="Long" name="playerId" comment="玩家id" />
+
+		<field type="String" name="name" comment="玩家名字" />
+		<field type="String" name="img" comment="玩家图片" />
+		<field type="Integer" name="playerState" comment="玩家状态" />
+		<field type="Long" name="coins" comment="筹码" />
+		<field type="Integer" name="vip" comment="vip" />
+		<field type="Integer" name="pos" comment="位置" />
+		<field type="Long" name="currentBet" comment="当前押注" />
+		<field type="Long" name="allBet" comment="总押注" />
+		
+	</macro>
+
+	<macro id="ShopInfoData" comment="商品信息">
+		<field type="Integer" name="shopId" comment="商品id" />
+		<field type="Integer" name="price" comment="商品价格" />
+	</macro>
+
+	<macro id="ItemInfoData" comment="道具信息">
+		<field type="String" name="uuid" comment="数据库id" />
+		<field type="Integer" name="templateId" comment="模板id" />
+		<field type="Integer" name="overlap" comment="数量" />
+		<field type="Long" name="beginTime" comment="开始时间" />
+		<field type="Long" name="duration" comment="持续时间" />
+	</macro>
+	<macro id="ItemInfoDataNew" comment="新 道具信息">
+		<field type="Long" name="fromPlayerId" comment="道具来源 从哪里来的"/>
+		<field type="Integer" name="itemId" comment="道具ID" />
+		<field type="Integer" name="itemType" comment="道具类型" />
+		<field type="String" name="itemName" comment="道具名称" />
+		<field type="Long" name="price" comment="道具价格" />
+		<field type="String" name="img" comment="道具图片" />
+		<field type="Integer" name="usingClockItemId" comment="正在使用中的 色钟的ID" />
+		<field type="Integer" name="isExist" comment="是否已经存在 0：否，1：是" />
+	</macro>
+
+	<macro id="RandRewardData" comment="奖励信息">
+		<field type="Integer" name="rewardId" comment="奖励id" />
+		<field type="Integer" name="rewardCount" comment="奖励数量" />
+	</macro>
+
+	<macro id="HumanMonthCardInfoData" comment="月卡数据">
+		<field type="Long" name="beginTime" comment="开始时间" />
+		<field type="Long" name="getTime" comment="领取时间" />
+		<field type="Long" name="duration" comment="持续时间" />
+	</macro>
+	<macro id="HumanWeekCardInfoData" comment="周卡数据">
+		<field type="Long" name="beginTime" comment="开始时间" />
+		<field type="Long" name="getTime" comment="领取时间" />
+		<field type="Long" name="duration" comment="持续时间" />
+	</macro>
+
+	<macro id="MailInfoData" comment="邮件列表信息信息">
+		<field name="mailId" type="Long" comment="邮件id"></field>
+		<field name="sendId" type="Long" comment="发件角色id"></field>
+		<field name="sendName" type="String" comment="发件角色名称"></field>
+		<field name="mailCdTime" type="Long" comment="邮件还有多长时间过期"></field>
+
+		<field name="hasAttachment" type="Integer" comment="是否有奖品未领取"></field>
+		<field name="mailStatus" type="Integer" comment="邮件状态"></field>
+		<field name="mailTitle" type="String" comment="邮件标题"></field>
+		<field name="mailCreatTime" type="Long" comment="邮件发送时间"></field>
+		<field name="isFriendSend" type="Integer" comment="是否是好友发送的    0:是，1:否"></field>
+		<field name="vipLevel" type="Integer" comment="vip等级"></field>
+		<field name="headName" type="String" comment="头像"></field>
+	</macro>
+
+	<macro id="FriendInfoData" comment="好友信息">
+		<field type="Long" name="playId" comment="玩家id" />
+	</macro>
+	<macro id="FriendRequestInfoData" comment="好友请求信息">
+		<field type="Long" name="playId" comment="玩家id" />
+	</macro>
+	<macro id="FriendAlreadyGiftListData" comment="已发送好友礼物列表">
+		<field type="Long" name="playId" comment="玩家id" />
+	</macro>
+
+	<macro id="HumanMiscInfoData" comment="misc信息">
+		<field type="Long" name="onlineTime" comment="在线时长" />
+		<field type="Integer" name="currentOnlineRewardId" comment="在线时长" />
+		<field type="Long" name="firstRechargeTime" comment="首冲时间" />
+		<field type="Integer" name="renameTimes" comment="改名次数" />
+		<field type="Integer" name="newUser" comment="新手玩家" />
+		
+
+	</macro>
+	<macro id="HumanVipInfoData" comment="misc信息">
+		<field type="Long" name="lastGetTime" comment="vip领取时间" />
+		<field type="Integer" name="level" comment="vip领取时间" />
+		<field type="Long" name="buyTime" comment="购买时间" />
+		<field type="Integer" name="days" comment="天数" />
+	</macro>
+
+	<macro id="HumanRechargeOrderInfoData" comment="充值信息">
+		<field type="Long" name="orderId" comment="vip领取时间" />
+		<field type="Integer" name="productId" comment="产品id" />
+		<field type="Integer" name="orderStatus" comment="下单状态" />
+	</macro>
+
+
+	<macro id="TaskData" comment="任务信息">
+		<field type="Integer" name="taskId" comment="vip领取时间" />
+		<field type="Integer" name="finished" comment="完成数" />
+		<field type="Integer" name="getNums" comment="领取次数" />
+	</macro>
+
+    <macro id="ActivityData" comment="活动数据">
+    <field type="Long" name="activityId" comment="vip领取时间" />
+		<field type="String" name="title" comment="标题" />
+		<field type="String" name="title_cn" comment="中文标题" />
+		<field type="String" name="title_tw" comment="繁体标题" />
+
+		<field type="String" name="desc" comment="描述" />
+		<field type="String" name="desc_cn" comment="中文描述" />
+		<field type="String" name="desc_tw" comment="繁体描述" />
+
+		<field type="String" name="hall_pic_tw" comment="大厅图片,中文繁体" />
+		<field type="String" name="hall_pic_cn" comment="大厅图片,中文简体" />
+		<field type="String" name="hall_pic" comment="大厅图片" />
+		<field type="String" name="pic" comment="图片" />
+		<field type="String" name="pic_cn" comment="图片描述" />
+		<field type="String" name="pic_tw" comment="图片描述" />
+		<field type="Integer" name="link" comment="跳转链接" />
+		
+       <field type="String" name="ruleSre" comment="规则数据" />
+        
+        
+		<field type="Long" name="startTime" comment="开始时间" />
+		<field type="Long" name="endTime" comment="结束时间" />
+		<field type="String" name="fullValue" comment="全服累计金币 或者 次数 或者其他" />
+    </macro>
+
+	<macro id="ActivityCondition" comment="活动小条件数据">
+	<field type="Integer" name="conditionType" comment="小条件类型" />
+	<field type="Integer" name="valueDate" comment="完成需要达到的值" />
+	</macro>
+	
+	<macro id="HumanSimpleRewardInfoData" comment="人物活动动态数据">
+	   <field type="Long" name="activityId" comment="活动id" />
+	   <field type="Integer" name="stateListist" list="true" comment="活动领取状态数据"/>
+	</macro>
+
+   <macro id="HumanActivitySmallData" comment="活动进度数据">
+    <field type="Long" name="activityId" comment="活动id" />
+     <field type="Integer" name="smallValue" list="true" comment="活动完成进度数据"/>
+   </macro>
+
+	<macro id="HumanSimpleRewardActivityData" comment="活动信息">
+		<field type="Long" name="activityId" comment="活动id" />
+		<field type="Integer" name="drawType" comment="领奖状态" />
+	</macro>
+
+
+
+
+	<macro id="TexasSngInfoData" comment="sng">
+		<field type="Integer" name="id" comment="活动id" />
+		<field type="Integer" name="openUp" comment="开启状态" />
+		<field type="Integer" name="nums" comment="人数" />
+	</macro>
+
+	<macro id="TexasVipInfoData" comment="vip">
+		<field type="Long" name="id" comment="房间id" />
+		<field type="String" name="name" comment="名字" />
+		<field type="Integer" name="tId" comment="vip房间id" />
+		<field type="Integer" name="secure" comment="安全" />
+		<field type="Integer" name="num" comment="人数" />
+	</macro>
+
+	<macro id="FriendGiftInfoData" comment="玩家信息">
+		<field type="Long" name="giftId" comment="礼物id" />
+		<field type="Long" name="playerId" comment="玩家id" />
+		<field type="String" name="name" comment="名字" />
+		<field type="String" name="img" comment="图片" />
+
+		<field type="Long" name="sendTime" comment="发送时间" />
+		<field type="Long" name="getTime" comment="领取时间" />
+	</macro>
+
+	<macro id="FriendDetailInfoData" comment="玩家信息">
+		<field type="Long" name="playerId" comment="玩家id" />
+		<field type="String" name="name" comment="名字" />
+		<field type="String" name="img" comment="图片" />
+		<field type="Long" name="giftTime" comment="礼物时间" />
+		<field type="Long" name="gold" comment="筹码" />
+		<field type="Long" name="level" comment="等级" />
+		<field type="Integer" name="facebook" comment="facebook" />
+        <field type="Integer" name="sex" comment="性别" />
+		<field type="String" name="countries" comment="国籍"/>
+		<field type="Integer" name="isGame" comment="是否在游戏中 1 在游戏中 0 没有在" />
+		<field type="Integer" name="playerState" comment="玩家状态 1 在线 0 不在线" />
+		<field type="Long" name="offlineTime" comment="下线时间点" />
+		<field type="Integer" name="vipLevel" comment="VIP等级 " />
+		<field type="Integer" name="alreadyInvateClub" comment="是否已经邀请加入俱乐部" />
+		<field type="Integer" name="alreadyJoinClub" comment="是否已经加入俱乐部未加入: 0  已加入: 1   " />
+	</macro>
+
+	<macro id="BaccartBetData" comment="百家乐押注信息">
+		<field type="Integer" name="betType" comment="押注类型" />
+		<field type="Long" name="betNum" comment="押注数" />
+	</macro>
+
+	<macro id="BaccartSettleData" comment="百家乐结算信息">
+		<field type="Long" name="playerId" comment="玩家d" />
+		<field type="Long" name="winCoins" comment="赢钱数" />
+	</macro>
+
+	<macro id="BaccartPlayerData" comment="百家乐结算信息">
+		<field type="Long" name="playerId" comment="玩家d" />
+		<field type="String" name="name" comment="名字" />
+		<field type="String" name="img" comment="图像" />
+		<field type="Long" name="gold" comment="金币" />
+		<field type="Integer" name="vip" comment="vip" />
+		<field type="Integer" name="pos" comment="位置" />
+	</macro>
+
+	<macro id="PearlRoadData" comment="百家乐结算信息">
+		<field type="Integer" name="baccartPair" comment="百家乐对子" />
+		<field type="Integer" name="baccartResult" comment="百家乐结果" />
+
+	</macro>
+	<macro id="BaccartRoomData" comment="百家乐房间数据">
+		<field type="Integer" name="roomId" comment="房间id" />
+		<field type="Integer" name="num" comment="人数" />
+		<field type="Long" name="jackpot" comment="jackpot" />
+		<field type="Integer" name="closed" comment="关闭状态" />
+	</macro>
+
+	<macro id="BaccartLightData" comment="百家乐房间数据">
+		<field type="Integer" name="continueWin" comment="连胜次数" />
+		<field type="Long" name="minWins" comment="最下赢分量" />
+		<field type="Long" name="playerId" comment="玩家id" />
+	</macro>
+
+	<macro id="BaccartJackpotData" comment="百家乐jackpot">
+		<field type="Long" name="jackpot" comment="彩金" />
+		<field type="Long" name="playerId" comment="玩家id" />
+	</macro>
+
+	<macro id="HumanBaccartData" comment="百家乐">
+		<field type="Long" name="gameNum" comment="游戏数" />
+		<field type="Long" name="winNum" comment="赢局数" />
+		<field type="Long" name="beaconNum" comment="明灯数" />
+		<field type="Long" name="playerId" comment="玩家id" />
+	</macro>
+
+	<macro id="HumanTexasInfoData" comment="德州信息">
+		<field type="Integer" name="count" comment="游戏数" />
+		<field type="Integer" name="winCount" comment="胜利数" />
+		<field type="Integer" name="weekWinCoins" comment="明灯数" />
+		<field type="Integer" name="dayBiggestWinCoins" comment="天赢利" />
+		<field type="Integer" name="biggestHandCardList" list="true"
+			comment="玩家最大手牌" />
+	</macro>
+
+	<macro id="HumanTexasSNGInfoData" comment="德州sng信息">
+		<field type="Integer" name="joinTimes" comment="参加数" />
+		<field type="Integer" name="goldNum" comment="金牌数" />
+		<field type="Integer" name="silverNum" comment="银牌数" />
+		<field type="Integer" name="copperNum" comment="通牌数" />
+		<field type="Integer" name="weekScore" comment="周赢分" />
+
+	</macro>
+	<macro id="BaccartCoinSyncData" comment="百家乐筹码同步">
+		<field type="Long" name="coins" comment="金钱" />
+		<field type="Long" name="playerId" comment="玩家id" />
+	</macro>
+	<macro id="HumanLuckySpinData" comment="幸运轮盘">
+		<field type="Long" name="lastSpinTime" comment="上次转的时间" />
+
+	</macro>
+
+	<macro id="SlotConnectInfoData" comment="连线信息">
+		<field type="Integer" name="payLineId" comment="连线信息" />
+		<field type="Integer" name="posList" list="true" comment="位置" />
+		<field type="Integer" name="payId" comment="赔率ID" />
+	</macro>
+	<macro id="SpecialConnectInfoData" comment="特殊连线信息">
+		<field type="Integer" name="posList" list="true" comment="位置" />
+	</macro>
+	
+	<macro id="NewbieSlotConnectInfoData" comment="连线信息">
+		<field type="Integer" name="payLineId" comment="连线信息" />
+		<field type="Integer" name="posList" list="true" comment="位置" />
+		<field type="Integer" name="payId" comment="赔率ID" />
+	</macro>
+	<macro id="NewbieSpecialConnectInfoData" comment="特殊连线信息">
+		<field type="Integer" name="posList" list="true" comment="位置" />
+	</macro>
+	
+	<macro id="SlotList"  comment="老虎机列表">
+	     <field type="Integer" name="slotId"  comment="老虎机唯一ID"/>
+	     <field type="Long" name="handsel"  comment="彩金"/>
+	</macro>
+	 
+	
+	<macro id="HumanMiscFBInfoData" comment="fb信息">
+		<field type="Integer" name="fbReward" comment="fb奖励" />
+		<field type="String" name="fbInviteList" list="true" comment="fb邀请信息" />
+		<field type="Integer" name="fbInviteRewardList" list="true" comment="fb邀请奖励信息" />
+		<field type="Integer" name="fbThumb" comment="fb点赞奖励 1 领取" />
+		<field type="Long" name="fbstartTime" comment="fb邀请好友刷新时间" />
+	</macro>
+	
+	<macro id="HumanVipNewInfoData" comment="vipNew信息">
+		<field type="Integer" name="vipLevel" comment="vip等级" />
+		<field type="Integer" name="vipPoint" comment="当前vip点" />
+	</macro>
+	
+	<macro id="JackpotList" comment="最高彩金获得者数据">
+	   <field type="Long" name="userId"  comment="角色唯一ID"/>
+	   <field type="String" name="img" comment="头像图片" />
+	   <field type="String" name="name" comment="名字" />
+	   <field type="Long" name="jackpot"  comment="彩金"/>
+	   <field type="Integer" name="gameType" comment="游戏类型 百家乐 1 德州扑克 2 老虎机 classic：3  老虎机 四大美人：4 老虎机 水果：5"/>
+	</macro>
+	
+	<macro id="StrangerData" comment="陌生人列表">
+	  <field type="Long" name="userId"  comment="玩家唯一ID "/>
+	   <field type="String" name="img" comment="头像图片" />
+	   <field type="String" name="name" comment="名字" />
+	   <field type="Integer" name="level"  comment="玩家等级"/>
+	  	<field type="Integer" name="sex" comment="性别" />
+		<field type="String" name="countries" comment="国籍"/>
+		<field type="Integer" name="vipLevel" comment="VIP等级 " />
+		<field type="Integer" name="isRequest" comment="是否已经申请添加好友 0:未申请,1:已申请 " />
+	</macro>
+	
+	<macro id="JackpotfitLevelData" comment="适合自己等级游戏彩金">
+	 <field type="Integer" name="gameType"  comment="游戏类型 百家乐 1 德州扑克 2 老虎机 classic：3  老虎机 四大美人：4 老虎机 水果：5"/>
+	 <field type="Long" name="jackpot"  comment="彩金"/>
+	</macro>
+	
+	<macro id="RankListData" comment="排行榜数据">
+	      <field type="String"  name="countries"  comment="国籍"/>
+	      <field type="Long"  name="userId"  comment="玩家ID"/>
+	      <field type="String"  name="name"  comment="名字"/>
+	      <field type="String"  name="img"  comment="头像"/>
+	      <field type="Integer"  name="level"  comment="玩家等级"/>
+	      <field type="Long"  name="win"  comment="玩家积分"/>
+	      <field type="Integer"  name="rank"  comment="排名"/>
+	      <field type="Integer" name="vipLevel" comment="VIP等级 " />
+	</macro>
+	
+	<macro id="SlotRankData" comment="老虎机竞赛排行帮数据">
+	   <field type="Integer"  name="tournamentType"  comment="老虎机ID"/>
+	   <field type="Integer"  name="rank"  comment="名次 -1 表示没有上榜"/>
+	   <field type="String"  name="img"  comment="头像"/>
+	   <field type="String"  name="name"  comment="名称"/>
+	   <field type="Long"  name="bonus"  comment="累计中奖金额"/>
+	   <field type="Long"  name="passportId"  comment="角色ID"/>
+	   <field type="Integer" name="vipLevel" comment="用户等级"/>
+	</macro>
+	
+	<macro id="SlotSngView" comment="老虎机竞赛结果大厅展示">
+	 <field type="Integer"  name="slotType"  comment="老虎机类型"/>
+	 <field type="String"  name="img"  comment="头像"/>
+	 <field type="Long"  name="bonus"  comment="累计中奖金额"/>
+	</macro>
+	
+	<macro  id="SngTournamentData" comment="竞赛简要信息">
+	<field type="Integer"  name="tournamentType"  comment="竞速类型"/>
+	 <field type="Long"  name="endTimeBlock"  comment="老虎机结束时间块毫秒数"/>
+	<field type="Integer"  name="totalHuman"  comment="老虎机竞赛总人数"/>
+	 <field type="Long"  name="sngJackpot"  comment="总奖池"/>
+	  <field type="Integer" name="vipLevel" comment="用户等级"/>
+	</macro>
+	
+	<macro id="HumanSngInfo" comment="个人竞赛获奖信息">
+	<field type="Integer"  name="tournamentType"  comment="竞速类型"/>
+	<field type="Integer"  name="rank"  comment="名次"/>
+	 <field type="Long"  name="rewardNum"  comment="奖励数量"/>
+	  <field type="Long"  name="rewardTime"  comment="奖励时间"/>
+	</macro>
+	
+	<macro id="AchievementStateData" comment="成就完成情况">
+	   <field type="Integer"  name="id"  comment="成就ID"/>
+	   <field type="Integer"  name="state"  comment="1 没有完成 2 已经完成但没有领取 3 已经领取"/>
+	   <field type="Long"  name="completeTime"  comment="完成时间（状态2的情况下有用）"/>
+	</macro>
+	
+	<macro id="AchievementsProgressData" comment="成就进度">
+	   <field type="Integer"  name="serverType"  comment="大类型"/>
+	   <field type="Integer"  name="smalType"  comment="小类型"/>
+	   <field type="String"  name="value"  comment="当前值"/>
+	</macro>
+	<macro id="AmazonDelivery" comment="没有验证过的订单数据">
+	   <field type="Integer" name="productId" comment="产品d"/>
+		<field type="String" name="receiptId" comment="收据ID"/>
+		<field type="String" name="userId" comment="Amazon客户的 ID"/>
+	</macro>
+	<macro id="BounsConnectInfoData" comment="bonus位置数据">
+	   <field type="Integer" name="posList" list="true" comment="位置" />
+	</macro>
+	<macro id="Bonus29Data" comment="bonus位置数据">
+	   <field type="Integer" name="gold" list="true" comment="金币" />
+	</macro>
+	<macro id="TreasuryCurData" comment="返回当前存钱罐的 对象">
+	   <field type="Long" name="typeTreasury"  comment="玩家唯一ID "/>
+	   <field type="Long" name="curGold" comment="头像图片" />
+	   <field type="Long" name="maxTreasury" comment="名字" />
+	   <field type="Long" name="vipPointTreasury" comment="名字" />
+	</macro>
+	<macro id="ClubInfoUnit" comment="俱乐部信息">
+		<field type="String" name="id" comment="id" />
+		<field type="String" name="name" comment="名字" />
+		<field type="Integer" name="ico" comment="ico" />
+		<field type="Integer" name="level" comment="等级" />
+		<field type="Integer" name="progress" comment="等级进度" />
+		<field type="String" name="notice" comment="公告" />
+		<field type="Integer" name="huoyue" comment="赛季活跃点" />
+		<field type="Integer" name="money" comment="资产" />
+		<field type="Integer" name="male" comment="男" />
+		<field type="Integer" name="female" comment="女" />
+		<field type="Integer" name="rankHuoYue" comment="俱乐部活跃排名" />
+		<field type="Integer" name="rankGongXian" comment="俱乐部贡献排名" />
+		<field type="Integer" name="clubType" comment="类型" />
+		<field type="Integer" name="limit" comment="段位" />
+		<field type="Integer" name="zhiwu" comment="自己的职务" />
+		<field type="Long" name="seasonEndSecond" comment="到赛季结束的时间秒" />
+		<field type="String" name="additionalIco"  list="true" comment="额外解锁的图标" />
+	</macro>
+	<macro id="ClubNoteUnit" comment="俱乐部留言板">
+			<field type="String" name="noteId" comment="留言id" />
+			<field type="Long" name="playerId" comment="玩家id" />
+			<field type="String" name="playerName" comment="玩家名字" />
+			<field type="String" name="img" comment="头像" />
+			<field type="String" name="guoji" comment="国籍" />
+			<field type="Long" name="level" comment="等级" />
+			<field type="Integer" name="noteType" comment="类型 0 常规 1 礼物" />
+			<field type="String" name="content" comment="内容" />
+			<field type="Integer" name="giftId" comment="礼物id" />
+			<field type="Integer" name="alreadyGet" comment="1已经领取 0 未领取" />
+			<field type="Integer" name="zhiwu" comment="职务 1 主席  2副主席 3主管4成员" />
+			<field type="Long" name="time" comment="创建时间" />
+	</macro>
+	<macro id="ClubInfoGetUnit" comment="俱乐部信息get">
+		<field type="String" name="id" comment="id" />
+		<field type="String" name="name" comment="名字" />
+		<field type="Integer" name="ico" comment="ico" />
+		<field type="Integer" name="level" comment="等级" />
+		<field type="Integer" name="progress" comment="等级进度" />
+		<field type="String" name="notice" comment="公告" />
+		<field type="Integer" name="huoyue" comment="赛季活跃点" />
+		<field type="Integer" name="money" comment="资产" />
+		<field type="Integer" name="male" comment="男" />
+		<field type="Integer" name="female" comment="女" />
+		<field type="Integer" name="rankHuoYue" comment="俱乐部活跃排名" />
+		<field type="Integer" name="rankGongXian" comment="俱乐部贡献排名" />
+		<field type="Integer" name="clubType" comment="类型" />
+		<field type="Integer" name="limit" comment="段位" />
+	</macro>
+	
+	
+	<macro id="ClubListUnit" comment="俱乐部信息 " >
+			<field type="String" name="clubId" comment="俱乐部id" />
+			<field type="Integer" name="ico" comment="图标id" />
+			<field type="String" name="name" comment="名字" />
+			<field type="Integer" name="type" comment="类型" />
+			<field type="Integer" name="level" comment="等级" />
+			<field type="Integer" name="limit" comment="限制" />
+			<field type="Integer" name="num" comment="人数" />
+			<field type="Integer" name="maxNum" comment="最大人数" />
+			<field type="Integer" name="huoyue" comment="活跃度" />
+			<field type="Integer" name="gongxian" comment="贡献" />
+			<field type="Integer" name="applied" comment="是否申请过  申请过: 1" />
+	</macro>
+	
+	<macro id="ClubMemberInfo" comment="俱乐部成员信息 " >
+			<field type="Long" name="playerId" comment="成员id" />
+			<field type="String" name="name" comment="成员名字" />
+			<field type="String" name="ico" comment="ico" />
+			<field type="Integer" name="level" comment="成员等级" />
+			<field type="String" name="country" comment="国籍" />
+			<field type="Integer" name="zhiwu" comment="职务" />
+			<field type="Integer" name="gongxian" comment="个人贡献" />
+			<field type="Integer" name="huoyue" comment="个人活跃度" />
+			<field type="Integer" name="online" comment="是否在线" />
+			<field type="Integer" name="inGame" comment="是否游戏中" />
+			<field type="Long" name="logoutTime" comment="上次下线时间" />
+			<field type="Integer" name="tanheState" comment="不可弹劾:0 可弹劾:1 弹劾进行中:2 弹劾成功:3 " />
+			<field type="Integer" name="agree" comment="同意人数" />
+			<field type="Integer" name="refuse" comment="拒绝人数" />
+			<field type="Integer" name="selfState" comment="个人状态 1 同意 2 拒绝 0 未表态" />
+			<field type="Integer" name="vipLevel" comment="用户vip的等级" />
+		    <field type="Integer" name="girlFlag" comment="用户性别 1：男，2：女" />
+	</macro>
+	
+	
+	<macro id="BossInfoData" comment="世界boss的大boss的 信息">
+		<field type="Integer" name="nameId" comment="多语言ID" />
+		<field type="Integer" name="descrip" comment="描述" />
+		<field type="Integer" name="beKilled" comment="是否被杀" />
+		<field type="Integer" name="bossType" comment="boss类型" />
+		<field type="Long" name="changingBlood" comment="当前血量" />
+		<field type="Integer" name="blood" comment="基础血量" />
+		<field type="Long" name="increaseBlood" comment="增长的总血量" />
+		<field type="Integer" name="rewardNum1" comment="奖励类型1" />
+		<field type="Integer" name="rewardNum2" comment="奖励类型2" />
+		<field type="Long" name="startTime" comment="开始时间" />
+		<field type="Long" name="continueTime" comment="持续时间" />
+		<field type="Long" name="endTime" comment="结束时间" />
+	</macro>
+	
+	<macro id="AttackRankData" comment="世界boss的排行榜信息">
+		<field type="String" name="name" comment="用户的名称" />
+		<field type="Long" name="bossId" comment="boss的ID" />
+		<field type="Long" name="userId" comment="用户的ID" />
+		<field type="Long" name="attackTotalBlood" comment="攻击总血量" />
+		<field type="Integer" name="vipAdditionRate" comment="vip加成（百分号 前边的数）" />
+		<field type="Integer" name="attackRate" comment="当前用户 打掉的血 占据 总血 的 比例   ，（百分号 前边的数）" />
+		<field type="Integer" name="sortIndex" comment="排序字段" />
+	</macro>
+	
+	<macro id="LastWinHumanData" comment="boss站 上次的 第一名">
+		<field type="Long" name="level" comment="等级" />
+		<field type="Integer" name="vipLevel" comment="vip等级" />
+		<field type="Long" name="userId" comment="用户的ID" />
+		<field type="String" name="country" comment="国家" />
+		<field type="String" name="head" comment="头像" />
+		<field type="String" name="name" comment="名称" />
+		<field type="Long" name="attackTotalGold" comment="攻击总血量" />
+	</macro>
+	<macro id="RefreshBossData" comment="刷新boss信息">
+		<field type="Long" name="curBlood" comment="当前的血量" />
+		<field type="Long" name="skillTime" comment="技能的时间" />
+	</macro>
+	<macro id="LevelMoreGiftData" comment="等级礼包">
+		<field type="Integer" name="giftType" comment="奖励类型" />
+		<field type="Long" name="rewardNum" comment="奖励数量" />
+	</macro>
+	<!-- 三消老虎机 -->
+	<macro id="GcRemoveSlotSlotList" comment="三消老虎机返回值">
+		<field type="Integer" name="slotElementList"  list="true" comment="元素列表" />
+		<field type="Integer" name="lineNum" comment="每次三消转动的线数"/>
+		<field type="Long" name="rewardNum"  comment="收益" />
+		<field type="Integer" name="freeTimes"  comment="三消次数" />
+		<field type="Long" name="rewardSum"  comment="累计奖金" />
+	</macro>
+	
+	<!-- 石器时代 老虎机 -->
+	<macro id="Bonus14Data" comment="石器时代老虎机返回值">
+		<field type="Integer" name="times"  comment="元素列表" />
+		<field type="Long" name="singleGold" comment="单次获得金币的数量"/>
+		<field type="Long" name="overlyingGold"  comment="累计金币的数量" />
+		<field type="Integer" name="singleCollectNum"  comment="单次 敲打的数量" />
+		<field type="Integer" name="overlyingCollectNum"  comment="累计 收集的数量" />
+	</macro>
+	<!-- 无双 吹牛 其他人信息 -->
+	<macro id="ReturnPlayerInfo" comment="一个房间中 其他人的信息">
+		<field type="Long" name="passportId" comment="用户ID" />
+		<field type="String" name="name"  comment="用户的名称" />
+		<field type="Integer" name="girlFlag"  comment="性别 0:女       1:男" />
+		<field type="Integer" name="userStatus"  comment="用户当前的状态 0：观战   未参与(因为刚进入房间 别的用户 正在玩，所以此时只能观战)    1：参与      2:纯粹的观战模式 （进去就是看看 什么其他的也不干）" />
+		<field type="Long" name="curGold" comment="当前的金币" />
+		<field type="String" name="headImg" comment="头像信息" />
+		<field type="String" name="diceContainer" comment="色钟 不同状态 的色子 有不同的色钟" />
+		<field type="Integer" name="seat"  comment="位置" />
+		<field type="Integer" name="winTimes"  comment="几连胜" />
+		<field type="Integer" name="vipLevel"  comment="vip等级" />
+		<field type="Integer" name="num"  comment="用户最后叫号 色子的个数" />
+		<field type="Integer" name="value"  comment="用户最后叫号 色子的值" />
+		
+		<field type="Integer" name="diceType" comment="色子的int名"/>
+		<field type="Integer" name="diceValues"  list="true" comment="色子的值" />
+		<field type="Integer" name="redDiceValues"  list="true" comment="红色 色子的值" />
+		
+		<field type="String" name="clockImg" comment="色钟图片" />
+		<field type="Integer" name="clockItemId"  comment="色钟itemId" />
+		
+	</macro>
+	<!-- 结算信息 -->
+	<macro id="EndCountInfo" comment="结算时 每个人的信息">
+		<field type="Long" name="passportId" comment="用户ID" />
+		<field type="Integer" name="multiple" comment="所翻的倍数" />
+		<field type="Long" name="gold" comment="输赢 多少钱  整数 是 赢钱，负数 是输钱" />
+		<field type="String" name="name" comment="牛牛 模式专用：用户摇到号的名称 例如  ：五小牛 、豹子  等等" />
+		<field type="Integer" name="diceValues" list="true" comment="摇出色子的值得集合" />
+		<field type="Integer" name="winPassportId" list="true" comment="赢得人的ID" />
+		<field type="Integer" name="winMultiple" list="true" comment="倍数" />
+		<field type="Long" name="personTotalGold" comment="用户 自己的总金币" />
+	</macro>
+	<macro id="BetTotalNum" comment="bet场对应的人数信息">
+		<field type="Integer" name="bet" comment="倍数"/>
+		<field type="Long" name="totalNum" comment="在线总人数"/>
+	</macro>
+	<macro id="DiceInfo" comment="摇出来的色子的信息">
+		<field type="Long" name="passportId" comment="用户ID"/>
+		<field type="Integer" name="diceValues" list="true" comment="色子值" />
+		<field type="Integer" name="cowNameInt" comment="几小牛"/>
+		<field type="Integer" name="redDiceValues" list="true" comment="需要被标红的色子的值的集合"/>
+	</macro>
+	<macro id="BlackWhiteDiceInfo" comment="摇出来的色子的信息">
+		<field type="Long" name="passportId" comment="用户ID"/>
+		<field type="Integer" name="isOut" comment="0:未出局，1：已出局"/>
+		<field type="Integer" name="diceValues" list="true" comment="每一把被移除 之前所有 的色子值" />
+		<field type="Integer" name="removeDiceValues" list="true" comment="被移除的色子 index的值"/>
+	</macro>
+	<macro id="BlackWhiteNum" comment="摇出来的色子的信息">
+		<field type="Integer" name="red" comment="红  数量"/>
+		<field type="Integer" name="black"  comment="黑  数量" />
+		<field type="Integer" name="single"  comment="单 数量"/>
+		<field type="Integer" name="doubles"  comment="双 数量"/>
+	</macro>
+	
+	
+	<macro id="ShowHandBet" comment="梭哈模式 单独摇色子时 的数组">
+		<field type="Long" name="passportId" comment="某个用户的ID()"/>
+		<field type="Integer" name="bet" comment="上面某个用户  倍数"/>
+		<field type="Long" name="gold" comment="上面某个用户 的金币"/>
+		<field type="Long" name="personTotalGold" comment="用户 自己的总金币" />
+	</macro>
+	<macro id="BlackWhiteBet" comment="梭哈模式 单独摇色子时 的数组">
+		<field type="Long" name="passportId" comment="某个用户的ID()"/>
+		<field type="Integer" name="bet" list="true" comment="所有赢了 的人 的倍数"/>
+		<field type="Integer" name="winPassportIds" list="true" comment="所有赢了 的人的Id"/>
+		<field type="Long" name="gold" comment="上面某个用户 的金币"/>
+	</macro>
+	<macro id="HumanRankInfo" comment="无双吹牛  排行榜人物信息">
+		<field type="Long" name="passportId" comment="某个用户的ID()"/>
+		<field type="Integer" name="vip" comment="vip等级"/>
+		<field type="String" name="name" comment="名称"/>
+		<field type="String" name="headImg" comment="头像"/>
+		<field type="Long" name="gold" comment="用户的金币（可能是 天 、周 、月 或者 总金币   中的一种）"/>
+	</macro>
+	<macro id="BazooTaskInfo" comment="无双吹牛  任务列表">
+		<field type="Integer" name="taskId" comment="任务ID"/>
+		<field type="Integer" name="refreshtype" comment="刷新类型  按天:1、按周:2、按月 等等"/>
+		<field type="Integer" name="modeType" comment="吹牛 的类型 0:不区分模式， 1:吹牛，2:牛牛，3:梭哈"/>
+		<field type="Integer" name="bigType" comment="大的分类：0:任务，成就：1：胜利者，2：实践家，3：资本家"/>
+		<field type="Integer" name="wayOfPlay" comment="玩的方式：1：只要玩了就算，2：必须赢了才算，3:连胜 "/>
+		<field type="Integer" name="condition" comment="应该满足的 条件"/>
+		<field type="Integer" name="rewardNum" comment="应当给予的奖励"/>
+		<field type="Integer" name="finishTimes" comment="用户完成次数"/>
+		<field type="Integer" name="isFinish" comment="是否完成 0:未完成，1:已完成"/>
+		<field type="Integer" name="nameId" comment="名称ID"/>
+		<field type="Integer" name="descrip" comment="描述ID"/>
+		<field type="String" name="icon" comment="图标"/>
+	</macro>
+	<macro id="BazooAchieveInfo" comment="无双吹牛  成就列表">
+		<field type="Integer" name="bigtype" comment="大的分类：1：胜利者，2：实践家，3：资本家"/>
+		<field type="Integer" name="modeType" comment="吹牛 的类型 0:不区分模式， 1:吹牛，2:牛牛，3:梭哈"/>
+		<field type="Integer" name="wayOfPlay" comment="小的分类：1：胜场数，2：连胜数，3：玩的局数，4：钱数，5：段位数"/>
+		<field type="Integer" name="condition" comment="应该满足的 条件"/>
+		<field type="Integer" name="rewardNum" comment="应当给予的奖励"/>
+		<field type="Integer" name="finishVlaues" comment="用户完成次数 或者 金币"/>
+		<field type="Integer" name="isFinish" comment="是否完成 0:未完成，1:已完成"/>
+		<field type="Integer" name="nameId" comment="名称ID"/>
+		<field type="Integer" name="descrip" comment="描述ID"/>
+		<field type="String" name="icon" comment="图标"/>
+	</macro>
+	<macro id="PriRoomData" comment="无双吹牛  列出所有私人房间">
+		<field type="String" name="roomNumber" comment="房间号"/>
+		<field type="String" name="creater" comment="创建者"/>
+		<field type="Long" name="createrPassportId" comment="创建者的ID"/>
+		<field type="Integer" name="flag" comment="性别 0：女，1：男"/>
+		<field type="Integer" name="vip" comment="vip等级"/>
+		<field type="Integer" name="modeType" comment="房间的模式  1：经典模式，2：牛牛模式，3：梭哈模式"/>
+		<field type="Integer" name="bet" comment="底注"/>
+		<field type="String" name="img" comment="头像"/>
+		<field type="String" name="numTotalNum" comment="房间当前人数/房间总人数"/>
+		<field type="Integer" name="isNeedPassword" comment="是否需要密码：0需要， 1不需要"/>
+	</macro>
+	
+</macros>

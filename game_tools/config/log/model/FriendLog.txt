@@ -1,0 +1,3 @@
+message com.logserver.model.FriendLog(
+	long friendId;//好友id
+)

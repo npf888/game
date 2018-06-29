@@ -1,0 +1,5 @@
+message com.logserver.model.RechargeLog(
+    long orderId;// 订单号
+    int productId;//产品id
+    int cost;//花费
+)

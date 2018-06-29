@@ -1,0 +1,5 @@
+int nameId;[notNull=false]//名字id
+String descrip;[notNull=false]//描述
+int category;[notNull=false]//第二大分类
+int categoryMissionLevel;[notNull=false]//最大分类
+int num;[notNull=false]//随机个数

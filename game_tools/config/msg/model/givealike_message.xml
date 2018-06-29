@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd" module="givealike">
+	
+		<!-- 开启或者关闭面板-->
+	<message type="CG_GIVEALIKE_SAVE" comment="保存用户点评">
+		<field type="Integer" name="slotType" comment="老虎机类型" />
+		<field type="Integer" name="paintAssess" comment="美术点评" />
+		<field type="Integer" name="playAssess" comment="玩法点评" />
+		<field type="Integer" name="totalAssess" comment="综合点评" />
+	</message>
+	
+	<!--返回boss信息 和上次的 boss站的 winner-->
+	<message type="GC_GET_GIVEALIKE_INFO" comment="返回点评信息">
+		<field type="Integer" name="paintAssess" comment="美术点评" />
+		<field type="Integer" name="playAssess" comment="玩法点评" />
+		<field type="Integer" name="totalAssess" comment="综合点评" />
+	</message>
+	
+
+	<message type="CG_ISNOT_GIVEALIKE" comment="判断老虎机 是否 是 评论过">
+		<field type="Integer" name="slotType" comment="老虎机类型" />
+	</message>
+	<message type="GC_ISNOT_GIVEALIKE" comment="是否评论过">
+		<field type="Integer" name="isNot" comment="0：否，1：是" />
+	</message>
+</messages>

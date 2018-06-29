@@ -1,0 +1,4 @@
+int type;[notNull=false;minValue=0]//1 gold 2 free
+int wheelType;[notNull=false;minValue=0]//2 2转盘 3 3转盘
+int rewardType;[notNull=false;minValue=0]//中奖类型，1、linebet，2、转盘2*倍数，3转盘2累加，4大转盘,5:免费转动
+int rewardNum;[notNull=false;minValue=0]//中奖数量,0:代表大转盘

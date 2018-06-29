@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration
+    PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect"> org.hibernate.dialect.MySQL5InnoDBDialect
+		</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.transaction.factory_class">
+			org.hibernate.transaction.JDBCTransactionFactory
+		</property>
+		<property name="hibernate.cache.provider_class"> org.hibernate.cache.NoCacheProvider
+		</property>
+		<property name="hibernate.cache.use_query_cache"> false </property>
+		<mapping class="com.db.model.DbVersion" />
+		<mapping class="com.db.model.DeviceEntity" />
+		<mapping class="com.db.model.UserInfo" />
+		<mapping class="com.db.model.HumanEntity" />
+		<mapping class="com.db.model.HumanTexasEntity" />
+
+		<mapping class="com.db.model.HumanMonthCardEntity" />
+		<mapping class="com.db.model.HumanWeekCardEntity" />
+		<mapping class="com.db.model.FriendEntity" />
+		<mapping class="com.db.model.FriendRequestEntity" />
+		<mapping class="com.db.model.MailEntity" />
+		<mapping class="com.db.model.HumanWeekSignInEntity" />
+		<mapping class="com.db.model.NoticeEntity" />
+		<mapping class="com.db.model.HumanMiscEntity" />
+		<mapping class="com.db.model.HumanVipEntity" />
+		<mapping class="com.db.model.HumanRechargeOrderEntity" />
+		<mapping class="com.db.model.HumanTaskEntity" />
+		<mapping class="com.db.model.HumanActivityEntity" />
+		<mapping class="com.db.model.ActivityEntity" />
+		<mapping class="com.db.model.HumanItemEntity" />
+		<mapping class="com.db.model.HumanTexasSNGEntity" />
+		<mapping class="com.db.model.CompensationEntity" />
+		<mapping class="com.db.model.HumanCompensationEntity" />
+		<mapping class="com.db.model.HumanRefundEntity" />
+		<mapping class="com.db.model.HumanFriendGiftEntity" />
+	    <mapping class="com.db.model.RobotComplementEntity" />
+		<mapping class="com.db.model.HumanBaccartEntity" />
+	    <mapping class="com.db.model.BaccartRoomModelEntity" />
+        <mapping class="com.db.model.HumanLuckySpinEntity" />
+        <mapping class="com.db.model.HumanLuckyMatchEntity" />
+        <mapping class="com.db.model.SlotEntity" />
+        <mapping class="com.db.model.HumanSlotEntity" />
+        <mapping class="com.db.model.HumanVipNewEntity" />
+        <mapping class="com.db.model.TextasEntity" />
+        <mapping class="com.db.model.RankEntity" />
+        <mapping class="com.db.model.HumanGiftEntity" />
+        <mapping class="com.db.model.HumanAchievementEntity" />
+        <mapping class="com.db.model.Conversioncode" />
+        <mapping class="com.db.model.RobotStatisDataEntity" />
+        <mapping class="com.db.model.SlotListEntity" />
+        
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,3 @@
+int type;[notNull=false;minValue=0]//1 单线下注额 2 总下注额
+int times;[notNull=false;minValue=0]//倍数
+int weight;[notNull=false;minValue=0]//权重

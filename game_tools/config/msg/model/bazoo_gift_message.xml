@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="bazoogift">
+
+
+	<!-- 发送  2：色钟，3：红包 -->
+	<message type="CG_BAZOO_SEND_GIFT" comment="发送礼物">
+		<field type="Integer" name="itemType" comment="发送什么类型的道具（2:色钟，3：红包，4：礼物）"/>
+	
+		<field type="Long" name="toPlayerId" comment="发给谁"/>
+		<field type="Integer" name="itemId" comment="礼物ID"/>
+		<field type="Integer" name="number" comment="礼物数量"/>
+	</message>
+	
+	<!-- 返回 -->
+	<message type="GC_BAZOO_SEND_GIFT" comment="返回">
+		<field type="Long" name="fromPlayerGold" comment="发送者的金币数量"/>
+		<field type="Long" name="fromPlayerId" comment="谁发的"/>
+		<field type="Long" name="toPlayerId" comment="发给谁"/>
+		<field type="Integer" name="itemId" comment="礼物ID"/>
+		<field type="Integer" name="number" comment="礼物数量"/>
+		<field type="Integer" name="itemType" comment="礼物类型(2:色钟，3：红包，4：礼物)"/>
+	</message>
+
+	
+	
+	<!-- 领取红包 -->
+	<message type="CG_BAZOO_RED_PACKAGE" comment="领取所有红包">
+		<field type="Integer" name="itemId" comment="红包的itemID"/>
+	</message>
+	
+	<!-- 领取红包 返回-->
+	<message type="GC_BAZOO_RED_PACKAGE" comment="领取所有红包 返回">
+		<field type="Integer" name="isSucess" comment="是否成功0：成功，1：失败"/>
+		<field type="Integer" name="langId" comment="失败后 多语言ID"/>
+		<field type="String" name="paramsList" list="true" comment="参数列表"/>
+	</message>
+	
+</messages>
+
+
+
+
+
+
+

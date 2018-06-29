@@ -1,0 +1,8 @@
+int nameId;[notNull=false]//语言Id
+int descrip;[notNull=false]//名称
+String langDesc;[notNull=false]//语言描述
+String icon;[notNull=false]	//图标
+int onlineTime;[notNull=false,minValue=0]//在线时长
+int rewardId;[notNull=false,minValue=1]//奖励id
+int rewardNum;[notNull=false]	//奖励数量
+

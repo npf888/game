@@ -1,0 +1,9 @@
+message com.logserver.model.PlayerKeepLog(
+    int loginDay; //第几天登陆
+     String countries; //国家
+     String ipCountries; //用户IP对应的国家
+     int channelType; //渠道类型
+     String deviceMode; //设备的类型
+     String clientVersion; //版本
+
+)

@@ -1,0 +1,8 @@
+message com.logserver.model.InOutTimeLog(
+    long inTime; //进入老虎机的时间
+    int slotType;//区分老虎机 1、初级，2、中级、3、高级、4、精英
+    long outTime; //退出老虎机的时间
+    long inOutTotalTime;//退出时间 减去 进入时间的差值（一次得）
+    long charId;//用户ID
+    long slotId;//老虎机ID
+)

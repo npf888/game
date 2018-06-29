@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="monthcard">
+
+	<!-- 商品信息-->
+	<message type="CG_MONTH_CARD_GET" comment="领取月卡">
+	</message>
+		<!-- 商品信息-->
+	<message type="GC_MONTH_CARD_GET" comment="领取月卡">
+		<field type="com.gameserver.common.data.RandRewardData" 
+					name="randRewardList" comment="道具奖励" list="true" macro="RandRewardData"  clientType="com.gameserver.common.data.RandRewardData"></field>
+	</message>
+	
+	<message type="GC_HUMAN_MONTH_CARD_INFO_DATA" comment="月卡数据">
+		<field type="com.gameserver.monthcard.data.HumanMonthCardInfoData" clientType="HumanMonthCardInfoData" 
+					name="monthCardInfoData" comment="月 卡数据"  macro="HumanMonthCardInfoData"></field>
+	</message>
+</messages>

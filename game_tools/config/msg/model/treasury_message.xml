@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="treasury">
+	
+	
+	<message type="CG_TREASURY" comment="返回当前存钱罐的 对象">
+	</message>
+	<!-- 返回 存钱罐的 对象 -->
+	<message type="GC_TREASURY" comment="返回当前存钱罐的 对象">
+		 <field type="Long" name="typeTreasury" comment="类型 总共 六种   0,1,2,3,4,5 "/>
+		 <field type="Long" name="curGold" comment="当前金币"/>
+		 <field type="Long" name="maxTreasury" comment="作者:存储上限"/>
+		 <field type="Long" name="vipPointTreasury" comment="作者:VIP点数奖励"/>
+	</message>
+	
+</messages>

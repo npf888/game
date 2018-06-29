@@ -1,0 +1,14 @@
+int nameId;[notNull=false] // 名称
+int descrip;[notNull=false] //描述
+String langDesc; [notNull=false]// 语言描述
+String icon; [notNull=false]// icon
+int smallBlind; [notNull=false]//vip等级
+int serviceValue1; [notNull=false]//服务费1
+int watchNum; [notNull=false]//筹码
+int serviceValue2; [notNull=false] //赠送经验
+int victoryExp; [notNull=false]	//经验速度
+int joinExp;[notNull=false] //魅力值
+int dealerCost;[notNull=false] //每天奖励
+int roomNum;[notNull=false] //房间人数
+int minCarry;[notNull=false] //最小携带
+int maxCarry;[notNull=false] //最大携带

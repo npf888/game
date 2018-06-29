@@ -1,0 +1,4 @@
+message com.logserver.model.BaccaratRoomLog(
+    long roomId;//房间号
+
+)

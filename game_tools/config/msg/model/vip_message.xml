@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd" module="vip">
+	
+		<!-- 购买vip-->
+	<message type="CG_VIP_BUY" comment="购买vip">
+		<field type="Integer" name="vipLevel" comment="购买档次" />
+	</message>
+		<!-- 购买vip-->
+	<message type="GC_VIP_BUY" comment="购买vip">
+	<field type="com.gameserver.common.data.RandRewardData" 
+					name="randRewardList" comment="道具奖励" list="true" macro="RandRewardData"  clientType="com.gameserver.common.data.RandRewardData"></field>
+	</message>
+	
+	<!-- 领取vip-->
+	<message type="CG_VIP_GET" comment="领取vip">
+	</message>
+		<!-- 领取vip-->
+	<message type="GC_VIP_GET" comment="领取vip">
+	<field type="com.gameserver.common.data.RandRewardData" 
+					name="randRewardList" comment="道具奖励" list="true" macro="RandRewardData"  clientType="com.gameserver.common.data.RandRewardData"></field>
+	</message>
+	
+	<message type="GC_HUMAN_VIP_INFO_DATA" comment="vip数据">
+		<field type="com.gameserver.vip.data.HumanVipInfoData" clientType="HumanVipInfoData" 
+					name="vipInfoData" comment="vip数据"  macro="HumanVipInfoData"></field>
+	</message>
+	
+	<!-- vip开房-->
+	<message type="CG_VIP_CREATE_ROOM" comment="vip开房">
+		<field type="Integer" name="vipId" comment="vip房间类型d" />
+		<field type="String" name="password" comment="密码" />
+	</message>
+	
+	<!-- vip开房-->
+	<message type="GC_VIP_CREATE_ROOM" comment="vip开房">
+		
+	</message>
+
+</messages>

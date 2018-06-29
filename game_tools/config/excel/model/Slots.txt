@@ -1,0 +1,8 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int slotsNum;[notNull=false;minValue=0] //下限
+int turn;[notNull=false;minValue=0] //下限
+int type;[notNull=false;minValue=0] //种类
+int pages;[notNull=false;minValue=0] //支付表所在页数，0：不显示，1：第一页，2：第二页

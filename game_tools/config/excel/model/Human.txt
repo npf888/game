@@ -1,0 +1,42 @@
+int vocationNameLangId;[notNull=false] // 职业名称多语言Id
+String vocationName; // 职业名称
+int sex;[notNull=false;minValue=0;maxValue=1] //性别
+int photo;[notNull=false;minValue=0] // 头像
+int head;[notNull=false;minValue=0] // 全身像
+float modelScale;[notNull=false;] // 资源缩放
+int baseHp;[notNull=false;minValue=0] // 基础血量
+int baseAttack;[notNull=false;minValue=0] // 基础攻击
+int baseDefence;[notNull=false;minValue=0] // 基础防御
+float growthHp;[notNull=false;minValue=0] // 血量成长
+float growthAttack;[notNull=false;minValue=0] // 攻击成长
+float growthDefence;[notNull=false;minValue=0] // 防御成长
+int crit;[notNull=false;minValue=0] // 爆击
+int critResist;[notNull=false;minValue=0] // 爆击抵抗
+int hit;[notNull=false;minValue=0] // 命中
+int dodge;[notNull=false;minValue=0] // 闪避
+int avoidDamage;[notNull=false;minValue=0] // 免伤
+int critDamage;[notNull=false;minValue=0] // 暴击伤害
+int wreckArmorDamage;[notNull=false;minValue=0] // 破甲伤害
+int moveSpeed;[notNull=false;minValue=0] // 移动速度
+int capEquip;// 帽子装备
+int weaponEquip;// 武器装备
+int clothesEquip;// 衣服装备
+int bootsEquip;// 鞋子装备
+int bracersEquip;// 护腕装备
+int talismanEquip;// 饰品装备
+int commonAttack;[notNull=false;minValue=0] // 普通攻击
+int activeSkill1;[notNull=false] // 主动技能1
+int activeSkill2;[notNull=false] // 主动技能2
+int activeSkill3;[notNull=false] // 主动技能3
+int activeSkill4;[notNull=false] // 主动技能4
+int passiveSkill1;[notNull=false] // 被动技能1
+int passiveSkill2;[notNull=false] // 被动技能2
+int passiveSkill3;[notNull=false] // 被动技能3
+int collisionLength;[notNull=false;minValue=0] //碰撞块长
+int collisionWidth;[notNull=false;minValue=0] //碰撞块宽
+int collisionHeight;[notNull=false;minValue=0] //碰撞块高
+int open;[notNull=false] //是否开放
+int vocationDescriptionLangId;[notNull=false] // 职业说明多语言Id
+int roleInterfaceSort;[notNull=false] //角色界面排序
+int roleInterfaceAppearance;[notNull=false] //角色界面外观
+float stiffTime;[notNull=false] //被击硬直时间

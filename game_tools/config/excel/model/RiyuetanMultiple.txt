@@ -1,0 +1,2 @@
+int times;[notNull=false,minValue=0]//倍数值除100
+int weight;[notNull=false,minValue=0]//权重

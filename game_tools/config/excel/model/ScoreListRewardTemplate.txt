@@ -1,0 +1,7 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+int list1;[notNull=false] //名次
+int list2;[notNull=false] //名次
+int reward;[notNull=false] //
+int rewardNum;[notNull=false] //

@@ -1,0 +1,4 @@
+int callType;[notNull=false] //1:自己没有顺子且没有叫1点  2:有顺子没叫1点 或者 有叫1点没有顺子   3：自己有顺子且叫了1点
+int peopleNum;[notNull=false]	//玩游戏的人数
+int pointNum;[notNull=false]	//随便叫 哪个点的数量
+int probability;[notNull=false]	//概率

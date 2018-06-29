@@ -1,0 +1,8 @@
+int nameId;[notNull=false]//名字id
+int descrip;[notNull=false]//描述
+String langDesc;[notNull=false]//语言描述
+String icon;[notNull=false]// icon
+int day;[notNull=false]	// 天数
+int itemId;[notNull=false] // 道具id
+int itemNum;[notNull=false] // 道具
+

@@ -1,0 +1,4 @@
+String country; //国家编号
+String langDesc; //对应中文名称
+String icon;[notNull=false] //国家对应的icon
+int nameId;[notNull=false] //国家名称

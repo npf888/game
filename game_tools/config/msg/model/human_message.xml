@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="human">
+
+	<!-- 登录时给客户端下发人物全信息 -->
+	<message type="GC_HUMAN_DETAIL_INFO" comment="服务器给客户端下发人物全信息">
+		<field type="com.gameserver.human.data.HumanInfoData"
+			name="human" comment="玩家" macro="HumanInfoData" />
+	</message>
+	
+	<!-- 次接口 是新加的接口 用来存储用户的 新手大礼包是否显示的 -->
+	<message type="CG_HUMAN_DETAIL_INFO_TODAY_VIEW" comment="手大礼包是否显示的 用户触发">
+	</message>
+
+    <message type="CG_HUMAN_NEW_GUIDE" comment="新手引导记录">
+       <field type="Integer" name="guideId" comment="0 大礼包 1 百家乐 2 德州 3 老虎"  />
+    </message>
+
+	<message type="GC_ROLE_SYMBOL_CHANGED_LONG" comment="用于发送符号数值改变消息">
+		<field type="Short" name="roleType" comment="角色类型"></field>
+		<field type="Long" name="roleUUID" comment="角色UUID"></field>
+		<field type="com.core.util.KeyValuePair&lt;Integer,Long&gt;"
+			clientType="com.core.util.data.KeyValuePairIntData" name="properties"
+			list="true" comment="所有变化的符号值">
+			<field type="Integer" name="key" comment="符号索引" />
+			<field type="Long" name="value" comment="符号值" />
+		</field>
+	</message>
+	
+	<!-- 人物更改名字 -->
+	<message type="CG_HUMAN_CHANGE_NAME" comment="更改名字">
+		<field type="String" name="name" comment="玩家名字" />
+	</message>
+	
+	<message type="GC_HUMAN_CHANGE_NAME" comment="更改名字">
+		<field type="String" name="name" comment="玩家名字"/>
+		<field type="Integer" name="duplicateNum" comment="(如果不是重复，此字段值为null 或者0)重复多语言的ID" />
+	</message>
+	
+	<!--  人物更改性别 -->
+	<message type="CG_HUMAN_CHANGE_SEX" comment="更改性别">
+		<field type="Integer" name="sex" comment="性别"  />
+	</message>
+	
+	<message type="GC_HUMAN_CHANGE_SEX" comment="更改性别">
+		<field type="Integer" name="sex" comment="性别" />
+	</message>
+	
+
+	<!-- 人物更改图像 -->
+	<message type="CG_HUMAN_CHANGE_IMG" comment="更改图像 ">
+		<field type="String" name="img" comment="玩家图像 "/>
+	</message>
+	<!-- 人物更改图像 -->
+	<message type="GC_HUMAN_CHANGE_IMG" comment="更改图像 ">
+		<field type="String" name="img" comment="玩家图像 "/>
+	</message>
+	
+	
+	<!-- 人物VIP等级 修改后发送此消息 -->
+	<message type="GC_HUMAN_CHANGE_VIP" comment="VIP等级的修改 ">
+		<field type="Integer" name="vip" comment="VIP等级的修改 "/>
+	</message>
+	
+	
+	
+	<message type="CG_HUMAN_VIDEO_NUM" comment="观看视频">
+	   
+	</message>
+	<message type="GC_HUMAN_VIDEO_NUM" comment="观看视频返回">
+	   
+	</message>
+	
+	<message type="CG_CHANEAGE_COUNTRIES" comment="修改角色年龄国际" >
+	     <field type="String" name="countries" comment="国籍"/>
+		<field type="Integer" name="age" comment="年龄" />
+	</message>
+	<message type="GC_CHANEAGE_COUNTRIES" comment="修改角色年龄国际返回" >
+	     <field type="String" name="countries" comment="国籍"/>
+		<field type="Integer" name="age" comment="年龄" />
+	</message>
+	
+	
+	<!-- 老虎机大厅   -->
+	
+	<message type="GC_SLOT_ROOM1" comment="玩家进入老虎机获取其他人信息">
+	   <field type="com.gameserver.slot.data.HumanBroadcastInfo" name="humanBroadcastInfo" comment="房间玩家列表 " list="true"  >
+				<field type="Long" name="playerId" comment="玩家id" />
+		       <field type="String" name="img" comment="图片" />
+		        <field type="Integer" name="level" comment="等级" />
+		        <field type="String" name="countries" comment="国籍"/>
+		        <field type="Long" name="gold" comment="玩家筹码" />
+		        <field type="String" name="name" comment="名字" />
+		         <field type="Integer" name="giftId" comment="礼品的ID没有就是0" />
+		         <field type="Integer" name="isRequest" comment="是否已经申请添加好友 0:未申请,1:已申请 " />
+		         <field type="Integer" name="vipLevel" comment="用户vip的等级" />
+		         <field type="Integer" name="girlFlag" comment="用户性别 1：男，2：女" />
+		</field>
+	</message>
+	
+	<message type="GC_SLOT_ROOM2" comment="老虎机玩家广播2">
+	    <field type="Long" name="playerId" comment="玩家id" />
+		<field type="String" name="img" comment="图片" />
+		<field type="Integer" name="level" comment="等级" />
+		<field type="String" name="countries" comment="国籍"/>
+		 <field type="String" name="name" comment="名字" />
+	</message>
+	
+	<message type="GC_SLOT_ROOM3" comment="老虎机玩家广播3">
+	    <field type="Long" name="playerId" comment="玩家id" />
+		<field type="Long" name="gold" comment="玩家筹码" />
+	</message>
+	
+	<message type="GC_SLOT_ROOM4" comment="老虎机玩家广播4">
+	    <field type="Long" name="playerId" comment="玩家id" />
+        <field type="Integer" name="bigAward" comment="大奖类型 0：没有中大奖 1 2 3 4"/>
+	</message> 
+	
+	<message type="GC_SLOT_ROOM5" comment="玩家退出老虎机玩家广播5">
+	    <field type="Long" name="playerId" comment="玩家id" />
+	</message>
+	
+	<message type="CG_SLOT_ROOM_GIFT" comment="老虎机房间发礼物">
+	    <field type="Integer" name="giftId" comment="礼物ID" />
+	    <field type="Integer" name="send_type" comment="发送类型 0 个人 1 全体" />
+	    <field type="Long" name="rece_playerId" comment="接收者ID在发送类型是0的时候有效果" />
+	</message>
+	<message type="GC_SLOT_ROOM_GIFT" comment="老虎机房间发礼物">
+	    <field type="Long" name="send_playerId" comment="发送者ID" />
+	    <field type="Integer" name="giftId" comment="礼物ID" />
+	    <field type="Integer" name="send_type" comment="发送类型 0 个人 1 全体" />
+	    <field type="Long" name="rece_playerId" comment="接收者ID在发送类型是0的时候有效果" />
+	</message>
+	
+	<message type="CG_SLOT_ROOM_PLEASE"  comment="邀请朋友加入老虎机房间">
+	      <field type="Long" name="req_playerId" comment="邀请的好友ID" />
+	</message>
+	<message type="GC_SLOT_ROOM_PLEASE"  comment="邀请朋友加入老虎机房间返回">
+	      <field type="Long" name="playerId" comment="发出邀请的角色ID" />
+	      <field type="String" name="friendImg" comment="邀请的好友IMG" />
+	      <field type="String" name="friendName" comment="邀请的好友名字" />
+	       <field type="Integer" name="slotId" comment="要求加入的老虎机ID" />   
+	       <field type="Integer" name="vipLevel" comment="VIP等级" />   
+	     <field type="String" name="roomId" comment="房间ID"/> 
+	</message>
+	
+	<message type="CG_ROOM_BIGWIN_GIFT" comment="bigWin分享礼物">
+	     <field type="Integer" name="giftId" comment="礼物ID" />
+	</message>
+	
+	<message type="GC_FRIEND_GAME" comment="好友进入游戏通知">
+	    <field type="Long" name="friendId" comment="好友ID" />
+	</message>
+	
+	<!-- 双倍经验 加成 -->
+	<message type="CG_EXP_DOUBLE" comment="双倍经验加成">
+	</message>
+	<message type="GC_EXP_DOUBLE" comment="双倍经验加成">
+	    <field type="Long" name="leftTime" comment="双倍经验的剩余时间" />
+	</message>
+	<!-- 等级礼包 同时 展示好几个的  -->
+	<message type="GC_LEVEL_GIFT_MORE" comment="等级礼包 （多个同时展示）">
+	   <field type="com.gameserver.human.data.LevelMoreGiftData" name="levelMoreGiftData" comment="类型-数量" list="true" macro="LevelMoreGiftData"/>
+	</message>
+	
+	<!-- 通知前端通知什么类型的礼物（金币或者道具） -->
+	<!-- <message type="GC_GIFT_REMIND" comment="双倍经验加成">
+	    <field type="Long" name="leftTime" comment="双倍经验的剩余时间" />
+	</message> -->
+	
+</messages>

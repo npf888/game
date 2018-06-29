@@ -1,0 +1,14 @@
+int nameId;[notNull=false] // 名称
+int descrip;[notNull=false] //描述
+String langDesc; [notNull=false]// 语言描述
+String icon; [notNull=false]// icon
+int vipLv; //vip等级
+int costDiamonds; //花费钻石
+int giftChips; //筹码
+int giftExp;  //赠送经验
+int expUp; 	//经验速度
+int charmValue; //魅力值
+int dailyReward; //每天奖励
+int expression;[notNull=false] //表情是否开启
+int vipRoom;[notNull=false]//vip房间 
+int winTimes;[notNull=false]//连赢次数

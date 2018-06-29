@@ -1,0 +1,5 @@
+int gameId;[notNull=false]//游戏类型 1 百家乐 2 德州
+int roomId;[notNull=false]//房间Id
+int itemId;[notNull=false]//物品ID
+int costChips;[notNull=false]//消耗筹码
+int changeCharm;[notNull=false]//魅力值  

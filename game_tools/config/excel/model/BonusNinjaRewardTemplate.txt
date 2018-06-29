@@ -1,0 +1,4 @@
+int slotsNum;[notNull=false;minValue=0] //老虎机类型
+int type;[notNull=false;minValue=0]//是否中奖 1 中，0 否
+int times;[notNull=false;minValue=0]//单线下注额倍数,选取的次数(百分比，实际值除以100）
+int weight;[notNull=false;minValue=0]//权值

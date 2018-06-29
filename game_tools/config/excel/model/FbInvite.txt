@@ -1,0 +1,7 @@
+int nameId;[notNull=false]//语言Id
+int descrip;[notNull=false]//名称
+String langDesc;[notNull=false]//语言描述
+String icon;[notNull=false]	//图标
+int gamerNum;[notNull=false,minValue=0]//游戏数量
+int itemId;[notNull=false,minValue=1]//item id
+int itemNum;[notNull=false]	//item num

@@ -1,0 +1,3 @@
+int slotsNum;[notNull=false;minValue=0] //老虎机类型
+int times;[notNull=false;minValue=0] //单线倍数
+int weight;[notNull=false;minValue=0] //

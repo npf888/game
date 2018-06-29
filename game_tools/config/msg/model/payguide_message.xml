@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd" module="guide">
+	
+		<!-- 返回给客户端 付费新手引导-->
+	<message type="GC_PAY_GUIDE" comment="返回给客户端 付费新手引导">
+		<field type="Integer" name="payType" comment="1:treasury-小金猪    2:exp-经验加速卡     3:preference-特惠礼包      4:club-俱乐部      5:monthcard-月卡    6:coupon-优惠券" />
+	</message>
+	
+	<message type="CG_ITEM_INVOKE" comment="点击道具商城，调用此接口">
+	</message>
+
+</messages>

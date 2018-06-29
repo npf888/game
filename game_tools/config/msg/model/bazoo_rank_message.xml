@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="bazoorank">
+
+
+	<!-- 排行榜 -->
+	<message type="CG_BAZOO_RANK_TOTAL_GOLD_REQUEST" comment="用户当前所有的金币  排行榜 ">
+	</message>
+	
+	
+	<message type="CG_BAZOO_RANK_REQUEST" comment="盈利 的 排行榜 ">
+		<field type="Integer" name="dateType" comment="按什么查询：： 1:天   2:周  3:月" />
+	</message>
+	
+	<message type="GC_BAZOO_RANK_REQUEST" comment="排行榜返回">
+		<field type="com.gameserver.bazoorank.data.HumanRankInfo" name="humanRankInfo" comment="排行榜 人物信息" list="true" macro="HumanRankInfo" ></field>
+	</message>
+
+	
+	
+	
+</messages>
+
+
+
+
+
+
+

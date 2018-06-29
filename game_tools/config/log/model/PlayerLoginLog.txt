@@ -1,0 +1,7 @@
+message com.logserver.model.PlayerLoginLog(
+    int channelType; //渠道
+    String deviceMode; //设备类型
+    String clientVersion; //版本号
+    String countries; //国家
+    String ipCountries; //用户IP对应的国家
+)

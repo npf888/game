@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN"
+          "http://www.ibatis.com/dtd/sql-map-config-2.dtd" >
+<sqlMapConfig>
+	<settings cacheModelsEnabled="true" enhancementEnabled="true"
+		lazyLoadingEnabled="true" maxRequests="64" maxSessions="30"
+		maxTransactions="100" useStatementNamespaces="false" />
+		
+	 <!-- <transactionManager type="JDBC">
+		<dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="com.mysql.jdbc.Driver" />
+			<property name="JDBC.ConnectionURL"
+				value="jdbc:mysql://rm-t4n1xi7107e902cej.mysql.singapore.rds.aliyuncs.com:3306/texas_log?useUnicode=true&amp;characterEncoding=utf-8" />
+			<property name="JDBC.Username" value="texas" />
+			<property name="JDBC.Password" value="Texas123$%^" />
+			<property name="Pool.MaximumActiveConnections" value="50" />
+			<property name="Pool.MaximumIdleConnections" value="1" />
+		</dataSource>
+	</transactionManager>  -->
+ 	 <transactionManager type="JDBC">
+		<dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="com.mysql.jdbc.Driver" />
+			<property name="JDBC.ConnectionURL"
+				value="jdbc:mysql://127.0.0.1:3306/texas_log?useUnicode=true&amp;characterEncoding=utf-8" />
+			<property name="JDBC.Username" value="root" />
+			<property name="JDBC.Password" value="root" />
+			<property name="Pool.MaximumActiveConnections" value="50" />
+			<property name="Pool.MaximumIdleConnections" value="1" />
+		</dataSource>
+	</transactionManager> 
+	<!-- 自动生成日志的配置开始 -->
+<sqlMap resource="com/logserver/model/gold.xml" />
+<sqlMap resource="com/logserver/model/chat.xml" />
+<sqlMap resource="com/logserver/model/vip.xml" />
+<sqlMap resource="com/logserver/model/diamond.xml" />
+<sqlMap resource="com/logserver/model/weekcard.xml" />
+<sqlMap resource="com/logserver/model/monthcard.xml" />
+<sqlMap resource="com/logserver/model/signin.xml" />
+<sqlMap resource="com/logserver/model/recharge.xml" />
+<sqlMap resource="com/logserver/model/basicplayer.xml" />
+<sqlMap resource="com/logserver/model/onlinetimereward.xml" />
+<sqlMap resource="com/logserver/model/onlinetime.xml" />
+<sqlMap resource="com/logserver/model/dailytask.xml" />
+<sqlMap resource="com/logserver/model/exception.xml" />
+<sqlMap resource="com/logserver/model/charm.xml" />
+<sqlMap resource="com/logserver/model/friend.xml" />
+<sqlMap resource="com/logserver/model/item.xml" />
+<sqlMap resource="com/logserver/model/rename.xml" />
+<sqlMap resource="com/logserver/model/texasroom.xml" />
+<sqlMap resource="com/logserver/model/baccaratroom.xml" />
+<sqlMap resource="com/logserver/model/luckyspin.xml" />
+<sqlMap resource="com/logserver/model/slot.xml" />
+<sqlMap resource="com/logserver/model/dataoverview.xml" />
+<sqlMap resource="com/logserver/model/newrecharge.xml" />
+<sqlMap resource="com/logserver/model/playerlogin.xml" />
+<sqlMap resource="com/logserver/model/playeronle.xml" />
+<sqlMap resource="com/logserver/model/playerkeep.xml" />
+<sqlMap resource="com/logserver/model/slotroom.xml" />
+<sqlMap resource="com/logserver/model/inouttime.xml" />
+<sqlMap resource="com/logserver/model/jackpot.xml" />
+<sqlMap resource="com/logserver/model/tournament.xml" />
+<sqlMap resource="com/logserver/model/worldboss.xml" />
+<sqlMap resource="com/logserver/model/statisticstime.xml" />
+<sqlMap resource="com/logserver/model/diceclassicalbazoogold.xml" />
+<sqlMap resource="com/logserver/model/diceclassicalcallnum.xml" />
+<sqlMap resource="com/logserver/model/diceclassicalguess.xml" />
+<sqlMap resource="com/logserver/model/diceclassicalroom.xml" />
+<sqlMap resource="com/logserver/model/dicecow.xml" />
+<sqlMap resource="com/logserver/model/diceshowhand.xml" />
+<sqlMap resource="com/logserver/model/dicesignin.xml" />
+<sqlMap resource="com/logserver/model/diceblackwhite.xml" />
+<sqlMap resource="com/logserver/model/dicestatisticswinlost.xml" />
+
+	<!-- 自动生成日志的配置结束 -->
+</sqlMapConfig>

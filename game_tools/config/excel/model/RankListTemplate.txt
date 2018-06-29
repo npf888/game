@@ -1,0 +1,8 @@
+int nameId;[notNull=false] // 名称
+int descrip;[notNull=false] //描述
+int rankListId;[notNull=false] //排行榜类型 1 今日单  2 今日总
+String langDesc;[notNull=false] //描述
+int list1;[notNull=false] //名次
+int list2;[notNull=false] //名次
+int reward;[notNull=false] //奖励类型3金钱
+int rewardNum ;[notNull=false] //奖励数量

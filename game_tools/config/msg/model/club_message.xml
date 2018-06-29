@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd" module="club">
+
+	<message type="CG_CLUB_PANEL" comment="打开俱乐部面板">
+	</message>
+
+	<message type="GC_CLUB_LIST" comment="获取俱乐部列表">
+	<field type="com.gameserver.club.protocol.ClubListUnit" name="list" comment="俱乐部排行" list="true" macro="ClubListUnit" />
+<!-- 		<field type="com.gameserver.club.protocol.ClubListUnit" name="list" -->
+<!-- 			comment="俱乐部排行 " list="true"> -->
+<!-- 			<field type="String" name="clubId" comment="俱乐部id" /> -->
+<!-- 			<field type="Integer" name="ico" comment="图标id" /> -->
+<!-- 			<field type="String" name="name" comment="名字" /> -->
+<!-- 			<field type="Integer" name="type" comment="类型" /> -->
+<!-- 			<field type="Integer" name="level" comment="等级" /> -->
+<!-- 			<field type="Integer" name="limit" comment="限制" /> -->
+<!-- 			<field type="Integer" name="num" comment="人数" /> -->
+<!-- 			<field type="Integer" name="maxNum" comment="最大人数" /> -->
+<!-- 			<field type="Integer" name="huoyue" comment="活跃度" /> -->
+<!-- 			<field type="Integer" name="gongxian" comment="贡献" /> -->
+<!-- 			<field type="Integer" name="applied" comment="是否申请过  申请过: 1" /> -->
+<!-- 		</field> -->
+	</message>
+
+	<message type="GC_CLUB_SEARCH_RESULT" comment="俱乐部搜索结果">
+	<field type="com.gameserver.club.protocol.ClubListUnit" name="list" comment="俱乐部搜索结果" list="true" macro="ClubListUnit" />
+<!-- 		<field type="com.gameserver.club.protocol.ClubListUnit" name="list" comment="俱乐部搜索结果 " list="true"> -->
+<!-- 			<field type="String" name="clubId" comment="俱乐部id" /> -->
+<!-- 			<field type="Integer" name="ico" comment="图标id" /> -->
+<!-- 			<field type="String" name="name" comment="名字" /> -->
+<!-- 			<field type="Integer" name="type" comment="类型" /> -->
+<!-- 			<field type="Integer" name="level" comment="等级" /> -->
+<!-- 			<field type="Integer" name="limit" comment="限制" /> -->
+<!-- 			<field type="Integer" name="num" comment="人数" /> -->
+<!-- 			<field type="Integer" name="maxNum" comment="最大人数" /> -->
+<!-- 			<field type="Integer" name="huoyue" comment="活跃度" /> -->
+<!-- 			<field type="Integer" name="gongxian" comment="贡献" /> -->
+<!-- 			<field type="Integer" name="applied" comment="是否申请过  申请过: 1" /> -->
+<!-- 		</field> -->
+	</message>
+
+	<message type="GC_CLUB_RANKING_LIST" comment="俱乐部赛季排行">
+		<field type="Integer" name="opType" comment="1 活跃帮   2贡献榜" />
+		<field type="com.gameserver.club.protocol.ClubListUnit" name="list" comment="俱乐部排行" list="true" macro="ClubListUnit" />
+		<field type="com.gameserver.club.protocol.ClubListUnit" name="self" comment="自己的俱乐部信息" macro="ClubListUnit" />
+		<field type="Integer" name="selfRank" comment="排名" />
+	</message>
+	
+	<message type="CG_CLUB_CREATE" comment="创建俱乐部">
+		<field type="String" name="name" comment="俱乐部名字" />
+		<field type="String" name="notice" comment="公告" />
+		<field type="Integer" name="_type" comment="类型 1	公开 2	需要申请  3 不可加入" />
+		<field type="Integer" name="ico" comment="图标" />
+		<field type="Integer" name="limit" comment="段位限制" />
+	</message>
+
+	<message type="GC_CLUB_INFO" comment="获取俱乐部信息">
+		<field type="com.gameserver.club.protocol.ClubInfoUnit" name="clubInfo" comment="俱乐部信息" macro="ClubInfoUnit" />
+	</message>
+
+	<message type="GC_CLUB_MEMBER_LIST" comment="获取俱乐部成员列表">
+		<field type="com.gameserver.club.protocol.ClubMemberListUnit" name="list" comment="如果操作成功 成员变化后的信息 " list="true"  macro="ClubMemberInfo"/>
+<!-- 		<field type="com.gameserver.club.protocol.ClubMemberListUnit" -->
+<!-- 			name="list" comment="俱乐部排行 " list="true"> -->
+<!-- 			<field type="Long" name="playerId" comment="成员id" /> -->
+<!-- 			<field type="String" name="name" comment="成员名字" /> -->
+<!-- 			<field type="String" name="ico" comment="ico" /> -->
+<!-- 			<field type="Integer" name="level" comment="成员等级" /> -->
+<!-- 			<field type="String" name="country" comment="国籍" /> -->
+<!-- 			<field type="Integer" name="zhiwu" comment="职务" /> -->
+<!-- 			<field type="Integer" name="gongxian" comment="个人贡献" /> -->
+<!-- 			<field type="Integer" name="huoyue" comment="个人活跃度" /> -->
+<!-- 			<field type="Integer" name="online" comment="是否在线" /> -->
+<!-- 			<field type="Integer" name="inGame" comment="是否游戏中" /> -->
+<!-- 			<field type="Long" name="logoutTime" comment="上次下线时间" /> -->
+<!-- 			<field type="Integer" name="tanheState" comment="不可弹劾:0 可弹劾:1 弹劾进行中:2 弹劾成功:3 " /> -->
+<!-- 			<field type="Integer" name="agree" comment="同意人数" /> -->
+<!-- 			<field type="Integer" name="refuse" comment="拒绝人数" /> -->
+<!-- 			<field type="Integer" name="selfState" comment="个人状态 1 同意 2 拒绝 0 未表态" /> -->
+			
+<!-- 		</field> -->
+	</message>
+
+	<message type="GC_CLUB_SIGN_DATA" comment="俱乐签到信息">
+		<field type="Integer" name="canSign" comment="是否可以签到" />
+		<field type="Long" name="nextSignTime" comment="若不能签到这个是知道下次可签到需要持续的时间毫秒" />
+	</message>
+
+	<message type="CG_CLUB_SIGN" comment="俱乐签到">
+	</message>
+	<message type="GC_CLUB_SIGN" comment="俱乐签到">
+		<field type="Integer" name="ret" comment="0 成功 1失败" />
+	</message>
+
+	<message type="GC_CLUB_DONATE_DATA" comment="俱乐部捐献信息">
+		<field type="Integer" name="canDonate" comment="是否可以捐献" />
+		<field type="Long" name="nextSignTime" comment="若不能捐献这个是知道下次可捐献需要持续的时间毫秒" />
+	</message>
+
+	<message type="CG_CLUB_DONATE" comment="俱乐捐献">
+		<field type="Integer" name="count" comment="捐献数量" />
+	</message>
+	<message type="GC_CLUB_DONATE" comment="俱乐捐献">
+		<field type="Integer" name="ret" comment="0 成功 1失败" />
+	</message>
+	<message type="CG_CLUB_SEARCH" comment="俱乐搜索">
+		<field type="String" name="name" comment="俱乐部名字" />
+	</message>
+
+	<message type="CG_CLUB_NOTE_PANEL" comment="俱乐留言板面板">
+	</message>
+
+	<message type="GC_CLUB_NOTE_LIST" comment="俱乐留言列表">
+		<field type="Integer" name="opType"
+			comment="操作类型 1 全部  2 增加  3 删除   4 更新 （可能用不上）" />
+		<field type="com.gameserver.club.protocol.ClubNoteUnit" name="clubNote" comment="俱乐部留言板" list="true" macro="ClubNoteUnit"/>
+	</message>
+
+	<message type="CG_CLUB_NOTE_SEND" comment="俱乐留言板发送">
+		<field type="String" name="msg" comment="内容" />
+	</message>
+
+	<message type="CG_CLUB_NOTE_SEND_GIFT" comment="俱乐留言板发送礼包">
+		<field type="Integer" name="pid" comment="奖励id" />
+	</message>
+	
+	<message type="CG_CLUB_INVATE_LIST" comment="获取俱乐留邀请">
+	</message>
+	
+	<message type="GC_CLUB_INVATE_LIST" comment="获取俱乐留邀请">
+		<field type="com.gameserver.club.protocol.ClubInvateUnit" name="list" comment="邀请列表 " list="true">
+			<field type="String" name="clubId" comment="俱乐部id" />
+			<field type="Integer" name="ico" comment="图标id" />
+			<field type="String" name="name" comment="名字" />
+			<field type="Integer" name="type" comment="类型" />
+			<field type="Integer" name="level" comment="等级" />
+			<field type="Integer" name="limit" comment="限制" />
+			<field type="Integer" name="num" comment="人数" />
+			<field type="Integer" name="maxNum" comment="最大人数" />
+			<field type="Integer" name="huoyue" comment="活跃度" />
+			<field type="Long" name="createTime" comment="邀请时间" />
+		</field>
+	</message>
+
+	<message type="CG_CLUB_RANKING_lIST" comment="获取俱乐留排行榜">
+	<field type="Integer" name="opType" comment="1 活跃帮   2贡献榜" />
+	</message>
+	
+	<message type="CG_CLUB_JOIN" comment="加入俱乐部">
+	<field type="String" name="clubId" comment="俱乐部id" />
+	</message>
+	
+	<message type="CG_CLUB_NOT_JOIN" comment="拒绝加入俱乐部">
+		<field type="String" name="clubId" comment="俱乐部id" />
+	</message>
+	
+	<message type="GC_CLUB_JOIN_RESULT" comment="俱乐部邀请/拒绝结果">
+		<field type="String" name="clubId" comment="要删除的俱乐部id" />
+	</message>
+	
+	<message type="CG_CLUB_APPLY_LIST" comment="获取俱乐留申请">
+	</message>
+	
+	<message type="GC_CLUB_APPLY_LIST" comment="获取俱乐留申请">
+		<field type="Integer" name="opType" comment="类型 0 all  1 增加  2 删除  " />
+		<field type="com.gameserver.club.protocol.ClubApplyUnit" name="list" comment="申请列表" list="true">
+			<field type="Long" name="playerId" comment="申请人id" />
+			<field type="String" name="playerName" comment="申请人名字" />
+			<field type="String" name="img" comment="头像" />
+			<field type="String" name="country" comment="国籍" />
+			<field type="Long" name="level" comment="等级" />
+			<field type="Long" name="time" comment="申请时间毫秒" />
+		</field>
+	</message>
+	
+	<message type="CG_CLUB_APPLY_OP" comment="获取俱乐申请列表">
+		<field type="Long" name="playerId" comment="玩家id" />
+		<field type="Integer" name="opType" comment="类型 0 决绝  1 同意" />
+	</message>
+	
+	<message type="GC_CLUB_APPLY_OP" comment="获取俱乐申请列表">
+		<field type="Integer" name="ret" comment="类型 0 成功 1 失败" />
+	</message>
+
+	<message type="CG_CLUB_INVATE" comment="邀请某人加入俱乐部">
+		<field type="Long" name="playerId" comment="玩家id" />
+	</message>
+
+	<message type="GC_CLUB_INVATE" comment="获取俱乐申请列表">
+		<field type="Integer" name="ret" comment="类型 0 成功 1 失败" />
+	</message>
+
+	<message type="CG_CLUB_JOIN2" comment="从俱乐部列表加入俱乐部">
+		<field type="String" name="clubId" comment="俱乐部id" />
+	</message>
+
+	<message type="GC_CLUB_JOIN2" comment="从俱乐部列表加入俱乐部">
+		<field type="Integer" name="ret" comment="类型 0 成功 1 失败" />
+	</message>
+
+	<message type="CG_CLUB_EDIT" comment="设置俱乐部">
+		<field type="String" name="notice" comment="公告" />
+		<field type="Integer" name="_type" comment="类型 1	公开 2	需要申请  3 不可加入" />
+		<field type="Integer" name="ico" comment="图标" />
+		<field type="Integer" name="limit" comment="段位限制" />
+	</message>
+
+	<message type="GC_CLUB_EDIT" comment="设置俱乐部">
+		<field type="Integer" name="ret" comment="类型 0 成功 1 失败" />
+	</message>
+
+	<message type="CG_CLUB_CHANGE_NAME" comment="俱乐部改名字">
+		<field type="String" name="name" comment="俱乐部名字" />
+	</message>
+
+	<message type="GC_CLUB_CHANGE_NAME" comment="设置俱乐部">
+		<field type="Integer" name="ret" comment="类型 0 成功 1 失败" />
+	</message>
+	
+	<message type="CG_CLUB_LEAVE" comment="离开俱乐部">
+	</message>
+
+	<message type="GC_CLUB_LEAVE" comment="离开俱乐部">
+		<field type="Integer" name="ret" comment="类型 0 成功 1 失败" />
+	</message>
+
+	<message type="CG_CLUB_KICK" comment="踢出俱乐部">
+		<field type="Long" name="playerId" comment="玩家id" />
+	</message>
+
+	<message type="GC_CLUB_KICK" comment="踢出俱乐部">
+		<field type="Integer" name="ret" comment="类型 0 成功 1 失败" />
+	</message>
+	
+	<message type="CG_CLUB_PROMATE" comment="授权">
+		<field type="Long" name="playerId" comment="玩家id" />
+		<field type="Integer" name="opType" comment="类型 0 降职 1 升职" />
+	</message>
+
+	<message type="GC_CLUB_PROMATE" comment="授权">
+		<field type="Integer" name="ret" comment="类型 0 成功 1 失败" />
+		<field type="com.gameserver.club.protocol.ClubMemberListUnit" name="info" comment="如果操作成功 成员变化后的信息 " macro="ClubMemberInfo"/>
+	</message>
+
+	<message type="CG_CLUB_INFO_GET" comment="获取俱乐部信息">
+		<field type="Long" name="playerId" comment="玩家id" />
+	</message>
+
+	<message type="GC_CLUB_INFO_GET" comment="获取俱乐部信息">
+		<field type="com.gameserver.club.protocol.ClubInfoGetUnit" name="clubInfo" comment="俱乐部信息get" macro="ClubInfoGetUnit" />
+	</message>
+	
+	<message type="CG_CLUB_NOTE_DELETE" comment="俱乐部留言删除">
+		<field type="String" name="msgId" comment="留言id" />
+	</message>
+
+	<message type="GC_CLUB_NOTE_DELETE" comment="俱乐部留言删除">
+		<field type="Integer" name="ret" comment="类型 0 成功 1 失败" />
+	</message>
+
+	<message type="CG_CLUB_GET_GIFT" comment="俱乐部留言礼物">
+		<field type="String" name="msgId" comment="留言id" />
+	</message>
+
+	<message type="GC_CLUB_GET_GIFT" comment="俱乐部留言礼物">
+		<field type="Integer" name="ret" comment="类型 0 成功 1 失败" />
+	</message>
+	
+	<message type="CG_CLUB_TANHE" comment="俱乐部发起弹劾">
+	</message>
+<!-- 	<message type="GC_CLUB_TANHE" comment="俱乐部发起弹劾"> -->
+<!-- 		<field type="Integer" name="ret" comment="类型 0 成功 1 失败" /> -->
+<!-- 	</message> -->
+	<message type="CG_CLUB_TANHE_STATE" comment="弹劾状态">
+	</message>
+	<message type="GC_CLUB_TANHE_STATE" comment="弹劾状态">
+		<field type="Integer" name="result" comment="不可弹劾:0 可弹劾:1 弹劾进行中:2 弹劾成功:3 弹劾失败：4" />
+		<field type="Integer" name="agree" comment="同意人数" />
+		<field type="Integer" name="refuse" comment="拒绝人数" />
+		<field type="Integer" name="selfState" comment="个人状态 1 同意 2 拒绝 0 未表态" />
+	</message>
+	<message type="CG_CLUB_TANHE_VOTE" comment="俱乐部弹劾同意/拒绝">
+		<field type="Integer" name="ret" comment="类型 -1 拒绝 1 同意" />
+	</message>
+	<message type="GC_CLUB_TANHE_VOTE" comment="俱乐部弹劾拒绝">
+		<field type="Integer" name="ret" comment="类型 0 成功 1 失败" />
+	</message>
+</messages>

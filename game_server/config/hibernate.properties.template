@@ -1,0 +1,10 @@
+hibernate.connection.url=jdbc:mysql://localhost:3306/texas?useUnicode=true&characterEncoding=utf-8&useServerPrepStmts=true
+hibernate.connection.username=root
+hibernate.connection.password=
+hibernate.connection.provider_class=org.hibernate.connection.C3P0ConnectionProvider
+hibernate.show_sql=true
+hibernate.c3p0.min_size=5
+hibernate.c3p0.max_size=10
+hibernate.c3p0.timeout=1000
+hibernate.c3p0.max_statements=50
+hibernate.show_sql=true

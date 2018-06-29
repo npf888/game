@@ -1,0 +1,21 @@
+String titleName;[notNull=false]	//称号名称（策划用）
+int iconId;[notNull=false;]//无尽副本图标id
+int titleLangId;[notNull=false;] // 说明多语言ID
+String titleDepict;[notNull=false;] // 称号说明
+int titleType;[notNull=false;]//称号类型
+int isOpen;[notNull=false;]//是否开启
+int fihterPower;[notNull=false;]//战力
+int sortId;[notNull=false;]//排序ID
+int hp;[notNull=false;minValue=0]//生命
+int attack;[notNull=false;minValue=0]//攻击力
+int defence;[notNull=false;minValue=0]//防御力
+int hit;[notNull=false;minValue=0] // 命中
+int dodge;[notNull=false;minValue=0] // 闪避
+int crit;[notNull=false;minValue=0] // 爆击
+int critResist;[notNull=false;minValue=0] // 爆击抵抗
+int avoidDamage;[notNull=false;minValue=0] // 免伤
+int critDamage;[notNull=false;minValue=0] // 暴击伤害
+int achieveType;[notNull=false;minValue=0] // 获取条件
+int parameterA;[notNull=false;minValue=0] // 参数1
+int parameterB;[notNull=false;minValue=0] // 参数2
+int viewType;[notNull=false;] // 显示类型

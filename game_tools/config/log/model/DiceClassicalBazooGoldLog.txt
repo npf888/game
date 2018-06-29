@@ -1,0 +1,10 @@
+message com.logserver.model.DiceClassicalBazooGoldLog(
+	int bet;// 房间倍数
+	String roomNum;// 房间号
+	int goldType; // 金币变更类型
+    String goldReason; // 金币类型reason 描述
+	long goldChangeBefore; // 金币变更前
+	long goldChange; // 金币变更额度
+	long goldChangeAfter; // 金币变更额度后
+	String endCount; // 这个结算 主要是 让 每一轮 和每一轮 之间 有 个分界线 
+)

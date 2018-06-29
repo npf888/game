@@ -1,0 +1,6 @@
+message com.logserver.model.QuickerBindLog(
+	long quickerId;
+	String quickerName;
+	long bindId;
+	String bindName;
+)

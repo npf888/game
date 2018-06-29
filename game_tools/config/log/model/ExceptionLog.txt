@@ -1,0 +1,6 @@
+message com.logserver.model.ExceptionLog(
+    String shortMessage; // 短信息
+	Text fullMessage; // 长信息
+	String className; // 类名
+	String methodName; // 方法名
+)

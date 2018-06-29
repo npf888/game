@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="bazoo">
+
+
+	<message type="CG_BAZOO_CHANGE_NAME" comment="修改昵称">
+		<field type="String" name="nickname" comment="用户要变成的昵称"/>
+	</message>
+	<message type="GC_BAZOO_CHANGE_NAME" comment="修改昵称 返回">
+		<field type="String" name="nickname" comment="返回用户改的名称"/>
+	</message>
+	
+	<!-- 吹牛 房间心跳 -->
+	<message type="CG_BAZOO_HEART_BEAT" comment="心跳">
+	</message>
+	<message type="GC_BAZOO_HEART_BEAT" comment="心跳">
+	</message>
+
+	<!-- 吹牛模式 -->
+	<!-- 吹牛模式 -->
+	<!-- 吹牛模式 -->
+	
+	
+	<message type="CG_MODE_CHOSE" comment="选择模式">
+		<field type="Integer" name="modeType" comment="模式类型：1：经典吹牛模式，2：牛牛模式，3：梭哈模式，4：单挑模式，5：单机模式"/>
+	</message>
+	<message type="GC_MODE_CHOSE" comment="选择模式 返回数据">
+		<field type="com.gameserver.bazoo.data.BetTotalNum" name="betTotalNum" comment="bet场 对应的人数信息" list="true" macro="BetTotalNum" ></field>
+	</message>
+	<!--创建私人房间 -->
+	<message type="CG_ROOM_CREATE" comment="创建房间（创建的房间都是私人房间）">
+		<field type="Integer" name="modeType" comment="模式"/>
+		<field type="Integer" name="bet" comment="倍数"/>
+		<field type="String" name="password" comment="创建房间的 密码"/>
+	</message> 
+	<message type="GC_ROOM_CREATE" comment="创建房间（创建的房间都是私人房间）">
+		<field type="Integer" name="isSuccess" comment="创建房间是否成功，0：成功，1：失败"/>
+	</message> 
+	<!--搜索私人房间 -->
+	<message type="CG_ROOM_PRI_SEARCH" comment="搜索私人房间（根据房间号）">
+		<field type="String" name="roomNumber" comment="房间号"/>
+	</message> 
+	<!--搜索私人房间 返回 -->
+	<message type="GC_ROOM_PRI_SEARCH" comment="搜索私人房间（根据房间号,返回）">
+		<field type="String" name="roomNumber" comment="房间号"/>
+	</message> 
+	
+	
+	<!--列出所有的房间-->
+	<message type="CG_ROOM_PRI_List" comment="请求 列出所有的房间">
+	</message> 
+	<message type="GC_ROOM_PRI_List" comment="所有的房间的返回">
+		<field type="com.gameserver.bazoo.data.PriRoomData" name="priRoomData" comment="所有的房间" list="true" macro="PriRoomData" ></field>
+	</message> 
+	
+	
+	<!--加入私人房间 -->
+	<message type="CG_ROOM_PRI_JOIN" comment="加入私人房间（根据房间号加入的）">
+		<field type="String" name="roomNumber" comment="房间号"/>
+		<field type="String" name="password" comment="加入房间需要此房间的 密码"/>
+	</message> 
+	<!--加入私人 返回 -->
+	<message type="GC_ROOM_PRI_JOIN" comment="加入私人房间 返回">
+		<field type="Integer" name="modeType" comment="模式"/>
+		<field type="Integer" name="isSuccess" comment="创建房间是否成功，0：成功，1：失败"/>
+	</message> 
+	
+	
+	
+	
+	<!-- 根据状态返回消息 -->
+	<message type="GC_STATE_ROOM_ENTER" comment="根据状态返回消息 0">
+		<field type="Integer" name="status" comment="新一轮 的状态 "/> 
+	</message>
+	<message type="GC_STATE_ROOM_MATCHING" comment="根据状态返回消息 1">
+		<field type="Integer" name="status" comment="匹配状态 "/> 
+	</message>
+	<message type="GC_STATE_ROOM_READY" comment="根据状态返回消息 2">
+		<field type="Integer" name="status" comment="倒计时  还有多长时间 开始 统一摇色子"/> 
+		<field type="Integer" name="leftSecond" comment="倒计时  还剩几秒"/> 
+	</message>
+	<message type="GC_STATE_ROOM_ROUND_BEGIN" comment="根据状态返回消息 3">
+		<field type="Integer" name="status" comment="收到统一摇色子的消息 之后的状态"/> 
+	</message>
+	
+	<!-- 经典模式的状态 -->
+			<message type="GC_STATE_ROOM_ROUND_TURN" comment="根据状态返回消息4">
+				<field type="Integer" name="status" comment="没有叫号 ，处于等待状态"/> 
+				<field type="Long" name="whoTurnPassportId" comment="谁正在等待（那个人的ID）"/> 
+				<field type="Integer" name="leftSecond" comment="等待剩余时间"/> 
+			</message>
+			<message type="GC_STATE_ROOM_CALL_DICE" comment="根据状态返回消息 5">
+				<field type="Integer" name="status" comment="已经叫号（和上边 的 5 循环切换 状态）"/> 
+			</message>
+			
+			<message type="GC_STATE_ROOM_ROUND_OPEN" comment="根据状态返回消息 6">
+				<field type="Integer" name="status" comment="抢开之后的状态"/> 
+				<field type="Long" name="robPassportId" comment="抢开的人的ID"/> 
+				<field type="Integer" name="robMultiple" comment="抢开倍数"/> 
+			</message>
+			<message type="GC_STATE_ROOM_ROUND_GUESS" comment="根据状态返回消息 7">
+				<field type="Integer" name="status" comment="竞猜的状态"/> 
+			</message>
+			
+	<!-- 牛牛模式 和 经典模式 公用-->
+			<message type="GC_STATE_ROOM_ROUND_RESULT" comment="根据状态返回消息 8 或 11">
+				<field type="Integer" name="status" comment="结算 中 的状态 "/> 
+				<field type="com.gameserver.bazoo.data.EndCountInfo" name="endCountInfo" comment="结算返回 每个人的信息" list="true" macro="EndCountInfo" ></field>
+			</message>
+			
+	<!-- 牛牛模式的状态 （经典模式的result的状态 和 牛牛模式 的result状态是一个）-->
+			<message type="GC_STATE_ROOM_SINGLE_SWING_BEGIN" comment="根据状态返回消息 9">
+				<field type="Integer" name="status" comment="重摇开始 的状态 "/> 
+			</message>
+			
+			<message type="GC_STATE_ROOM_SINGLE_SWING_END" comment="根据状态返回消息 10">
+				<field type="Integer" name="status" comment="重摇结束  的状态 "/> 
+				<field type="com.gameserver.bazoo.data.DiceInfo" name="diceInfo" comment="重摇结束,用户该轮流看每个人的色子值" list="true" macro="DiceInfo" ></field>
+			</message>
+	
+	
+	<!-- 梭哈 模式的状态-->
+	<!-- 梭哈 模式的状态-->
+			<message type="GC_STATE_ROOM_SHOW_HAND_ALL_SWING" comment="根据状态返回消息 12">
+				<field type="Integer" name="status" comment="统一摇完色子 之后 等待 几秒 的 时间状态 "/> 
+				<field type="Integer" name="leftTimes" comment="剩余次数"/>
+				<field type="Long" name="leftSecond" comment="剩余时间"/>
+				<field type="com.gameserver.bazoo.data.DiceInfo" name="diceInfo" comment="重摇结束,用户该轮流看每个人的色子值" list="true" macro="DiceInfo" ></field>
+			</message>
+			
+			<message type="GC_STATE_ROOM_SHOW_HAND_SINGLE_SWING" comment="根据状态返回消息 13">
+				<field type="Integer" name="status" comment="每个人单独摇 的状态（大部分 时间都在这个状态） "/> 
+				<field type="Long" name="lastPassportId"  comment="最后一个需要"/>
+				<field type="Long" name="passportId" list="true" comment="当前摇色子的用户的ID"/>
+				<field type="Integer" name="leftTimes" comment="剩余次数"/>
+				<field type="Long" name="leftSecond" comment="剩余时间"/>
+				<field type="com.gameserver.bazoo.data.DiceInfo" name="diceInfo" comment="其他人的色子的数组" list="true" macro="DiceInfo" ></field>
+				<field type="com.gameserver.bazoo.data.ShowHandBet" name="showHandBet" comment="结算返回 每个人的信息" list="true" macro="ShowHandBet" ></field>
+			</message>
+			<message type="GC_STATE_ROOM_SHOW_HAND_ROUND_RESULT" comment="根据状态返回消息 14">
+				<field type="Integer" name="status" comment="摇完 到进入下一局 之前的状态"/> 
+				<field type="com.gameserver.bazoo.data.EndCountInfo" name="endCountInfo" comment="结算返回 每个人的信息" list="true" macro="EndCountInfo" ></field>
+			</message>
+	
+	<!-- 红黑单双  模式的状态-->
+	
+			<message type="GC_STATE_ROOM_BLACK_WHITE_SOME_ONE_CALL" comment="根据状态返回消息 15">
+				<field type="Long" name="whoCallPassportId" comment="是谁叫的号" />
+				<field type="Integer" name="diceType" comment="叫的是 什么（1:红，2：黑，3：单，4：双）"/>
+				<field type="Integer" name="killNum" comment="几杀" />
+				<field type="Integer" name="multiple" comment="变化的倍数" />
+				<field type="com.gameserver.bazoo.data.BlackWhiteBet" name="blackWhiteBet" comment="结算返回 每个人的信息" list="true" macro="BlackWhiteBet" ></field>
+				<field type="com.gameserver.bazoo.data.BlackWhiteDiceInfo" name="blackWhiteDiceInfo" comment="所有人色子的剩余值" list="true" macro="BlackWhiteDiceInfo" ></field>
+			</message>
+			
+			<message type="GC_STATE_ROOM_BLACK_WHITE_WAIT_SOME_ONE" comment="根据状态返回消息 16">
+				<field type="Long" name="whoTurnPassportId" comment="用户ID" />
+				<field type="Long" name="leftSecond" comment="剩余时间" />
+			</message>
+			
+			<message type="GC_STATE_ROOM_BLACK_WHITE_SWING_LEFT" comment="根据状态返回消息 17">
+				<field type="Integer" name="multiple" comment="变化的倍数" />
+				<field type="Long" name="passportId" list="true" comment="所有需要重摇的用户的ID" />
+				<field type="Integer" name="leftDiceNum" list="true" comment="所有需要重摇的用户剩余的色子数" />
+			</message>
+			
+			<message type="GC_STATE_ROOM_BLACK_WHITE_END" comment="根据状态返回消息 18">
+				<field type="com.gameserver.bazoo.data.EndCountInfo" name="endCountInfo" comment="结算返回 每个人的信息" list="true" macro="EndCountInfo" ></field>
+			</message>
+			
+			
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--被踢出房间 -->
+	<message type="GC_ROOM_BE_REMOVEED" comment="被踢出房间">
+	</message> 
+	
+	
+	<!--加入公共房间 -->
+	<message type="CG_ROOM_PUB_JOIN" comment="加入公共房间（根据房间号加入的）">
+		<field type="String" name="roomNumber" comment="房间号"/>
+	</message> 
+	
+	
+	<!--进入房间 -->
+	<message type="CG_ROOM_ENTER" comment="进入房间">
+		<field type="Integer" name="bet" comment="倍数"/>
+	</message>
+	<!--不允许 进入房间 （因为用户还在某个房间里） -->
+	<message type="GC_ROOM_ENTER_NOT_ALLOW" comment="不允许 进入房间">
+		<field type="Integer" name="langId" comment="多语言ID"/>
+		<field type="String" name="paramsList" list="true" comment="参数列表"/>
+	</message>
+	<!--进入房间  匹配中   当前只有一个用户（用户自己）的时候 发送此消息 告诉用户 应该处于等待状态-->
+	<message type="GC_ROOM_MATCHEDING" comment="进入房间  匹配中   当前只有一个用户（用户自己）的时候 发送此消息 告诉用户 应该处于等待状态">
+	</message>
+	<!--进入房间  匹配上 发送 此消息-->
+	<message type="GC_ROOM_MATCHED" comment="匹配到玩家">
+		<field type="Integer" name="waitTime" comment="等待开始时间（秒）"/>
+	</message>
+	<!--进入房间  谁 进入 发给谁（只发一次） 相当于初始化-->
+	<message type="GC_ROOM_INIT" comment="返回其他人的信息，大于等于 3个人的时候">
+		<field type="Integer" name="pubOrPri" comment="公共场 or 私人场   0:公共 ，1:私人"/>
+		<field type="Long" name="lastPassportId" comment="最后一个叫号的ID：如果是0就不是最后一个"/>
+		<field type="String" name="roomNum" comment="房间号"/>
+		<field type="Integer" name="waitTime" comment="等待时间（只有在第一次开始的时候）"/>
+		<field type="Integer" name="turnWait" comment="每个用户叫号 间隔"/>
+		<field type="Integer" name="guessWait" comment="竞猜时间  间隔"/>
+		<field type="Integer" name="onePoint" comment="万能符是否叫过 0没有叫过，1叫过"/>
+		<field type="Integer" name="cowSwingToBegin" comment="牛牛模式 统一摇完色子之后 到 重摇色子之前"/>
+		<field type="Integer" name="cowOneRoundTime" comment="牛牛模式 一局 的时间"/>
+		<field type="Integer" name="cowLookDiceValueTime" comment="牛牛模式 一局 用户 重摇结束到 结算之前 会有段时间 去看别人的色子"/>
+		<field type="Integer" name="cowEndCountTime" comment="牛牛模式 结算时间"/>
+		<field type="Integer" name="reShakingTimes" comment="梭哈模式 一个人代表的次数"/>
+		<field type="Integer" name="showHandWhoTurn" comment="梭哈模式 该轮到谁摇 色子"/>
+		<field type="Integer" name="showHandShakeTime" comment="梭哈模式  用户摇 色子的时间"/>
+		<field type="Integer" name="showHandEndToStart" comment="梭哈模式  结束到开始"/>
+		<field type="Long" name="bankPassportId" comment="牛牛模式  的庄家ID"/>
+		
+		<field type="com.gameserver.bazoo.data.EndCountInfo" name="endCountInfo" comment="结算返回 每个人的信息" list="true" macro="EndCountInfo" ></field>
+		<field type="com.gameserver.bazoo.data.ShowHandBet" name="showHandBet" comment="结算返回 每个人的信息" list="true" macro="ShowHandBet" ></field>
+		
+		<field type="com.gameserver.bazoo.data.ReturnPlayerInfo" name="returnPlayerInfo" comment="其他人的信息" list="true" macro="ReturnPlayerInfo" ></field>
+	</message>
+	
+	<!--进入房间  有新人进入了，那些正在房间里的人  会收到 这个消息-->
+	<message type="GC_ROOM_ENTER" comment="进入房间  有新人进入了，那些正在房间里的人  会收到 这个消息">
+		<field type="com.gameserver.bazoo.data.ReturnPlayerInfo" name="returnPlayerInfo" comment="其他人的信息" list="true" macro="ReturnPlayerInfo" ></field>
+	</message>
+	
+	<!--房间状态 变化-->
+	<message type="GC_ROOM_STATE" comment="房间状态 变化">
+		<field type="Integer" name="roomState" comment="房间状态"/>
+	</message>
+	
+	
+	<!--退出房间 -->
+	<message type="CG_ROOM_OUT" comment="退出房间">
+		<field type="Integer" name="bet" comment="倍数"/>
+	</message>
+	<message type="GC_ROOM_OUT" comment="某个用户 退出房间 当前 房间内所有用户 收到 此退出房间消息 ">
+		<field type="Long" name="beRemovedPassportIds" list="true" comment="每次退出房间时,被移除房间 的所有的用户ID"/>
+	</message>
+	
+
+
+	<!--普通人：统一摇色子得返回  告诉前端 摇色子（前端摇色子 需要时间,返回此接口的时候后台去 等待一小会） -->
+	<message type="GC_DICE_UNIFY_SWING" comment="统一摇色子得返回(由服务器来统一摇色子  同时表示新一轮开始 )">
+		<field type="Long" name="passportId" comment="用户ID" />
+		<field type="Integer" name="diceValues"  list="true" comment="色子的值" />
+	</message>
+	
+	<!--机器人：统一摇色子得返回  告诉前端 摇色子（前端摇色子 需要时间,返回此接口的时候后台去 等待一小会） -->
+	<message type="GC_ROBOT_DICE_UNIFY_SWING" comment="统一摇色子返回 给机器人所有人的 所有的值">
+		<field type="com.gameserver.bazoo.data.DiceInfo" name="diceInfo" comment="机器人看到所有人的值" list="true" macro="DiceInfo" ></field>
+	</message>
+	<!--机器人：告诉机器人 要进入哪个房间 -->
+	<message type="GC_ROBOT_WHICH_ROOM_TO_GOIN" comment="告诉机器人 要进入哪个房间 ">
+		<field type="Long" name="passportId" comment="用户ID" />
+		<field type="String" name="roomNumber" comment="要进入哪个房间"/>
+	</message>
+	
+	<!--统一摇色子得返回(由服务器来摇色子 表示新一轮开始 ) -->
+	<message type="GC_DICE_USER_SHOULD_SWING" comment="紧接上一个接口，服务器等待一小会之后，告诉所有人谁改摇色子了shouldCallPassportId 如果等于 0 说明是重摇,不等于 0是 统一摇">
+		<field type="Long" name="shouldCallPassportId" comment="统一摇完之后 该哪个用户叫号" />
+	</message>
+
+	<!-- 单独摇色子 -->
+	<message type="CG_DICE_SINGLE_SWING" comment="单独摇色子">
+	</message>
+	<!-- 单独摇色子返回 -->
+	<message type="GC_DICE_SINGLE_SWING" comment="单独摇色子返回值，返回给自己的有diceValues,返回个其他人的没有 diceValues为空">
+		<field type="Long" name="passportId" comment="用户ID" />
+		<field type="Integer" name="diceValues"  list="true" comment="色子的值" />
+	</message>
+	
+	<!-- 每个人轮流 叫号 -->
+	<message type="CG_TALK_BIG" comment="每个人轮流 叫号 ">
+		<field type="Integer" name="diceNum" comment="色子的数量"/>
+		<field type="Integer" name="diceValue" comment="色子的值"/>
+	</message>
+	<message type="GC_TALK_BIG" comment="叫号完毕">
+		<field type="Long" name="WhoTurnPassportId" comment="轮到哪个人(这个人的ID)叫号了"/>
+		<field type="Long" name="curPassportId" comment="当前叫号的是哪个人"/>
+		<field type="Integer" name="callDiceNum" comment="用户叫的色子的数量"/>
+		<field type="Integer" name="callDiceValue" comment="用户叫的色子的值"/>
+		<field type="Integer" name="onePoint" comment="万能符是否叫过 0没有叫过，1叫过"/>
+	</message>
+	
+	<!-- 抢开-->
+	<message type="CG_ROB_OPEN" comment="抢开 ">
+	</message>
+	<message type="GC_ROB_OPEN" comment="抢开返回信息">
+		<field type="Long" name="robPassportId" comment="抢开的人的ID"/>
+		<field type="Integer" name="multiple" comment="抢开的倍数"/>
+	</message>
+	
+	
+	<!-- 抢开 之后 , 竞猜大小之前  前端 要等待一小段时间(动画时间)  然后在发送这个接口 通知前端 打开 竞猜的 窗口-->
+	<message type="GC_GUESS_OPEN" comment="抢开 之后 , 竞猜大小之前  前端 要等待一小段时间(动画时间)  然后在发送这个接口 通知前端 打开 竞猜的 窗口 ">
+	</message>
+	<!-- 抢开 之后 其他人 竞猜大小 -->
+	<message type="CG_GUESS_BIG_SMALL" comment="抢开 之后 其他人 竞猜大小 ">
+		<field type="Integer" name="bigSmall" comment="1:大于         0:小于"/>
+	</message>
+	
+	<!-- 竞猜 完 大小 有个小手会飞到 同意的人个人身上 -->
+	<message type="GC_GUESS_BIG_SMALL" comment="抢开 之后 其他人 竞猜大小 推送所有人">
+		<field type="Long" name="passportId" comment="当前是哪个用户(他的ID)"/>
+		<field type="Long" name="agreePassportId" comment="当前这个用户 同意了 哪个用户(他的ID)"/>
+	</message>
+	
+	
+	<!-- 最终结算返回 -->
+	<message type="GC_END_COUNT" comment="结算返回">
+		<field type="Integer" name="finalDiceNum" comment="最终 这一局 有几个 叫的色子值(个数)" />
+		<field type="com.gameserver.bazoo.data.EndCountInfo" name="endCountInfo" comment="结算返回 每个人的信息" list="true" macro="EndCountInfo" ></field>
+	</message>
+	
+	
+	
+
+	
+
+
+	
+	
+	<!-- 牛牛模式 -->
+	<!-- 牛牛模式 -->
+	<!-- 牛牛模式 -->
+	
+	<!-- 统一摇一次色子的返回值 -->
+	<message type="GC_COW_UNIFY_SWING" comment="牛牛 模式:统一摇号返回">
+		<field type="Integer" name="oneRoundTime" comment="一局的时间（秒）"/>
+		<field type="Integer" name="cowNameInt" comment="名称用 int类型表示"/>
+		<field type="Integer" name="diceValues" list="true" comment="色子的值的集合"/>
+		<field type="Integer" name="redDiceValues" list="true" comment="需要被标红的色子的值的集合"/>
+		<field type="Long" name="passportId" comment="庄家的ID"/>
+	</message>
+	<message type="GC_COW_SINGLE_SWING_BEGIN" comment="牛牛 模式:重摇开始">
+	</message>
+	
+	
+	
+	<!-- 单独摇号 -->
+	<message type="CG_COW_SINGLE_SWING" comment="牛牛 模式:单独摇号">
+		<field type="Integer" name="diceValues" list="true" comment="将要被 重摇的  色子的值的集合"/>
+	</message>
+	<message type="GC_COW_SINGLE_SWING" comment="牛牛 模式:统一摇号返回">
+		<field type="Long" name="passportId" comment="用户的ID"/>
+		<field type="Integer" name="cowNameInt" comment="名称用 int类型表示"/>
+		<field type="Integer" name="diceValues" list="true" comment="色子的值的集合"/>
+		<field type="Integer" name="redDiceValues" list="true" comment="需要被标红的色子的值的集合"/>
+	</message>
+	
+	
+	
+	<message type="GC_COW_SINGLE_SWING_END" comment="牛牛 模式:单独摇号">
+		<field type="com.gameserver.bazoo.data.DiceInfo" name="diceInfo" comment="重摇结束,用户该轮流看每个人的色子值" list="true" macro="DiceInfo" ></field>
+	</message>
+	
+	<!-- 结算完毕  给所有人返回 -->
+	<message type="GC_COW_END_UNIFY_SWING" comment="牛牛 模式:结算完毕  给所有人返回">
+		<field type="com.gameserver.bazoo.data.EndCountInfo" name="endCountInfo" comment="结算返回 每个人的信息" list="true" macro="EndCountInfo" ></field>
+	</message>
+	
+	
+	
+	
+	
+	<!-- 梭哈模式 -->
+	<!-- 梭哈模式 -->
+	<!-- 梭哈模式 -->
+	
+	<message type="GC_SHOW_HAND_UNIFY_SWING" comment="梭哈 模式:统一摇号返回">
+		<field type="Integer" name="leftTimes" comment="剩余次数"/>
+		<field type="com.gameserver.bazoo.data.DiceInfo" name="diceInfo" comment="梭哈 模式：统一摇号会返回所有人的值" list="true" macro="DiceInfo" ></field>
+	</message>
+	<message type="GC_SHOW_HAND_LITTLE_SWING" comment="梭哈  模式:最小的人 摇色子">
+		<field type="Long" name="passportId" list="true" comment="那个点数 最低的人 去摇色子（这个人的ID）"/>
+	</message>
+	
+	
+	<!-- 梭哈模式   用户选择一个色子 其他人就会看到-->
+	<message type="CG_SHOW_HAND_SINGLE_SWICH" comment="梭哈  模式:选择色子（某个）">
+		<field type="Integer" name="diceIndex" comment="用户选择的某个色子的索引"/>
+	</message>
+	<message type="GC_SHOW_HAND_SINGLE_SWICH" comment="梭哈  模式:选择色子（某个）">
+		<field type="Long" name="passportId" comment="谁选择的色子"/>
+		<field type="Integer" name="diceIndex" comment="用户选择的某个色子的索引"/>
+	</message>
+	
+	<!-- 梭哈模式   用户  取消选择一个色子 其他人就会看到-->
+	<message type="CG_SHOW_HAND_SINGLE_SWICH_CANCEL" comment="梭哈  模式:取消 选择色子（某个）">
+		<field type="Integer" name="diceIndex"  comment="用户  取消选择的某个色子的索引"/>
+	</message>
+	<message type="GC_SHOW_HAND_SINGLE_SWICH_CANCEL" comment="梭哈  模式:取消 选择色子（某个）">
+		<field type="Long" name="passportId" comment="谁选择的色子"/>
+		<field type="Integer" name="diceIndex"  comment="用户  取消选择的某个色子的索引"/>
+	</message>
+	
+	
+	<!-- 梭哈模式   用户单独摇色子-->
+	<message type="CG_SHOW_HAND_SINGLE_SWING" comment="梭哈  模式:单独摇色子">
+		<field type="Integer" name="diceValues" list="true" comment="将要被 重摇的  色子的值的集合"/>
+	</message>
+	<!-- 梭哈模式   用户单独摇色子 的返回 摇发送给所有人-->
+	<message type="GC_SHOW_HAND_SINGLE_SWING" comment="梭哈  模式:最小的人 摇色子">
+		<field type="Long" name="passportId" comment="那个点数 最低的人 去摇色子（这个人的ID）"/>
+		<field type="Integer" name="diceValues" list="true" comment="将要被 重摇的  色子的值的集合"/>
+		<field type="Integer" name="nameInt" comment="几小牛"/>
+		<field type="Integer" name="leftTimes" comment="剩余次数"/>
+		<field type="com.gameserver.bazoo.data.ShowHandBet" name="showHandBet" comment="结算返回 每个人的信息" list="true" macro="ShowHandBet" ></field>
+	</message>
+	
+	
+	<!-- 梭哈模式  结算-->
+	<message type="GC_SHOW_HAND_END_COUNT" comment="梭哈  模式: 最终结算">
+		<field type="com.gameserver.bazoo.data.EndCountInfo" name="endCountInfo" comment="结算返回 每个人的信息" list="true" macro="EndCountInfo" ></field>
+	</message>
+	
+	
+	
+	
+	
+	
+	<!-- 红黑单双 模式 -->
+	<!-- 红黑单双 模式 -->
+	<!-- 红黑单双 模式 -->
+	
+	
+	
+	
+	<!-- 统一摇色子得返回(由服务器来统一摇色子  同时表示新一轮开始 ) -->
+	<message type="GC_BLACK_WHITE_ALL_SWING" comment="统一摇色子得返回(由服务器来统一摇色子  同时表示新一轮开始 )">
+		<field type="Long" name="passportId" list="true" comment="所有需要重摇的用户的ID" />
+		<field type="Integer" name="leftDiceNum" list="true" comment="所有需要重摇的用户剩余的色子数" />
+		<field type="Integer" name="diceValues"  list="true" comment="当前用户的色子的值" />
+		<field type="Integer" name="multiple" comment="变化的倍数" />
+		<field type="com.gameserver.bazoo.data.BlackWhiteNum" name="blackWhiteNum" comment="红黑单双的数量"  macro="BlackWhiteNum" ></field>
+	</message>
+	
+	
+	<!-- 轮到谁叫号了 -->
+	<message type="GC_BLACK_WHITE_WHO_TURN" comment="轮到谁叫号了">
+		<field type="Long" name="whoTurnPassportId" comment="用户ID" />
+		<field type="Long" name="leftSecond" comment="剩余时间" />
+	</message>
+	
+	<!-- 每个人轮流 叫号 -->
+	<message type="CG_BLACK_WHITE_CALL_NUM" comment="每个人轮流 叫号 ">
+		<field type="Integer" name="diceType" comment="1:红，2：黑，3：单，4：双"/>
+	</message>
+	
+	<!-- 每个人轮流 叫号 返回-->
+	<message type="GC_BLACK_WHITE_CALL_NUM" comment="每个人轮流 叫号 返回">
+		<field type="Long" name="whoCallPassportId" comment="是谁叫的号" />
+		<field type="Integer" name="diceType" comment="叫的是 什么（1:红，2：黑，3：单，4：双）"/>
+		<field type="Integer" name="killNum" comment="几杀" />
+		<field type="Integer" name="multiple" comment="变化的倍数" />
+		<field type="com.gameserver.bazoo.data.BlackWhiteBet" name="blackWhiteBet" comment="结算返回 每个人的信息" list="true" macro="BlackWhiteBet" ></field>
+		<field type="com.gameserver.bazoo.data.BlackWhiteDiceInfo" name="blackWhiteDiceInfo" comment="所有人色子的剩余值" list="true" macro="BlackWhiteDiceInfo" ></field>
+	</message>
+	
+	
+	<!-- 梭哈模式  结算-->
+	<message type="GC_BLACK_WHITE_END_COUNT" comment="红黑单双  模式: 最终结算">
+		<field type="com.gameserver.bazoo.data.EndCountInfo" name="endCountInfo" comment="结算返回 每个人的信息" list="true" macro="EndCountInfo" ></field>
+	</message>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- 大厅通知前端, 状态 是否有没做的事 主动请求-->
+	<message type="CG_BAZOO_HALL_STATUS" comment="大厅通知前端, 状态 是否有没做的事，主动请求">
+	</message>
+	<!-- 大厅通知前端, 状态 是否有没做的事（会显示小红点）-->
+	<message type="GC_BAZOO_HALL_STATUS" comment="大厅通知前端, 状态 是否有没做的事（会显示小红点）">
+		<field type="Integer" name="signInStatus" comment="0:没有领取,1:已经领取"/>
+		<field type="Integer" name="taskNumber" comment="任务 已完成未领取的数量"/>
+	</message>
+	
+	
+	
+	<!-- 发送魔法表情-->
+	<message type="CG_BAZOO_MAGIC_FACE" comment="调用 魔法表情">
+		<field type="Long" name="sendPassportId" comment="谁发的"/>
+		<field type="Long" name="receivePassportId" comment="给谁发的"/>
+		<field type="String" name="magicFace"  comment="发送的魔法表情"/>
+	</message>
+	<message type="GC_BAZOO_MAGIC_FACE" comment="返回 魔法表情">
+		<field type="Long" name="sendPassportId" comment="谁发的"/>
+		<field type="Long" name="receivePassportId" comment="给谁发的"/>
+		<field type="String" name="magicFace"  comment="发送的魔法表情"/>
+	</message>
+	
+	
+	<!--新手进度 -->
+	<message type="CG_BAZOO_NEWGUY_PROCESS" comment="存储新手的进度(每调用一次 -->某个模式进度完毕)">
+		<field type="Integer" name="ModeType" comment="模式(1:经典, 2:牛牛, 3:梭哈, 4:红黑)"/>
+	</message>
+	
+	
+	<!-- 第三方博趣平台入口 -->
+	<message type="CG_BAZOO_BOQU" comment="博趣平台入口">
+		<field type="String" name="pcOrMobile" comment="是pc端还是手机端，PC端传入'pc',手机端传入'mobile'"/>
+	</message>
+	<message type="GC_BAZOO_BOQU" comment="博趣平台入口 返回页面（前端直接访问）">
+		<field type="String" name="htmlPage" comment="base64编码之后的带参数的页面"/>
+	</message>
+	
+	
+	<message type="CG_BAZOO_FACEBOOK_ADD_GOLD" comment="facebook 的广告 每看一次 加多少金币">
+		<field type="Integer" name="gold" comment="增加的金币数量"/>
+	</message>
+</messages>
+
+
+
+
+
+
+

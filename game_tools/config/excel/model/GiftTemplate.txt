@@ -1,0 +1,15 @@
+int nameId;[notNull=false] // 名称
+int descrip;[notNull=false] //描述
+String langDesc;[notNull=false] //描述
+String icon;[notNull=false] //图片
+int giftType;[notNull=false] //礼包类型 1 商店礼包 2新手礼包 3 多种礼包
+int levelDown;[notNull=false] //等级下限
+int levelUp;[notNull=false] //等级上限
+int vipLevel;[notNull=false] //vip等级限制
+int gift1;[notNull=false] //礼包1
+int gift2;[notNull=false] //礼包2
+int gift3;[notNull=false] //礼包3
+int noVipGiftTime;[notNull=false] //非VIP持续时间
+int vipGiftTime;[notNull=false] //VIP持续时间
+int noMoneyInGame;[notNull=false] //没钱持续时间
+int buyTimes;[notNull=false] //

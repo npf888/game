@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="shop">
+
+	<!-- 商品信息-->
+	<message type="CG_SHOP_LIST" comment="客户端请求商品信息">
+	</message>
+	
+	<message type="GC_SHOP_LIST" comment="客户端请求商品信息">
+		<field type="com.gameserver.shop.data.ShopInfoData"
+			name="shopList" comment="商品信息" macro="ShopInfoData"  list="true"/>
+	</message>
+	
+	<message type="CG_BUY_ITEM" comment="客户端请求购买">
+		<field type="Integer" comment="商品id" name="shopId"/>
+	</message>
+	
+	<message type="GC_BUY_ITEM" comment="客户端购买成功">
+		<field type="Integer" comment="商品id" name="shopId"/>
+	</message>
+</messages>

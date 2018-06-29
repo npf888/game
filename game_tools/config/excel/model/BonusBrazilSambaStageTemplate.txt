@@ -1,0 +1,5 @@
+int slotsNum;[notNull=false;minValue=0] //老虎机类型
+int velocity;[notNull=false;minValue=0] //作者: 力度条颜色 （前端上传）1：黄色 2：黄绿色 3：绿色
+int type;[notNull=false;minValue=0] //1.奖励类型
+int reward;[notNull=false;minValue=0] //单线下注额倍数,(百分比，实际值除以100）
+int weight;[notNull=false;minValue=0] //权值

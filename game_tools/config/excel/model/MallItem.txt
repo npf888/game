@@ -1,0 +1,18 @@
+int nameLangId;[notNull=false;minValue=0] // 道具名称多语言 Id
+String name;[notNull=false;NotTranslate]//道具名称
+int descLangId;[notNull=false;minValue=0] // 文字描述多语言 Id
+String desc;[notNull=false;NotTranslate]//文字描述
+int itemTemplateId;[notNull=false;minValue=0] // 道具模板ID
+int itemType;[notNull=false] //道具类型
+int itemCount;[notNull=false;minValue=1] // 道具数量
+int currencyType;[notNull=false;] // 货币类型
+int sellPrice;[notNull=false;minValue=1]//出售价格
+int vipSellPrice;[notNull=false;minValue=1]//VIP出售价格
+int ifDiscount;[notNull=false;minValue=0;maxValue=1] //是否折扣
+int discountRate;[notNull=false;] //折扣百分比
+int weight;[notNull=false;] //权重
+int sellAssort;[notNull=false;minValue=0]//默认商城分类
+int sellTag;[notNull=false;minValue=0]//默认出售标签
+int ifCanPut;[notNull=false;minValue=0;maxValue=1] //是否默认上架
+int minLevel;[notNull=false] //随机到此物品的最低等级
+int maxLevel;[notNull=false] //随机到此物品的最高等级

@@ -1,0 +1,8 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int slotsNum;[notNull=false;minValue=0] //老虎机类型
+int Num;[notNull=false;minValue=0] //第几次中奖
+int rewardNum;[notNull=false;minValue=0] //作者:猜中奖励，单线下注额的倍数，数值除以100使用
+int probability;[notNull=false;minValue=0] //概率取值除以100

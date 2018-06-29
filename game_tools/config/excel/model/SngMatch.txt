@@ -1,0 +1,20 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int openUp;[notNull=false;minValue=0] //房间是否开启
+int roomNum;[notNull=false;minValue=1] //房间人数
+int dealerCost;[notNull=false;minValue=1] //dealer cost
+int openRoomNum;[notNull=false;minValue=0] //房间数
+int entryFee;[notNull=false;minValue=1] //入场费
+int serviceFee;[notNull=false;minValue=1] //服务费
+int chipsReward1;[notNull=false;minValue=1] //金杯筹码奖励
+int scoreReward1;[notNull=false;minValue=1] //金杯分数奖励
+int chipsReward2;[notNull=false;minValue=1]	//银杯筹码奖励
+int scoreReward2;[notNull=false;minValue=1] //银杯分数奖励
+int initialChips;[notNull=false;minValue=1] //起始筹码
+int ticketId;[notNull=false;minValue=1] //门票id
+
+
+
+

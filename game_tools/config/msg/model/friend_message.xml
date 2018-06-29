@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="relation">
+
+	
+	
+	<!--客户端请求好友列表 -->
+	<message type="CG_LOAD_FRIEND_LIST" comment="客户端请求好友列表">
+	</message>
+	
+	<message type="GC_LOAD_FRIEND_LIST" comment="客户端请求好友列表">
+			<field type="com.gameserver.relation.data.FriendDetailInfoData"
+			clientType="com.gameserver.relation.data.FriendDetailInfoData" name="friendDetailInfoDatalist" comment="玩家信息" macro="FriendDetailInfoData" list="true">
+		</field>
+	</message>
+	
+	<message type="CG_LOAD_FRIEND_REQUEST_LIST" comment="客户端请求好友列表">
+	</message>
+	<message type="GC_LOAD_FRIEND_REQUEST_LIST" comment="客户端请求好友列表">
+<field type="com.gameserver.player.data.PlayerInfoData"
+			clientType="com.gameserver.player.data.PlayerInfoData" name="friendRequestInfoDataList" comment="玩家信息" macro="PlayerInfoData" list="true">
+		</field>
+	
+	</message>
+	
+	<!-- 客户端请求添加好友 -->
+	<message type="CG_REQUEST_FRIEND" comment="客户端请求添加好友">
+		<field type="Long" comment="玩家id" name="playerId"/>
+	</message>
+	
+	<!-- 客户端请求添加好友回复 -->
+	<message type="GC_REQUEST_FRIEND" comment="请求添加好友">
+		<field type="Long" comment="玩家id" name="playerId"/>
+	</message>
+	
+	<!-- 客户端请求添加好友回复同步 -->
+	<message type="GC_REQUEST_FRIEND_SYNC" comment="请求添加好友同步">
+		<field type="com.gameserver.player.data.PlayerInfoData"
+			clientType="com.gameserver.player.data.PlayerInfoData" name="friendRequestInfoData" comment="玩家信息" macro="PlayerInfoData" >
+		</field>
+	</message>
+	
+	<!-- 客户端添加好友 -->
+	<message type="CG_APPLY_FRIEND" comment="客户端处理好友请求">
+		<field type="Long" comment="请求id" name="playerId"/>
+		<field type="Integer" comment="处理结果" name="result"/>
+	</message>
+	
+	<message type="GC_APPLY_FRIEND" comment="客户端处理好友请求">
+		<field type="Long" comment="玩家id" name="playId"/>
+		<field type="Integer" comment="处理结果" name="result"/>
+	</message>
+	
+	<!-- 客户端添加好友 -->
+	<message type="GC_ADD_FRIEND" comment="客户端处理好友请求">
+		<field type="com.gameserver.relation.data.FriendDetailInfoData"
+			clientType="com.gameserver.relation.data.FriendDetailInfoData" name="friendDetailInfoData" comment="玩家信息" macro="FriendDetailInfoData" >
+		</field>
+	</message>
+	
+	<!-- 客户端删除好友 -->
+	<message type="CG_DELETE_FRIEND" comment="客户端删除好友请求">
+		<field type="Long" comment="好友id" name="friendId"/>
+	</message>
+	
+	<message type="GC_DELETE_FRIEND" comment="客户端删除好友请求">
+		<field type="Long" comment="好友id" name="friendId"/>
+	</message>
+	
+	<message type="CG_LOAD_FRIEND_GIFT_LIST" comment="客户端请求好友礼物列表">
+	</message>
+	<message type="GC_LOAD_FRIEND_GIFT_LIST" comment="客户端请求好友礼物列表">
+		<field type="com.gameserver.relation.data.FriendGiftInfoData"
+			clientType="com.gameserver.relation.data.FriendGiftInfoData" name="friendGiftInfoDataList" comment="玩家信息" macro="FriendGiftInfoData" list="true">
+		</field>
+	</message>
+		
+	<!-- 发送礼物 -->
+	<message type="CG_FRIEND_GIFT" comment="发送礼物">
+	 
+	<field type="Long" comment="好友id" name="friendId"/>
+	
+	</message>
+	
+	<message type="GC_FRIEND_GIFT" comment="发送礼物">
+		<field type="com.gameserver.relation.data.FriendAlreadyGiftListData" clientType="FriendAlreadyGiftListData" name="friendAlreadyGiftListData" macro="FriendAlreadyGiftListData" list="true" comment="已发送礼物好友列表"/>
+	</message>
+	
+	<!-- 客户端请求发送礼物同步 -->
+	<message type="GC_FRIEND_GIFT_SYNC" comment="发送礼物同步">
+		<field type="com.gameserver.relation.data.FriendGiftInfoData"
+			clientType="com.gameserver.relation.data.FriendGiftInfoData" name="friendGiftInfoData" comment="玩家信息" macro="FriendGiftInfoData" >
+		</field>
+	</message>
+
+			
+	<!-- 领取礼物 -->
+	<message type="CG_FRIEND_GIFT_GET" comment="领取礼物">
+		<field type="Long" comment="礼物id" name="giftId"/>
+	</message>
+	
+	<message type="GC_FRIEND_GIFT_GET" comment="领取礼物">
+		<field type="Long" comment="礼物id" name="giftId"/>
+	</message>
+	
+		<!-- facebook-->
+	<message type="CG_FACEBOOK_FRIENDS_SYNC" comment="facebook好友">
+		<field type="String"  name="friendList" list="true" comment="好友"/>
+	</message>
+	
+	<message type="CG_FACEBOOK_NUM" comment="facebook好友个数">
+		<field type="Integer"  name="friendNum" comment="好友个数"/>
+	</message>
+	
+	
+	
+	<message type="GC_FACEBOOK_FRIENDS_SYNC" comment="facebook好友">
+			<field type="com.gameserver.relation.data.FriendDetailInfoData"
+			clientType="com.gameserver.relation.data.FriendDetailInfoData" name="friendRequestInfoData" list="true" comment="玩家信息" macro="FriendDetailInfoData" >
+		</field>
+	</message>
+	
+	<message type="CG_STRANGER_LIST" comment="请求陌生人列表">
+	</message>
+	
+	<message type="GC_STRANGER_LIST"  comment="返回陌生人列表">
+	  <field type="com.gameserver.relation.data.StrangerData" clientType="StrangerData" name="strangerData" list="true" macro="StrangerData" comment="服务器返回数据"/>
+	</message>
+	
+	<message type="CG_ENTER_FRIENDS_ROOM" comment="进入好友房间">
+	      <field type="Long" comment="好友ID" name="friendId"/>
+	</message>
+	
+</messages>

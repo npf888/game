@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns="http://www.xgame.com"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.xgame.com"
+	elementFormDefault="qualified">
+
+<!-- 
+// templateToGen
+/////////////////////////////////////////////////////////////////// 
+//-->
+	<xs:element name="templateToGen">
+		<xs:annotation>
+			<xs:documentation><![CDATA[文档根标记]]></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="template" />
+				<xs:element ref="skip" />
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+
+<!-- 
+// template
+/////////////////////////////////////////////////////////////////// 
+//-->
+	<xs:element name="template">
+		<xs:annotation>
+			<xs:documentation><![CDATA[模板配置]]></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="templateConfigFileName" />
+				<xs:element ref="clazzName" />
+				<xs:element ref="clazzComment" />
+				<xs:element ref="superClazz" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+<!-- 
+// templateConfigFileName, 
+// clazzName, 
+// clazzComment, 
+// superClazz
+/////////////////////////////////////////////////////////////////// 
+//-->
+
+	<xs:element name="templateConfigFileName">
+		<xs:annotation>
+			<xs:documentation><![CDATA[模板配置文件名称]]></xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="clazzName">
+		<xs:annotation>
+			<xs:documentation><![CDATA[模板类的完整名称, 例如 : com.xgame.war2.building.BuildingTemplateVO]]></xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="clazzComment">
+		<xs:annotation>
+			<xs:documentation><![CDATA[模板类注释信息]]></xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	
+	<xs:element name="superClazz">
+		<xs:annotation>
+			<xs:documentation><![CDATA[模板类的父类]]></xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+<!-- 
+// skip
+/////////////////////////////////////////////////////////////////// 
+//-->
+	<xs:element name="skip">
+		<xs:annotation>
+			<xs:documentation><![CDATA[跳过标记, 在该标记之内的所有 &lt;template&gt; 标记将被忽略!]]></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="template" 
+					minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

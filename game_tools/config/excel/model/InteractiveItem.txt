@@ -1,0 +1,7 @@
+int nameId;[notNull=false]//语言Id
+int descrip;[notNull=false]//名称
+String langDesc;[notNull=false]//语言描述
+String icon;[notNull=false]	//图标
+int costChips;[notNull=false,minValue=0]//花费筹码
+int changeCharm;[notNull=false,minValue=1]//魅力值改变
+int quality;[notNull=false,minValue=1]//品质

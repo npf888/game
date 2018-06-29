@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="baccart">
+
+	<!--百家乐列表-->
+	<message type="CG_BACCART_LIST" comment="百家乐列表">
+	</message>
+	
+	<!--百家乐列表-->
+	<message type="GC_BACCART_LIST" comment="百家乐列表">
+		<field type="com.gameserver.baccart.data.BaccartRoomData" name="baccartRoomDataList" comment="百家乐房间列表" list="true" macro="BaccartRoomData" ></field>
+	</message>
+		
+	
+	<!--百家乐洗牌-->
+	<message type="GC_BACCART_SHUFFLE" comment="百家乐洗牌">
+		<field type="Integer" name="remainCards" comment="剩余牌" />
+	</message>
+	<!--百家乐开始下注-->
+	<message type="GC_BACCART_START_BET" comment="百家乐开始下注">
+	</message>
+	
+	<!--百家乐下注信息-->
+	<message type="CG_BACCART_BET" comment="百家乐下注">
+		<field type="com.gameserver.baccart.data.BaccartBetData" name="betDataList" comment="下注列表" list="true" macro="BaccartBetData" ></field>	
+	</message>
+	
+	<message type="GC_BACCART_BET" comment="百家乐下注">
+		<field type="Long" name="playerId" comment="玩家id" ></field>	
+		<field type="com.gameserver.baccart.data.BaccartBetData" name="betDataList" comment="下注列表" list="true" macro="BaccartBetData" ></field>	
+	</message>
+	
+	<!--百家乐结算信息-->
+	<message type="GC_BACCART_SETTLE" comment="百家乐下注">
+		<field type="Integer" name="bankerCardList" comment="庄家牌" list="true"/>
+		<field type="Integer" name="playerCardList" comment="闲家牌" list="true"/>
+		<field type="com.gameserver.baccart.data.PearlRoadData" name="pearlRoadData" comment="珠盘路"  macro="PearlRoadData" ></field>
+		<field type="com.gameserver.baccart.data.BaccartSettleData" name="settleDataList" comment="赢钱列表" list="true" macro="BaccartSettleData" ></field>	
+	</message>
+	
+		<!--百家乐清理桌面信息-->
+	<message type="GC_BACCART_CLEAR_TABLE" comment="百家乐清理桌面">
+
+	</message>
+	
+	<!--百家乐玩家加入-->
+	<message type="CG_BACCART_JOIN" comment="玩家加入">	
+		<field type="Integer" name="roomId" comment="房间id"/>
+	</message>
+	
+	<!--百家乐玩家加入-->
+	<message type="GC_BACCART_JOIN" comment="玩家加入">	
+		<field type="com.gameserver.baccart.data.BaccartPlayerData" name="playerDataList" comment="玩家信息列表" list="true" macro="BaccartPlayerData" ></field>	
+		<field type="com.gameserver.baccart.data.PearlRoadData" name="pearlRoadDataList" comment="珠盘路" list="true" macro="PearlRoadData" ></field>
+		<field type="com.gameserver.baccart.data.BaccartBetData" name="betDataList" comment="下注信息" list="true" macro="BaccartBetData" ></field>	
+		<field type="Integer" name="roomState" comment="房间状态"/>
+		<field type="Long" name="jackpot" comment="jackpot"/>
+		<field type="Integer" name="roomId" comment="房间id"/>
+		<field type="Integer" name="remainCards" comment="剩余牌数"/>
+		<field type="Long" name="remainTime" comment="剩余时间"/>
+	</message>
+	
+	<message type="GC_BACCART_SYNC_JOIN" comment="玩家加入">	
+		<field type="com.gameserver.baccart.data.BaccartPlayerData" name="playerData" comment="玩家信息"  macro="BaccartPlayerData" ></field>	
+	</message>
+	
+	<!-- 明灯 -->
+	<message type="GC_BACCART_LIGHT" comment="玩家明灯">	
+		<field type="com.gameserver.baccart.data.BaccartLightData" name="lightDataList" comment="明灯信息" list="true" macro="BaccartLightData" ></field>	
+	</message>
+	
+	<!--百家乐玩家站起-->
+	<message type="CG_BACCART_STAND" comment="玩家站起">	
+	</message>
+	<!--百家乐玩家站起-->
+	<message type="GC_BACCART_STAND" comment="玩家站起">	
+		<field type="Long" name="playerId" comment="玩家d"/>
+	</message>
+	
+	<!--百家乐玩家坐下-->
+	<message type="CG_BACCART_SEAT" comment="玩家坐下">	
+		<field type="Integer" name="pos" comment="坐下位置"/>
+	</message>
+	<!--百家乐玩家坐下-->
+	<message type="GC_BACCART_SEAT" comment="玩家坐下">	
+		<field type="Long" name="playerId" comment="玩家d"/>
+		<field type="Integer" name="pos" comment="坐下位置"/>
+	</message>
+	<!--百家乐玩家退出-->
+	<message type="CG_BACCART_EXIT" comment="玩家退出">	
+	</message>
+	<!--百家乐玩家退出-->
+	<message type="GC_BACCART_EXIT" comment="玩家退出">	
+		<field type="Long" name="playerId" comment="玩家id"/>
+	</message>
+	
+
+	
+	<!--百家乐彩金池同步-->
+	<message type="GC_BACCART_JACKPOT" comment="彩金池">	
+		<field type="Long" name="jackpot" comment="筹码"/>
+	</message>
+	
+		<!--百家乐玩家彩金-->
+	<message type="GC_BACCART_PLAYER_JACKPOT" comment="玩家彩金">
+		<field type="com.gameserver.baccart.data.BaccartJackpotData" name="jackpotDataList" comment="个人彩金信息" list="true"   macro="BaccartJackpotData" ></field>	
+	
+	</message>
+	
+	<message type="CG_HUMAN_BACCART" comment="百家乐玩家信息">
+		<field type="Long" name="playerId" comment="玩家id"/>
+	</message>
+		<!--百家乐玩家信息-->
+	<message type="GC_HUMAN_BACCART" comment="百家乐玩家信息">
+		<field type="com.gameserver.baccart.data.HumanBaccartData" name="humanBaccartData" comment="百家乐"    macro="HumanBaccartData" ></field>	
+	
+	</message>
+	
+	<!--筹码同步-->
+	<message type="GC_HUMAN_BACCART_COINS_SYNC" comment="百家乐筹码同步">
+		<field type="com.gameserver.baccart.data.BaccartCoinSyncData" name="baccartCoinSyncDataList" comment="百家乐" list="true"    macro="BaccartCoinSyncData" ></field>	
+	</message>
+	
+	<!--自动补充-->
+	<message type="CG_BACCART_AUTO" comment="百家乐自动补充">
+		<field type="Integer" name="auto" comment="自动补充"/>
+	</message>
+		<!--自动补充-->
+	<message type="GC_BACCART_AUTO" comment="百家乐自动补充">
+		<field type="Integer" name="auto" comment="自动补充"/>
+	</message>
+	
+	<!-- 百家乐改变自动补充筹码-->
+	<message type="CG_BACCART_COMPLEMENT" comment="百家乐补充筹码">
+		<field type="Long" name="complement" comment="补充数" />
+	</message>
+		<!-- 百家乐改变自动补充筹码-->
+	<message type="GC_BACCART_COMPLEMENT" comment="百家乐补充筹码">
+		<field type="Long" name="complement" comment="补充数" />
+	</message>
+	
+	<!-- 百家乐复活-->
+	<message type="CG_BACCART_REVIVE" comment="百家乐复活">
+		<field type="Integer" name="revive" comment="复活" />
+	</message>
+	
+	<!-- 百家乐改变自动补充筹码-->
+	<message type="GC_BACCART_REVIVE" comment="百家乐复活">
+		<field type="Integer" name="revive" comment="复活" />
+	</message>
+	
+	<!-- 百家乐补充筹码-->
+	<message type="GC_BACCART_COMPLEMENT_TIP" comment="百家乐补充筹码">
+		<field type="Long" name="complement" comment="补充" />
+	</message>
+	
+	<!--百家乐快速开始  -->
+	<message type="CG_BACCARAT_QUICK_START" comment="百家乐快速开始">	
+	</message>
+	
+</messages>

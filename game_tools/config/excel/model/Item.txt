@@ -1,0 +1,18 @@
+int nameId;[notNull=false]//语言Id
+int descrip;[notNull=false]//名称
+String langDesc;[notNull=false]//语言描述
+String icon;[notNull=false]	//图标
+int overLimit;[notNull=false,minValue=1]//叠加上限
+String beginTime;[notNull=false]	//开始时间
+String endTime;[notNull=false]	//过期时间
+int rewardId;[notNull=false]//奖励id
+int rewardNum;[notNull=false]//奖励数量
+int send;[notNull=false]//是否发送
+int recyclingPrice;[notNull=false]//回收价钱
+int itemType;[notNull=false]//道具类型
+int time;[notNull=false]//使用时间 分钟
+int cardID;[notNull=false]//
+int cardType;[notNull=false]//卡片类型
+int experience;[notNull=false]//经验加成
+int poolType;[notNull=false]//对应奖池
+int bag;[notNull=false]//是否背包显示 1.是 2.不显示

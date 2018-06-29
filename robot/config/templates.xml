@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<scripts>
+	<file name="bonusOcean.xls">
+	    <sheet class="com.gameserver.slot.template.BonusOceanTemplate"/>
+	    <sheet class="com.gameserver.slot.template.BonusOceanRewardTemplate"/>
+	</file>
+	<file name="slotsList.xls">
+		<sheet class="com.gameserver.slot.template.SlotsListTemplate" />
+	</file>
+	<file name="scatterGame.xls">
+		<sheet class="com.gameserver.slot.template.ScatterTemplate" />
+		<sheet class="com.gameserver.slot.template.BoxTemplate" />
+	</file>
+	<file name="scatterCrystal.xls">
+		<sheet class="com.gameserver.slot.template.ScatterCrastalTemplate" />
+	</file>
+	<file name="scatterCowboy.xls">
+		<sheet class="com.gameserver.slot.template.ScatterCowboyTemplate" />
+	</file>
+	<file name="scatterMultiple.xls">
+		<sheet class="com.gameserver.slot.template.ScatterMultipleTemplate" />
+	</file>
+	<file name="bonusAztec.xls">
+		<sheet class="com.gameserver.slot.template.BonusAztecTemplate" />
+	</file>
+	<!--机器人经典模式的配置文件  -->
+	<file name="classicalProperty.xls">
+	    <sheet class="com.gameserver.bazoo.template.ClassicalPropertyTemplate"/>
+	</file>
+</scripts>

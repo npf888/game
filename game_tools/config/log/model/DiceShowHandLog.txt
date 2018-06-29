@@ -1,0 +1,6 @@
+message com.logserver.model.DiceShowHandLog(
+	int bet;// 房间倍数
+	String roomNum;// 房间号
+	String diceValues; // 色子值
+	String diceName; // 几小牛-num值
+)

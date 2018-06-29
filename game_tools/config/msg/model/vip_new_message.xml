@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd" module="vipnew">
+	
+	 <!-- vip数据-->
+	<message type="GC_VIP_NEW_DATA" comment="vip数据">
+	<field type="com.gameserver.vipnew.data.HumanVipNewInfoData" clientType="HumanVipNewInfoData" 
+					name="humanVipNewInfoData" comment="vip数据"  macro="HumanVipNewInfoData"></field>
+	</message>
+
+</messages>

@@ -1,0 +1,1 @@
+ alter table t_human_slot add column slotType23Jackpot varchar(256) COMMENT '东方龙老虎机23 专用字段，5个奖池金额 顺序排列的字符串，用逗号分隔';

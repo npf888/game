@@ -1,0 +1,16 @@
+﻿Hi = Hi
+生命 = Hp
+攻击 = Attack
+防御 = Defense
+命中 = Hit
+闪避 = Dodge
+暴击 = Crit
+暴伤 = CritHurt
+免伤 = Avoid
+吸血 = SuckHp
+Buy = Buy
+TakeOff = TakeOff
+Equip = Equip
+Use = Use
+Male = Male
+FeMale = FeMale

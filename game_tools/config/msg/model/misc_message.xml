@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="misc">
+
+	<message type="GC_MISC_INFO_DATA" comment="在线奖励">
+		<field type="com.gameserver.misc.data.HumanMiscInfoData" clientType="HumanMiscInfoData" name="humanMiscInfoData" comment="内容" macro="HumanMiscInfoData"/>
+	</message>
+	<!-- 公告信息-->
+	<message type="CG_ONLINE_REWARD" comment="在线奖励">
+	</message>
+	<message type="GC_ONLINE_REWARD" comment="在线奖励">
+		<field type="com.gameserver.common.data.RandRewardData" clientType="com.gameserver.common.data.RandRewardData" name="reward" comment="内容" macro="RandRewardData"/>
+	</message>
+	
+	<!-- 公告信息-->
+	<message type="CG_NEW_USER" comment="新手引导">
+	</message>
+	<message type="GC_NEW_USER" comment="新手引导">
+	</message>
+	
+		<!-- 韩国推广奖励-->
+	<message type="CG_KOREAN_SB" comment="韩国推广奖励">
+			<field type="Integer" name="rewardNum" comment="奖励"/>
+	
+	</message>
+	<message type="GC_KOREAN_SB" comment="韩国推广奖励">
+		<field type="Integer" name="rewardNum" comment="奖励"/>
+	
+	</message>
+	
+	<message type="CG_FB_INVITE" comment="fb邀请">
+		<field type="String" name="fbInviteIdList" list="true" comment="好友列表"/>
+	</message>
+	<message type="GC_FB_INVITE" comment="fb邀请">
+		<field type="String" name="fbInviteIdList" list="true" comment="好友列表"/>
+	</message>
+	
+	<message type="CG_FB_INVITE_GET_REWARD" comment="fb邀请奖励">
+		<field type="Integer" name="rewardId"  comment="奖励项 "/>
+	</message>
+	<message type="GC_FB_INVITE_GET_REWARD" comment="fb邀请奖励">
+		<field type="com.gameserver.common.data.RandRewardData" 
+					name="randRewardList" comment="道具奖励" list="true" macro="RandRewardData"  clientType="com.gameserver.common.data.RandRewardData"></field>
+	
+	</message>
+		<message type="GC_MISC_FB_INFO_DATA" comment="在线奖励">
+		<field type="com.gameserver.misc.data.HumanMiscFBInfoData" clientType="HumanMiscFBInfoData" name="humanMiscFBInfoData" comment="内容" macro="HumanMiscFBInfoData"/>
+	</message>
+	
+	<message type="CG_FB_GET_REWARD" comment="fb奖励">
+		
+	</message>
+	<message type="GC_FB_GET_REWARD" comment="fb邀请奖励">
+			<field type="com.gameserver.common.data.RandRewardData" 
+					name="randRewardList" comment="道具奖励" list="true" macro="RandRewardData"  clientType="com.gameserver.common.data.RandRewardData"></field>
+	
+	</message>
+	
+	<message type="CG_FB_THUMB_REWARD" comment="fb点赞奖励">
+	</message>
+	
+	<message type="GC_FB_THUMB_REWARD" comment="fb点赞奖励">
+	<field type="com.gameserver.common.data.RandRewardData" 
+					name="randRewardList" comment="道具奖励" list="true" macro="RandRewardData"  clientType="com.gameserver.common.data.RandRewardData"></field>
+	</message>
+	
+</messages>

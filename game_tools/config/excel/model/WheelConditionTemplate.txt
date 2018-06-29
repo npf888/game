@@ -1,0 +1,1 @@
+int pid;[notNull=false]//跟recharge表对应的pid 表示哪个需要翻倍

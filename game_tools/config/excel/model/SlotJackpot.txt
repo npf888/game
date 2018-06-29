@@ -1,0 +1,6 @@
+String langDesc;[notNull=false]	//描述
+int slotId;[notNull=false;minValue=0] //老虎机ID
+int payId;[notNull=false;minValue=0] //转轴图案组合ID
+int bet;[notNull=false;minValue=0] //老虎机下注额ID
+int rewardPer;[notNull=false;minValue=0] //彩金池获奖比例 万分比
+int jackpotPer;[notNull=false;minValue=0] //5个jackPort彩金

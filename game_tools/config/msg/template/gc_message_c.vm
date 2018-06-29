@@ -1,0 +1,133 @@
+#macro( smallType $type)
+#if($type == "Byte")int#elseif( $type == "Boolean" )int#elseif( $type == "Short" )int#elseif( $type == "Integer" )int#elseif( $type == "Long" )long#elseif( $type == "Float" )Number#elseif( $type == "Double" )Number#elseif( $type == "String" )string#else$type#end
+#end
+#macro( bigType $type)
+#if( $type == "Integer" )Int#elseif( $type == "Boolean" )Byte#elseif( $type == "String" )String#elseif( $type == "Long" )Long#else$type#end
+#end
+#macro( upperFirstChar $type)$type.substring(0,1).toUpperCase()$type.substring(1)#end
+using System.Collections;
+
+#if($constants.size()>0)
+	/**
+	 * 常量定义
+#foreach( $constant in $constants )
+	 *	【$constant.name】$constant.desc
+#end	
+	 */
+#end
+public class ${module}GCMessage:AbstractMessageReceiver
+{
+	protected override void collectObservers()
+	{
+#foreach( $msg in $msgs )
+		register(NetMessageType.${msg.type},${msg.type});
+#end
+	}
+#foreach( $msg in $msgs )
+ 
+  	/**
+	 * $msg.comment
+#foreach( $field in $msg.fields )
+	 * @param $field.smallName $field.comment
+#end
+	 */
+	public void ${msg.type}(InputMessage data) 
+	{
+#if($msg.hasListField)
+		int i,size;
+#end
+#foreach( $field in $msg.fields )
+#if ($field.list) 
+		ArrayList ${field.smallName} = new ArrayList();
+		size = data.GetShort();
+		for(i=0; i<size; i++)
+		{
+#if($field.isNewType)
+			${field.type} ${field.smallName}_Datas= new ${field.type}();
+#if($field.hasListField)
+			int ${field.smallName}_j;
+#end
+#foreach( $subfield in $field.subFields )
+			#set($index=$velocityCount - 1)
+#if($subfield.type=="Long")
+			${field.smallName}_Datas.${subfield.smallName} =data.GetLong();
+#elseif($subfield.list) 
+				ArrayList ${field.smallName}_${subfield.smallName} = new ArrayList();
+				int ${field.smallName}_${subfield.smallName}Size = data.GetShort();
+				for(${field.smallName}_j=0; ${field.smallName}_j<${field.smallName}_${subfield.smallName}Size; ${field.smallName}_j++){
+#if($subfield.isNewType)
+					${subfield.type} ${field.smallName}_${subfield.smallName}_Datas= new ${subfield.type}();
+#foreach( $subsubfield in $subfield.subFields )
+					${field.smallName}_${subfield.smallName}_Datas.${subsubfield.smallName} =#if($subsubfield.castType)(${subsubfield.castType})#end data.Get#bigType($subsubfield.type)();//$subsubfield.comment
+#end
+#else
+					#smallType(${subfield.type}) ${field.smallName}_${subfield.smallName}_Datas =#if($subfield.castType)(${subfield.castType})#end data.Get#bigType($subfield.type)();//$subfield.comment
+#end
+					${field.smallName}_${subfield.smallName}.Add(${field.smallName}_${subfield.smallName}_Datas);
+				}
+			${field.smallName}_Datas.${subfield.smallName} = ${field.smallName}_${subfield.smallName};
+#else
+			${field.smallName}_Datas.${subfield.smallName} =#if($subfield.castType)(${subfield.castType})#end data.Get#bigType($subfield.type)();//$subfield.comment
+#end
+#end
+#elseif($field.type=="Long")
+			#smallType($field.type) ${field.smallName}_Datas = data.GetLong();
+#else
+			#smallType($field.type) ${field.smallName}_Datas =#if($field.castType)(${field.castType})#end data.Get#bigType($field.type)();
+#end
+			${field.smallName}.Add(${field.smallName}_Datas);
+		}
+#elseif($field.isNewType)
+		${field.type} ${field.smallName} = new ${field.type}();
+#if($field.hasListField)
+		int j;
+#end
+#foreach( $subfield in $field.subFields )
+			#set($index=$velocityCount - 1)
+#if($subfield.type=="Long")
+		${field.smallName}.${subfield.smallName} = data.GetLong();//$subfield.comment
+#elseif($subfield.list) 
+		ArrayList ${subfield.smallName} = new ArrayList();
+		int ${subfield.smallName}Size = data.GetShort();
+		for(j=0; j<${subfield.smallName}Size; j++)
+		{
+#if($subfield.isNewType)
+			${subfield.type} ${subfield.smallName}_Datas = new ${subfield.type}();
+#foreach( $subsubfield in $subfield.subFields )
+					#set($index=$velocityCount - 1)
+#if($subsubfield.type=="Long")
+			${subfield.smallName}_Datas.${subsubfield.smallName} = data.GetLong();//$subsubfield.comment
+#else
+			${subfield.smallName}_Datas.${subsubfield.smallName} =#if($subsubfield.castType)(${subsubfield.castType})#end data.Get#bigType($subsubfield.type)();//$subsubfield.comment
+#end
+#end					
+#else
+			#smallType(${subfield.type}) ${subfield.smallName}_Datas =#if($subfield.castType)(${subfield.castType})#end data.Get#bigType($subfield.type)();//$subfield.comment
+#end
+			${subfield.smallName}.Add(${subfield.smallName}_Datas);
+		}
+		${field.smallName}.${subfield.smallName} = ${subfield.smallName};
+#else
+		${field.smallName}.${subfield.smallName} =#if($subfield.castType)(${subfield.castType})#end data.Get#bigType($subfield.type)();//$subfield.comment
+#end
+#end
+#elseif($field.type=="Long")
+		long ${field.smallName} = data.GetLong();
+#else
+		#smallType($field.type) ${field.smallName} =#if($field.castType)(${field.castType})#end data.Get#bigType($field.type)();		
+#end
+#end
+#if($msg.fields.size()>0||$msg.subMsgs.size()==0)
+		#upperFirstChar($module)Handler.Instance().${msg.type}(#foreach( $field in $msg.fields )${field.smallName}#if($velocityCount != $msg.fields.size()),#end#end);
+#end
+#foreach( $subMsg in $msg.subMsgs )
+		int i,size;
+		size = data.GetShort();
+		for(i=0; i<size; i++)
+		{
+			${subMsg.type}(data);
+		}
+#end
+	}
+#end
+}

@@ -1,0 +1,9 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int slotsNum;[notNull=false;minValue=0] //下限
+int pay;[notNull=false;minValue=0] //倍数*100
+int value;[notNull=false;minValue=0] //权重
+int levelDown;[notNull=false;minValue=0] //等级下限
+int levelUp;[notNull=false;minValue=0] //等级上限

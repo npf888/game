@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="config"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/game_core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/game_webserver_interface"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/game_server"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/game_db"/>
+	<classpathentry kind="lib" path="/code_libs/libs/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/code_libs/libs/slf4j-log4j12-1.6.0.jar"/>
+	<classpathentry kind="lib" path="/code_libs/libs/mina-core-1.1.7.jar"/>
+	<classpathentry kind="lib" path="/code_libs/libs/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="/code_libs/libs/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="/code_libs/libs/libthrift-0.9.2.jar"/>
+	<classpathentry kind="lib" path="/code_libs/libs/google-api-client-1.18.0-rc.jar"/>
+	<classpathentry kind="lib" path="/code_libs/libs/google-api-services-androidpublisher-v1.1-rev22-1.18.0-rc.jar"/>
+	<classpathentry kind="lib" path="/code_libs/libs/google-collect-snapshot-20071022.jar"/>
+	<classpathentry kind="lib" path="/code_libs/libs/google-http-client-1.18.0-rc.jar"/>
+	<classpathentry kind="lib" path="/code_libs/libs/google-http-client-jackson2-1.18.0-rc.jar"/>
+	<classpathentry kind="lib" path="/code_libs/libs/google-oauth-client-1.18.0-rc.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/code_libs/libs/netty-all-4.1.7.Final.jar"/>
+	<classpathentry kind="lib" path="/code_libs/libs/fastjson-1.1.33.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

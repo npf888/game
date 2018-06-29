@@ -1,0 +1,5 @@
+int nameId;[notNull=false] // 名称
+int descrip; //描述
+String langDesc; // 语言描述
+String icon; // icon
+

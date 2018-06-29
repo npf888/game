@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="activity">
+
+	<!--活动 -->
+	<message type="GC_ACTIVITY_LIST" comment="活动列表">
+		<field type="com.gameserver.activity.data.ActivityData"
+			name="activityDataList" comment="活动信息" list="true" clientType="ActivityData" macro="ActivityData">
+		</field>
+	</message>
+	<!--客户端主动请求 一条数据 -->
+	<message type="CG_ACTIVITY_LIST" comment="活动列表">
+	</message>
+	
+	<message type="GC_UPDATE_ACTIVITY" comment="活动更新">
+		<field type="com.gameserver.activity.data.ActivityData"
+			name="activityDataList" comment="活动信息" clientType="ActivityData" macro="ActivityData">
+		</field>
+	</message>
+	
+	
+	<message type="GC_HUMAN_ACTIVITY_REWARD_DATA_LIST" comment="用户活动奖励列表">
+		<field type="com.gameserver.activity.data.HumanSimpleRewardInfoData"
+			name="humanSimpleRewardInfoData" comment="活动奖励信息" clientType="HumanSimpleRewardInfoData" macro="HumanSimpleRewardInfoData"  list="true"/>
+	</message>
+	
+	<message type="GC_UPDATE_HUMAN_ACTIVITY_REWARD" comment="用户活动奖励列表更新">
+		<field type="com.gameserver.activity.data.HumanSimpleRewardInfoData"
+			name="humanSimpleRewardInfoData" comment="活动奖励信息" clientType="HumanSimpleRewardInfoData" macro="HumanSimpleRewardInfoData" />
+	</message>
+	
+	
+	
+	<message type="GC_HUNAMN_PROGRESS" comment="活动进度数据">
+	   <field type="com.gameserver.activity.data.HumanActivitySmallData"
+			name="humanActivitySmallData" comment="活动进度数据" clientType="HumanActivitySmallData" macro="HumanActivitySmallData"   list="true"/>
+	</message>
+	
+	<message type="CG_ACTIVITY_PROGRESS" comment="获取活动进度数据">
+	   
+	</message>
+	
+	<message type="GC_HUNAMN_PROGRESS_SINGLE" comment="活动进度数据">
+	   <field type="com.gameserver.activity.data.HumanActivitySmallData"
+			name="humanActivitySmallData" comment="活动进度数据" clientType="HumanActivitySmallData" macro="HumanActivitySmallData"/>
+	</message>
+	
+	
+	<message type="CG_GET_ACTIVITY_REWARD" comment="用户领取活动奖励">
+		<field type="Long" name="activityId" comment="活动id"/>
+		<field type="Integer" name="indexId" comment="具体小条件Id数组的索引下标"/>
+	</message>
+	
+	<message type="GC_GET_ACTIVITY_REWARD" comment="用户领取活动奖励">
+	    <field type="Integer" name="result" comment="领取结果 0 失败 1 成功"/>
+		<field type="Long" name="activityId" comment="活动id"/>
+		<field type="Integer" name="indexId" comment="具体小条件Id数组的索引下标"/>
+	</message>
+	<!-- 直接推送的  周、月特惠充值活动 -->
+	<message type="GC_MONTH_OR_WEEK" comment="直接推送的  周、月特惠充值活动">
+	    <field type="Integer" name="mwtype" comment="周：0，月：1"/>
+	    <field type="Integer" name="startOrEnd" comment="开始：0，结束：1"/>
+	    <field type="Long" name="leftTime" comment="周或者月的剩余时间"/>
+	</message>
+	
+	<!-- 返回  周、月特惠充值活动 的剩余时间 两个（周 和 月）-->
+	<message type="CG_MONTH_WEEK_LEFT_TIME" comment="返回   周、月特惠充值活动的时间">
+	</message>
+	<message type="GC_MONTH_WEEK_LEFT_TIME" comment="返回    周、月特惠充值活动的时间">
+	    <field type="Long" name="weekLeftTime" comment="秒"/>
+	    <field type="Long" name="monthLeftTime" comment="秒"/>
+	</message>
+	<!-- 还有未领取的活动 要通知客户端 -->
+	<message type="CG_STILL_HAVE_ACTIVITY_GOLD" comment="还有未领取的活动的金币">
+	</message>
+	<message type="GC_STILL_HAVE_ACTIVITY_GOLD" comment="还有未领取的活动的金币">
+	</message>
+	
+	
+	
+	<!-- 功能 -->
+	<message type="CG_FUNCTION" comment="功能">
+	</message>
+	<message type="GC_FUNCTION_LEFT_TIME" comment="功能">
+		<field type="String" name="img" comment="图片"/>
+		<field type="Long" name="leftTime"  comment="剩余时间" />
+		<field type="Integer" name="functionType"  list="true"  comment="类型  1 筹码   2 物品  3 礼包  4 功能性付费" />
+	</message>
+	
+</messages>

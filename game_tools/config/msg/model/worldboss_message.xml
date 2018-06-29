@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd" module="worldboss">
+	
+		<!-- 开启或者关闭面板-->
+	<message type="CG_OPEN_PANEL" comment="开启或者关闭面板">
+		<field type="Integer" name="panelType" comment="0:开启，1:关闭" />
+	</message>
+	
+	<!--获取boss信息-->
+	<message type="CG_GET_BOSS_INFO" comment="获取boss信息">
+	</message>
+	<!--返回boss信息 和上次的 boss站的 winner-->
+	<message type="GC_GET_BOSS_INFO" comment="返回两个boss信息">
+		<field type="com.gameserver.worldboss.data.BossInfoData" 
+					name="bossInfoData" comment="boss的信息" list="true" macro="BossInfoData"  clientType="com.gameserver.worldboss.data.BossInfoData"></field>
+		<field type="com.gameserver.worldboss.data.LastWinHumanData" 
+					name="lastWinHumanData" comment="上次boss Winner" list="true" macro="LastWinHumanData"  clientType="com.gameserver.worldboss.data.LastWinHumanData"></field>
+	</message>
+	
+	
+	<!--伤害 排行榜 的 信息 请求-->
+	<message type="CG_GET_RANK_INFO" comment="伤害 排行榜 的 信息 请求">
+	</message>
+	<!--返回 伤害 排行榜 的 信息 请求-->
+	<message type="GC_GET_RANK_INFO" comment="返回 伤害 排行榜 的 信息 请求">
+		<field type="Integer" name="curIndex" comment="当前用户所在排行榜的位置" />
+		<field type="com.gameserver.worldboss.data.AttackRankData" 
+					name="attackRankData" comment="boss的信息" list="true" macro="AttackRankData"  clientType="com.gameserver.worldboss.data.AttackRankData"></field>
+	</message>
+	
+	<!--更新当前boss的信息-->
+	<message type="GC_REFRESH_BOSS_INFO" comment="刷新boss的信息">
+		<field type="com.gameserver.worldboss.data.RefreshBossData" 
+					name="refreshBossData" comment="刷新boss的信息" list="true" macro="RefreshBossData"  clientType="com.gameserver.worldboss.data.RefreshBossData"></field>
+	</message>
+	<message type="CG_REFRESH_BOSS_INFO" comment="进入老虎机主动请求">
+	</message>
+	
+	<message type="CG_BOSS_START_END_INFO" comment="boss的开始结束信息">
+	</message>
+	<message type="GC_BOSS_START_END_INFO" comment="boss的开始结束信息">
+		<field type="Integer" name="bossType" comment="下一个worldBoss的类型" />	
+		<field type="Integer" name="beKilled" comment="是否 被击杀 1：被击杀- 0：没有被击杀" />	
+		<field type="Integer" name="startEndRuning" comment="0:开启，1:关闭, 2：进行中" />	
+		<field type="Long" name="nextBossLeftTime" comment="距离 下一个boss 开始的剩余时间 (秒)" />	
+		<field type="Long" name="curBossLeftTime" comment="当前的boss 剩余时间 (秒)" />	
+	</message>
+	<message type="GC_SELF_ATTACK_BLOOD_INFO" comment="自己攻击的血量 ">
+		<field type="Integer" name="selfAttackBlood" comment="自己攻击的血量" />	
+		<field type="Integer" name="winType" comment="当前是否 bigWin、megaWin等等 :   0:普通     1:bigwin  2:megawin   3:superwin  4:epicwin" />	
+	</message>
+	<message type="CG_RETURN_BLOOD" comment="自己攻击的血量 ">
+	</message>
+	<message type="GC_RETURN_BLOOD" comment="自己攻击的血量 ">
+		<field type="Integer" name="skillType" comment="技能类型，0:持续的，1：立即生效的" />	
+		<field type="Integer" name="skill" comment="是否开启技能，0:开启，1关闭" />	
+		<field type="Integer" name="skillTime" comment="技能持续时间" />	
+	</message>
+	<message type="CG_BEFORE_START" comment="主动请求比赛之前 多少分钟">
+	</message>
+	<message type="GC_BEFORE_START" comment="比赛之前 多少分钟">
+		<field type="Integer" name="bossType" comment="boss的类型" />	
+		<field type="Integer" name="leftTime" comment="剩余时间" />	
+	</message>
+	
+	
+	
+
+</messages>

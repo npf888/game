@@ -1,0 +1,9 @@
+String serverUrl;[notNull=false] // 服务器地址
+int platformKind;[notNull=true]	//平台类型
+String platformName;[notNull=false]	//平台名称
+String appId;[notNull=false]	//应用id
+String appKey;[notNull=false]	//平台密钥
+int act;[notNull=false]	//接口编号
+int actKind;[notNull=false]	//接口类型
+String paramInfo;[notNull=false]	//参数信息
+String returnInfo;[notNull=false]	//返回结果信息

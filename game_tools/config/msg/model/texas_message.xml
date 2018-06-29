@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="texas">
+	
+	
+	<!-- 德州房间类型列表 -->
+	<message type="CG_TEXAS_LIST" comment="德州房间类型列表">
+	</message>
+	<message type="GC_TEXAS_LIST" comment="德州房间类型列表">
+		<field type="com.gameserver.texas.data.TexasRoomTypeInfoData" name="roomTypeList" comment="房间类型列表" list="true" macro="TexasRoomTypeInfoData" ></field>
+	</message>
+	
+	<!-- 加入德州房间号 -->
+	<message type="CG_JOIN_TEXAS_ROOM_ID" comment="加入德州房间号">
+		<field type="Long" name="roomId" comment="房间id" />
+	</message>
+	
+	<!-- 加入德州房间类型 -->
+	<message type="CG_JOIN_TEXAS" comment="加入德州房间类型">
+		<field type="Integer" name="roomId" comment="房间id" />
+	</message>
+	
+	<message type="GC_JOIN_TEXAS" comment="加入德州">
+		<field type="com.gameserver.texas.data.TexasRoomPlayerInfoData" name="playerList" comment="玩家列表" list="true" macro="TexasRoomPlayerInfoData" ></field>	
+		<field type="Integer" name="roomType" comment="房间类型"></field>
+		<field type="Integer" name="texasRoomEnum" comment="sng或普通房"></field>
+	</message>
+	
+	<!-- 离开德州房间 -->
+	<message type="CG_LEAVE_TEXAS" comment="离开德州房间">
+	</message>
+	
+	<message type="GC_LEAVE_TEXAS" comment="离开德州房间">
+		<field type="Long" name="playerId" comment="离开id"></field>	
+		<field type="Integer" name="ifNoGold" comment="是否没钱"></field>	
+	</message>
+	
+	<!-- 向服务器同步玩家角色信息 -->
+	<message type="GC_SYNC_JOIN_TEXAS" comment="同步加入德州" description="同步其他玩家角色信息">
+		<field type="com.gameserver.texas.data.TexasRoomPlayerInfoData" name="playerJoin" comment="玩家列表" macro="TexasRoomPlayerInfoData" ></field>	
+	</message>
+	
+	<!-- 向玩家发送小盲注-->
+	<message type="GC_TEXAS_SMALL_BLIND" comment="庄家位置">
+		<field type="Integer" name="pos" comment="位置" ></field>
+		<field type="Long" name="smallBlind" comment="小盲注" ></field>
+	</message>
+	
+	<!-- 向玩家发送大盲注-->
+	<message type="GC_TEXAS_BIG_BLIND" comment="庄家位置">
+		<field type="Integer" name="pos" comment="庄家位置" ></field>
+		<field type="Long" name="bigBlind" comment="大盲注" ></field>
+	</message>
+	
+	<!-- 向玩家发送庄家位置-->
+	<message type="GC_TEXAS_BANKER_POS" comment="庄家位置">
+		<field type="Integer" name="pos" comment="庄家位置" ></field>
+	</message>
+	
+	<!-- 向玩家发送底牌-->
+	<message type="GC_TEXAS_BUTTOM_DEAL" comment="底牌发送">
+		<field type="Integer" name="cardList" comment="底牌" list="true" ></field>
+	</message>
+	
+	<!-- 轮到该玩家-->
+	<message type="GC_TEXAS_PLAYER_TURN" comment="轮到该玩家">
+		<field type="Integer" name="position" comment="轮到该玩家"></field>
+	</message>
+	
+	<!-- flop 发三张牌-->
+	<message type="GC_TEXAS_FLOP" comment="发三张公共牌">
+		<field type="Integer" name="cardList" comment="公共牌" list="true" ></field>
+	</message>
+	
+	<!-- turn 发四张牌-->
+	<message type="GC_TEXAS_TURN" comment="轮到该玩家">
+		<field type="Integer" name="card" comment="第4张牌"></field>
+	</message>
+	
+	<!-- River 发五张牌-->
+	<message type="GC_TEXAS_RIVER" comment="轮到该玩家">
+		<field type="Integer" name="card" comment="第5张牌"></field>
+	</message>
+	
+	<!-- 德州看牌-->
+	<message type="CG_TEXAS_LOOK" comment="德州看牌" >
+	</message>
+	
+	<!-- 德州看牌-->
+	<message type="GC_TEXAS_LOOK" comment="德州看牌">
+		<field type="Integer" name="pos" comment="跟注位置"></field>
+	</message>
+	
+	<!-- 德州跟注-->
+	<message type="CG_TEXAS_FOLLOW" comment="德州跟注" >
+	</message>
+	
+	<!-- 德州跟注-->
+	<message type="GC_TEXAS_FOLLOW" comment="德州跟注">
+		<field type="Integer" name="pos" comment="跟注位置"></field>
+	</message>
+	
+	<!-- 德州加注-->
+	<message type="CG_TEXAS_ADD_BET" comment="德州加注" >
+		<field type="Long" name="addBet" comment="加注额度"></field>
+	</message>
+	
+	<!-- 德州加注-->
+	<message type="GC_TEXAS_ADD_BET" comment="德州加注">
+		<field type="Integer" name="pos" comment="加注位置"></field>
+		<field type="Long" name="addBet" comment="加注额度"></field>
+	</message>
+	
+	<!-- 德州allin-->
+	<message type="CG_TEXAS_ALL_IN" comment="德州allin" >
+	</message>
+	
+	<!-- 德州allin-->
+	<message type="GC_TEXAS_ALL_IN" comment="德州allin">
+		<field type="Integer" name="pos" comment="allin位置"></field>
+		<field type="Long" name="allInBet" comment="allin额度"></field>
+	</message>
+	
+	<!-- 德州弃牌-->
+	<message type="CG_TEXAS_GIVE_UP" comment="德州allin" >
+	</message>
+	
+	<!-- 德州弃牌-->
+	<message type="GC_TEXAS_GIVE_UP" comment="德州allin">
+		<field type="Integer" name="pos" comment="allin位置"></field>
+	
+	</message>
+	
+		<!-- 德州分池-->
+	<message type="GC_TEXAS_SIDE_POOL" comment="德州分池">
+		<field type="Integer" name="sidePoolList" comment="边池列表 " list="true" ></field>
+	</message>
+	
+		<!-- 德州房间信息-->
+	<message type="GC_TEXAS_ROOM_INFO" comment="德州房间信息">
+		<field type="Integer" name="roomState" comment="房间状态" />
+		<field type="Integer" name="publicCardList" comment="公共牌" list="true" />
+		<field type="Long" name="sidePoolList" comment="边池" list="true" />
+		<field type="Integer" name="bankPos" comment="庄家位置" />
+		<field type="Integer" name="currentBetterPos" comment="当前下注位置" />
+	</message>
+	
+	<!-- 德州结算-->
+	<message type="GC_TEXAS_SETTLE" comment="德州结算">
+		<field type="com.gameserver.texas.data.TexasRoomPlayerSettleCardsInfoData" name="playerList" comment="玩家列表 " list="true"  >
+				<field type="Integer" name="pos" comment="玩家位置" />
+				<field type="String" name="cardListStr" comment="手牌"/>
+				<field type="Integer" name="firstCard" comment="第一张牌"/>
+				<field type="Integer" name="secondCard" comment="第二张牌"/>
+		</field>
+		<field type="com.gameserver.texas.data.TexasPoolSettleInfoData" name="settlePoolList" comment="边池获胜列表 " list="true">
+			<field type="com.gameserver.texas.data.TexasRoomPlayerSettleInfoData" name="winnerList" comment="边池获胜列表 " list="true"  >
+				<field type="Integer" name="pos" comment="玩家位置" />
+				<field type="Long" name="winBet" comment="赢得筹码" />
+				<field type="Integer" name="handCardType" comment="手牌类型" />
+			
+			</field>
+		</field>
+	</message>
+	
+	<!-- 德州全部弃牌-->
+	<message type="GC_TEXAS_SETTLE_GIVEUP" comment="德州结算">
+		<field type="Integer" name="winnerPos" comment="获胜玩家 ">
+		</field>
+		<field type="Integer" name="settlePoolList" comment="边池列表 " list="true">
+		</field>
+	</message>
+	
+	<!-- 德州清理台面-->
+	<message type="GC_TEXAS_PREPARE_RESTART" comment="德州清理台面">
+		<field type="Integer" name="smallBlind" comment="下一局小盲注 ">
+		</field>
+		<field type="Long" name="duration" comment="升盲注剩余时间">
+		</field>
+	</message>
+	
+	
+	<!-- 德州金币同步-->
+	<message type="GC_TEXAS_COINS_SYNC" comment="德州金币同步">
+		<field type="Integer" name="pos" comment="玩家 ">
+		</field>
+		<field type="Long" name="coins" comment="金币数 ">
+		</field>
+	</message>
+	
+
+	<!-- 德州坐下-->
+	<message type="CG_TEXAS_SEAT" comment="德州玩家坐下">
+		<field type="Integer" name="pos" comment="位置" ></field>	
+	</message>
+	
+	
+	<!-- 德州坐下-->
+	<message type="GC_TEXAS_SEAT" comment="德州玩家坐下">
+		<field type="com.gameserver.texas.data.TexasRoomPlayerInfoData" name="playerJoin" comment="玩家列表" macro="TexasRoomPlayerInfoData" ></field>	
+	</message>
+	
+	<!-- 德州退出-->
+	<message type="CG_TEXAS_EXIT" comment="德州玩家退出">
+	
+	</message>
+	
+	<!-- 德州退出-->
+	<message type="GC_TEXAS_EXIT" comment="德州玩家退出">
+	
+	</message>
+	
+
+	
+	<!-- 德州基本信息-->
+	<message type="GC_HUMAN_TEXAS_INFO_DATA" comment="德州基本信息">
+		
+		<field type="Integer" name="totalCount" comment="总数" />
+		<field type="Integer" name="winCount" comment="获胜数" />
+		<field type="Integer" name="isAuto" comment="自动" />
+		<field type="Integer" name="people" comment="人数" />
+		<field type="Integer" name="weekWinCoins" comment="周盈利" />
+		<field type="Integer" name="dayBiggestWinCoins" comment="单日最高盈利" />
+		<field type="Integer" name="biggestHandCardList" comment="最大手牌" list="true"/>
+	
+	</message>
+	
+	<!-- 德州改变自动补充筹码-->
+	<message type="CG_TEXAS_AUTO" comment="德州改变自动补充筹码">	
+		<field type="Integer" name="isAuto" comment="补充" />
+	</message>
+	
+	
+	
+	<!-- 德州改变自动补充筹码-->
+	<message type="CG_TEXAS_COMPLEMENT" comment="德州补充筹码">
+		<field type="Long" name="complement" comment="补充数" />
+	</message>
+	
+	<message type="GC_TEXAS_COMPLEMENT" comment="德州补充筹码">
+		<field type="Long" name="complement" comment="补充数" />
+	</message>
+	
+	
+	<!-- 德州打赏-->
+	<message type="CG_TEXAS_TIPS" comment="德州打赏">
+	
+	</message>
+	
+	<message type="GC_TEXAS_TIPS" comment="德州打赏">
+	
+		<field type="Integer" name="pos" comment="打赏位置"></field>
+	
+	</message>
+	
+	
+	<!-- 德州人数-->
+	<message type="CG_TEXAS_PEOPLE_SETTING" comment="德州人数">	
+		<field type="Integer" name="people" comment="人数" />
+	</message>
+	<message type="GC_TEXAS_PEOPLE_SETTING" comment="德州人数">	
+		<field type="Integer" name="people" comment="人数" />
+	</message>
+	
+	<!--德州快速开始  -->
+	<message type="CG_TEXAS_QUICK_START" comment="德州快速开始">	
+	</message>
+	
+	<!--德州牌型  -->
+	<message type="GC_TEXAS_HAND_CARD" comment="德州快速开始">	
+		<field type="Integer" name="handCardType" comment="手牌类型" />
+	</message>
+	
+	
+		
+	<!--德州sng列表  -->
+	<message type="CG_TEXAS_SNG_LIST" comment="德州sng列表">
+	</message>
+	<message type="GC_TEXAS_SNG_LIST" comment="德州sng列表">
+		<field type="com.gameserver.texas.data.sng.TexasSngInfoData" name="sngInfoDataList" comment="玩家列表" macro="TexasSngInfoData" list="true"></field>	
+	</message>
+	
+	<message type="CG_JOIN_TEXAS_SNG" comment="德州sng报名">
+		<field type="Integer" name="sngId" comment="sng id"></field>	
+	</message>
+	
+	<message type="GC_SNG_RANK" comment="德州sng名次">
+		<field type="Integer" name="pos" comment="pos"></field>	
+		<field type="Integer" name="sngRank" comment="rank"></field>	
+	</message>
+	
+	<!-- 德州sng基本信息-->
+	<message type="GC_HUMAN_TEXAS_SNG_INFO_DATA" comment="德州sng基本信息">
+		
+		<field type="Integer" name="joinTimes" comment="参加次数" />
+		<field type="Integer" name="goldNum" comment="金杯" />
+		<field type="Integer" name="silverNum" comment="银杯" />
+		<field type="Integer" name="copperNum" comment="铜杯" />
+		<field type="Integer" name="weekScore" comment="周分数" />
+		<field type="Long" name="rank" comment="排行" />
+	</message>
+	
+	
+	<!--德州vip房间列表  -->
+	<message type="CG_TEXAS_VIP_LIST" comment="德州vip列表">
+	</message>
+	<message type="GC_TEXAS_VIP_LIST" comment="德州vip列表">
+		<field type="com.gameserver.texas.data.vip.TexasVipInfoData" name="vipInfoDataList" comment="房间列表" macro="TexasVipInfoData" list="true"></field>	
+	</message>
+	
+	<message type="CG_JOIN_TEXAS_VIP" comment="德州加入vip房间">
+		<field type="Long" name="vipId" comment="vipId"></field>
+			<field type="String" name="password" comment="密码"></field>		
+	</message>
+	
+	<message type="GC_JOIN_TEXAS_VIP_FAILED" comment="德州加入vip房间">
+		<field type="Integer" name="errorCode" comment="errorCode"></field>	
+	</message>
+	
+	<message type="GC_TEXAS_CLEAR_TABLE" comment="德州清理桌面">
+		
+	</message>
+	
+	<!-- 德州自动补充筹码-->
+	<message type="GC_TEXAS_COMPLEMENT_NUM" comment="德州补充筹码数">
+		<field type="Long" name="complement" comment="补充数" />
+	</message>
+	
+	<!-- 德州信息查询-->
+	<message type="CG_HUMAN_TEXAS_INFO_DATA_SEARCH" comment="德州补充筹码数">
+		<field type="Long" name="playerId" comment="玩家id" />
+	</message>
+	<!-- 德州信息查询-->
+	<message type="GC_HUMAN_TEXAS_INFO_DATA_SEARCH" comment="德州信息查询">
+	<field type="Long" name="playerId" comment="玩家id" />
+		<field type="com.gameserver.texas.data.sng.HumanTexasSNGInfoData" name="humanTexasSNGInfoData" comment="德州sng信息" macro="HumanTexasSNGInfoData" ></field>	
+		<field type="com.gameserver.texas.data.HumanTexasInfoData" name="humanTexasInfoData" comment="德州信息" macro="HumanTexasInfoData" ></field>	
+		
+	</message>
+	<message type="GC_HUMAN_TEXAS_EXP" comment="德州结算经验广播">
+	<field type="com.gameserver.texas.data.TexasRoomExp" comment="玩家经验列表" list="true" name="texasRoomExp">
+	<field type="Long" name="playerId" comment="玩家id" />
+	<field type="Integer" name="exp" comment="增加经验" />
+	</field>
+	
+	
+	</message>
+</messages>

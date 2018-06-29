@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+          "http://www.ibatis.com/dtd/sql-map-2.dtd" >
+<sqlMap>
+    <typeAlias alias="dice_classical_room_log" type="com.logserver.model.DiceClassicalRoomLog" />
+    <insert id="insert_dice_classical_room_log" parameterClass="dice_classical_room_log">
+insert into $tableName$(log_type,log_time,region_id,server_id,account_id,account_name,level,reason,param,bet,room_num,room_status,total_num,every_ids, createTime) values(#logType#,#logTime#,#regionId#,#serverId#,#accountId#,#accountName#,#level#,#reason#,#param#,#bet#,#roomNum#,#roomStatus#,#totalNum#,#everyIds#, #createTime#)</insert>
+    <statement id="createTable_dice_classical_room_log" parameterClass="java.lang.String">
+create table if not exists $tableName$
+(
+id int(11) not null AUTO_INCREMENT primary key,
+	log_type int(11) not null default -100,
+	log_time bigint not null,
+	region_id int(11) ,
+	server_id int(11) ,
+	account_id bigint not null,
+		account_name varchar(128),
+		level bigint ,
+	reason int(11) ,
+		param text,
+		bet int(11) ,
+		room_num varchar(256),
+		room_status int(11) ,
+	total_num int(11) ,
+		every_ids varchar(256),
+	createTime bigint not null
+	,key account_id (account_id)
+	,key account_name (account_name)
+)ENGINE = MyISAM DEFAULT CHARSET UTF8
+    </statement>
+</sqlMap>

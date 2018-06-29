@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<scripts>
+  <file name="city.xls">
+		<sheet class="com.gameserver.scene.template.CityTemplate" />
+	
+	</file>
+	<file name="Config.xls">
+		<sheet class="com.gameserver.common.template.ConfigTemplate" />
+	</file>
+	
+	<file name="dirtywords.xls">
+		<sheet class="com.gameserver.common.template.Dirtywords" />
+	</file>
+	
+	<file name="TexasRoom.xls">
+		<sheet class="com.gameserver.texas.template.TexasRoomTemplate" />
+		<sheet class="com.gameserver.texas.template.TexasRoomConfigTemplate" />
+		<sheet class="com.gameserver.texas.template.TexasJackpotTemplate" />
+	</file>
+
+	<file name="RoleExp.xls">
+		<sheet class="com.gameserver.human.template.RoleExpTemplate" />
+	</file>
+	<file name="Shop.xls">
+		<sheet class="com.gameserver.shop.template.ShopTemplate" />
+	</file>
+	<file name="Item.xls">
+		<sheet class="com.gameserver.item.template.ItemTemplate" />
+		<sheet class="com.gameserver.item.template.InteractiveItemTemplate" />
+		<sheet class="com.gameserver.item.template.ItemCostTemplate" />
+	</file>
+	<file name="ItemNew.xls">
+		<sheet class="com.gameserver.item.template.ItemNewTemplate" />
+	</file>
+	<file name="signIn.xls">
+		<sheet class="com.gameserver.signin.template.SignInTemplate" />
+		<sheet class="com.gameserver.signin.template.CumulativeSignInTemplate" />
+	</file>
+	<file name="onlineRewards.xls">
+		<sheet class="com.gameserver.misc.template.OnlineRewardTemplate" />
+	</file>
+	<file name="vip.xls">
+		<sheet class="com.gameserver.vip.template.VipTemplate" />
+		<sheet class="com.gameserver.vip.template.VipRoomTemplate" />
+	</file>
+	
+	<file name="vipNew.xls">
+		<sheet class="com.gameserver.vipnew.template.VipNewTemplate" />
+	</file>
+	
+	
+	<file name="recharge.xls">
+		<sheet class="com.gameserver.recharge.template.RechargeTemplate" />
+		
+	</file>
+	<file name="task.xls">
+		<sheet class="com.gameserver.task.template.DailyTaskTemplate" />
+		<sheet class="com.gameserver.task.template.DailyExtraTemplate" />
+	</file>
+	
+	<file name="match.xls">
+		<sheet class="com.gameserver.texas.template.SngMatchTemplate" />
+		<sheet class="com.gameserver.texas.template.SngMatchConfigTemplate" />
+	</file>
+	<file name="baccaratRoom.xls">
+		<sheet class="com.gameserver.baccart.template.BaccaratRoomTemplate" />
+		<sheet class="com.gameserver.baccart.template.BaccaratConfigTemplate" />
+		<sheet class="com.gameserver.baccart.template.JackpotTemplate" />
+	</file>
+	
+	<file name="turntable.xls">
+		<sheet class="com.gameserver.luckyspin.template.TurntableTemplate" />
+		<sheet class="com.gameserver.luckyspin.template.TurntableExtra" />
+	</file>
+	
+	<file name="luckyMatch.xls">
+		<sheet class="com.gameserver.luckyspin.template.LuckyMatchTemplate" />
+	
+	</file>
+	<file name="payLines.xls">
+		<sheet class="com.gameserver.slot.template.PaylinesTemplate" />
+	
+	</file>
+		<file name="slots.xls">
+		<sheet class="com.gameserver.slot.template.SlotsTemplate" />
+	<sheet class="com.gameserver.slot.template.ReelTemplate" />
+	<sheet class="com.gameserver.slot.template.PayTemplate" />
+	<sheet class="com.gameserver.slot.template.SlotJackpotTemplate" />
+	<sheet class="com.gameserver.slot.template.SlotJackpotNewTemplate" />
+	</file>
+	<file name="slotsList.xls">
+		<sheet class="com.gameserver.slot.template.SlotsListTemplate" />
+	</file>
+	
+	<file name="bounsGame.xls">
+		<sheet class="com.gameserver.slot.template.BounsGameTemplate" />
+	</file>
+	
+	<file name="winMultiple.xls">
+		<sheet class="com.gameserver.slot.template.WinMultipleTemplate" />
+	</file>
+	
+	<file name="scatterWheel.xls">
+	<sheet class="com.gameserver.slot.template.ScatterWheel" />
+	<sheet class="com.gameserver.slot.template.WheelType" />
+	<sheet class="com.gameserver.slot.template.GoldBonusTemplate" />
+	<sheet class="com.gameserver.slot.template.BigWheelTemplate" />
+	</file>
+	
+	
+	<file name="scatterGame.xls">
+		<sheet class="com.gameserver.slot.template.ScatterTemplate" />
+		<sheet class="com.gameserver.slot.template.BoxTemplate" />
+	</file>
+	
+	<file name="fbInvite.xls">
+		<sheet class="com.gameserver.misc.template.FbInviteTemplate" />
+	</file>
+	
+	<file name="rankList.xls">
+	   <sheet class="com.gameserver.ranknew.template.RankListTemplate"/>
+	</file> 
+	
+	<file name="gift.xls">
+	   <sheet class="com.gameserver.gift.template.GiftTemplate"/>
+	</file>
+	<file name="achievement.xls">
+	   <sheet class="com.gameserver.achievement.template.AchievementTemplate"/>
+	</file>
+	<file name="videoReward.xls">
+	   <sheet class="com.gameserver.human.template.VideoRewardTemplate"/>
+	</file>
+	<file name="riyuetanMultiple.xls">
+	   <sheet class="com.gameserver.slot.template.RiyuetanMultipleTemplate"/>
+	</file>
+	<file name="scatterMultiple.xls">
+	   <sheet class="com.gameserver.slot.template.ScatterMultipleTemplate"/>
+	</file>
+	
+	<file name="bounsZeus.xls">
+	   <sheet class="com.gameserver.slot.template.BounsZeusTemplate"/>
+	   <sheet class="com.gameserver.slot.template.BounsZeusRewardTemplate"/>
+	</file>
+	
+	<file name="magicSymbol.xls">
+	    <sheet class="com.gameserver.slot.template.MagicSymbolTemplate"/>
+	</file>
+	<!-- 旧的石器时代 小游戏 -->
+	<file name="bounsStoneAge.xls">
+	    <sheet class="com.gameserver.slot.template.BonusStoneAgeTemplate"/>
+	    <sheet class="com.gameserver.slot.template.BonusStoneAgeRewardTemplate"/>
+	</file>
+	<!-- 新的石器时代 小游戏 -->
+	<file name="bounsStoneAgeOptimize.xls">
+	    <sheet class="com.gameserver.slot.template.BonusStoneAgeOptimizeTemplate"/>
+	    <sheet class="com.gameserver.slot.template.BonusStoneAgeAppleTemplate"/>
+	    <sheet class="com.gameserver.slot.template.BonusStoneAgeRuneTemplate"/>
+	    <sheet class="com.gameserver.slot.template.BonusStoneAgePreyTemplate"/>
+	</file>
+	
+	
+	<file name="bounsSphinx.xls">
+	    <sheet class="com.gameserver.slot.template.BounsSphinxTemplate"/>
+	    <sheet class="com.gameserver.slot.template.BounsSphinxRewardTemplate"/>
+	</file>
+	<file name="wildSphinx.xls">
+	    <sheet class="com.gameserver.slot.template.WildSphinxTemplate"/>
+	</file>
+	<file name="bonusAztec.xls">
+	    <sheet class="com.gameserver.slot.template.BonusAztecTemplate"/>
+	</file>
+	<file name="bonusWolf.xls">
+	    <sheet class="com.gameserver.slot.template.BonusWolfTemplate"/>
+	</file>
+	<file name="scatterCrystal.xls">
+	    <sheet class="com.gameserver.slot.template.ScatterCrastalTemplate"/>
+	    <sheet class="com.gameserver.slot.template.ScatterCrystalRewardTemplate"/>
+	</file>
+	
+	<!-- 泰国象 old -->
+	<file name="bonusElephant.xls">
+	    <sheet class="com.gameserver.slot.template.BounsElephontTemplate"/>
+	</file>
+	<!-- 泰国象 new -->
+	<file name="bonusElephant1.xls">
+	    <sheet class="com.gameserver.slot.template.BounsElephont1Template"/>
+	    <sheet class="com.gameserver.slot.template.BounsElephont1RewardTemplate"/>
+	</file>
+	<file name="bigWildRespin.xls">
+	    <sheet class="com.gameserver.slot.template.BigWildRespinTemplate"/>
+	</file>
+	<file name="bounsTiger.xls">
+	    <sheet class="com.gameserver.slot.template.BounsTigerTemplate"/>
+	    <sheet class="com.gameserver.slot.template.BounsTigerRewardTemplate"/>
+	</file>
+	<file name="scatterCowboy.xls">
+	    <sheet class="com.gameserver.slot.template.ScatterCowboyTemplate"/>
+	    <sheet class="com.gameserver.slot.template.ScatterGoldTemplate"/>
+	</file>
+	<file name="jackpotDrong.xls">
+	    <sheet class="com.gameserver.slot.template.JackpotDragonTemplate"/>
+	</file>
+	<file name="bounsNinja.xls">
+	    <sheet class="com.gameserver.slot.template.BonusNinjaTemplate"/>
+	    <sheet class="com.gameserver.slot.template.BonusNinjaRewardTemplate"/>
+	</file>
+	<file name="bonusRhino.xls">
+	    <sheet class="com.gameserver.slot.template.BounsRhinoTemplate"/>
+	</file>
+	<file name="bonusOcean.xls">
+	    <sheet class="com.gameserver.slot.template.BonusOceanTemplate"/>
+	    <sheet class="com.gameserver.slot.template.BonusOceanRewardTemplate"/>
+	    <sheet class="com.gameserver.slot.template.ScatterOceanTemplate"/>
+	    <sheet class="com.gameserver.slot.template.ScatterOceanRewardTemplate"/>
+	</file>
+	<file name="bonusHolmes.xls">
+	    <sheet class="com.gameserver.slot.template.BonusHolmesTemplate"/>
+	    <sheet class="com.gameserver.slot.template.BonusHolmesRewardTemplate"/>
+	</file>
+	
+	<file name="levelGift.xls">
+	    <sheet class="com.gameserver.human.template.LevelGift"/>
+	</file>
+	<file name="scoreList.xls">
+	    <sheet class="com.gameserver.ranknew.template.ScoreListTemplate"/>
+	    <sheet class="com.gameserver.ranknew.template.ScoreListRewardTemplate"/>
+	</file>
+	<file name="multipleWheel.xls">
+	    <sheet class="com.gameserver.recharge.template.MultipleWheel"/>
+	    <sheet class="com.gameserver.recharge.template.WheelConditionTemplate"/>
+	</file>
+	<file name="shavePrize.xls">
+	    <sheet class="com.gameserver.collect.template.ShavePrizeTemplate"/>
+	    <sheet class="com.gameserver.collect.template.CardRewardTemplate"/>
+	</file>
+	<file name="exchange.xls">
+	    <sheet class="com.gameserver.collect.template.ExchangeTemplate"/>
+	</file>
+	<file name="tournament.xls">
+	    <sheet class="com.gameserver.slot.template.TournamentTemplate"/>
+	    <sheet class="com.gameserver.slot.template.TournamentRankListTemplate"/>
+	</file>
+	<file name="treasury.xls">
+	    <sheet class="com.gameserver.treasury.template.TreasuryTemplate"/>
+	</file>
+	
+	<file name="bonusPirate1.xls">
+	    <sheet class="com.gameserver.slot.template.BounsPirate1Template"/>
+	    <sheet class="com.gameserver.slot.template.BounsPirate1Step1Template"/>
+	    <sheet class="com.gameserver.slot.template.BounsPirate1Step2Template"/>
+	</file>
+	<file name="bonusPirate2.xls">
+	    <sheet class="com.gameserver.slot.template.BounsPirate2Template"/>
+	    <sheet class="com.gameserver.slot.template.BounsPirate2RewardTemplate"/>
+	</file>
+	<file name="bonusPirate3.xls">
+	    <sheet class="com.gameserver.slot.template.BounsPirate3Template"/>
+	    <sheet class="com.gameserver.slot.template.BounsPirate3RewardTemplate"/>
+	</file>
+	<file name="coupon.xls">
+	    <sheet class="com.gameserver.human.template.CouponTemplate"/>
+	</file>
+	
+	<file name="SocialitySparta.xls">
+	    <sheet class="com.gameserver.slot.template.SocialitySpartaTemplate"/>
+	    <sheet class="com.gameserver.slot.template.SocialitySpartaRewardTemplate"/>
+	</file>
+	<file name="bonusSparta.xls">
+	    <sheet class="com.gameserver.slot.template.BonusSpartaTemplate"/>
+	    <sheet class="com.gameserver.slot.template.BonusSpartaRewardTemplate"/>
+	</file>
+
+	<file name="club.xls">
+	    <sheet class="com.gameserver.club.template.ClubTemplate"/>
+		<sheet class="com.gameserver.club.template.ClubIconTemplate"/>
+		<sheet class="com.gameserver.club.template.ClubListTemplate"/>
+	</file>
+
+	<file name="clubrecharge.xls">
+		<sheet class="com.gameserver.club.template.ClubRechargeTemplate"/>
+	</file>
+
+	<file name="weeklyMonthlyPack.xls">
+	    <sheet class="com.gameserver.activity.template.WeeklyMonthlyPackTemplate"/>
+	</file>
+	<file name="unlocklevel.xls">
+	    <sheet class="com.gameserver.club.template.UnlockLevelTemplate"/>
+	</file>
+	
+	<!-- 巴西风情  new 小游戏 -->
+	<file name="bonusBrazil.xls">
+	    <sheet class="com.gameserver.slot.template.BonusBrazilTemplate"/>
+	    <sheet class="com.gameserver.slot.template.BonusBrazilBarGameTemplate"/>
+	    <sheet class="com.gameserver.slot.template.BonusBrazilSambaStageTemplate"/>
+	</file>
+	<!-- 小红帽 小游戏 -->
+	<file name="bounsRedgirl.xls">
+	    <sheet class="com.gameserver.slot.template.BounsRedgirlTemplate"/>
+	    <sheet class="com.gameserver.slot.template.BounsRedgirlRewardTemplate"/>
+	</file>
+	<file name="scatterRedgirl.xls">
+	    <sheet class="com.gameserver.slot.template.ScatterRedgirlTemplate"/>
+	</file>
+	<!-- 世界boss -->
+	<file name="worldboss.xls">
+	    <sheet class="com.gameserver.worldboss.template.BossTemplate"/>
+	    <sheet class="com.gameserver.worldboss.template.BossPropertyTemplate"/>
+	    <sheet class="com.gameserver.worldboss.template.BossList"/>
+	</file>
+	<file name="Noviceboot.xls">
+	    <sheet class="com.gameserver.newbie.template.NovicebootTemplate"/>
+	    <sheet class="com.gameserver.newbie.template.NoviceSlotsTemplate"/>
+	    <sheet class="com.gameserver.newbie.template.NoviceStepTemplate"/>
+	</file>
+	
+	<!-- 万圣节 老虎机 -->
+	<file name="bonusHallowmas.xls">
+	    <sheet class="com.gameserver.slot.template.BounsHallowmasTemplate"/>
+	    <sheet class="com.gameserver.slot.template.BounsHallowmasRewardTemplate"/>
+	    <sheet class="com.gameserver.slot.template.BounsHallowmasJackpotTemplate"/>
+	</file>
+	
+	<!-- 中了winner之后的 翻倍转盘 -->
+	<file name="Winnerwheel.xls">
+	    <sheet class="com.gameserver.slot.template.WinnerWheelConfigTemplate"/>
+	    <sheet class="com.gameserver.slot.template.WinnerWheelTemplate"/>
+	</file>
+	
+	<!--新手大礼包  -->
+	<file name="newComer.xls">
+	    <sheet class="com.gameserver.gift.template.NewComerTemplate"/>
+	</file>
+	
+	
+	<!--无双吹牛 -->
+	<file name="LiarsDiceRoom.xls">
+	    <sheet class="com.gameserver.bazoo.template.LiarsDiceRoomTemplate"/>
+	    <sheet class="com.gameserver.bazoo.template.LiarsDiceRoomConfigTemplate"/>
+	    <sheet class="com.gameserver.bazoo.template.LiarsDiceRoomSignInTemplate"/>
+	    <sheet class="com.gameserver.bazoo.template.LiarsDiceRoomTaskTemplate"/>
+	    <sheet class="com.gameserver.bazoo.template.LiarsDiceRoomAchieveTemplate"/>
+	</file>
+	
+	<!--机器人经典模式的配置文件  -->
+	<file name="classicalProperty.xls">
+	    <sheet class="com.gameserver.bazoo.template.ClassicalPropertyTemplate"/>
+	</file>
+</scripts>

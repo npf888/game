@@ -1,0 +1,8 @@
+message com.logserver.model.WorldBossLog(
+	int bossType;// boss的类型
+	String starttime; // boss开启的时间
+    int beginEnd; // boss开始或者结束 1 开始，2结束
+    int bloodBeginEnd; // 回血的开始或者结束 1开始，2结束
+    long curAttackBlood; // 用户攻击的血量
+    long bossId; // boss的Id
+)

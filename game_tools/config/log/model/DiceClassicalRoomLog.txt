@@ -1,0 +1,7 @@
+message com.logserver.model.DiceClassicalRoomLog(
+	int bet;// 房间倍数
+	String roomNum;// 房间号
+	int roomStatus; // 房间类型 0:创建，1:进入，2:退出房间 
+    int totalNum; // 房间总人数
+    String everyIds; // 每个人的ID用 "," 分割
+)

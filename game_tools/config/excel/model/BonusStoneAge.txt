@@ -1,0 +1,6 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int slotsNum;[notNull=false;minValue=0] //老虎机类型
+int bonusNum;[notNull=false;minValue=0] //bonus个数

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="weekcard">
+
+	<!-- 商品信息-->
+	<message type="CG_WEEK_CARD_GET" comment="领取周卡">
+	</message>
+		<!-- 商品信息-->
+	<message type="GC_WEEK_CARD_GET" comment="领取周卡">
+	<field type="com.gameserver.common.data.RandRewardData" 
+					name="randRewardList" comment="道具奖励" list="true" macro="RandRewardData"  clientType="com.gameserver.common.data.RandRewardData"></field>
+	</message>
+	
+	<message type="GC_HUMAN_WEEK_CARD_INFO_DATA" comment="周卡数据">
+		<field type="com.gameserver.weekcard.data.HumanWeekCardInfoData" clientType="HumanWeekCardInfoData" 
+					name="weekCardInfoData" comment="周卡数据"  macro="HumanWeekCardInfoData"></field>
+	</message>
+</messages>

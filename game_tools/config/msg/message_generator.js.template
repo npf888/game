@@ -1,0 +1,2 @@
+// 例如生成道具消息代码
+engine.createMessageFiles("item_message.xml");

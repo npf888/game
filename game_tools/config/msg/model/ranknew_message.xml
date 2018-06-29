@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="ranknew">
+
+	<!-- 排行信息-->
+	<message type="CG_REQUEST_RANK" comment="排行">
+		<field type="Integer" name="start" comment="开始位置（包括）"/>
+		<field type="Integer" name="end" comment="结束位置（包括）"/>
+	</message>
+
+	<message type="GC_RANK_LIST" comment="排行">
+		<field type="Integer" name="start" comment="开始位置（包括）"/>
+		<field type="Integer" name="end" comment="结束位置（包括）"/>
+		<field type="com.gameserver.ranknew.data.RankListData" clientType="RankListData" name="rankListData" comment="排行数据" list="true" macro="RankListData"/>
+	</message>
+	
+   <message type="CG_HUMAN_RANK" comment="请求自己的排名">
+   
+   </message>
+   <message type="GC_HUMAN_RANK" comment="请求自己的排名返回">
+      <field type="Integer" name="rank" comment="自己的排名"/>
+      <field type="Long"  name="win"  comment="玩家积分"/>
+      <field type="Long"  name="refreshPoint"  comment="结算下次刷新点"/>
+   </message>
+
+</messages>

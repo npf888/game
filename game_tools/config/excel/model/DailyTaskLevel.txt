@@ -1,0 +1,5 @@
+int nameId;[notNull=false]//名字id
+int descrip;[notNull=false]//描述
+String langDesc;[notNull=false]//语言描述
+int categoryMissionLevel;[notNull=false]//最大分类
+int num;[notNull=false]//随机个数

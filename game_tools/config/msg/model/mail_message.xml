@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="mail">
+
+	<message type="CG_LOAD_MAIL_LIST" comment="客户端请求邮件列表" description="客户端请求邮件列表">
+		<field name="mailKind" type="Integer" comment="邮件类型"></field>
+	</message>
+	
+	<message type="GC_LOAD_MAIL_LIST" comment="响应客户端请求系统邮件列表">
+		<field name="mailKind" type="Integer" comment="邮件类型"></field>
+		<field type="com.gameserver.mail.data.MailInfoData"
+			clientType="MailInfoData" name="mailInfoDataList" list="true"
+			comment="邮件列表" macro="MailInfoData">
+		</field>
+	</message>
+	
+	<message type="CG_SEND_MAIL" comment="客户端请求发送邮件" description="客户端请求发送邮件">
+		<field name="roleId" type="Long" comment="目标人id"></field>
+		<field name="content" type="String" comment="邮件内容"></field>
+		<field name="title" type="String" comment="邮件标题"></field>
+		<field type="com.gameserver.common.data.RandRewardData" clientType="com.gameserver.common.data.RandRewardData" 
+					name="randReward" list="true" comment="邮件奖励" macro="RandRewardData"></field>
+	</message>
+	
+	<message type="GC_SEND_MAIL" comment="响应客户端请求发送邮件">
+	</message>
+	
+	<message type="CG_READ_MAIL" comment="客户端请求读取邮件" description="客户端请求读取邮件">
+	    <field name="mailId" type="Long" comment="邮件id"></field>
+	</message>
+	
+	<message type="GC_READ_MAIL" comment="响应客户端请求读取邮件">
+		<field name="mailId" type="Long" comment="邮件id"></field>
+		<field name="mailKind" type="Integer" comment="邮件类型"></field>
+		<field name="content" type="String" comment="邮件内容"></field>
+		<field name="receiveTime" type="Long" comment="接收时间"></field>
+		<field name="promptMessage" type="String" comment="提示信息"></field>
+		<field name="isDealWith" type="Integer" comment="是否已经处理过好友申请"></field>
+		<field name="hasAttachment" type="Integer" comment="是否有奖品未领取"></field>
+		<field type="com.gameserver.common.data.RandRewardData" clientType="com.gameserver.common.data.RandRewardData" 
+					name="randReward" list="true" comment="邮件奖励" macro="RandRewardData"></field>
+	</message>
+	
+	<message type="GC_UPDATE_MAIL_LIST" comment="服务器更新邮件列表,显示新邮件">
+		<field name="mailKind" type="Integer" comment="邮件类型"></field>
+		<field name="mailId" type="Long" comment="邮件id"></field>
+		<field type="com.gameserver.mail.data.MailInfoData"
+			clientType="MailInfoData" name="mailInfoData" 
+			comment="邮件详细信息" macro="MailInfoData">
+		</field>
+	</message>
+	
+	<message type="CG_DEAL_WITH_REWARD" comment="客户端请求全部奖品领取奖励" description="客户端请求全部奖品领取奖励">
+		<field name="mailId" type="Long" comment="邮件id"></field>
+	</message>
+	
+	<message type="GC_DEAL_WITH_REWARD" comment="响应客户端请求全部奖品领取奖励">
+		<field name="mailId" type="Long" comment="邮件id"></field>
+	</message>
+	
+	<message type="CG_DELETE_MAIL" comment="客户端请求删除邮件" description="客户端请求删除邮件">
+		<field type="Long" clientType="long" name="mailIdList" list="true"
+			comment="邮件Id列表" ></field>
+	</message>
+	
+	<message type="GC_DELETE_MAIL" comment="响应客户端请求删除邮件">
+	</message>
+	<message type="CG_RECEIVE_ALL" comment="一键领取邮件">  
+	</message>
+	<message type="GC_RECEIVE_ALL" comment="一键领取邮件返回">  
+	  <field type="Long" clientType="long" name="mailIdList" list="true"
+			comment="邮件Id列表" ></field>
+	</message>
+	
+	
+</messages>

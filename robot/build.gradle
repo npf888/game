@@ -1,0 +1,34 @@
+apply plugin: 'java'
+
+
+version = '1.0.0'
+
+sourceSets { 
+	 main { 
+	 	 resources.srcDirs "resources"
+		java.srcDir "$projectDir/src"
+	 } 
+ }
+
+dependencies{
+	compile fileTree(dir: rootDir.path+"/code_libs/libs", include: '*.jar')
+    compile project(':game_core')
+    compile project(':game_db')
+    compile project(':game_webserver_interface')
+    compile project(':game_log')
+    compile project(':game_server')
+   testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'robot',
+                   'Implementation-Version': version,
+                   'Main-Class': 'com.robot.RobotBazooClassicalRemote'
+    }
+}
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

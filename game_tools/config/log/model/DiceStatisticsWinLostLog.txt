@@ -1,0 +1,7 @@
+message com.logserver.model.DiceStatisticsWinLostLog(
+	int bet;// 房间倍数
+	String roomNum;// 房间号
+	int isRobot;//是否是机器人 1：是，0：否
+	int modeType;//房间类型
+	int winOrLost;//1：赢 ，0：输
+)

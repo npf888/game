@@ -1,0 +1,12 @@
+int nameId;[notNull=false] // 名称
+int descrip; //描述
+String langDesc; // 语言描述
+String icon; // icon
+int clientType; //
+int serverType; //
+int condition1; //
+int itemId; //
+int reward1Num; //
+int refreshtype; //
+int leveljudge;[notNull=false] //
+int goTo;[notNull=false] //

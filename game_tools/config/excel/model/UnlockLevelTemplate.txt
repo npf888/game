@@ -1,0 +1,2 @@
+int clubunlock; [notNull=false]// 俱乐部解锁
+int collection; [notNull=false]//收集解锁

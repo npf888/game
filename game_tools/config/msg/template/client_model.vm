@@ -1,0 +1,24 @@
+#macro( smallType $type)
+#if($type == "Byte")int#elseif( $type == "Boolean" )int#elseif( $type == "Short" )int#elseif( $type == "Integer" )int#elseif( $type == "Long" )long#elseif( $type == "Float" )Number#elseif( $type == "Double" )Number#elseif( $type == "String" )string#else$type#end
+#end
+#macro( bigType $type)
+#if( $type == "Integer" )Int#elseif( $type == "Boolean" )Byte#elseif( $type == "String" )UTF#else$type#end
+#end
+#macro( upperFirstChar $type)$type.substring(0,1).toUpperCase()$type.substring(1)#end
+using System.Collections;
+
+public class $model.type
+{
+#foreach( $field in $model.subFields )
+	/** $field.comment */
+#if($field.list)
+	public ArrayList ${field.smallName};
+#else
+#if(!$field.castType)
+	public #smallType($field.type) ${field.smallName};
+#else
+	public ${field.castType} ${field.smallName};
+#end
+#end
+#end
+}

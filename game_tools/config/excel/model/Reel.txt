@@ -1,0 +1,13 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int slotsNum;[notNull=false;minValue=0] //老虎机
+int turn;[notNull=false;minValue=0] //位置
+int reel1;[notNull=false;minValue=0] //卷轴1
+int reel2;[notNull=false;minValue=0] //卷轴2
+int reel3;[notNull=false;minValue=0] //卷轴3
+int reel4;[notNull=false;minValue=0] //卷轴4
+int reel5;[notNull=false;minValue=0] //卷轴5
+int levelDown;[notNull=false;minValue=0] //等级下限
+int levelUp;[notNull=false;minValue=0] //等级上限

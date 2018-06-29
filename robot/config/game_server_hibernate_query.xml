@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.db.model">
+
+<!-- #############################################HumanEntity相关语句############################## -->
+
+	
+	<!--周卡请求 -->
+	<query name="queryWeekCardByCharid">
+	<![CDATA[
+		from HumanWeekCardEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	
+	<!-- ipad充值流水查询 -->
+	<query name="queryDeviceByUserid">
+	<![CDATA[
+		from DeviceEntity where userid = :userid
+	]]>
+	</query>
+
+	<!-- 根据PassportId查询所有CharacterInfo -->
+	<query name="queryCharactersByPid">
+	<![CDATA[
+		from HumanEntity where passportId = :passportId  order by createTime
+	]]>
+	</query>
+	
+	<!-- 根据name查询所有CharacterInfo -->
+	<query name="queryCharacterByName">
+	<![CDATA[
+		from HumanEntity where name = :name  order by createTime
+	]]>
+	</query>
+	
+
+	
+	<!-- 根据PassportId查询德州信息 -->
+	<query name="queryHumanTexasByCharid">
+	<![CDATA[
+		from HumanTexasEntity where charId = :charId  order by createTime
+	]]>
+	</query>
+	
+		<!-- 根据PassportId查询德州sng信息 -->
+	<query name="queryHumanTexasSNGByCharid">
+	<![CDATA[
+		from HumanTexasSNGEntity where charId = :charId  order by createTime
+	]]>
+	</query>
+	
+		<!-- 根据PassportId查询道具 -->
+	<query name="queryItemsByCharid">
+	<![CDATA[
+		from HumanItemEntity where charId = :charId  order by createTime
+	]]>
+	</query>
+	
+
+	<!-- 邮件 -->
+	<query name="queryMailByCharid">
+	<![CDATA[
+		from MailEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryMailBySendid">
+	<![CDATA[
+		from MailEntity where sendId = :charId
+	]]>
+	</query>
+	
+	
+	<!--好友 -->
+	<query name="queryFriendByCharid">
+	<![CDATA[
+		from FriendEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	<!--好友 -->
+	<query name="queryFriendByCharidFriendId">
+	<![CDATA[
+		from FriendEntity where charId = :charId and friendId=:friendId order by createTime desc
+	]]>
+	</query>
+	
+	
+		<!--好友请求 -->
+	<query name="queryFriendRequestByCharid">
+	<![CDATA[
+		from FriendRequestEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+		<!--好友请求 -->
+	<query name="queryFriendRequestByCharidSendid">
+	<![CDATA[
+		from FriendRequestEntity where charId=:charId and sendId = :sendId order by createTime desc
+	]]>
+	</query>
+	
+	
+		<!--签到请求 -->
+	<query name="queryWeekSignInByCharid">
+	<![CDATA[
+		from HumanWeekSignInEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<!--月卡请求 -->
+	<query name="queryMonthCardByCharid">
+	<![CDATA[
+		from HumanMonthCardEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+
+	
+	
+
+	
+	<!--跑马灯-->
+	<query name="queryNotices">
+	<![CDATA[
+		from NoticeEntity order by createTime desc
+	]]>
+	</query>
+	<!--misc -->
+	<query name="queryMiscByCharid">
+	<![CDATA[
+		from HumanMiscEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+
+	<!--vip -->
+	<query name="queryVipByCharid">
+	<![CDATA[
+		from HumanVipEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<!-- vipNew -->
+	<query name="queryVipByHumanId">
+	<![CDATA[
+		from HumanVipNewEntity where humanId = :humanId order by createTime desc
+	]]>
+	</query>
+	
+	<!-- 礼包 -->
+	<query name="queryHumanGiftId">
+	<![CDATA[
+		from HumanGiftEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	
+	<!--充值 -->
+	<query name="queryRechargeOrderByCharid">
+	<![CDATA[
+		from HumanRechargeOrderEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryRechargeOrderByOrders">
+	<![CDATA[
+		from HumanRechargeOrderEntity where id = :id order by createTime desc
+	]]>
+	</query>
+	<query name="queryRechargeMyCardTradeNo">
+	<![CDATA[
+		from HumanRechargeOrderEntity where myCardTradeNo = :myCardTradeNo order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryRechargeOrderStartAndEnd">
+	<![CDATA[
+		from HumanRechargeOrderEntity where createTime >= :startTime and createTime <= :endTime order by createTime desc
+	]]>
+	</query>
+	
+	
+	
+	
+	<!--任务 -->
+	<query name="queryTaskByCharid">
+	<![CDATA[
+		from HumanTaskEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	
+	<!--活动数据-->
+	<query name="queryActivityByCharid">
+	<![CDATA[
+		from HumanActivityEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	
+	<!--活动 -->
+	<query name="queryActivities">
+	<![CDATA[
+		from ActivityEntity order by createTime desc
+	]]>
+	</query>
+	
+	<!--补偿-->
+	<query name="queryCompensations">
+	<![CDATA[
+		from CompensationEntity order by createTime desc
+	]]>
+	</query>
+	
+		<!--补偿-->
+	<query name="queryCompensationsByCharid">
+	<![CDATA[
+		from HumanCompensationEntity  where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	
+		<query name="queryRefundsByCharid">
+	<![CDATA[
+		from HumanRefundEntity  where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryFriendGiftByCharid">
+	<![CDATA[
+		from HumanFriendGiftEntity  where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryBaccartByCharid">
+	<![CDATA[
+		from HumanBaccartEntity  where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryBaccartRoomByRoomId">
+	<![CDATA[
+		from BaccartRoomModelEntity  where roomId = :roomId order by createTime desc
+	]]>
+	</query>
+	
+		<query name="queryLuckySpinByCharid">
+	<![CDATA[
+		from HumanLuckySpinEntity  where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+		<query name="queryLuckyMatchByCharid">
+	<![CDATA[
+		from HumanLuckyMatchEntity  where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryAllSlots">
+	<![CDATA[
+		from SlotEntity order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryAllTextas">
+	<![CDATA[
+		from TextasEntity order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryAllRank">
+	<![CDATA[
+		from RankEntity order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryRankNewByCharid">
+	<![CDATA[
+		from RankEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	
+	
+	
+	<query name="queryAllHumanSlotsByCharId">
+	<![CDATA[
+		from HumanSlotEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryAllACHIEVEMENTByCharId">
+	<![CDATA[
+		from HumanAchievementEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<!-- 随机码 -->
+	<query name="queryAllConversioncode">
+	<![CDATA[
+		from Conversioncode order by createTime desc
+	]]>
+	</query>
+	
+	<query name="querySlotLists">
+	<![CDATA[
+		from SlotListEntity group by type order by id
+	]]>
+	</query>
+	<query name="querySlotAllLists">
+	<![CDATA[
+		from SlotListEntity  order by id
+	]]>
+	</query>
+</hibernate-mapping>

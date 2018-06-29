@@ -1,0 +1,11 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int slotsNum;[notNull=false;minValue=0] //老虎机类型
+
+int type;[notNull=false;minValue=0] //1.第一奖池 2.第二奖池 3.第三奖池 4.第四奖池
+int wildNum;[notNull=false;minValue=0] //奖池wild个数
+int rewardNum;[notNull=false;minValue=0] //奖池奖励，单线下注额的倍数，数值除以100使用
+int wallTimes;[notNull=false;minValue=0] //攻城次数（N1<玩家≤N2）,起始位0
+int rewardPercent;[notNull=false;minValue=0] //奖励百分比，奖励除以100

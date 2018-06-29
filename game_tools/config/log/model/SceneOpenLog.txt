@@ -1,0 +1,3 @@
+message com.logserver.model.SceneOpenLog(
+	int sceneId;//场景Id
+)

@@ -1,0 +1,10 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+int grades;[notNull=false] //段位
+int starLv;[notNull=false] //星级
+int rewardId;[notNull=false] //
+int rewardNum;[notNull=false] //
+int scoreLower;[notNull=false] //积分下限
+int scoreUpper;[notNull=false] //积分上限
+int rewardState;[notNull=false] //0没有奖励 1有奖励

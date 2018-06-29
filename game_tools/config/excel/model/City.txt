@@ -1,0 +1,8 @@
+int cityNameLangId;[notNull=false] // 城镇名称多语言Id
+String cityName; // 城镇名称
+int nextCityId; [notNull=false;minValue=0]//下一个场景id
+int minLevel;[notNull=false;minValue=0] // 城镇最低等级
+int maxLevel;[notNull=false;minValue=0] // 城镇最高等级
+String citySceneName; // 城镇场景名
+int needTaskId;[notNull=false;minValue=0] // 需求任务ID
+String backgroundScence;[notNull=false]//背景场景

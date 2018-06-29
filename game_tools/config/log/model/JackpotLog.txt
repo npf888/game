@@ -1,0 +1,14 @@
+message com.logserver.model.JackpotLog(
+    String slotName; //老虎机名称
+    int slotType;//老虎机类型
+    int slotId;//老虎机ID
+    int bet;//当前的下注
+    int jackType;//类型 1 变化前，2变化后
+    String jackpotNum; //哪个倍数的
+    String cumuJackpotNum; //哪个倍数的
+    long jackpot; //当前jackpot
+    long cumuJackpot; //当前cumuJackpot
+    long afterChangeJackpot; //变化后的jackpot
+    long afterChangeCumuJackpot; //变化后的cumuJackpot
+    long rewardPer; //当前用户获取到的彩金
+)

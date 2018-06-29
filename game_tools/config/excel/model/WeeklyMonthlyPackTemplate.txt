@@ -1,0 +1,7 @@
+String langDesc; //多语言描述
+int packType;[notNull=false;minValue=0] //礼包类型，0表示周礼包，1表示月礼包
+int vipLevel;[notNull=false;minValue=0] //VIP等级
+int packDuration;[notNull=false;minValue=0] //礼包持续时间，单位：秒
+int packCycle;[notNull=false;minValue=0] //礼包刷新时间
+int pid;[notNull=false;minValue=0] //Recharge表对应的pid
+int extraPercentage;[notNull=false;minValue=0] //购买弹窗显示： 额外获得的百分比（如：配置200，显示200% MORE）

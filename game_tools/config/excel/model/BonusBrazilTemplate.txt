@@ -1,0 +1,9 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+int type;[notNull=false] //小游戏类型 1：喝酒小游戏 2：桑巴小游戏
+String icon;[notNull=false] //icon
+int slotsNum;[notNull=false;minValue=0] //老虎机类型
+int bonusNum;[notNull=false;minValue=0] //bonus的个数
+int value;[notNull=false;minValue=0] //权值
+int chance;[notNull=false;minValue=0] //机会数量

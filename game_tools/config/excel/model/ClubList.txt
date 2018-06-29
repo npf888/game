@@ -1,0 +1,10 @@
+int nameId;[notNull=false] // 名称id
+int descrip; [notNull=false;minValue=0]// 描述
+String icon1; [notNull=false]//奖励筹码ico
+int rankListId; [notNull=false;minValue=0]//类型
+String langDesc; [notNull=false]//注释
+int list1; [notNull=false;minValue=0]//名词
+int list2;[notNull=false;minValue=0] // 名次
+int reward1;[notNull=false;minValue=0] // 奖励1
+String reward2;[notNull=false] // 奖励物品
+int rewardNum1;[notNull=false;minValue=0] // 人均奖励数量

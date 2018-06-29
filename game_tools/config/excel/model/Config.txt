@@ -1,0 +1,40 @@
+int initialChips;[notNull=false;minValue=0] // 初始筹码
+int initialFire;[notNull=false;minValue=0] // 初始钻石
+int initialCharm;[notNull=false;minValue=0] //初始魅力值
+int monthCardId;[notNull=false;minValue=0] //月卡id
+int monthCardNum;[notNull=false;minValue=0] //月卡初始赠送筹码
+int monthCardNumDay;[notNull=false;minValue=0] //月卡每天赠送筹码
+int weekCardId;[notNull=false;minValue=0] //周卡id
+int weekCardNum;[notNull=false;minValue=0] //周卡初始赠送筹码
+int weekCardNumDay;[notNull=false;minValue=0] //周卡每天赠送筹码
+int mailNum;[notNull=false;minValue=1]       //最大邮件数
+int mailTime;[notNull=false;minValue=1] 	 //最长时间
+int defaultNum;[notNull=false;minValue=1]	//默认人数
+int supplyChips;[notNull=false;minValue=1]  //自动补充筹码
+int friendsNum;[notNull=false;minValue=1]  //好友数量
+int friendRequestNum;[notNull=false;minValue=1] //好友请求数量
+int friendRequestTime;[notNull=false;minValue=1] //好友请求保存时间
+int giftId;[notNull=false;minValue=1] //礼物id
+int giftNum;[notNull=false;minValue=1] //礼物数量
+int vipTime;[notNull=false;minValue=1] //vip时间
+int chatIntervalTime;[notNull=false;minValue=1] //聊天间隔
+int chatNumLimit;[notNull=false;minValue=1]//聊天字数
+int changeNameId;[notNull=false;minValue=1]//改名卡id
+int newReward;[notNull=false;minValue=1]//新手奖励
+int dailyGiftNum;[notNull=false;minValue=1]//礼物数
+int turntableCost;[notNull=false;minValue=1]//幸运转盘
+int luckyMatchCost;[notNull=false;minValue=1]//幸运匹配
+int fbItemNum;[notNull=false;minValue=1]//fb奖励
+int lvRatio;[notNull=false;minValue=1]//经验加成参数
+int rankVip;[notNull=false;minValue=0]//排行榜vip开启等级
+int lvLimit;[notNull=false;minValue=1]//角色最大等级
+int fbLikeReward;[notNull=false;minValue=1]//fb点赞获取筹码
+int durationTime;[notNull=false;minValue=1]//老虎机竞赛持续时间
+int waitTime;[notNull=false;minValue=1]//老虎机竞赛等待时间
+int fbInviteTime;[notNull=false;minValue=1]//FB邀请好友刷新时间
+int logintime;[notNull=false;minValue=1]//转盘刷新时间
+int daytime;[notNull=false;minValue=1]//每日任务刷新时间
+int timeout;[notNull=false;minValue=1]//推出老虎机时间
+int roomcompare;[notNull=false;minValue=1]//进房间对比参数
+int clubChangeNameItemId;[notNull=false;minValue=1]//俱乐部改名卡模板id
+int speakerItemId;[notNull=false;minValue=1]//喇叭道具id

@@ -1,0 +1,7 @@
+int nameId;[notNull=false] //名称id
+int descrip;[notNull=false] //描述id
+String icon;[notNull=false] //ico
+String langDesc;[notNull=false] //注释
+int type;[notNull=false] //type
+int condition;[notNull=false] //条件
+int value;[notNull=false] //值

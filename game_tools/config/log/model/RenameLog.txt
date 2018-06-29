@@ -1,0 +1,4 @@
+message com.logserver.model.RenameLog(
+    String beforeName;// 改名前
+    String afterName;//改名后
+)

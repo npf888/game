@@ -1,0 +1,11 @@
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int wheeltype;[notNull=false]	//转盘编号
+long start;[notNull=false]	//金币区间开始
+long end;[notNull=false]	//金币区间结束
+int bigswitch;[notNull=false]	//中奖开关 0.关 1.开
+int megaswitch;[notNull=false]	//中奖开关 0.关 1.开
+int superswitch;[notNull=false]	//中奖开关 0.关 1.开
+int epicswitch;[notNull=false]	//中奖开关 0.关 1.开
+int jackpotswitch;[notNull=false]	//中奖开关 0.关 1.开
+int pid;[notNull=false]	//对应商品的ID

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+          "http://www.ibatis.com/dtd/sql-map-2.dtd" >
+<sqlMap>
+    <typeAlias alias="item_log" type="com.logserver.model.ItemLog" />
+    <insert id="insert_item_log" parameterClass="item_log">
+insert into $tableName$(log_type,log_time,region_id,server_id,account_id,account_name,level,reason,param,template_id,delta,result_count, createTime) values(#logType#,#logTime#,#regionId#,#serverId#,#accountId#,#accountName#,#level#,#reason#,#param#,#templateId#,#delta#,#resultCount#, #createTime#)</insert>
+    <statement id="createTable_item_log" parameterClass="java.lang.String">
+create table if not exists $tableName$
+(
+id int(11) not null AUTO_INCREMENT primary key,
+	log_type int(11) not null default -100,
+	log_time bigint not null,
+	region_id int(11) ,
+	server_id int(11) ,
+	account_id bigint not null,
+		account_name varchar(128),
+		level bigint ,
+	reason int(11) ,
+		param text,
+		template_id int(11) ,
+	delta int(11) default 0,
+	result_count int(11) ,
+createTime bigint not null
+	,key account_id (account_id)
+	,key account_name (account_name)
+)ENGINE = MyISAM DEFAULT CHARSET UTF8
+    </statement>
+</sqlMap>

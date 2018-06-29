@@ -1,0 +1,120 @@
+[17/11/08 17:59:34,624] [INFO] ConfigHelper.buildConfig --> Load config [class com.tools.log.LogMsgGenConfig] from [file:/C:/d_sortwire/eclipse_workspace/game_tools/bin/log/log_msg_gen.cfg.js]
+[17/11/08 17:59:35,137] [INFO] LogMsgGenerator.main --> Delete dir : game_tools/out/
+[17/11/08 17:59:35,175] [INFO] LogMsgGenerator.generateMessageTypeConfig --> MessageType.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver
+[17/11/08 17:59:35,198] [INFO] LogMsgGenerator.generateLogMsgRecognizer --> LogMessageRecognizer.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver
+[17/11/08 17:59:35,263] [INFO] LogMsgGenerator.generateMessageConfig --> gold_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:35,397] [INFO] LogMsgGenerator.generateMessageSource --> GoldLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:35,462] [INFO] LogMsgGenerator.generateMessageConfig --> chat_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:35,599] [INFO] LogMsgGenerator.generateMessageSource --> ChatLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:35,678] [INFO] LogMsgGenerator.generateMessageConfig --> vip_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:35,813] [INFO] LogMsgGenerator.generateMessageSource --> VipLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:35,881] [INFO] LogMsgGenerator.generateMessageConfig --> diamond_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:36,014] [INFO] LogMsgGenerator.generateMessageSource --> DiamondLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:36,077] [INFO] LogMsgGenerator.generateMessageConfig --> weekcard_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:36,215] [INFO] LogMsgGenerator.generateMessageSource --> WeekcardLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:36,287] [INFO] LogMsgGenerator.generateMessageConfig --> monthcard_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:36,430] [INFO] LogMsgGenerator.generateMessageSource --> MonthcardLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:36,497] [INFO] LogMsgGenerator.generateMessageConfig --> sign_in_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:36,635] [INFO] LogMsgGenerator.generateMessageSource --> SignInLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:36,702] [INFO] LogMsgGenerator.generateMessageConfig --> recharge_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:36,827] [INFO] LogMsgGenerator.generateMessageSource --> RechargeLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:36,890] [INFO] LogMsgGenerator.generateMessageConfig --> basic_player_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:37,027] [INFO] LogMsgGenerator.generateMessageSource --> BasicPlayerLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:37,088] [INFO] LogMsgGenerator.generateMessageConfig --> online_time_reward_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:37,221] [INFO] LogMsgGenerator.generateMessageSource --> OnlineTimeRewardLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:37,287] [INFO] LogMsgGenerator.generateMessageConfig --> online_time_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:37,429] [INFO] LogMsgGenerator.generateMessageSource --> OnlineTimeLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:37,505] [INFO] LogMsgGenerator.generateMessageConfig --> daily_task_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:37,629] [INFO] LogMsgGenerator.generateMessageSource --> DailyTaskLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:37,728] [INFO] LogMsgGenerator.generateMessageConfig --> exception_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:37,933] [INFO] LogMsgGenerator.generateMessageSource --> ExceptionLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:37,986] [INFO] LogMsgGenerator.generateMessageConfig --> charm_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:38,117] [INFO] LogMsgGenerator.generateMessageSource --> CharmLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:38,226] [INFO] LogMsgGenerator.generateMessageConfig --> friend_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:38,391] [INFO] LogMsgGenerator.generateMessageSource --> FriendLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:38,505] [INFO] LogMsgGenerator.generateMessageConfig --> item_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:38,633] [INFO] LogMsgGenerator.generateMessageSource --> ItemLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:38,693] [INFO] LogMsgGenerator.generateMessageConfig --> rename_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:38,837] [INFO] LogMsgGenerator.generateMessageSource --> RenameLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:38,907] [INFO] LogMsgGenerator.generateMessageConfig --> texas_room_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:39,042] [INFO] LogMsgGenerator.generateMessageSource --> TexasRoomLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:39,116] [INFO] LogMsgGenerator.generateMessageConfig --> baccarat_room_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:39,255] [INFO] LogMsgGenerator.generateMessageSource --> BaccaratRoomLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:39,318] [INFO] LogMsgGenerator.generateMessageConfig --> lucky_spin_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:39,456] [INFO] LogMsgGenerator.generateMessageSource --> LuckySpinLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:39,527] [INFO] LogMsgGenerator.generateMessageConfig --> slot_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:39,657] [INFO] LogMsgGenerator.generateMessageSource --> SlotLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:39,721] [INFO] LogMsgGenerator.generateMessageConfig --> data_overview_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:39,853] [INFO] LogMsgGenerator.generateMessageSource --> DataOverviewLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:39,927] [INFO] LogMsgGenerator.generateMessageConfig --> new_recharge_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:40,060] [INFO] LogMsgGenerator.generateMessageSource --> NewRechargeLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:40,131] [INFO] LogMsgGenerator.generateMessageConfig --> player_login_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:40,304] [INFO] LogMsgGenerator.generateMessageSource --> PlayerLoginLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:40,383] [INFO] LogMsgGenerator.generateMessageConfig --> player_onle_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:40,528] [INFO] LogMsgGenerator.generateMessageSource --> PlayerOnleLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:40,609] [INFO] LogMsgGenerator.generateMessageConfig --> player_keep_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:40,760] [INFO] LogMsgGenerator.generateMessageSource --> PlayerKeepLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:40,830] [INFO] LogMsgGenerator.generateMessageConfig --> slot_room_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:40,970] [INFO] LogMsgGenerator.generateMessageSource --> SlotRoomLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:41,036] [INFO] LogMsgGenerator.generateMessageConfig --> in_out_time_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:41,176] [INFO] LogMsgGenerator.generateMessageSource --> InOutTimeLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:41,238] [INFO] LogMsgGenerator.generateMessageConfig --> jackpot_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:41,374] [INFO] LogMsgGenerator.generateMessageSource --> JackpotLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:41,436] [INFO] LogMsgGenerator.generateMessageConfig --> tournament_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:41,568] [INFO] LogMsgGenerator.generateMessageSource --> TournamentLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:41,627] [INFO] LogMsgGenerator.generateMessageConfig --> world_boss_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:41,769] [INFO] LogMsgGenerator.generateMessageSource --> WorldBossLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:41,854] [INFO] LogMsgGenerator.generateMessageConfig --> statistics_time_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:41,981] [INFO] LogMsgGenerator.generateMessageSource --> StatisticsTimeLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:42,043] [INFO] LogMsgGenerator.generateMessageConfig --> dice_classical_room_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:42,176] [INFO] LogMsgGenerator.generateMessageSource --> DiceClassicalRoomLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:42,237] [INFO] LogMsgGenerator.generateMessageConfig --> dice_classical_guess_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:42,377] [INFO] LogMsgGenerator.generateMessageSource --> DiceClassicalGuessLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:42,442] [INFO] LogMsgGenerator.generateMessageConfig --> dice_classical_call_num_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:42,592] [INFO] LogMsgGenerator.generateMessageSource --> DiceClassicalCallNumLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:42,643] [INFO] LogMsgGenerator.generateMessageConfig --> dice_classical_bazoo_gold_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:42,768] [INFO] LogMsgGenerator.generateMessageSource --> DiceClassicalBazooGoldLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:42,827] [INFO] LogMsgGenerator.generateMessageConfig --> dice_cow_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:42,994] [INFO] LogMsgGenerator.generateMessageSource --> DiceCowLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:43,071] [INFO] LogMsgGenerator.generateMessageConfig --> dice_show_hand_log.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:43,195] [INFO] LogMsgGenerator.generateMessageSource --> DiceShowHandLog.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\src\com\logserver\model
+[17/11/08 17:59:43,375] [INFO] LogMsgGenerator.generateLogService --> LogService.java is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_server\src\com\gameserver\common\log
+[17/11/08 17:59:43,376] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/gold.xml" />
+[17/11/08 17:59:43,377] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/chat.xml" />
+[17/11/08 17:59:43,377] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/vip.xml" />
+[17/11/08 17:59:43,377] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/diamond.xml" />
+[17/11/08 17:59:43,377] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/weekcard.xml" />
+[17/11/08 17:59:43,377] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/monthcard.xml" />
+[17/11/08 17:59:43,377] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/signin.xml" />
+[17/11/08 17:59:43,378] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/recharge.xml" />
+[17/11/08 17:59:43,378] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/basicplayer.xml" />
+[17/11/08 17:59:43,378] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/onlinetimereward.xml" />
+[17/11/08 17:59:43,378] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/onlinetime.xml" />
+[17/11/08 17:59:43,378] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/dailytask.xml" />
+[17/11/08 17:59:43,378] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/exception.xml" />
+[17/11/08 17:59:43,379] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/charm.xml" />
+[17/11/08 17:59:43,379] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/friend.xml" />
+[17/11/08 17:59:43,379] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/item.xml" />
+[17/11/08 17:59:43,379] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/rename.xml" />
+[17/11/08 17:59:43,379] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/texasroom.xml" />
+[17/11/08 17:59:43,379] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/baccaratroom.xml" />
+[17/11/08 17:59:43,379] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/luckyspin.xml" />
+[17/11/08 17:59:43,380] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/slot.xml" />
+[17/11/08 17:59:43,380] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/dataoverview.xml" />
+[17/11/08 17:59:43,380] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/newrecharge.xml" />
+[17/11/08 17:59:43,380] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/playerlogin.xml" />
+[17/11/08 17:59:43,380] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/playeronle.xml" />
+[17/11/08 17:59:43,380] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/playerkeep.xml" />
+[17/11/08 17:59:43,380] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/slotroom.xml" />
+[17/11/08 17:59:43,380] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/inouttime.xml" />
+[17/11/08 17:59:43,381] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/jackpot.xml" />
+[17/11/08 17:59:43,381] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/tournament.xml" />
+[17/11/08 17:59:43,381] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/worldboss.xml" />
+[17/11/08 17:59:43,381] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/statisticstime.xml" />
+[17/11/08 17:59:43,381] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/diceclassicalroom.xml" />
+[17/11/08 17:59:43,381] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/diceclassicalguess.xml" />
+[17/11/08 17:59:43,381] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/diceclassicalcallnum.xml" />
+[17/11/08 17:59:43,382] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/diceclassicalbazoogold.xml" />
+[17/11/08 17:59:43,382] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/dicecow.xml" />
+[17/11/08 17:59:43,382] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> <sqlMap resource="com/logserver/model/diceshowhand.xml" />
+[17/11/08 17:59:43,383] [INFO] LogMsgGenerator.generateLogsIbatisConfig --> log_ibatis_config_section.xml is generated at C:\d_sortwire\eclipse_workspace\game_tools\..\game_log\config

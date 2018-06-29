@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd" module="collect">
+	
+	<message type="CG_CHARM_EXCHANGE" comment="魅力值兑换圈">
+	   <field type="Integer" name="exchangeId" comment="exchange表ID"  />
+	</message>
+	<message type="GC_CHARM_EXCHANGE" comment="魅力值兑换圈">
+	   <field type="Integer" name="returnType" comment="1成功 2 魅力值不够 3 请求物品不存在"  />
+	</message>
+	
+	<message type="CG_COLLECT_INIT" comment="打开收集系统初始数据请求">
+	</message>
+	
+	<message  type="GC_COLLECT_INIT" comment="打开收集系统初始数据请求返回">
+	  <field type="com.gameserver.collect.data.ItemData1" name="itemData1" comment="抽奖券 " list="true"  >
+				<field type="Integer" name="cardType" comment="1 铜 2 银 3 金" />
+				<field type="Integer" name="num" comment="数量" />
+		</field>
+	  <field type="com.gameserver.collect.data.ItemData2" name="itemData2" comment="碎片数量 " list="true"  >
+				<field type="Integer" name="Itemid" comment="碎片物品ID" />
+				<field type="Integer" name="num" comment="数量" />
+		</field>
+	</message>
+	
+	<message type="GC_GET_VOUCHERS" comment="获得券通知">
+	   <field type="Integer" name="itemId" comment="物品ID" />
+	   <field type="Integer" name="num" comment="数量" />
+	</message>
+	
+	<message type="CG_RAFFLE" comment="抽奖">
+	   <field type="Integer" name="cardType" comment="1 铜 2 银 3 金" />
+	</message>
+	
+	<message type="GC_RAFFLE" comment="抽奖返回">
+	   <field type="Integer" name="cardType" comment="1 铜 2 银 3 金" />
+	   <field type="Integer" name="returnRes" comment="1 成功 0失败"/>
+	   <field type="Integer" name="Id" comment="奖池ID 成功的前提下有效"/>
+	</message>
+	
+	
+	
+	<message type="CG_CARD_EXCHANGE" comment="卡片兑换">
+	   <field type="Integer" name="cardType" comment="1 农场卡 2 建筑卡3 赌场卡" />
+	</message>
+	
+	<message type="GC_CARD_EXCHANGE" comment="卡片兑换返回">
+	   <field type="Integer" name="cardType" comment="1 农场卡 2 建筑卡3 赌场卡" />
+	   <field type="Integer" name="returnRes" comment="1 成功 0失败" />
+	</message>
+	
+	
+</messages>

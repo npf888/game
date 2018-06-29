@@ -1,0 +1,6 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+int slotsNum;[notNull=false;minValue=0] //老虎机类型
+int number;[notNull=false;minValue=0] //第二次jackpot转出个数
+int proportion;[notNull=false;minValue=0] //彩金获得比例： X/100
+int weight;[notNull=false;minValue=0] //权值

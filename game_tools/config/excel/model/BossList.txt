@@ -1,0 +1,9 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String icon1;[notNull=false] //icon
+int rankListId;[notNull=false]	//1、击杀榜 2、未击杀榜
+String langDesc; //多语言描述
+int list1;[notNull=false] //富豪榜伤害名次
+int list2;[notNull=false] //排名名次
+int itemid2;[notNull=false] //奖励2：物品id
+int rewardNum2;[notNull=false] //奖励数量 奖励物品数量

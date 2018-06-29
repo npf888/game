@@ -1,0 +1,7 @@
+int nameId;[notNull=false] // 名称
+int descrip; //描述
+String langDesc; // 语言描述
+String icon; // icon
+int finishNum;[notNull=false] // 完成任务个数
+int reward1Num;[notNull=false] // 奖励
+int itemId;[notNull=false] // 

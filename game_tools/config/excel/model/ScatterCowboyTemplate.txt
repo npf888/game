@@ -1,0 +1,8 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int slotsNum;[notNull=false;minValue=0] //老虎机类型
+int scatterNum;[notNull=false;minValue=0] //scatterNum
+int gameType;[notNull=false;minValue=0] //1 总线中奖翻倍 2 免费次数 3 金矿游戏
+int rewardNum;[notNull=false;minValue=0] //

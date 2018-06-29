@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd" module="lobby">
+	
+	
+	<!-- 请求最高彩金获得者前20位 -->
+	<message type="CG_JACKPOT_LIST_DATA" comment="请求最高彩金获得者前20位">
+	 <field name="operationType" type="Integer" comment="请求类型 1 请求最近彩金获得者 2 获取自己适合的游戏类型彩金"></field>
+	</message>
+
+   <!-- 彩金返回数据 -->
+   <message type="GC_JACKPOT_LIST_DATA" comment="最高彩金获得者前20位">
+     <field type="com.gameserver.lobby.data.JackpotList" clientType="JackpotList" name="jackpotList" macro="JackpotList"  list="true" comment="彩金获得者数据"/>
+   </message>
+   
+   <!-- 返回适合自己游戏的彩金 -->
+   <message type="GC_JACKPOT_LEVEL_DATA" comment="适合自己等级游戏的彩金">
+      <field type="com.gameserver.lobby.data.JackpotfitLevelData" clientType="JackpotfitLevelData" name="jackpotfitLevelData" macro="JackpotfitLevelData" list="true" comment="适合自己等级游戏彩金"/>
+   </message>
+   
+   <!-- 请求具体房间彩金  -->
+   <message type="CG_GAMETYPE_JACKPOT" comment="具体游戏类型彩金">
+        <field type="Integer" name="gameType"  comment="游戏类型 百家乐 1 德州扑克 2 老虎机 classic：3  老虎机 四大美人：4 老虎机 水果：5"/>
+        <field type="Integer" name="gameId" comment="游戏的id"/>
+   </message>
+   
+   <message type="GC_GAMETYPE_JACKPOT" comment="返回游戏彩金">
+       <field type="Integer" name="gameType"  comment="游戏类型 百家乐 1 德州扑克 2 老虎机 classic：3  老虎机 四大美人：4 老虎机 水果：5"/>
+       <field type="Integer" name="gameId" comment="游戏的id"/>
+       <field type="Long" name="gamejackpot" comment="游戏彩金"/>
+   </message>
+
+ <!-- 新的彩金  -->
+   <message type="CG_NEW_JACKPOT" comment="返回游戏彩金数">
+       <field type="Integer" name="bet"  comment="根据bet数 获取相应的彩金值"/>
+   </message>
+   <message type="GC_NEW_JACKPOT" comment="游戏彩金数">
+       <field type="Long" name="jackpot"  comment="根据bet数 获取的相应的彩金值"/>
+   </message>
+   
+   <message type="CG_SLOT_NEW_JACKPOTS" comment="主动请求 进入老虎机后的第一个页面展示的 四个阶段的 彩金数">
+       <field type="Integer" name="slotType"  comment="根据bet数 获取的相应的彩金值"/>
+   </message>
+   <message type="GC_SLOT_NEW_JACKPOTS" comment="进入老虎机后的第一个页面展示的 四个阶段的 彩金数">
+       <field type="Integer" name="jackpotNum" list="true" comment="《第几个》--不同的等级对应的最大彩金数，有几个传几个，（配置中可以关闭不同等级的彩金，然以就不显示）"/>
+       <field type="Long" name="jackpot" list="true" comment="不同的等级对应的最大彩金数，有几个传几个，（配置中可以关闭不同等级的彩金，然以就不显示）"/>
+   </message>
+   
+   
+   
+   <message type="CG_ALL_SLOT_NEW_JACKPOTS" comment="请求所有老虎机的最高彩金（slotType->jackpot）">
+   </message>
+   <message type="GC_ALL_SLOT_NEW_JACKPOTS" comment="返回  所有老虎机（每种类型的老虎机 对应一个最高的彩金）的最高彩金">
+       <field type="Integer" name="slotType" list="true" comment="老虎机类型"/>
+       <field type="Long" name="jackpot" list="true" comment="老虎机类型 对应的最高彩金"/>
+   </message>
+
+
+
+
+</messages>

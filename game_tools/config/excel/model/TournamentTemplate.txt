@@ -1,0 +1,16 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int tournamentType;[notNull=false] //
+int slotNum1;[notNull=false] //
+int slotNum2;[notNull=false] //
+int slotNum3;[notNull=false] //
+int slotNum4;[notNull=false] //
+int slotNum5;[notNull=false] //
+int duration1;[notNull=false] //
+int duration2;[notNull=false] //
+int duration3;[notNull=false] //
+int totalTime;[notNull=false] //
+int raceReward;[notNull=false] //
+int intervalRaceReward;[notNull=false] //

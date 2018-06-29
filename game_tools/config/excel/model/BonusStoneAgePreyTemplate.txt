@@ -1,0 +1,3 @@
+int slotsNum;[notNull=false;minValue=0] //老虎机类型
+int PreyNum;[notNull=false;minValue=0] //捕住猎物的个数，最终奖励为：个数*单个倍数
+int weight;[notNull=false;minValue=0] //权值

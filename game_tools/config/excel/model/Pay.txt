@@ -1,0 +1,12 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int slotsNum;[notNull=false;minValue=0] //老虎机号
+int combination1;[notNull=false;minValue=0] //5个
+int combination2;[notNull=false;minValue=0] //4个
+int combination3;[notNull=false;minValue=0] //3个
+int combination4;[notNull=false;minValue=0] //2个
+int combination5;[notNull=false;minValue=0] //1个
+int pay;[notNull=false;minValue=0]//赔率
+int jackpotid;[notNull=false;minValue=0]//中jackpot类型 1.中5个 2.中4个 3.中3个 4.不中

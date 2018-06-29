@@ -1,0 +1,15 @@
+博趣的 对接文档 http://doc.uugame.net:8080/index.php?s=/1&page_id=40
+
+1: 获取博趣 token : 用户登录时 （h5-）调用  登录服务器的 HtmlLoginHandler 方法（前提是  通过 这个注册过了） ，
+        其中会有调用第三方平台的  接口（接口->用户->登/注册-第三方主=http://www.bo-qu.com/api/user/login/third）
+        用来获取第三方 的token,与当前用户 匹配上
+ 
+ 
+2：博趣入口：分成两个 一个是pc入口，一个是手机入口：CGBazooBoqu 
+   
+        
+3：充值的过程 ：前端调用后端的接口 获取 充值页面 CGRequestOrder->如果是 渠道 （19-博趣）那么就会返回充值页面的链接，由前端调用，然后用户去充值，
+      用户充值完毕->回调预置 的 回调接口 （http->servlet->BoquPay（http://xxx:8888/api/boquPay））     
+
+      
+4：通知的接口（包括充值回调，和 兑换金币的回调）（http->servlet->BoquPay（http://xxx:8888/api/boquPay）

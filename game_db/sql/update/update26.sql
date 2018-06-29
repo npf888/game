@@ -1,0 +1,1 @@
+alter table t_human_info add column todayView tinyint(1) default 0 COMMENT "1 当天已经显示，0 当天未显示";

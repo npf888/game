@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="notice">
+
+	<!-- 公告信息-->
+	<message type="GC_NOTICE_INFO_DATA" comment="跑马灯">
+		<field type="String" name="content" comment="内容"/>
+	</message>
+	
+	<!-- 跑马灯信息-->
+	<message type="GC_NOTICE_INFO_DATA_MULTI" comment="跑马灯">
+		<field type="Integer" name="langId" comment="多语言key"/>
+		<field type="String" name="paramsList" list="true" comment="参数"/>
+	</message>
+</messages>

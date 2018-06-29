@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="recharge">
+
+	<!--充值 -->
+	<message type="CG_REQUEST_ORDER" comment="请求订单">
+		<field type="Integer" name="productId" comment="产品d"/>
+	</message>
+	<message type="GC_REQUEST_ORDER" comment="请求订单">
+		<field type="com.gameserver.recharge.data.HumanRechargeOrderInfoData"
+			name="order" comment="订单信息" macro="HumanRechargeOrderInfoData" />
+	</message>
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- mycard -->
+	<message type="CG_REQUEST_ORDER_MYCARD" comment="请求订单">
+		<field type="Integer" name="productId" comment="产品d"/>
+	</message>
+	
+	<message type="GC_MYCARD_AUTHCODE" comment="获取mycard交易码">
+	    <field type="String" name="returnCode" comment="返回结果 1 表示成功 0 表示失败"/>
+		<field type="String" name="authCode" comment="交易码"/>
+	</message>
+	
+	<message type="CG_VALIDATE_ORDER_MYCARD" comment="验证订单mycard">
+		<field type="Long" name="orderId" comment="订单号"/>
+	</message>
+	
+	<!-- mycard -->
+	
+	<!--MOL 支付  -->
+    <message type="CG_REQUEST_ORDER_MOL" comment="验证订MOL">
+		<field type="Integer" name="productId" comment="PID-1表示点卡支付"/>
+	</message>
+	
+	<message type="CG_VALIDATE_ORDER_MOL" comment="验证订单MOL">
+	    <field type="Long" name="orderId" comment="订单号"/>
+	    <field type="String" name="currencyCode" comment="币种"/>
+	    <field type="Integer" name="amount" comment="单位是分"/>
+	    <field type="String" name="paymentId" comment="MOL订单"/>
+		<field type="String" name="virtualCurrencyAmount" comment="发放的游戏币PID为-1的时候有效"/>
+	</message>
+	
+	<message type="GC_MOL_ORDER" comment="待验证发货订单">
+	     <field type="com.gameserver.recharge.data.MolValidationOrder" name="molValidationOrder" comment="待验证订单链表 " list="true"  >
+				<field type="String" name="referenceId" comment="玩家订单" />
+				<field type="String" name="paymentId" comment="MOL订单"/>
+		</field>
+	</message>
+	
+	<!--MOL 支付 -->
+	     
+	<!-- 亚马逊支付 -->
+	<message type="CG_ORDER_AMAZON" comment="验证订单亚马逊">
+		<field type="Long" name="orderId" comment="订单号"/>
+		<field type="String" name="receiptId" comment="收据ID"/>
+		<field type="String" name="userId" comment="Amazon客户的 ID"/>
+	</message>
+	
+	<message type="CG_ORDER_AMAZON_DELIVERY" comment="验证订单亚马逊">
+	<field type="com.gameserver.recharge.data.AmazonDelivery" 
+					name="amazonDeliveryList" comment="道具奖励" list="true" macro="AmazonDelivery"  clientType="com.gameserver.recharge.data.AmazonDelivery"></field>
+					
+	</message>
+	
+	<message type="GC_ORDER_AMAZON_DELIVERY" comment="验证订单亚马逊订单返回">
+	   <field type="String" name="receiptId" comment="成功的收据ID"/>
+	</message>
+
+	<!--亚马逊支付 -->
+
+	<message type="CG_VALIDATE_ORDER" comment="验证订单">
+		<field type="String" name="signature" comment="渠道订单id"/>
+		<field type="String" name="purchaseData" comment="产品id"/>
+	</message>
+	
+	<message type="GC_VALIDATE_ORDER" comment="验证订单">
+		<field type="Integer" name="result" comment="结果"/>
+		<field type="Long" name="orderId" comment="订单号"/>
+		<field type="Long" name="pId" comment="产品"/>
+		<field type="com.gameserver.common.data.RandRewardData" 
+					name="randRewardList" comment="道具奖励" list="true" macro="RandRewardData"  clientType="com.gameserver.common.data.RandRewardData"></field>
+	</message>
+	
+	
+	
+	<message type="GC_ORDER_INFO_DATA_LIST" comment="未处理订单列表">
+		<field type="com.gameserver.recharge.data.HumanRechargeOrderInfoData"
+			name="orderList" comment="订单信息" macro="HumanRechargeOrderInfoData" list="true" />
+	</message>
+	
+	 <message type="GC_DOUBLE_TURN" comment="充值返回">
+		<field type="Integer" name="multipleId" comment="表ID"/>
+		<field type="Long" name="doubleMoney" comment="需要翻倍的钱"/>
+	</message>
+	
+	<!-- 玩家 获得优惠券 -->
+	 <message type="GC_OBTAIN_COUPON" comment="获得优惠券">
+		<field type="Integer" name="couponId" comment="优惠券 模板的ID"/>
+	 </message>
+	 <message type="CG_COUPON_EXIST" comment="优惠券是否存在">
+	 </message>
+	 <message type="GC_COUPON_EXIST" comment="优惠券是否存在">
+		<field type="Integer" name="couponExist" comment="是否存在 1 是 有优惠券    0 是没有优惠券"/>
+	 </message>
+
+
+
+
+	<!-- 博趣 第三方请求订单的返回页面 （前端直接访问）-->
+	<message type="GC_REQUEST_ORDER_THIRD_PARTY" comment="博趣 第三方请求订单的返回页面（前端直接访问）">
+		<field type="String" name="htmlPage" comment="base64编码之后的带参数的页面"/>
+	</message>
+
+
+
+	
+</messages>

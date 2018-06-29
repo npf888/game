@@ -1,0 +1,10 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+int slotsNum;[notNull=false;minValue=0] //老虎机类型
+int checkpoint;[notNull=false;minValue=0] //关卡 0为初始
+int numberGhosts;[notNull=false;minValue=0] //每关出现的鬼魂个数
+int numberChildren;[notNull=false;minValue=0] //每关出现的小孩个数
+int validTime;[notNull=false;minValue=0] //有效击打时间;秒
+int hitTheGhost;[notNull=false;minValue=0] //打中鬼的次数
+int guaranteed;[notNull=false;minValue=0] //保底奖金： 0;有 1;无
+int reward;[notNull=false;minValue=0] //奖励

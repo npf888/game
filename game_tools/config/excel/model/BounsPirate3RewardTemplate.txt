@@ -1,0 +1,8 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+int slotsNum;[notNull=false] //老虎机机器编号
+int level;[notNull=false] //关卡
+int rewardType;[notNull=false] //作者:奖励类型：0.金币   1.次数  2.藏宝图2  3.藏宝图3
+int rewardNum;[notNull=false] //奖励的数量
+int weight;[notNull=false] //权重

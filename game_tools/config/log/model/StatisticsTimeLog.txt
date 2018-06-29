@@ -1,0 +1,16 @@
+message com.logserver.model.StatisticsTimeLog(
+	long userId;// 用户
+	long slotType;// 老虎机
+	long slotListPosition;// 在这个slotType类型下 的哪个老虎机
+	long bet;// 下注额
+	long slotStartBeforeTime;// 老虎机主转中 转动老虎机之前
+	long slotStartBeforeAfter;// 每个老虎机主转 时间（包括小游戏）
+	long achievementTournamentStartEnd; //成就和竞赛 时间
+    long humanJackpotBroadcastNoticeStartEnd; // 全服广播（jackpot）
+    long activityBeforeEnd; // 所有活动 的时间
+    long taskCollectBeforeEnd; // 收集和 每日任务
+    long treasuryStartEnd; // 小金猪
+    long HuoYueForLaohujiWinEnd; // 俱乐部
+    long WorldBossNewBeforeEnd; // 世界boss
+    long totalTime; // 整个老虎机所需的时间
+)

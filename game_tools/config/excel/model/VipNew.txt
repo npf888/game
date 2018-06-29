@@ -1,0 +1,14 @@
+int nameId;[notNull=false] // 名称
+int descrip;[notNull=false] //描述
+String langDesc; [notNull=false]// 语言描述
+String icon; [notNull=false]// icon
+int vipLv; [notNull=false] //vip等级
+int vipPoint; [notNull=false]//vip最大点
+int expression;[notNull=false] //是否开启表情
+int vipRoom;[notNull=false]//vip房间 
+int winTimes;[notNull=false]//连赢次数
+float buyingRatio;[notNull=false]//购买加成比例
+int vipPointRatio;[notNull=false]//vip点数加成
+int siginRatio;[notNull=false]//签到加成
+int beaconRevive;[notNull=false]//百家乐明灯复活权限
+int dailyreward;[notNull=false]//vip加成系数

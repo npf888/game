@@ -1,0 +1,3 @@
+message com.logserver.model.WeekLoginLog(
+    int days;   //天数
+)

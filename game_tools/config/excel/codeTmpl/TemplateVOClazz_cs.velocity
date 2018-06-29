@@ -1,0 +1,17 @@
+/**
+ * $comment
+ * 
+ * @author CodeGenerator, don't	modify this file please.
+ * 
+ */
+ #macro( lowerFirstChar $type)$type.substring(0,1).toLowerCase()$type.substring(1)#end
+public class $className
+{
+		/** 策划表数据主键 */
+	public int id;
+	#foreach($field	in $fields)
+	/** $field.comment */
+	public #lowerFirstChar($field.fieldType) $field.fieldName;
+	#end
+
+}

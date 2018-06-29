@@ -1,0 +1,6 @@
+String requestClientVersion;//客户端版本
+String serverState;//服务器状态
+String serverNew;//是否新服
+int suggested;//是否是推荐服务器
+String url;//IP地址
+String serverName;//服务器名称

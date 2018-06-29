@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd" module="gift">
+	
+	
+	<message type="CG_REQUEST_GIFT" comment="请求多种礼包">
+	</message>
+	
+	<message type="GC_REQUEST_GIFT" comment="请求多种礼包">
+		 <field type="Long" name="startTime" comment="开始计时点" />
+		 <field type="Integer" name="giftId" comment="礼包ID" />
+	</message>
+	
+	<message type="CG_REQUEST_GIFT_TIME_END" comment="当时间为0时，调用这个接口 ,目的是返回提示信息">
+	</message>
+	
+	<!-- 新手礼包 新 -->
+	<message type="CG_NEW_COMER_GIFT" comment="新手礼包"></message>
+	<message type="GC_NEW_COMER_GIFT" comment="新手礼包">
+		 <field type="Integer" name="openShut" comment="是否开启 礼包 （0：开启，1：关闭），如果是 1 就关闭礼包" />
+		 <field type="Integer" name="giftType" comment="礼包类型 限时0，不限时 1" />
+		 <field type="Long" name="leftTime" comment="剩余时间" />
+		 <field type="Long" name="pid" comment="礼包 pid" />
+	</message>
+</messages>

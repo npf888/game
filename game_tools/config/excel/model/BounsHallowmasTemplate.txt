@@ -1,0 +1,11 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+int slotsNum;[notNull=false;minValue=0] //老虎机类型
+int bonusNum;[notNull=false;minValue=0] //bonus的个数
+int collectPumpkin;[notNull=false;minValue=0] //收集南瓜个数
+int reward;[notNull=false;minValue=0] //为单线下注额的倍数，数值除以100使用
+int wildNum;[notNull=false;minValue=0] //wild游戏个数
+int jackpotNum;[notNull=false;minValue=0] //jackpot个数
+int turntime;[notNull=false;minValue=0] //轮数
+

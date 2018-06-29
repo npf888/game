@@ -1,0 +1,5 @@
+int timeLimit;[notNull=false]	//礼包购买限时 单位,秒
+int type;[notNull=false]	//礼包购买限时开关  0,开  1,关
+int gameTime1;[notNull=false]	//判定玩家游戏天数 单位,天
+int gameTime2;[notNull=false]	//判定玩家游戏天数  单位,天
+int pid;[notNull=false]	//对应recharge表内pid值

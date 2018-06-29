@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="luckyspin">
+
+	<!--幸运转盘-->
+	<message type="CG_LUCKY_SPIN" comment="转盘">
+		<field type="Integer" name="free" comment="免费" />
+	</message>
+	
+	<message type="GC_LUCKY_SPIN" comment="转盘">
+		<field type="Integer" name="pos" comment="位置" />
+	</message>
+	
+	<message type="GC_LUCKY_SPIN_INFO_DATA" comment="转盘">
+			<field type="com.gameserver.luckyspin.data.HumanLuckySpinData" clientType="HumanLuckySpinData" name="humanLuckySpinData" comment="内容" macro="HumanLuckySpinData"/>
+	
+	</message>
+	
+	<!--幸运匹配-->
+	<message type="CG_LUCKY_MATCH" comment="匹配">
+	
+	</message>
+	
+	<message type="GC_LUCKY_MATCH" comment="匹配">
+		<field type="Integer" name="pos" comment="位置" />
+	</message>
+	
+	<!-- 新大转盘消息 -->
+	<message type="CG_BIG_ZHUANPAN" comment="请求大转盘数据">
+	</message>
+	
+	<message type="GC_BIG_ZHUANPAN" comment="请求大转盘数据">
+	    <field type="Integer" name="isFree" comment="是否有免费转动 1 有免费转动 0 没有" />
+	    <field type="Integer"  name="loginPoint"  comment="登陆进度"/>
+	</message>
+	
+	<message type="CG_SPIN_ZHUANPAN"  comment="转动装盘">
+	       <field type="Integer" name="isFree" comment="1 免费转动 0 花钱转动" />
+	</message>
+	
+	<message type="GC_SPIN_ZHUANPAN_FREE" comment="免费返回">
+	    <field type="Integer"  name="point"  comment="转盘停留位置"/>
+	    <field type="Integer"  name="loginPoint"  comment="登陆进度"/>
+	    <field type="Integer"  name="dailyReward"  comment="每日奖励"/>
+	    <field type="Integer"  name="vipReward"  comment="VIP奖励"/>
+	    <field type="Integer"  name="friendReward"  comment="好友奖励"/>
+	    <field type="Integer"  name="levelReward"  comment="等级奖励"/>
+	</message>
+	<message type="GC_SPIN_ZHUANPAN_NOFREE" comment="还钱返回">
+	     <field type="Integer" name="isFree" comment="是否有免费转动 1 有免费转动 0 没有" />
+	      <field type="Integer"  name="point"  comment="转盘停留位置"/>
+	</message>
+	
+	
+
+</messages>

@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd" module="slot">
+	
+	<message type="CG_SLOT_ENTER" comment="进入老虎机">
+		<field type="Integer" name="slotId" comment="老虎机Id" />
+	</message>
+	<message type="CG_SLOT_ENTER_ROOM" comment="进入老虎机">
+		<field type="Integer" name="slotId" comment="老虎机Id" />
+		 <field type="String" name="roomId" comment="房间ID"/> 
+	</message>
+	
+	
+	
+	<message type="GC_SLOT_ENTER" comment="进入老虎机">
+			<field type="Integer" name="slotId" comment="老虎机Id" />
+			<field type="Integer" name="resultType" comment="返回类型  0 成功 1 等级不足 2 筹码不足" />
+	</message>
+	
+	<message type="CG_SLOT_OUT" comment="退出老虎机，删除用户所在当前老虎机的ID">
+		<field type="Integer" name="slotId" comment="老虎机Id" />
+	</message>
+	
+	<!-- slot-->
+	<message type="CG_SLOT_SLOT" comment="slot">
+		<field type="Integer" name="bet" comment="下注" />
+		<field type="Integer" name="free" comment="是否免费" />
+	</message>
+	
+	<!-- slot-->
+	<message type="GC_SLOT_SLOT" comment="slot">
+	    <field type="Long" name="msgId"  comment="消息码" />
+	    <field type="Integer" name="free" comment="是否免费" />
+		<field type="Integer" name="slotElementList"  list="true" comment="元素列表" />
+		<field type="com.gameserver.slot.data.SlotConnectInfoData" name="slotConnectInfoDataList" comment="连线信息列表" list="true" macro="SlotConnectInfoData" ></field>
+		<field type="Long" name="rewardNum"  comment="收益" />
+		<field type="Integer" name="freeTimes"  comment="免费次数" />
+		<field type="Long" name="rewardSum"  comment="累计奖金" />
+		<field type="com.gameserver.slot.data.SpecialConnectInfoData" name="specialConnectInfoDataList" comment="特殊连线信息列表" list="true" macro="SpecialConnectInfoData" ></field>
+	</message>
+	<!-- slot 三消返回的消息，三消转动时 就不返回 GC_SLOT_SLOT-->
+	<message type="GC_REMOVE_SLOT_SLOT" comment="slot">
+		<field type="com.gameserver.slot.data.SlotConnectInfoData" name="slotConnectInfoDataList" comment="连线信息列表" list="true" macro="SlotConnectInfoData" ></field>
+		<field type="com.gameserver.slot.data.GcRemoveSlotSlotList" name="gcRemoveSlotSlotList" comment="三消老虎机列表" list="true" macro="GcRemoveSlotSlotList" ></field>
+	</message> 
+	
+	<message type="GC_ROTARY_TABLE" comment="转盘游戏返回">
+	        <field type="Integer" name="firstType" comment="1：GOLD BONUS;2:FREE SPIN" />
+	        <field type="Integer" name="secondIndex" comment="第二个盘子停留的位置 表里面的 ID " />
+	        <field type="Integer" name="thirdIndex" comment="第三个盘子停留的位置 表里面的 ID" />
+	        <field type="Integer" name="bigWheelIndex" comment="第四个盘子停留的位置 表里面的 ID" />
+	        <field type="Integer" name="posList" list="true" comment="大转盘玩法元素位置" />
+	        <field type="Integer" name="bounsList" list="true" comment="BounsGameTemplate表ID " />
+		    <field type="Integer" name="bounsListPosition" list="true" comment="BounsGame元素位置  " />
+	</message>
+	
+	<!-- slot-->
+	<message type="CG_FREE_SLOT_REWARD" comment="slot">
+		<field type="Integer" name="pos"  comment="盒子位置" />
+	</message>
+	
+	<!-- slot-->
+	<message type="GC_FREE_SLOT_REWARD" comment="slot">
+		<field type="Integer" name="boxList"  list="true" comment="盒子列表" />
+		<field type="Integer" name="pos"  comment="盒子位置" />
+		<field type="Long" name="rewardNum" comment="奖金数" />
+	</message>
+	
+	
+	<message type="CG_SLOT_GET_LIST" comment="获取老虎机列表">
+		<field type="Integer" name="soltType" comment="老虎机类型" />
+	</message>
+	
+	<message type="GC_SLOT_LIST" comment="老虎机列表">
+		<field type="com.gameserver.slot.data.SlotList" name="slotList" comment="老虎机列表" list="true" macro="SlotList" ></field>
+	</message>
+	
+	<!-- 老虎机竞赛start -->
+	<!-- <message type="CG_SLOT_GET_SNGBONUS" comment="获取竞赛信息">
+	    <field type="Integer" name="tournamentType" comment="竞赛类型"/>
+	</message> -->
+	<!-- <message type="GC_SLOT_GET_SNGBONUS1" comment="获取竞赛奖金池 变化的时候也会主动推给客户端">
+	    <field type="Integer" name="tournamentType"  comment="竞赛类型" />
+	     <field type="Long" name="startTime" comment="时间块" />
+		<field type="Long" name="allBonus" comment="奖金总数" />
+		<field type="Long" name="totalNum" comment="总人数" />
+	</message> -->
+	 <!-- <message type="GC_SLOT_GET_SNGBONUS2" comment="竞技排行榜（始终包括自己）">
+	    <field type="com.gameserver.slot.data.SlotRankData" name="slotRankData" comment="竞赛类型展示" list="true" macro="SlotRankData"/>
+	 </message> -->
+	
+	<!--  <message type="GC_ENTER_SNG" comment="进入老虎机这时竞赛没有开启就推这个消息  (有时候也会主动推送 ,例如请求竞赛前三名结果竞赛没有开启)">
+	 </message> -->
+	 
+	 
+	<message type="CG_SLOT_TOURNAMENT_START" comment="竞赛开始">
+	    <field type="Integer" name="tournamentType" comment="竞赛类型"/>
+	</message>
+	
+	 <message type="GC_SLOT_TOURNAMENT_START_DATA" comment="竞赛开始 返回的列表">
+	    <field type="Integer" name="tournamentType"  comment="竞赛类型" />
+	     <field type="Long" name="startTime" comment="时间块" />
+		<field type="Long" name="allBonus" comment="奖金总数" />
+		<field type="Long" name="totalNum" comment="总人数" />
+	</message> 
+	 <message type="GC_SLOT_TOURNAMENT_NOT_OPEN" comment="接收到此消息说明 竞赛处于关闭状态">
+	 </message>
+	
+	 <message type="GC_SLOT_RANK_LIST" comment="竞技排行榜（始终包括自己）">
+	    <field type="com.gameserver.slot.data.SlotRankData" name="slotRankData" comment="竞赛类型展示" list="true" macro="SlotRankData"/>
+	 </message> 
+	 <message type="CG_SLOT_TOURNAMENT_CLOSE" comment="关闭竞赛面板">
+	       <field type="Integer" name="tournamentType"  comment="竞赛类型" />
+	 </message>
+	 
+	 <!-- <message type="CG_CLOSE_SNG" comment="关闭竞赛面板">
+	       <field type="Integer" name="tournamentType"  comment="竞赛类型" />
+	 </message> -->
+	 
+	<!--  <message type="CG_SNG_ENTER" comment="进入老虎机竞赛页面">
+	 </message> -->
+	<!--  <message type="GC_SNG_ENTER" comment="进入老虎机竞赛页面返回（未开启的竞赛没有数据）">
+	    <field type="com.gameserver.slot.data.SngBriefData" name="sngBriefData" comment="竞赛类型展示" list="true" macro="SngBriefData"/>
+	 </message> -->
+	 <message type="CG_TOURNAMENT_GET_LIST" comment="进入老虎机竞赛页面">
+	 </message> 
+	 
+	 <message type="GC_TOURNAMENT_GET_LIST" comment="进入老虎机竞赛页面返回（竞赛 开始和结束都会推送此集合）">
+	    <field type="com.gameserver.slot.data.SngTournamentData" name="sngTournamentData" comment="竞赛类型展示" list="true" macro="SngTournamentData"/>
+	 </message>
+	 
+	 
+	<message type="CG_SLOT_GET_RANK" comment="请求老虎机前3名排行数据">
+	 <field type="Integer" name="tournamentType" comment="比赛类型"/>
+	</message>
+	
+	<message type="GC_SLOT_GET_RANK" comment="返回老虎机前3名排行数据 变化的时候也会主动推给客户端">
+	    <field type="com.gameserver.slot.data.SlotRankData" name="slotRankData" comment="排行榜列表" list="true" macro="SlotRankData"/>
+	</message>
+	
+	<message type="CG_SNG_RANK_INFO" comment="自己获奖记录">
+	</message>
+	<message type="GC_SNG_RANK_INFO" comment="自己获奖记录返回">
+	<field type="com.gameserver.slot.data.HumanSngInfo" name="humanSngInfos" comment="个人获奖列表" list="true" macro="HumanSngInfo"/>
+	</message>
+	
+	
+	<message type="GC_SLOT_GET_REWARD" comment="竞赛 结束奖励前三名">
+		 <field type="Long" name="rewardNum" comment="奖励金币数量"/>
+		 <field type="Integer" name="rank" comment="名次"/>
+	</message>
+	<!-- <message type="GC_SLOT_SNG_VIEW" comment="推送大厅显示老虎机竞赛显示 此消息作废">
+	 <field type="com.gameserver.slot.data.SlotSngView" name="slotSngView" comment="大厅竞赛结果展示" list="true" macro="SlotSngView"/>
+	</message> -->
+	<!-- 老虎机竞赛 end -->
+
+
+
+
+
+
+
+   <message type="GC_SLOT_TYPE10" comment="马来网红倍数">
+	   <field type="Integer" name="winMulId" comment="马来网红倍数ID"/>
+	</message>
+   <message type="GC_SLOT_TYPE10_SCATTER" comment="马来网红scatter倍数">
+	   <field type="Integer" name="pos" comment="马来网红scatter倍数"/>
+	</message>
+	<!-- 日月潭老虎机 -->
+	<message type="GC_SLOT_TYPE11"  comment="日月潭老虎机返回">
+	     <field type="Integer" name="sunMoonLakeData" comment="日月潭老虎机中奖倍数" list="true" />
+	</message>
+	
+	<!-- 维密老虎机 -->
+	<message type="GC_SLOT_TYPE12"  comment="维密老虎机scatter返回">
+	    <field type="Integer" name="slotsScatterData" comment="维密老虎机要选择的ID" list="true" />
+	</message> 
+	
+	<message type="CG_SLOT_TYPE12_CHOOSE"  comment="维密老虎机玩家选择ID">
+	      <field type="Integer" name="id" comment="维密老虎机玩家选择ID"/>
+	</message>
+	<message type="GC_SLOT_TYPE12_CHOOSE"  comment="维密老虎机玩家选择ID">
+	      <field type="Integer" name="freeNum" comment="免费次数"/>
+	</message>
+	
+
+	<message type="CG_SLOT_TYPE12_FREE"  comment="维密老虎机自由转动结束后发送这个消息">
+	     
+	</message>
+	<message type="GC_SLOT_TYPE12_FREE"  comment="维密老虎机自由转动结束后发送这个消息">
+	     <field type="Long" name="rewardNum" comment="奖金数没有乘倍数前的" />
+	     <field type="Integer" name="multiple" comment="倍数" />
+	</message>
+	
+	<message type="GC_SLOT_TYPE3_BOUNS_START" comment="水果老虎机 判断是否开始小游戏 bouns">
+		<field type="Long" name="currentGold" list="true" comment="当前的金币" />
+	</message>
+	
+	<!-- 宙斯老虎机 -->
+	<!-- 此返回对象 是交互多次的接口,依然可以使用，但是不用了 -->
+	<message type="GC_SLOT_TYPE13_BOUNS"  comment="宙斯老虎机数据推送">
+	      <field type="Integer" name="isSuccess" comment="是否成功 1 成功 0 失败 ,2开启小游戏" />
+	      <field type="Integer" name="bounsNum" comment="可以抽奖次数" />
+	      <field type="Long" name="money" comment="抽奖获得的金钱总数" />
+	      <field type="Long" name="singleBounsNum" comment="点击获得免费次数" />
+	      <field type="Long" name="singleMoney" comment="点击获得的金钱总数" />
+	</message>
+	<!-- 这是主动推送的接口 -->
+	<message type="GC_SLOT_TYPE13_SEND_BOUNS"  comment="宙斯老虎机数据推送(主动推送 全部数据回去)">
+		  <field type="Integer" name="mtType" list="true" comment="相对应的 金币 或 免费次数 类型，1:金币，2:免费次数"/>
+		  <field type="Long" name="moneyOrTimes" list="true" comment="相对应的 金币或者免费次数"/>
+		 <field type="Long" name="times"  comment="初始的免费次数"/> 
+	</message>
+	
+	
+	<message type="CG_SLOT_TYPE13_BOUNS_PRIZE"  comment="宙斯老虎机抽奖">
+	    
+	</message>
+	
+	<!-- 石器时代老虎机  -->
+	
+	<message type="GC_SLOT_TYPE14"  comment="石器时代老虎机有替换元素">
+	      <field type="Integer" name="slotElementListCope"  list="true" comment="替换后的元素列表" />
+	</message>
+   
+    <message type="GC_SLOT_TYPE14_BONUS"  comment="石器时代老虎机有替换元素">
+         <field type="Integer" name="bounsWeight" comment="bonus倍数" />
+    </message>
+    
+    <!-- 石器时代老虎机  新的小游戏的接口-->
+    <message type="GC_SLOT_TYPE14_APPLE_BONUS"  comment="石器时代老虎机 苹果">
+         <field type="com.gameserver.slot.data.Bonus14Data" name="bonus14Data" comment="每次敲打的苹果的数据" list="true" macro="Bonus14Data"/>
+    </message>
+    <message type="GC_SLOT_TYPE14_RUNE_BONUS"  comment="石器时代老虎机 翻牌小游戏">
+         <field type="Integer" name="rewardPoolList" list="true" comment="流程-每次翻到的牌" />
+         <field type="Integer" name="sameNum" comment="相同 的数量" />
+         <field type="Long" name="totalGold" comment="获得的总的金币数量" />
+    </message>
+    <message type="GC_SLOT_TYPE14_PREY_BONUS"  comment="石器时代老虎机 捕猎小游戏">
+         <field type="Integer" name="nums" comment="捕兽夹 的数量" />
+         <field type="Integer" name="preyNum" comment="捕获到的 野兽的数量" />
+         <field type="Long" name="perGold"  comment="每个猎物获得的金币" />
+         <field type="Long" name="totalGold" comment="获得的总的金币数" />
+    </message>
+
+  
+  <!-- 狮身人面老虎机  -->
+  
+  
+  <message type="CG_SLOT_TYPE15_BOUNS"  comment="狮身人面老虎机的bouns小游戏">
+      <field type="Integer" name="rewardPool" comment="bouns位置元素ID" />
+  </message>
+  <!-- 狮身人面老虎机 - 判断是否开始小游戏的对象 -->
+  <message type="GC_SLOT_TYPE15_BOUNS_START"  comment="狮身人面老虎机 判断是否开始小游戏 bouns">
+  	 <field type="Long" name="currentGold" list="true" comment="当前的金币" />
+  </message>
+  
+  <!-- 狮身人面老虎机  bonus 小游戏-->
+  <message type="GC_SLOT_TYPE15_BOUNS"  comment="狮身人面老虎机的返回值">
+      <field type="Long" name="totalGold" comment="总金币" />
+      <field type="Long" name="currentGold" comment="当前金币" />
+      <field type="Integer" name="isSuccess" comment="是否成功获取金币  1：是，0：否" />
+  </message>
+  
+  <!-- 阿兹特克老虎机 -->
+  <message type="GC_SLOT_TYPE16"  comment="阿兹特克老虎机拼图个数">
+      <field type="Integer" name="cardNumber" comment="图片个数" />
+  </message>
+  
+  <!-- 狼老虎机 -->
+   <message type="GC_SLOT_TYPE17"  comment="狼老虎机bouns玩法">
+      <field type="Long" name="bonusNum" comment="bouns单独中奖金额" />
+      <field type="Integer" name="wolfTimes" comment="转动次数" />
+      <field type="Integer" name="wolfBonusNum" comment="bonus个数" />
+      <field type="com.gameserver.slot.data.BounsConnectInfoData" name="bounsConnectInfoData" comment="bonus位置" list="true" macro="BounsConnectInfoData"/>
+  </message>
+  
+  
+  <!-- 水晶魔法老虎机 -->
+   <message type="CG_SLOT_TYPE19_SCATTER"  comment="水晶魔法老虎机的scatter玩法">
+   
+  </message>
+  
+  <message type="GC_SLOT_TYPE19"  comment="水晶魔法老虎机拼图个数">
+      <field type="Integer" name="id" comment="区域ID" />
+      <field type="Integer" name="levelEnough" comment="1：是           0：否" />
+      <field type="Integer" name="mType" comment="1.单线下注额的倍数 2.免费转动次数" />
+      <field type="Long" name="mt" comment="金钱 money 或者 次数time" />
+  </message>
+  
+  <!-- 泰国大象老虎机 -->
+  <message type="GC_SLOT_TYPE20"  comment="泰国大象老虎机 BigWild">
+       <field type="Integer" name="column" list="true" comment="那一列中了BigWild"/>
+       <field type="Integer" name="freeNum" comment="一共获得免费转动次数" />
+  </message>
+  
+  <message type="GC_SLOT_TYPE20_BOUNS"  comment="泰国大象老虎机Bouns小游戏 ">
+          <field type="Integer" name="multiples" list="true" comment="宝箱倍数客户端需要缩小100倍"/>
+  </message>
+  
+  <message type="GC_SLOT_TYPE20_BOUNS_NEW"  comment="泰国大象老虎机Bouns小游戏(新的小游戏-替换了老的小游戏) ">
+          <field type="Long" name="reward" list="true" comment="每次获取的reward"/>
+          <field type="Integer" name="isPicture" list="true" comment="是否是 相片 0 不是，1 是"/>
+          <field type="Long" name="samePictureGold" list="true" comment="相同图片获取的金币"/>
+          <field type="Long" name="totalGold"  comment="获得的总金币"/>
+  </message>
+ 
+
+  <!--  老虎老虎  bouns 返回个数和位置信息-->
+
+  <message type="GC_SLOT_TYPE21_BOUNS_INFO"  comment="老虎老虎机bouns信息">
+   	<field type="Integer" name="bounsNum" comment="bouns个数"/>
+   	<field type="Integer" name="posList" list="true" comment="bouns位置"/>
+   	<field type="Long" name="rewardTimeList" list="true" comment="奖池的倍数从小到大 依次排列"/>
+   	
+   	<field type="Integer" name="isMatch" list="true" comment="是否匹配"/>
+   	<field type="Long" name="totalGold" list="true" comment="对应的奖金"/>
+   	<field type="Integer" name="rewardPool" list="true" comment="第几个奖池"/>
+  </message>
+
+  <!-- 老虎老虎机 bouns 小游戏的玩法接口 -->
+  <message type="CG_SLOT_TYPE21_BOUNS"  comment="老虎老虎机bouns游戏">
+  </message>
+  <message type="GC_SLOT_TYPE21_BOUNS"  comment="老虎老虎机bouns信息">
+   	<field type="Integer" name="rewardPool" comment="第几个奖池"/>
+   	<field type="Integer" name="isMatch"  comment="是否匹配：1 是，0 否"/>
+   	<field type="Integer" name="totalGold"  comment="总金币"/>
+  </message>
+  
+  <!-- 西部牛仔老虎机  -->
+  
+  <message type="CG_SLOT_TYPE22"  comment="西部牛仔老虎机挖矿小游戏">
+         <field type="Integer" name="bet" comment="下注" />
+  </message>
+  
+  <message type="GC_SLOT_TYPE22"  comment="西部牛仔老虎机挖矿小游戏返回">
+    	<field type="Integer" name="remaining"  comment="剩余次数"/>
+    	<!-- <field type="Long" name="rewardNum"  comment="总收益" /> -->
+         <field type="Long" name="rewardNum" list="true" comment="每次获得的金币" />
+  </message>
+    <!--  东方龙老虎  bouns 返回个数和位置信息 奖池初始化信息-->
+
+  <message type="GC_SLOT_TYPE23_BOUNS_INFO"  comment="东方龙老虎机bouns信息">
+   	<field type="Integer" name="bounsNum" comment="bouns个数"/>
+   	<field type="Long" name="obtainReward" comment="每次中奖获得的奖金数"/>
+   <!-- 	<field type="Integer" name="posList" list="true" comment="bouns位置"/> -->
+   	<field type="String" name="jackpotInfo"  comment="奖池的初始化信息，每个奖池的金额以','分割"/>
+  </message>
+  
+  <message type="CG_SLOT_TYPE23_INIT_REWARD"  comment="东方龙老虎机初始化奖池信息">
+   	<field type="Integer" name="bet"  comment="当前下注额"/>
+  </message>
+  <message type="GC_SLOT_TYPE23_INIT_REWARD"  comment="东方龙老虎机初始化奖池信息">
+   	<field type="String" name="jackpotInfo"  comment="奖池的初始化信息，每个奖池的金额以','分割"/>
+  </message>
+  
+  <!-- 巴西风情老虎机 -->
+	<message type="GC_SLOT_TYPE24_BOUNS"  comment="巴西风情老虎机数据推送">
+	      <field type="Integer" name="isSuccess" comment="是否成功 1 成功 0 失败 ,2开启小游戏" />
+	      <field type="Integer" name="bounsNum" comment="可以抽奖次数" />
+	      <field type="Long" name="money" comment="抽奖获得的金钱总数" />
+	      <field type="Long" name="singleBounsNum" comment="点击获得免费次数" />
+	      <field type="Long" name="singleMoney" comment="点击获得的金钱总数" />
+	</message>
+	<!-- 这是主动推送的接口 -->
+	<message type="GC_SLOT_TYPE24_SEND_BOUNS"  comment="巴西风情 数据推送(主动推送 全部数据回去)">
+		  <field type="Integer" name="mtType" list="true" comment="相对应的 金币 或 免费次数 类型，1:金币，2:免费次数"/>
+		  <field type="Long" name="moneyOrTimes" list="true" comment="相对应的 金币或者免费次数"/>
+		 <field type="Long" name="times"  comment="初始的免费次数"/>
+	</message>
+	
+	<message type="CG_SLOT_TYPE24_BOUNS_PRIZE"  comment="巴西风情老虎机点击卡牌">
+	</message>
+	
+	<!-- 巴西风情老虎机 新的小游戏     桑巴小游戏-->
+	<message type="GC_SLOT_TYPE24_BOUNS_GAME_START"  comment="巴西风情老虎机触发 bonus 游戏">
+		<field type="Integer" name="gameType"  comment="随机出来要玩 哪个游戏小游戏类型 1：喝酒小游戏 2：桑巴小游戏"/>
+		<field type="Integer" name="color" list="true" comment="桑巴小游戏 会用到这个，作者:力度条颜色（前端上传） 1：黄色 2：黄绿色 3：绿色"/>
+		<field type="Integer" name="chance"  comment="桑巴小游戏 会用到这个，用户有几次机会，默认是 1 次"/>
+		<field type="Integer" name="round"  comment="总共有几轮  喝酒小游戏会用到这个"/>
+	</message>
+	<message type="CG_SLOT_TYPE24_BOUNS_GAME_GO"  comment="巴西风情老虎机 去游戏 游戏">
+		<field type="Integer" name="gameType"  comment="要玩 哪个小游戏"/>
+		<field type="Integer" name="color"  comment="要是 桑巴小游戏 就传 color"/>
+	</message>
+	<!--  桑巴小游戏-->
+	<message type="GC_SLOT_TYPE24_BOUNS_SAMBA"  comment="巴西风情老虎机  桑巴  游戏">
+		<field type="Long" name="reward"  comment="获得的金币"/>
+	</message>
+	<!--  喝酒小游戏-->
+	<message type="GC_SLOT_TYPE24_BOUNS_BAR"  comment="巴西风情老虎机  喝酒  游戏">
+		<field type="Integer" name="isReward" list="true" comment="是否是金币  0：不是，1：是"/>
+		<field type="Long" name="rewards"  list="true" comment="获得的金币数量集合"/>
+		<field type="Long" name="totalGold"   comment="获得的总钱数"/>
+	</message>
+	
+	
+	
+	
+	<!--  忍者老虎机  -->
+	<message type="GC_SLOT_TYPE25_WILD_INFO"  comment="忍者老虎机wild信息">
+	    <field type="Integer" name="wildNum" comment="wild个数"/>
+	   	<field type="Integer" name="posList" list="true" comment="wild位置"/>
+	   	<field type="Integer" name="allPosList" list="true" comment="wild元素替换 本列所有元素后 所有元素的位置"/>
+	</message>
+	<message type="GC_SLOT_TYPE25_BOUNS_INFO"  comment="忍者老虎机bouns信息">
+		<field type="Integer" name="position" comment="忍者随机位置"/>
+		<field type="Integer" name="bounsNum" comment="bouns个数"/>
+	   	<field type="Integer" name="posList" list="true" comment="bouns位置"/>
+	</message>
+	
+	<message type="CG_SLOT_TYPE25_BOUNS"  comment="忍者老虎机bouns小游戏">
+		<field type="Integer" name="position" comment="用户选择的位置"/>
+	</message>
+	<message type="GC_SLOT_TYPE25_BOUNS"  comment="忍者老虎机bouns小游戏">
+		<field type="Integer" name="isMatch" comment="是否匹配：1 是，0否"/>
+		<field type="Long" name="totalGold" comment="中奖额度"/>
+	</message>
+	
+	<!-- 猫老虎机彩金通知 -->
+	<message type="GC_SLOT_TYPE18"  comment="猫老虎机彩金推送">
+	      <field type="Integer" name="slotId" comment="老虎机ID" />
+	      <field type="Long" name="jackpot" comment="获得彩金" />
+	</message>
+	
+		<!--  女巫魔法老虎机  -->
+	<message type="GC_SLOT_TYPE26_WILD_INFO"  comment="女巫魔法老虎机wild信息">
+	    <field type="Integer" name="wildNum" comment="wild个数"/>
+	   	<field type="Integer" name="posList" list="true" comment="wild位置"/>
+	   	<field type="Integer" name="allPosList" list="true" comment="wild元素替换 本列所有元素后 所有元素的位置"/>
+	</message>
+	<message type="GC_SLOT_TYPE26_BOUNS_INFO"  comment="女巫魔法老虎机bouns信息">
+		<field type="Integer" name="bounsNum" comment="bouns个数"/>
+		<field type="Long" name="totalGold" comment="奖金额度"/>
+	   	<field type="Integer" name="posList" list="true" comment="bouns位置"/>
+	</message>
+	<message type="CG_SLOT_TYPE26_BOUNS"  comment="女巫魔法老虎机bouns小游戏">
+	</message>
+	<message type="GC_SLOT_TYPE26_BOUNS"  comment="女巫魔法老虎机bouns小游戏">
+		<field type="Integer" name="totalGold" comment="中奖额度"/>
+	</message>
+	
+	<!--  犀牛老虎机  -->
+	<message type="GC_SLOT_TYPE27_BOUNS_INFO"  comment="犀牛老虎机bouns信息">
+		<field type="Integer" name="bounsNum" comment="bouns个数"/>
+		<field type="Long" name="totalGold" comment="中奖额度"/>
+	</message>
+	
+	
+	<!-- 海底世界老虎机 -->
+	<message type="GC_SLOT_TYPE28_WILD_INFO"  comment="海底世界老虎机wild信息">
+	    <field type="Integer" name="wildNum" comment="wild个数"/>
+	    <field type="Integer" name="rate" comment="中奖倍数"/>
+	   	<field type="Integer" name="posList" list="true" comment="wild位置"/>
+	   	<field type="Integer" name="allPosList" list="true" comment="wild元素替换 本列所有元素后 所有元素的位置"/>
+	</message>
+	<message type="GC_SLOT_TYPE28_BOUNS_INFO"  comment="海底世界老虎机bouns信息">
+		<field type="Integer" name="bounsNum" comment="bouns个数"/>
+	   	<field type="Integer" name="posList" list="true" comment="bouns位置"/>
+		<field type="Integer" name="rewardId" comment="奖池的ID"/>
+	</message>
+	
+	<message type="CG_SLOT_TYPE28_BOUNS"  comment="海底世界老虎机bouns小游戏">
+	</message>
+	<message type="GC_SLOT_TYPE28_BOUNS"  comment="海底世界老虎机bouns小游戏">
+		<field type="Integer" name="rewardId" comment="奖金模板的ID"/>
+		<!-- <field type="Integer" name="backType" comment="1:小宝石，2：是次数，3:大宝石"/>
+		<field type="Integer" name="goldOrTimes" comment="金币或者次数"/> -->
+	</message>
+	<!-- 海底世界新的 小游戏 有 特殊scatter触发  -->
+	<message type="GC_SLOT_TYPE28_SCATTER_INFO"  comment="海底世界老虎机 新添加龟兔赛跑游戏，用户的 名次永远是数组中的第一个">
+	   	<field type="Long" name="rewards" list="true" comment="奖励集合"/>
+	   	<field type="Integer" name="rands" list="true" comment="名次集合"/>
+	   	<field type="Integer" name="specilScatter" list="true" comment="特殊scatter位置"/>
+	</message>
+	
+	<!-- 西方龙老虎机 -->
+	<message type="GC_SLOT_TYPE29_WILD_INFO"  comment="西方龙老虎机wild信息">
+	    <field type="Integer" name="wildNum" comment="wild个数"/>
+	   	<field type="Integer" name="posList" list="true" comment="wild位置"/>
+	</message>
+	<message type="GC_SLOT_TYPE29_BOUNS_INFO"  comment="西方龙老虎机bouns信息">
+		<field type="Integer" name="bounsNum" comment="bouns个数"/>
+	   	<field type="Integer" name="posList" list="true" comment="bouns位置"/>
+	   	<field type="Integer" name="isSon" list="true" comment="是否是龙子 1:是龙子，0不是龙子"/>
+	   	 <field type="com.gameserver.slot.data.Bonus29Data" name="bonus29Data" comment="金币" list="true" macro="Bonus29Data"/>
+  </message>
+	
+	<message type="CG_SLOT_TYPE29_BOUNS"  comment="西方龙老虎机bouns小游戏">
+		<field type="Integer" name="position" comment="龙蛋位置"/>
+	</message>
+	<message type="GC_SLOT_TYPE29_BOUNS"  comment="西方龙老虎机bouns小游戏">
+		<field type="Integer" name="isSon" comment="1:是龙子，0不是龙子"/>
+		<field type="Integer" name="gold" list="true" comment="金币"/>
+	</message>
+	
+	<!-- 福尔摩斯老虎机 -->
+	<message type="GC_SLOT_TYPE30_BOUNS_INFO"  comment="福尔摩斯老虎机bouns信息">
+		<field type="Integer" name="bounsNum" comment="bouns个数"/>
+	   	<field type="Integer" name="posList" list="true" comment="bouns位置"/>
+	   	<field type="Integer" name="times" list="true" comment="第几次选择"/>
+	   	<field type="Long" name="reward" list="true" comment="第几次的奖励"/>
+	</message>
+	
+	<message type="CG_SLOT_TYPE30_BOUNS"  comment="福尔摩斯老虎机bouns小游戏">
+		<field type="Integer" name="number" comment="猜大小的第几个"/>
+	</message>
+	<message type="GC_SLOT_TYPE30_BOUNS"  comment="福尔摩斯老虎机bouns小游戏">
+		<field type="Integer" name="isSingleWin" comment="1：单个中，0：单个不中"/>
+		<field type="Integer" name="isAllWin" comment="1：是全中，0：不全中"/>
+		<field type="Integer" name="gold" comment="单次金币"/>
+		<field type="Integer" name="totalGold" comment="所有金币"/>
+	</message>
+	
+	
+	
+		<!--  海盗老虎机 wild  -->
+	<message type="GC_SLOT_TYPE31_WILD_INFO"  comment="海盗老虎机wild信息">
+	    <field type="Integer" name="wildNum" comment="wild个数"/>
+	   	<field type="Integer" name="posList" list="true" comment="wild位置"/>
+	</message>
+		<!--  海盗老虎机   特殊wild-->
+	<message type="GC_SLOT_TYPE31_SPECIFIC_WILD_INFO"  comment="海盗老虎机特殊wild信息">
+	    <field type="Integer" name="wildNum" comment="wild个数"/>
+	   	<field type="Integer" name="posList" list="true" comment="wild位置"/>
+	</message>
+	<message type="GC_SLOT_TYPE31_BONUS"  comment="海盗老虎机中了bonus 游戏">
+	    <field type="Integer" name="whichNum" list="true" comment="三种小游戏 1：第一个-海盗交锋，2:第二个-海岛钓鱼，3:第三个-宝藏探秘"/>
+	</message>
+	<message type="CG_SLOT_TYPE31_BOUNS"  comment="海盗老虎机bouns小游戏">
+		<field type="Integer" name="whichNum" comment="第几个小游戏"/>
+	</message>
+	<message type="GC_SLOT_TYPE31_BONUS_ONE"  comment="海盗老虎机:bonus 游戏 第一个-海盗交锋">
+	    <field type="Integer" name="firstFew"  comment="最开始的 子弹数量"/>
+	    <field type="Integer" name="multiple"  comment="金币所翻倍数"/>
+	    <field type="Integer" name="typeList" list="true" comment="类型的集合，0 是金币    1是炮弹 ,和下边的集合一一对应"/>
+	    <field type="Long" name="goldsOrNumList" list="true" comment="金币或者炮弹的集合"/>
+	</message>
+	<message type="GC_SLOT_TYPE31_BONUS_TWO"  comment="海盗老虎机:bonus 游戏 第二个-海岛钓鱼">
+	   	<field type="Integer" name="rewardPoolList" list="true" comment="奖池的倍数从小到大 依次排列"/>
+	   	<field type="Integer" name="matchNumList" list="true" comment="钓鱼轨迹"/>
+	   	<field type="Long" name="gold"  comment="最终获得的奖励的金币数量"/>
+	</message>
+	<message type="GC_SLOT_TYPE31_BONUS_THREE"  comment="海盗老虎机:bonus 游戏 第三个-宝藏探秘">
+	    <field type="Integer" name="whichNum"  comment="第几关"/>
+	    <field type="Integer" name="rewardTypeList" list="true" comment="类型 的集合 和 下边顺序对应  奖励类型： 0.金币 1.次数 2.下一关（也有金币奖励）"/>
+	    <field type="Long" name="rewardNumList" list="true" comment="奖励集合 和上边 顺序对应"/>
+	    <field type="Integer" name="startNum"  comment="用户初始 点击宝藏次数"/>
+	</message>  
+	
+		<!--  斯巴达老虎机   特殊wild-->
+	<message type="GC_SLOT_TYPE32_BULLET_IN"  comment="斯巴达老虎机 每个用户在进入到这个老虎机的时候 返回这个消息，显示还有多少个攻城车 就可以攻破城墙了">
+		 <field type="Integer" name="bulletLeftNum"  comment="攻城车剩余数量（还差几辆攻城车就会 打开社交活动），如果已经打开就是0个"/>
+	</message>
+	<message type="GC_SLOT_TYPE32_BULLET_OUT"  comment="斯巴达老虎机攻城车出现 通知当前用户">
+	</message>
+	<message type="GC_SLOT_TYPE32_LEFT_BULLET_NUM"  comment="斯巴达老虎机攻城车剩余数量">
+	  <field type="Integer" name="bulletLeftNum"  comment="攻城车剩余数量（还差几辆攻城车就会 打开社交活动）"/>
+	  <field type="Integer" name="userId"  comment="当前获得攻城车的人的ID"/>
+	</message>
+	<message type="GC_SLOT_TYPE32_SOCIAL_CONTACT"  comment="斯巴达老虎机社交活动开启">
+	  <field type="Integer" name="freeNum"  comment="社交的自由转动数量"/>
+	  <field type="Long" name="rewardList" list="true" comment="社交的奖励 一次排列 "/>
+	</message>
+	<message type="GC_SLOT_TYPE32_WILD_INFO"  comment="斯巴达老虎机 返回普通wild的集合（用的元素也是那个固定的wild）">
+	  <field type="Integer" name="posList" list="true" comment="普通wild的集合"/>
+	  <field type="Integer" name="wildNum"  comment="普通wild的数量"/>
+	</message>
+	<message type="GC_SLOT_TYPE32_BONUS"  comment="斯巴达老虎机 闯关游戏">
+	  <field type="Integer" name="levelList" list="true" comment="有几条数据就是走了几关，然后每一条数据是每一关 攻击或防守的次数"/>
+	  <field type="Integer" name="isSuccessList" list="true" comment="每一次攻击是否成功，0否，1是  ，顺序排列"/>
+	  <field type="Long" name="rewardNumList" list="true" comment="每一次攻击获得的奖励，失败就是0"/>
+	</message>
+	<message type="GC_SLOT_TYPE32_SPECIAL_LIST"  comment="斯巴达老虎机 特殊元素 包含 大战士 小战士 用来固定的">
+	  <field type="Integer" name="smallSoldier" list="true" comment="小战士集合"/>
+	  <field type="Integer" name="bigSoldier" list="true" comment="大战士集合"/>
+	</message>
+	
+	<!--  小红帽 老虎机   -->
+	<message type="GC_SLOT_TYPE33_BONUS_LIST"  comment="小红帽老虎机bonus小游戏  返回对象">
+	  <field type="Integer" name="rollType" list="true" comment="每次摇色子的类型"/>
+	  <field type="Long" name="reward" list="true" comment="每次摇色子的 值"/>
+	  <field type="Integer" name="selectNum"  comment="摇色子的次数"/>
+	</message>
+	
+	
+	<!--  万圣节  老虎机   -->
+	<message type="GC_SLOT_TYPE38_WILD"  comment="万圣节老虎机   wild的玩法 ">
+	  <field type="Integer" name="multiple" comment="倍数"/>
+	</message>
+	<message type="GC_SLOT_TYPE38_PUMPKIN"  comment="万圣节老虎机   南瓜头给奖励 ">
+	  <field type="Long" name="totalGold" comment="总共中了多少钱"/>
+	</message>
+	<message type="GC_SLOT_TYPE38_JACKPOT"  comment="万圣节老虎机   jackpot ">
+	  <field type="Long" name="reward1" comment="第一部分中奖"/>
+	  <field type="Long" name="reward2" comment="第二部分中奖"/>
+	  <field type="Long" name="number" comment="第二部分中奖的 bonus的数量"/>
+	  <field type="Integer" name="JackpotList" list="true" comment="jackpot的位置"/>
+	</message>
+	
+	<message type="GC_SLOT_TYPE38_BONUS_TRIGGER"  comment="万圣节老虎机   触发 bonus小游戏 ">
+	</message>
+	<message type="CG_SLOT_TYPE38_BONUS"  comment="万圣节老虎机   用户玩 bonus小游戏 ">
+	  <field type="Integer" name="isGhost"  comment="是否过关（0,1,2,3关）： 只要调用这个接口 就是过关"/>
+	</message>
+	<message type="GC_SLOT_TYPE38_BONUS"  comment="万圣节老虎机   用户玩 bonus小游戏 ">
+	  <field type="Long" name="totalGold" comment="总共中了多少钱"/>
+	</message>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<message type="CG_GET_SLOT_CACHEMSG" comment="请求老虎机缓存消息">
+		
+	</message>
+	<message type="GC_GET_SLOT_CACHEMSG" comment="请求老虎机缓存消息,服务器没有缓存消息的时候返回">
+		
+	</message>
+	<message type="GC_SLOT_ERROR" comment="老虎机错误">
+		
+	</message>
+	
+	<message type="CG_DEMO_TYPE" comment="老虎机特效">
+	    <field type="Integer" name="demoType" comment="1:3个bonus 2 :4个bonus 3 :5个bonus 4:3个scatter 5:4个scatter 6:5个scatter 7:一列大号wild 8:2列大号wild 9:一列小号wild 10:2列小号wild 11:第一行随机出现相同元素 12:第一行出现3个jackpot 13:随机出现4个jackpot 14:随机出现5个jackpot 15: 随机出现6个jackpot 16: 随机出现7个jackpot 200:增加1个亿"/>
+	</message>
+	
+	<!--  使用此接口 说明是彩金老虎机，然后 还获得了彩金 -->
+	<message type="GC_HUMAN_JACKPOT_REWARD" comment="老虎机彩金 获得的值">
+		 <field type="Long" name="jackpotReward"  comment="获得彩金的数量"/>
+	</message>
+	
+	<!-- winner 赢得的钱的接口 -->
+	<message type="GC_WINNER_WHEEL" comment="老虎机彩金 获得的值">
+		 <field type="Integer" name="wheelType"  comment="转盘的类型（每个类型的转盘 花费的美元不一样）"/>
+		 <field type="Integer" name="multiple"  comment="获得彩金的数量"/>
+		 <field type="Long" name="totalGold"  comment="计算完毕之后的 用户如果购买 应该得的金币"/>
+		 <field type="Integer" name="goldType"  comment="充钱的类型：0：转动老虎机，1：小游戏"/>
+	</message>
+</messages>

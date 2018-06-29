@@ -1,0 +1,2 @@
+int type;[notNull=false;minValue=0]//1 gold 2 free
+int weight;[notNull=false;minValue=0]//权重

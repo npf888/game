@@ -1,0 +1,10 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int position1;[notNull=false;minValue=0] //下限
+int position2;[notNull=false;minValue=0] //下限
+int position3;[notNull=false;minValue=0] //下限
+int position4;[notNull=false;minValue=0] //下限
+int position5;[notNull=false;minValue=0] //下限
+int lineType;[notNull=false;minValue=0]//连线类型 1：3*5老虎机 2： 4*5老虎机

@@ -1,0 +1,14 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int clientType;[notNull=false]	//客户端类型
+int serverType;[notNull=false]	//服务器类型
+int smallType;[notNull=false]	//小类型
+int paramType;[notNull=false]	//参数类型  1 单个 2 多个
+int condition1;[notNull=false]	//条件一
+int condition2;[notNull=false]	//条件二
+int reward1Id;[notNull=false]	//奖励类型
+int reward1Num;[notNull=false]	//奖励数量
+int reward2Id;[notNull=false]	//奖励类型
+int reward2Num;[notNull=false]	//奖励数量

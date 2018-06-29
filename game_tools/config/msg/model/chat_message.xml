@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="chat">
+
+	<!--聊天 -->
+	<message type="CG_CHAT_MSG" comment="聊天">
+		<field type="Integer" name="channel" comment="频道"/>
+		<field type="Long" name="destRoleUUID" comment="接收玩家id"/>
+		<field type="String" name="content" comment="内容"/>
+		<field type="String" name="roomNumber" comment="房间号"/>
+		<field type="Integer" name="msgType" comment="消息类型（普通消息：0，可以加入房间的消息：1）"/>
+	</message>
+	
+	<message type="GC_CHAT_MSG" comment="聊天">
+		<field type="Integer" name="channel" comment="频道  	喇叭	SPEAKER(0),世界WORLD(1),房间ROOM(2),俱乐部CLUB(3),私聊	PRIVATE(4),百家乐BACCARAT(5);"/>
+		<field type="String" name="fromRoleImg" comment="发送玩家头像"/>
+		<field type="String" name="fromRoleName" comment="发送玩家名字"/>
+		<field type="Long" name="fromRoleUUID" comment="发送玩家id"/>
+		<field type="String" name="national" comment="国家"></field>
+		<field type="Integer" name="lv" comment="等级"/>
+		<field type="Integer" name="viplv" comment="vip等级"/>
+		<field type="Integer" name="rank" comment="排行榜"/>
+		<field type="Integer" name="sex" comment="性别 1男    2女"/>
+		<field type="String" name="content" comment="内容"/>
+		<field type="String" name="roomNumber" comment="房间号"/>
+		<field type="Integer" name="msgType" comment="消息类型（普通消息：0，可以加入房间的消息：1）"/>
+	</message>
+	
+
+
+	
+</messages>

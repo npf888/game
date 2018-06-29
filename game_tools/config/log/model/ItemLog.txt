@@ -1,0 +1,6 @@
+message com.logserver.model.ItemLog(
+    int templateId;// 道具模板ID
+    int delta  default 0;//变化值
+    int resultCount;// 数量
+
+)

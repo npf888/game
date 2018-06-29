@@ -1,0 +1,18 @@
+[17/10/16 14:24:42,308] [ERROR] MessageGenerator.doReplaceMacros --> 消息配置错误，不存在这样的宏定义：DiceInfo
+[17/10/16 14:24:43,840] [ERROR] MessageGenerator.createMessageFiles --> 
+java.lang.NullPointerException
+	at com.tools.msg.MessageGenerator.setMsgObjFields(MessageGenerator.java:450)
+	at com.tools.msg.MessageGenerator.createServerFiles(MessageGenerator.java:189)
+	at com.tools.msg.MessageGenerator.createMessageFiles(MessageGenerator.java:128)
+	at jdk.nashorn.internal.scripts.Script$\^eval\_.:program(<eval>:37)
+	at jdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:623)
+	at jdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:494)
+	at jdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:393)
+	at jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:446)
+	at jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:403)
+	at jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:399)
+	at jdk.nashorn.api.scripting.NashornScriptEngine.eval(NashornScriptEngine.java:150)
+	at javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:249)
+	at com.core.util.JsScriptHelper.executeScriptFile(JsScriptHelper.java:56)
+	at com.tools.msg.MessageGenerator.main(MessageGenerator.java:928)
+	at com.tools.app.App_GameMsgGen.main(App_GameMsgGen.java:29)

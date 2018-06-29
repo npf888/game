@@ -1,0 +1,6 @@
+int slotsNum;[notNull=false;minValue=0] //老虎机编号类型
+int stage;[notNull=false;minValue=0] //bouns个数
+int type;[notNull=false;minValue=0] //初始选择次数
+int reward;[notNull=false;minValue=0] //两个相同元素 取 reward的值, 要根据 typeNum的数量来定
+int weight;[notNull=false;minValue=0] //初始选择次数
+int typeNum;[notNull=false;minValue=0] //同类型元素数量

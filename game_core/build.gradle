@@ -1,0 +1,30 @@
+apply plugin: 'java'
+
+println 'This is executed during the configuration phase.'
+
+version = '1.0.0'
+
+sourceSets { 
+     main { 
+         java.srcDir "$projectDir/src"
+     } 
+ }
+
+ dependencies{
+    compile fileTree(dir: "../code_libs/libs", include: '*.jar')
+  
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'game_core',
+                   'Implementation-Version': version
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+
+

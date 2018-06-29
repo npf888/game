@@ -1,0 +1,4 @@
+message com.logserver.model.GoldLog(
+    long goldDelta; //变化
+    long goldLeft; //剩余
+)

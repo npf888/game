@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd" module="platform">
+
+	<message type="CG_CHECK_USER_LOGIN" comment="验证用户登录">
+	</message>
+
+	
+	
+</messages>

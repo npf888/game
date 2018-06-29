@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="bazoonewguy">
+
+
+	<!-- 签到 -->
+	<message type="CG_BAZOO_NEW_GUY_PROCESS" comment="无双吹牛新手打点">
+		<field type="Integer" name="modeType" comment="模式类型：1：经典吹牛模式，2：牛牛模式，3：梭哈模式，4：单挑模式"/>
+		<field type="Integer" name="process" comment="新手进程：到第1步传1，到第二步传2，3...依次类推"/>
+	</message>
+	
+</messages>
+
+
+
+
+
+
+

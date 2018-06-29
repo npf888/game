@@ -1,0 +1,128 @@
+[17/11/30 18:24:20,080] --> Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+[17/11/30 18:24:20,080] --> Start connect to Game Server host: 47.88.241.10 port: 9000
+[17/11/30 18:24:20,236] --> Connect success.
+[17/11/30 18:24:20,330] --> GCHandshake[]507
+[17/11/30 18:24:20,330] --> Message:GC_HANDSHAKE Type:507 Time:70us Total:1
+[17/11/30 18:24:20,721] --> GCCheckPlayerLogin[loginId=14854,facebookId=-1,accountId=-14854,img=head_1.png,utcOffset=28800000,playerRole=0]852
+[17/11/30 18:24:20,735] --> Message:GC_CHECK_PLAYER_LOGIN Type:852 Time:10us Total:2
+[17/11/30 18:24:21,361] --> GCHumanDetailInfo[human=com.gameserver.human.data.HumanInfoData@5de993b6]1551
+[17/11/30 18:24:21,361] --> Message:GC_HUMAN_DETAIL_INFO Type:1551 Time:24us Total:3
+[17/11/30 18:24:21,486] --> GCMiscInfoData[humanMiscInfoData=com.gameserver.misc.data.HumanMiscInfoData@18da174f]5053
+[17/11/30 18:24:21,486] --> GCMiscFbInfoData[humanMiscFBInfoData=com.gameserver.misc.data.HumanMiscFBInfoData@693f0d41]5062
+[17/11/30 18:24:21,486] --> GCLoadMailList[mailKind=0,mailInfoDataList={}]3652
+[17/11/30 18:24:21,486] --> GCLoadMailList[mailKind=1,mailInfoDataList={}]3652
+[17/11/30 18:24:21,486] --> GCLoadMailList[mailKind=2,mailInfoDataList={}]3652
+[17/11/30 18:24:21,486] --> GCLoadMailList[mailKind=3,mailInfoDataList={}]3652
+[17/11/30 18:24:21,486] --> GCLoadFriendGiftList[friendGiftInfoDataList={}]4014
+[17/11/30 18:24:21,486] --> GCFunctionLeftTime[img=,leftTime=0,functionType={0}]6817
+[17/11/30 18:24:21,486] --> GCEnterScene[]856
+[17/11/30 18:24:21,486] --> Message:GC_MISC_INFO_DATA Type:5053 Time:10us Total:4
+[17/11/30 18:24:21,486] --> Message:GC_MISC_FB_INFO_DATA Type:5062 Time:7us Total:5
+[17/11/30 18:24:21,486] --> Message:GC_LOAD_MAIL_LIST Type:3652 Time:6us Total:6
+[17/11/30 18:24:21,486] --> Message:GC_LOAD_MAIL_LIST Type:3652 Time:6us Total:7
+[17/11/30 18:24:21,486] --> Message:GC_LOAD_MAIL_LIST Type:3652 Time:7us Total:8
+[17/11/30 18:24:21,486] --> Message:GC_LOAD_MAIL_LIST Type:3652 Time:5us Total:9
+[17/11/30 18:24:21,486] --> Message:GC_LOAD_FRIEND_GIFT_LIST Type:4014 Time:5us Total:10
+[17/11/30 18:24:21,486] --> Message:GC_FUNCTION_LEFT_TIME Type:6817 Time:6us Total:11
+[17/11/30 18:24:21,486] --> Message:GC_ENTER_SCENE Type:856 Time:9us Total:12
+[17/11/30 18:24:21,720] --> GCModeChose[betTotalNum={com.gameserver.bazoo.data.BetTotalNum@4bf15073,com.gameserver.bazoo.data.BetTotalNum@48069fda,com.gameserver.bazoo.data.BetTotalNum@226b48b7,com.gameserver.bazoo.data.BetTotalNum@7ddd5c43}]13116
+[17/11/30 18:24:21,720] --> Message:GC_MODE_CHOSE Type:13116 Time:35us Total:13
+[17/11/30 18:24:21,926] --> GCStateRoomEnter[status=0]13127
+[17/11/30 18:24:21,926] --> Message:GC_STATE_ROOM_ENTER Type:13127 Time:21us Total:14
+[17/11/30 18:24:22,066] --> GCRoomInit[pubOrPri=0,lastPassportId=0,roomNum=1_0_500_1,waitTime=5,turnWait=10,guessWait=6,onePoint=0,cowSwingToBegin=2,cowOneRoundTime=10,cowLookDiceValueTime=2,cowEndCountTime=2,reShakingTimes=7,showHandWhoTurn=1,showHandShakeTime=10,showHandEndToStart=5,bankPassportId=0,endCountInfo={},showHandBet={},returnPlayerInfo={com.gameserver.bazoo.data.ReturnPlayerInfo@2ad1c34b}]13126
+[17/11/30 18:24:22,066] --> GCRoomMatcheding[]13144
+[17/11/30 18:24:22,066] --> GCRoomOut[beRemovedPassportIds={}]13113
+[17/11/30 18:24:22,066] --> Message:GC_ROOM_INIT Type:13126 Time:8us Total:15
+[17/11/30 18:24:22,066] --> Message:GC_ROOM_MATCHEDING Type:13144 Time:7us Total:16
+[17/11/30 18:24:22,066] --> Message:GC_ROOM_OUT Type:13113 Time:6us Total:17
+[17/11/30 18:24:22,519] --> GCPing[timestamp=1512037462156]503
+[17/11/30 18:24:22,519] --> Message:GC_PING Type:503 Time:15us Total:18
+[17/11/30 18:24:23,535] --> GCPing[timestamp=1512037463157]503
+[17/11/30 18:24:23,548] --> Message:GC_PING Type:503 Time:9us Total:19
+[17/11/30 18:24:24,533] --> GCPing[timestamp=1512037464158]503
+[17/11/30 18:24:24,533] --> Message:GC_PING Type:503 Time:28us Total:20
+[17/11/30 18:24:25,549] --> GCPing[timestamp=1512037465158]503
+[17/11/30 18:24:25,550] --> Message:GC_PING Type:503 Time:17us Total:21
+[17/11/30 18:24:26,520] --> GCPing[timestamp=1512037466159]503
+[17/11/30 18:24:26,520] --> Message:GC_PING Type:503 Time:30us Total:22
+[17/11/30 19:36:20,544] --> Message processor thread started [Thread[MessageProcessor Thread,5,main]]
+[17/11/30 19:36:20,546] --> Start connect to Game Server host: 47.88.241.10 port: 9000
+[17/11/30 19:36:21,874] --> Connect success.
+[17/11/30 19:36:22,423] --> GCHandshake[]507
+[17/11/30 19:36:22,423] --> Message:GC_HANDSHAKE Type:507 Time:20us Total:1
+[17/11/30 19:36:23,190] --> GCCheckPlayerLogin[loginId=14854,facebookId=-1,accountId=-14854,img=head_1.png,utcOffset=28800000,playerRole=0]852
+[17/11/30 19:36:23,190] --> Message:GC_CHECK_PLAYER_LOGIN Type:852 Time:8us Total:2
+[17/11/30 19:36:24,016] --> GCHumanDetailInfo[human=com.gameserver.human.data.HumanInfoData@284c4768]1551
+[17/11/30 19:36:24,017] --> Message:GC_HUMAN_DETAIL_INFO Type:1551 Time:9us Total:3
+[17/11/30 19:36:24,196] --> GCMiscInfoData[humanMiscInfoData=com.gameserver.misc.data.HumanMiscInfoData@76cf9122]5053
+[17/11/30 19:36:24,197] --> GCMiscFbInfoData[humanMiscFBInfoData=com.gameserver.misc.data.HumanMiscFBInfoData@7bf18d6]5062
+[17/11/30 19:36:24,199] --> GCLoadMailList[mailKind=0,mailInfoDataList={}]3652
+[17/11/30 19:36:24,199] --> GCLoadMailList[mailKind=1,mailInfoDataList={}]3652
+[17/11/30 19:36:24,199] --> GCLoadMailList[mailKind=2,mailInfoDataList={}]3652
+[17/11/30 19:36:24,199] --> GCLoadMailList[mailKind=3,mailInfoDataList={}]3652
+[17/11/30 19:36:24,200] --> GCLoadFriendGiftList[friendGiftInfoDataList={}]4014
+[17/11/30 19:36:24,201] --> GCFunctionLeftTime[img=,leftTime=0,functionType={0}]6817
+[17/11/30 19:36:24,201] --> GCEnterScene[]856
+[17/11/30 19:36:24,202] --> Message:GC_MISC_INFO_DATA Type:5053 Time:9us Total:4
+[17/11/30 19:36:24,202] --> Message:GC_MISC_FB_INFO_DATA Type:5062 Time:7us Total:5
+[17/11/30 19:36:24,202] --> Message:GC_LOAD_MAIL_LIST Type:3652 Time:9us Total:6
+[17/11/30 19:36:24,202] --> Message:GC_LOAD_MAIL_LIST Type:3652 Time:7us Total:7
+[17/11/30 19:36:24,203] --> Message:GC_LOAD_MAIL_LIST Type:3652 Time:5us Total:8
+[17/11/30 19:36:24,203] --> Message:GC_LOAD_MAIL_LIST Type:3652 Time:5us Total:9
+[17/11/30 19:36:24,203] --> Message:GC_LOAD_FRIEND_GIFT_LIST Type:4014 Time:6us Total:10
+[17/11/30 19:36:24,203] --> Message:GC_FUNCTION_LEFT_TIME Type:6817 Time:6us Total:11
+[17/11/30 19:36:24,203] --> Message:GC_ENTER_SCENE Type:856 Time:7us Total:12
+[17/11/30 19:36:24,998] --> GCPing[timestamp=1512041783769]503
+[17/11/30 19:36:25,002] --> GCModeChose[betTotalNum={com.gameserver.bazoo.data.BetTotalNum@32581177,com.gameserver.bazoo.data.BetTotalNum@ec83080,com.gameserver.bazoo.data.BetTotalNum@78061228,com.gameserver.bazoo.data.BetTotalNum@254c0dd2}]13116
+[17/11/30 19:36:25,003] --> Message:GC_PING Type:503 Time:36us Total:13
+[17/11/30 19:36:25,004] --> Message:GC_MODE_CHOSE Type:13116 Time:25us Total:14
+[17/11/30 19:36:25,815] --> GCPing[timestamp=1512041784770]503
+[17/11/30 19:36:25,816] --> GCStateRoomEnter[status=0]13127
+[17/11/30 19:36:25,819] --> GCRoomInit[pubOrPri=0,lastPassportId=0,roomNum=1_0_500_1,waitTime=5,turnWait=10,guessWait=6,onePoint=0,cowSwingToBegin=2,cowOneRoundTime=10,cowLookDiceValueTime=2,cowEndCountTime=2,reShakingTimes=7,showHandWhoTurn=1,showHandShakeTime=10,showHandEndToStart=5,bankPassportId=0,endCountInfo={},showHandBet={},returnPlayerInfo={com.gameserver.bazoo.data.ReturnPlayerInfo@3986f5e6}]13126
+[17/11/30 19:36:25,819] --> GCRoomMatcheding[]13144
+[17/11/30 19:36:25,820] --> GCRoomOut[beRemovedPassportIds={}]13113
+[17/11/30 19:36:25,820] --> Message:GC_PING Type:503 Time:8us Total:15
+[17/11/30 19:36:25,820] --> Message:GC_STATE_ROOM_ENTER Type:13127 Time:5us Total:16
+[17/11/30 19:36:25,820] --> Message:GC_ROOM_INIT Type:13126 Time:3us Total:17
+[17/11/30 19:36:25,820] --> Message:GC_ROOM_MATCHEDING Type:13144 Time:4us Total:18
+[17/11/30 19:36:25,820] --> Message:GC_ROOM_OUT Type:13113 Time:4us Total:19
+[17/11/30 19:36:26,372] --> GCPing[timestamp=1512041785770]503
+[17/11/30 19:36:26,373] --> Message:GC_PING Type:503 Time:30us Total:20
+[17/11/30 19:36:27,890] --> GCPing[timestamp=1512041786771]503
+[17/11/30 19:36:27,891] --> Message:GC_PING Type:503 Time:24us Total:21
+[17/11/30 19:36:28,380] --> GCPing[timestamp=1512041787771]503
+[17/11/30 19:36:28,383] --> Message:GC_PING Type:503 Time:68us Total:22
+[17/11/30 19:36:29,365] --> GCPing[timestamp=1512041788772]503
+[17/11/30 19:36:29,366] --> Message:GC_PING Type:503 Time:38us Total:23
+[17/11/30 19:36:30,388] --> GCPing[timestamp=1512041789772]503
+[17/11/30 19:36:30,389] --> Message:GC_PING Type:503 Time:26us Total:24
+[17/11/30 19:36:31,385] --> GCPing[timestamp=1512041790773]503
+[17/11/30 19:36:31,386] --> Message:GC_PING Type:503 Time:8us Total:25
+[17/11/30 19:36:32,385] --> GCPing[timestamp=1512041791774]503
+[17/11/30 19:36:32,386] --> Message:GC_PING Type:503 Time:29us Total:26
+[17/11/30 19:36:33,378] --> GCPing[timestamp=1512041792775]503
+[17/11/30 19:36:33,378] --> Message:GC_PING Type:503 Time:13us Total:27
+[17/11/30 19:36:34,373] --> GCPing[timestamp=1512041793775]503
+[17/11/30 19:36:34,374] --> Message:GC_PING Type:503 Time:9us Total:28
+[17/11/30 19:36:35,401] --> GCPing[timestamp=1512041794776]503
+[17/11/30 19:36:35,401] --> Message:GC_PING Type:503 Time:8us Total:29
+[17/11/30 19:36:36,370] --> GCPing[timestamp=1512041795776]503
+[17/11/30 19:36:36,370] --> Message:GC_PING Type:503 Time:24us Total:30
+[17/11/30 19:36:37,404] --> GCPing[timestamp=1512041796777]503
+[17/11/30 19:36:37,405] --> Message:GC_PING Type:503 Time:8us Total:31
+[17/11/30 19:36:38,988] --> GCPing[timestamp=1512041798378]503
+[17/11/30 19:36:38,989] --> Message:GC_PING Type:503 Time:24us Total:32
+[17/11/30 19:36:39,408] --> GCPing[timestamp=1512041798778]503
+[17/11/30 19:36:39,408] --> Message:GC_PING Type:503 Time:9us Total:33
+[17/11/30 19:36:40,401] --> GCPing[timestamp=1512041799778]503
+[17/11/30 19:36:40,401] --> Message:GC_PING Type:503 Time:10us Total:34
+[17/11/30 19:36:41,406] --> GCPing[timestamp=1512041800779]503
+[17/11/30 19:36:41,407] --> Message:GC_PING Type:503 Time:9us Total:35
+[17/11/30 19:36:42,871] --> GCPing[timestamp=1512041801780]503
+[17/11/30 19:36:42,872] --> Message:GC_PING Type:503 Time:10us Total:36
+[17/11/30 19:36:43,396] --> GCPing[timestamp=1512041802780]503
+[17/11/30 19:36:43,397] --> Message:GC_PING Type:503 Time:8us Total:37
+[17/11/30 19:36:44,376] --> GCPing[timestamp=1512041803781]503
+[17/11/30 19:36:44,376] --> Message:GC_PING Type:503 Time:7us Total:38
+[17/11/30 19:36:45,392] --> GCPing[timestamp=1512041804781]503
+[17/11/30 19:36:45,392] --> Message:GC_PING Type:503 Time:7us Total:39

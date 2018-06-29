@@ -1,0 +1,3 @@
+String langDesc;[notNull=false]	//描述
+int cardType;[notNull=false;minValue=0] //牌类型
+int jackpotPer;[notNull=false;minValue=0] //获取彩金池比例 万分比

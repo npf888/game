@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+          "http://www.ibatis.com/dtd/sql-map-2.dtd" >
+<sqlMap>
+    <typeAlias alias="player_keep_log" type="com.logserver.model.PlayerKeepLog" />
+    <insert id="insert_player_keep_log" parameterClass="player_keep_log">
+insert into $tableName$(log_type,log_time,region_id,server_id,account_id,account_name,level,reason,param,login_day,countries,ip_countries,channel_type,device_mode,client_version, createTime) values(#logType#,#logTime#,#regionId#,#serverId#,#accountId#,#accountName#,#level#,#reason#,#param#,#loginDay#,#countries#,#ipCountries#,#channelType#,#deviceMode#,#clientVersion#, #createTime#)</insert>
+    <statement id="createTable_player_keep_log" parameterClass="java.lang.String">
+create table if not exists $tableName$
+(
+id int(11) not null AUTO_INCREMENT primary key,
+	log_type int(11) not null default -100,
+	log_time bigint not null,
+	region_id int(11) ,
+	server_id int(11) ,
+	account_id bigint not null,
+		account_name varchar(128),
+		level bigint ,
+	reason int(11) ,
+		param text,
+		login_day int(11) ,
+		countries varchar(256),
+			ip_countries varchar(256),
+		channel_type int(11) ,
+		device_mode varchar(256),
+			client_version varchar(256),
+	createTime bigint not null
+	,key account_id (account_id)
+	,key account_name (account_name)
+)ENGINE = MyISAM DEFAULT CHARSET UTF8
+    </statement>
+</sqlMap>

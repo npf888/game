@@ -1,0 +1,4 @@
+int prevNameLangId;[notNull=false;minValue=0] // 角色性多语言ID
+String prevName;[notNull=false]	//性枚举
+int nextNameLangId;[notNull=false;minValue=0] // 角色名多语言ID
+String nextName;[notNull=false]	//名字枚举

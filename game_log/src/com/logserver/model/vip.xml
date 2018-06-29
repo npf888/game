@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+          "http://www.ibatis.com/dtd/sql-map-2.dtd" >
+<sqlMap>
+    <typeAlias alias="vip_log" type="com.logserver.model.VipLog" />
+    <insert id="insert_vip_log" parameterClass="vip_log">
+insert into $tableName$(log_type,log_time,region_id,server_id,account_id,account_name,level,reason,param,vip_level, createTime) values(#logType#,#logTime#,#regionId#,#serverId#,#accountId#,#accountName#,#level#,#reason#,#param#,#vipLevel#, #createTime#)</insert>
+    <statement id="createTable_vip_log" parameterClass="java.lang.String">
+create table if not exists $tableName$
+(
+id int(11) not null AUTO_INCREMENT primary key,
+	log_type int(11) not null default -100,
+	log_time bigint not null,
+	region_id int(11) ,
+	server_id int(11) ,
+	account_id bigint not null,
+		account_name varchar(128),
+		level bigint ,
+	reason int(11) ,
+		param text,
+		vip_level int(11) default 0,
+createTime bigint not null
+	,key account_id (account_id)
+	,key account_name (account_name)
+)ENGINE = MyISAM DEFAULT CHARSET UTF8
+    </statement>
+</sqlMap>

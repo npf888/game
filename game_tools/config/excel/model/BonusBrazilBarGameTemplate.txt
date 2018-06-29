@@ -1,0 +1,6 @@
+int slotsNum;[notNull=false;minValue=0] //老虎机类型
+int stage;[notNull=false;minValue=0] //轮次
+int type;[notNull=false;minValue=0] //奖励类型
+int alcohol;[notNull=false;minValue=0] //是否减生命值 （是否有酒） 0表是否，1表示是
+int reward;[notNull=false;minValue=0] //单线下注额倍数,(百分比，实际值除以100）
+int weight;[notNull=false;minValue=0] //权值

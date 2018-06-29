@@ -1,0 +1,10 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icons; //字符串类型图标
+int icon;[notNull=false]	//图标
+int modeType;[notNull=false] //吹牛 的类型 0:不区分模式， 1:吹牛，2:牛牛，3:梭哈
+int bigType;[notNull=false]	//大的分类：1：胜利者，2：实践家，3：资本家
+int wayOfPlay;[notNull=false] //小的分类：1：胜场数，2：连胜数，3：玩的局数，4：钱数，5：段位数
+int condition;[notNull=false] //应该满足的 条件
+int rewardNum;[notNull=false] //应当给予的奖励

@@ -1,0 +1,12 @@
+message com.logserver.model.NewRechargeLog(
+    long money; //充值钱数 
+    int timeDian; //几点
+    int channelType; //渠道
+    String deviceMode; //手机类型
+    String clientVersion; //版本号
+    String gameOrderId; //订单号
+    String countries; //国家
+    int age; //年龄
+    String ipCountries; // 国家
+    int girl; //1 是男，0是女
+)

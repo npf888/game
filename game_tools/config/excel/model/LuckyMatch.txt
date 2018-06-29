@@ -1,0 +1,21 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int itemId;[notNull=false;minValue=0] //itemId
+int itemNum;[notNull=false;minValue=0] //itemNum
+int value1;[notNull=false;minValue=0] //池子1
+int value2;[notNull=false;minValue=0] //池子1
+int value3;[notNull=false;minValue=0] //池子1
+int value4;[notNull=false;minValue=0] //池子1
+int value5;[notNull=false;minValue=0] //池子1
+int value6;[notNull=false;minValue=0] //池子1
+int value7;[notNull=false;minValue=0] //池子1
+int value8;[notNull=false;minValue=0] //池子1
+int value9;[notNull=false;minValue=0] //池子1
+int value10;[notNull=false;minValue=0] //池子1
+
+
+
+
+

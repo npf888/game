@@ -1,0 +1,9 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc;[notNull=false] //
+String stepDesc;[notNull=false] //
+int slotNum;[notNull=false]	//老虎机编号
+int type; [notNull=false] //老虎机场景
+int step;[notNull=false] //
+int force;[notNull=false] //0非强制1强制
+int ignore;[notNull=false] //0不可跳过      1可跳过

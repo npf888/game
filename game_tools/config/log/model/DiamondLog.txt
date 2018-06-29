@@ -1,0 +1,4 @@
+message com.logserver.model.DiamondLog(
+    long diamondDelta; //变化
+    long diamondLeft; //剩余
+)

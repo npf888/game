@@ -1,0 +1,6 @@
+message com.logserver.model.TexasRoomLog(
+    long roomId;//房间号
+    long modeId;//模式id
+ 	long typeId; //类型id
+ 
+)

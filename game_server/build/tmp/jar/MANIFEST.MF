@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Title: game_server
+Implementation-Version: 1.0.0
+Main-Class: com.gameserver.GameServer
+

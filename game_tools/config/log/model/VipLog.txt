@@ -1,0 +1,3 @@
+message com.logserver.model.VipLog(
+    int vipLevel  default 0;// vip等级
+)

@@ -1,0 +1,4 @@
+message com.logserver.model.CharmLog(
+    long charmDelta; //变化
+    long charmLeft; //剩余
+)

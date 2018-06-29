@@ -1,0 +1,4 @@
+String langDesc;[notNull=false]	//描述
+int slotNum;[notNull=false;minValue=0] //SlotsListTemplateVO id列
+int jackpotid;[notNull=false;minValue=0] //PayTemplateVO
+int jackpotreward;[notNull=false;minValue=0] //jackpot中奖获得奖金比（万分比）

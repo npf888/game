@@ -1,0 +1,2 @@
+int slotType;[notNull=false;minValue=0]//老虎机类型
+int scatterNum;[notNull=false;minValue=0]//中奖图标数量

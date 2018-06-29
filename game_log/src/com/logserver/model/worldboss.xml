@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+          "http://www.ibatis.com/dtd/sql-map-2.dtd" >
+<sqlMap>
+    <typeAlias alias="world_boss_log" type="com.logserver.model.WorldBossLog" />
+    <insert id="insert_world_boss_log" parameterClass="world_boss_log">
+insert into $tableName$(log_type,log_time,region_id,server_id,account_id,account_name,level,reason,param,boss_type,starttime,begin_end,blood_begin_end,cur_attack_blood,boss_id, createTime) values(#logType#,#logTime#,#regionId#,#serverId#,#accountId#,#accountName#,#level#,#reason#,#param#,#bossType#,#starttime#,#beginEnd#,#bloodBeginEnd#,#curAttackBlood#,#bossId#, #createTime#)</insert>
+    <statement id="createTable_world_boss_log" parameterClass="java.lang.String">
+create table if not exists $tableName$
+(
+id int(11) not null AUTO_INCREMENT primary key,
+	log_type int(11) not null default -100,
+	log_time bigint not null,
+	region_id int(11) ,
+	server_id int(11) ,
+	account_id bigint not null,
+		account_name varchar(128),
+		level bigint ,
+	reason int(11) ,
+		param text,
+		boss_type int(11) ,
+		starttime varchar(256),
+		begin_end int(11) ,
+	blood_begin_end int(11) ,
+	cur_attack_blood bigint ,
+	boss_id bigint ,
+createTime bigint not null
+	,key account_id (account_id)
+	,key account_name (account_name)
+)ENGINE = MyISAM DEFAULT CHARSET UTF8
+    </statement>
+</sqlMap>

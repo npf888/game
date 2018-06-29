@@ -1,0 +1,8 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int poolType;[notNull=false;minValue=0] //奖池类型
+int itemID;[notNull=false;minValue=0] //物品ID
+int rewardNum;[notNull=false;minValue=0] //数量
+int probability;[notNull=false;minValue=0] //权重

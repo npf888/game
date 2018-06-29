@@ -1,0 +1,2 @@
+long exp;[notNull=false] //角色经验
+int rewardChips;[notNull=false] //角色升级奖励筹码

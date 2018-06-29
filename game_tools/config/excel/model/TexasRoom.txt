@@ -1,0 +1,26 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int roomType;[notNull=false;minValue=0] //房间类型
+int openUp;[notNull=false;minValue=0] //房间是否开启
+int smallBlind;[notNull=false;minValue=1] //小盲注
+int minCarry;[notNull=false;minValue=1] //最小携带量
+int maxCarry;[notNull=false;minValue=1] //最大携带量
+int serviceValue1;[notNull=false;minValue=0] //池底抽水系数 *10000
+int serviceValue2;[notNull=false;minValue=0] //盲注倍数抽水系数*10000
+int victoryExp;[notNull=false;minValue=0] //胜利的经验
+int joinExp;[notNull=false;minValue=0]	//失败经验
+int watchNum;[notNull=false;minValue=0] //观看人数
+int roomNum;[notNull=false;minValue=0]	//座位
+int dealerCost;[notNull=false;minValue=0] //打赏
+int openRoomNum;[notNull=false;minValue=0] //房间数
+int smallCard;[notNull=false;minValue=2] //最小卡
+int suitNum;[notNull=false]//最合适的人数
+int displayNum;[notNull=false;minValue=0]//显示人数
+int operRb;[notNull=false;minValue=0]//是否开启机器人
+int openLv;[notNull=false;minValue=0]//进入等级
+int list;[notNull=false;minValue=0]//显示类型
+int jackpotOriValue;[notNull=false;minValue=0]//彩金池初始值
+int jackpotPoolPer;[notNull=false;minValue=0]//彩金池初玩家抽水抽成比例参数
+int jackpotAddPoolPer;[notNull=false;minValue=0]//彩金累计池初玩家抽水抽成比例参数

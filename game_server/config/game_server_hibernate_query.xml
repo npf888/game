@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.db.model">
+
+<!-- #############################################HumanEntity相关语句############################## -->
+
+	
+	<!--周卡请求 -->
+	<query name="queryWeekCardByCharid">
+	<![CDATA[
+		from HumanWeekCardEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	
+	<!-- ipad充值流水查询 -->
+	<query name="queryDeviceByUserid">
+	<![CDATA[
+		from DeviceEntity where userid = :userid
+	]]>
+	</query>
+
+	<!-- 根据PassportId查询所有CharacterInfo -->
+	<query name="queryCharactersByPid">
+	<![CDATA[
+		from HumanEntity where passportId = :passportId  order by createTime
+	]]>
+	</query>
+	<!-- 根据name查询所有CharacterInfo -->
+	<query name="queryCharacterByName">
+	<![CDATA[
+		from HumanEntity where name = :name   order by createTime
+	]]>
+	</query>
+	<!-- 根据name查询所有CharacterInfo -->
+	
+	 <query name="queryCharacterByNameAll">
+	<![CDATA[
+		from HumanEntity where name = :name or passportId = :name  order by createTime
+	]]>
+	</query> 
+	<!-- <query name="queryCharacterByNameAll">
+	<![CDATA[
+		from HumanEntity where name like :name or passportId like :name  order by createTime
+	]]>
+	</query> -->
+	
+
+	
+	<!-- 根据PassportId查询德州信息 -->
+	<query name="queryHumanTexasByCharid">
+	<![CDATA[
+		from HumanTexasEntity where charId = :charId  order by createTime
+	]]>
+	</query>
+	
+		<!-- 根据PassportId查询德州sng信息 -->
+	<query name="queryHumanTexasSNGByCharid">
+	<![CDATA[
+		from HumanTexasSNGEntity where charId = :charId  order by createTime
+	]]>
+	</query>
+	
+		<!-- 根据PassportId查询道具 -->
+	<query name="queryItemsByCharid">
+	<![CDATA[
+		from HumanItemEntity where charId = :charId  order by createTime
+	]]>
+	</query>
+	
+	
+
+	<!-- 邮件 -->
+	<query name="queryMailByCharid">
+	<![CDATA[
+		from MailEntity where charId = :charId and deleted = 0 order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryMailBySendid">
+	<![CDATA[
+		from MailEntity where sendId = :charId and deleted = 0
+	]]>
+	</query>
+	
+	
+	<!--好友 -->
+	<query name="queryFriendByCharid">
+	<![CDATA[
+		from FriendEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	<!--好友 -->
+	<query name="queryFriendByCharidFriendId">
+	<![CDATA[
+		from FriendEntity where charId = :charId and friendId=:friendId order by createTime desc
+	]]>
+	</query>
+	
+	
+		<!--好友请求 -->
+	<query name="queryFriendRequestByCharid">
+	<![CDATA[
+		from FriendRequestEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+		<!--好友请求 -->
+	<query name="queryFriendRequestByCharidSendid">
+	<![CDATA[
+		from FriendRequestEntity where charId=:charId and sendId = :sendId order by createTime desc
+	]]>
+	</query>
+	
+	
+		<!--签到请求 -->
+	<query name="queryWeekSignInByCharid">
+	<![CDATA[
+		from HumanWeekSignInEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<!--月卡请求 -->
+	<query name="queryMonthCardByCharid">
+	<![CDATA[
+		from HumanMonthCardEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+
+	
+	
+
+	
+	<!--跑马灯-->
+	<query name="queryNotices">
+	<![CDATA[
+		from NoticeEntity where isDelete=0 order by createTime desc
+	]]>
+	</query>
+	<!--misc -->
+	<query name="queryMiscByCharid">
+	<![CDATA[
+		from HumanMiscEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+
+	<!--vip -->
+	<query name="queryVipByCharid">
+	<![CDATA[
+		from HumanVipEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<!-- vipNew -->
+	<query name="queryVipByHumanId">
+	<![CDATA[
+		from HumanVipNewEntity where humanId = :humanId order by createTime desc
+	]]>
+	</query>
+	
+	<!-- 礼包 -->
+	<query name="queryHumanGiftId">
+	<![CDATA[
+		from HumanGiftEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	
+	<!--充值 -->
+	<query name="queryRechargeOrderByCharid">
+	<![CDATA[
+		from HumanRechargeOrderEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryRechargeOrderByOrders">
+	<![CDATA[
+		from HumanRechargeOrderEntity where id = :id order by createTime desc
+	]]>
+	</query>
+	<query name="queryRechargeMyCardTradeNo">
+	<![CDATA[
+		from HumanRechargeOrderEntity where myCardTradeNo = :myCardTradeNo order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryRechargeOrderStartAndEnd">
+	<![CDATA[
+		from HumanRechargeOrderEntity where createTime >= :startTime and createTime <= :endTime order by createTime desc
+	]]>
+	</query>
+	
+	
+	
+	
+	<!--任务 -->
+	<query name="queryTaskByCharid">
+	<![CDATA[
+		from HumanTaskEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	
+	<!--活动数据-->
+	<query name="queryActivityByCharid">
+	<![CDATA[
+		from HumanActivityEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	
+	<!--活动 -->
+	<query name="queryActivities">
+	<![CDATA[
+		from ActivityEntity order by createTime desc
+	]]>
+	</query>
+	
+	<!--补偿-->
+	<query name="queryCompensations">
+	<![CDATA[
+		from CompensationEntity order by createTime desc
+	]]>
+	</query>
+	
+		<!--补偿-->
+	<query name="queryCompensationsByCharid">
+	<![CDATA[
+		from HumanCompensationEntity  where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	
+		<query name="queryRefundsByCharid">
+	<![CDATA[
+		from HumanRefundEntity  where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryFriendGiftByCharid">
+	<![CDATA[
+		from HumanFriendGiftEntity  where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryBaccartByCharid">
+	<![CDATA[
+		from HumanBaccartEntity  where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryBaccartRoomByRoomId">
+	<![CDATA[
+		from BaccartRoomModelEntity  where roomId = :roomId order by createTime desc
+	]]>
+	</query>
+	
+		<query name="queryLuckySpinByCharid">
+	<![CDATA[
+		from HumanLuckySpinEntity  where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+		<query name="queryLuckyMatchByCharid">
+	<![CDATA[
+		from HumanLuckyMatchEntity  where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryAllSlots">
+	<![CDATA[
+		from SlotEntity order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryAllTextas">
+	<![CDATA[
+		from TextasEntity order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryAllRank">
+	<![CDATA[
+		from RankEntity order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryRankNewByCharid">
+	<![CDATA[
+		from RankEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	
+	
+	
+	<query name="queryAllHumanSlotsByCharId">
+	<![CDATA[
+		from HumanSlotEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<query name="queryAllACHIEVEMENTByCharId">
+	<![CDATA[
+		from HumanAchievementEntity where charId = :charId order by createTime desc
+	]]>
+	</query>
+	
+	<!-- 随机码 -->
+	<query name="queryAllConversioncode">
+	<![CDATA[
+		from Conversioncode order by createTime desc
+	]]>
+	</query>
+	
+	<query name="querySlotLists">
+	<![CDATA[
+		from SlotListEntity group by type order by id
+	]]>
+	</query>
+	
+	
+	<query name="queryCollectByHumanId">
+	<![CDATA[
+		from HumanCollectEntity where humanId = :humanId order by createTime desc
+	]]>
+	</query>
+	<!-- 储钱罐 -->
+	<query name="queryTreasuryByChartId">
+	<![CDATA[
+		from HumanTreasuryEntity where  chartId = :chartId 
+	]]>
+	</query>
+	
+	<!-- 公共的活动 -->
+	<query name="getAllCommonActivity">
+	<![CDATA[
+		from CommonActivityEntity
+	]]>
+	</query>
+	
+	<!-- 获取俱乐部 -->
+	<query name="selectAll">
+	<![CDATA[
+		from ClubEntity
+	]]>
+	</query>
+	
+	<!-- 俱乐部清理排名 -->
+	<query name="cleanRanking">
+	<![CDATA[
+		update ClubEntity set money=0,huoyue=0
+	]]>
+	</query>
+
+	<!-- 俱乐部成员清理排名 -->
+	<query name="cleanRankingMember">
+	<![CDATA[
+		update ClubMemberEntity set gongxian=0,huoyue=0
+	]]>
+	</query>
+	
+	<!-- 获取俱乐部 -->
+	<query name="selectClubByName">
+	<![CDATA[
+		from ClubEntity where name = :name
+	]]>
+	</query>
+	
+	<!-- 获取俱乐部 -->
+	<query name="selectClubById">
+	<![CDATA[
+		from ClubEntity where id = :id
+	]]>
+	</query>
+	
+	<!-- 获取所有俱乐部成员 -->
+	<query name="selectAllMembers">
+	<![CDATA[
+		from ClubMemberEntity
+	]]>
+	</query>
+	
+	<query name="selectMembersByPlayerId">
+	<![CDATA[
+		from ClubMemberEntity where id = :id
+	]]>
+	</query>
+
+
+	<query name="selectMembersByClubId">
+		<![CDATA[
+		from ClubMemberEntity where club_id = :club_id
+	]]>
+	</query>
+
+	<!-- 获取俱乐部留言 -->
+	<query name="selectAllClubNote">
+	<![CDATA[
+		from ClubNoteEntity where player_id = :player_id order by create_time asc
+	]]>
+	</query>
+	
+	
+	<!-- 获取俱乐部邀请 -->
+	<query name="selectClubInvateById">
+	<![CDATA[
+		from ClubInvateEntity where id = :id
+	]]>
+	
+	</query>
+		<query name="SELECT_50_QUERY">
+	<![CDATA[
+		from ClubEntity order by huoyue desc
+	]]>
+	</query>
+
+	<query name="selectClubApply">
+	<![CDATA[
+		from ClubApplyEntity where club_id = :club_id
+	]]>
+	</query>
+
+	<query name="selectClubApplyByPl">
+		<![CDATA[
+		from ClubApplyEntity where player_id = :player_id
+	]]>
+	</query>
+
+	<query name="selectClubInvatePlayers">
+		<![CDATA[
+		from ClubInvatePlayerEntity
+	]]>
+	</query>
+	
+	<!--   ====================== 世界boss  ============================= -->
+	<query name="queryByBossid">
+		<![CDATA[
+		from HumanAttackBossEntity where bossId = :bossId group by userId order by attackAllTotalBlood Desc 
+	]]>
+	</query>
+	
+		<query name="queryNumByBossid">
+			<![CDATA[
+			from HumanAttackBossEntity where bossId = :bossId group by userId order by attackAllTotalBlood Desc  limit 0,100
+		]]>
+		</query>
+		<query name="queryWinNumByBossidUserId">
+			<![CDATA[
+			from HumanAttackBossEntity where bossId = :bossId and userId = :userId group by userId order by attackAllTotalBlood Desc  limit 0,1
+		]]>
+		</query>
+		<query name="queryWinNumByBossid">
+			<![CDATA[ 
+				from HumanAttackBossEntity where bossId = :bossId order by attackAllTotalBlood Desc  limit 0,1 
+			]]>
+		</query>
+		
+		<query name="getbossbyid">
+			<![CDATA[ 
+				from HumanAttackBossEntity where bossId = :bossId 
+			]]>
+		</query>
+	
+	<query name="getlastboss">
+		<![CDATA[ 
+			from BossEntity  order by createTime Desc limit 0,1 
+		]]>
+	</query>
+<!-- 	<query name="selectClubInviteByPlayer"> -->
+<!-- 		<![CDATA[ -->
+<!-- 		from ClubInviteEntity where player_id= :player_id -->
+<!-- 	]]> -->
+<!-- 	</query>	 -->
+		<query name="getlasttwoboss">
+			<![CDATA[ 
+				from BossEntity  order by createTime Desc limit 0,2
+			 ]]>
+		</query>
+
+	<!--   ====================== 世界boss  ============================= -->
+	<query name="select50">
+		<![CDATA[ from ClubEntity order by huoyue desc limit 50 ]]>
+	</query>
+	
+		<query name="selectClubApplyByPlayer">
+			<![CDATA[ from ClubApplyEntity where player_id= :player_id ]]>
+		</query>
+		
+		
+	<!--   ====================== 点赞  ============================= -->
+	
+		<query name="queryLikeByUserIdSlotTypeAndBet">
+			<![CDATA[ from HumanGivealikeEntity where userId= :userId and  slotType =:slotType and slotBet =:slotBet]]>
+		</query>
+		<query name="queryLikeByUserId">
+			<![CDATA[ from HumanGivealikeEntity where userId= :userId]]>
+		</query>
+	
+	
+	
+	<!--   ====================== 推送  ============================= -->
+	<query name="selectPlayerByLevel">
+			<![CDATA[ from HumanEntity where level between :level0 and :level1]]>
+	</query>
+	<query name="selectNotSignForJpush">
+			<![CDATA[ from HumanWeekSignInEntity where updateTime<UNIX_TIMESTAMP(DATE_FORMAT(NOW(),'%Y-%m-%d'))*1000]]>
+	</query>
+	<query name="selectFriendRequestForJpush">
+			<![CDATA[from FriendRequestEntity]]>
+	</query>	
+	<query name="selectPlayerByGoldPercent">
+			<![CDATA[from HumanTreasuryEntity where type= :type]]>
+	</query>
+	<query name="selectPlayerWithRewardMail">
+			<![CDATA[from MailEntity where mailStatus= :mailStatus and hasAttachment=1]]>
+	</query>
+	<query name="selectPlayerByChargeTimes">
+			<![CDATA[from HumanRechargeOrderEntity where orderStatus=1 group by charId having count(id)> :times]]>
+	</query>
+	<query name="selectPlayerByOrderNotChargeTimes">
+			<![CDATA[from HumanRechargeOrderEntity where orderStatus!=1 group by charId having count(id)> :times]]>
+	</query>
+	<query name="selectPlayerByOnlineReward">
+			<![CDATA[from HumanMiscEntity where currentOnlineRewardId= :rewardId and lastGetTime< :ts]]>
+	</query>
+	<query name="selectPlayerByOffLineTime">
+			<![CDATA[from HumanEntity where lastLogoutTime< :ts]]>
+	</query>
+	
+			<!-- ====================== 新手引导  ============================= -->
+	<query name="querNewbieStepByCharid">
+			<![CDATA[from NewbieEntity where charId = :charId]]>
+	</query>
+	
+	<!--   ====================== 周 月 特惠礼包 ============================= -->
+	<query name="monthWeekEntityByUserIdAndMnType">
+		<![CDATA[ from HumanMonthWeekEntity  where userId= :userId and  mwType= :mwType]]>
+	</query>
+	
+	<!--   ====================== 付费引导 ============================= -->
+	<query name="humanpayguideByUserid">
+		<![CDATA[ from HumanPayguideEntity  where userId= :userId ]]>
+	</query>
+	<!--   ====================== 新手礼包 新 ============================= -->
+	<query name="queryAllHumanNewComerEntity">
+		<![CDATA[ from HumanNewComerEntity  where userId= :userId order by startTime desc]]>
+	</query>
+	
+	
+	<!--   ====================== 买一送一 ============================= -->
+	<query name="getfunctionentity">
+		<![CDATA[ from FunctionEntity  where endTime >= DATE_FORMAT(NOW(),'%Y-%m-%d')  order by startTime desc]]>
+	</query>
+	
+	
+	<!--   ====================== 无双吹牛  签到 ============================= -->
+	<query name="queryHumanBazooSigninByPassportId">
+		<![CDATA[ from HumanBazooSigninEntity  where passportId= :passportId]]>
+	</query>
+	
+	<!--   ====================== 无双吹牛  排行榜 ============================= -->
+	<query name="queryBazooRankByPassportId">
+		<![CDATA[ from HumanBazooRankEntity  where passportId= :passportId]]>
+	</query>
+	<query name="queryBazooRankAllByDay">
+		<![CDATA[ from HumanBazooRankEntity  where bazooAgentDisplay=0 and bazooRobotDisplay=0 order by dayProfit desc limit 0,100]]>
+	</query>
+	<query name="queryBazooRankAllByWeek">
+		<![CDATA[ from HumanBazooRankEntity  where bazooAgentDisplay=0 and bazooRobotDisplay=0 order by weekProfit desc limit 0,100]]>
+	</query>
+	<query name="queryBazooRankAllByMonth">
+		<![CDATA[ from HumanBazooRankEntity  where bazooAgentDisplay=0 and bazooRobotDisplay=0 order by monthProfit desc limit 0,100]]>
+	</query>
+	
+	
+	<!--   ====================== 无双吹牛  个人信息 ============================= -->
+	<query name="queryBazooPersonalByPassportId">
+		<![CDATA[ from HumanBazooPersonalEntity  where passportId= :passportId]]>
+	</query>
+	<query name="queryBazooPersonalAllByDay">
+		<![CDATA[ from HumanBazooPersonalEntity   order by dayProfit desc limit 0,100]]>
+	</query>
+	<query name="queryBazooPersonalAllByWeek">
+		<![CDATA[ from HumanBazooPersonalEntity   order by weekProfit desc limit 0,100]]>
+	</query>
+	<query name="queryBazooPersonalAllByMonth">
+		<![CDATA[ from HumanBazooPersonalEntity   order by monthProfit desc limit 0,100]]>
+	</query>
+	
+	
+	<!--   ====================== 无双吹牛  总金币排行榜 ============================= -->
+	<query name="selectPlayerOrderByGold">
+			<![CDATA[ from HumanEntity where bazooAgentDisplay=0 and bazooRobotDisplay=0 order by gold desc limit 0,100]]>
+	</query>
+	
+	<query name="queryHumanBazooTaskByPassportId">
+			<![CDATA[ from HumanBazooTaskEntity  where passportId= :passportId]]>
+	</query>
+	<query name="queryHumanBazooAchieveByPassportId">
+			<![CDATA[ from HumanBazooAchieveEntity  where passportId= :passportId]]>
+	</query>
+	
+	<query name="queryHumanBazooWinsByPassportId">
+			<![CDATA[ from HumanBazooWinsEntity  where passportId= :passportId    order by modeType asc, winTimes desc]]>
+	</query>
+	
+	<query name="queryFromBazooRoomCreate">
+			<![CDATA[ from BazooRoomCreateEntity   ]]>
+	</query>
+	<!--   ====================== 无双吹牛  t_user_info 通过username 和 password 查询 ============================= -->
+	<query name="getUserInfoByUsernameAndChannel">
+			<![CDATA[ from UserInfo  where username= :username    and channel= :channel ]]>
+	</query>
+	<query name="queryHumanBazooNewGuyByPassportId">
+			<![CDATA[ from HumanBazooNewGuyEntity  where userId= :passportId  ]]>
+	</query>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+int channelId;[notNull=false;minValue=0]//渠道id
+int pid;[notNull=false;minValue=-1]//pid
+int nameId;[notNull=false;minValue=0]//名字id
+int descrip;[notNull=false]//描述
+String langDesc;[notNull=false]//语言描述
+String icon;[notNull=false]// icon
+int num;[notNull=false;minValue=1] // 花费数量
+int itemNum;[notNull=false;minValue=1] //钻石数量
+int giftNum;[notNull=false;minValue=0] // 赠送数量
+String productId;[notNull=false] //产品id
+int used;[notNull=false] //是否使用
+int mark;[notNull=false;minValue=0] //mark 
+int itemId;[notNull=false;minValue=1] // 物品ID 
+int smallCategory;[notNull=false;minValue=1] // 物品类型
+int vipPoint;[notNull=false;minValue=0] // vip点 
+int category;[notNull=false;minValue=1] // 类型
+int payType;[notNull=false;minValue=0] // 支付类型1mycard
+int itemType;[notNull=false;minValue=0] // 物品类型

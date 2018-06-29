@@ -1,0 +1,54 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int payLinesNum;[notNull=false;minValue=0] //下限
+int bet1;[notNull=false;minValue=0]//下注1
+int bet2;[notNull=false;minValue=0]//下注2
+int bet3;[notNull=false;minValue=0]//下注3
+int bet4;[notNull=false;minValue=0]//下注4
+int bet5;[notNull=false;minValue=0]//下注5
+int reel1Num;[notNull=false;minValue=0]//卷轴1随机数范围
+int reel2Num;[notNull=false;minValue=0]//卷轴2随机数范围
+int reel3Num;[notNull=false;minValue=0]//卷轴3随机数范围
+int reel4Num;[notNull=false;minValue=0]//卷轴4随机数范围
+int reel5Num;[notNull=false;minValue=0]//卷轴5随机数范围
+int rows;[notNull=false;minValue=0]//行数
+int columns;[notNull=false;minValue=0]//列数
+int bigWinNum;[notNull=false;minValue=0]//列数
+int megaWinNum;[notNull=false;minValue=0]//列数
+int superWinNum;[notNull=false;minValue=0]//列数
+int epicWinNum;[notNull=false;minValue=0]//列数
+int openLv;[notNull=false;minValue=0]//进入等级
+int type;[notNull=false;minValue=0]//类型
+int list;[notNull=false;minValue=0]//显示类型
+int jackpotswitch;[notNull=false;minValue=0]//房间是否开jackpot 1.开 2.关
+int bet1Lv;[notNull=false;minValue=0]//压注最小等级
+int bet2Lv;[notNull=false;minValue=0]//压注最小等级
+int bet3Lv;[notNull=false;minValue=0]//压注最小等级
+int bet4Lv;[notNull=false;minValue=0]//压注最小等级
+int bet5Lv;[notNull=false;minValue=0]//压注最小等级
+int jackpotOriValue;[notNull=false;minValue=0]//彩金初始值
+int jackpotOriValue1;[notNull=false;minValue=0]//彩金初始值
+int jackpotOriValue2;[notNull=false;minValue=0]//彩金初始值
+int jackpotOriValue3;[notNull=false;minValue=0]//彩金初始值
+int jackpotOriValue4;[notNull=false;minValue=0]//彩金初始值
+int jackpotOriValue5;[notNull=false;minValue=0]//彩金初始值
+int jackpotPoolPer;[notNull=false;minValue=0]//
+int jackpotAddPoolPer;[notNull=false;minValue=0]//
+int raceReward;[notNull=false;minValue=0]//添加奖池比例
+int firstReward;[notNull=false;minValue=0]//第一名获得比例
+int secondReward;[notNull=false;minValue=0]//第二名获得比例
+int thirdReward;[notNull=false;minValue=0]//第三名获得比例
+int lineType;[notNull=false;minValue=0]//连线类型 1：3*5老虎机 2： 4*5老虎机
+int firstReel1;[notNull=false;minValue=0]//初始坐标
+int firstReel2;[notNull=false;minValue=0]//初始坐标
+int firstReel3;[notNull=false;minValue=0]//初始坐标
+int firstReel4;[notNull=false;minValue=0]//初始坐标
+int firstReel5;[notNull=false;minValue=0]//初始坐标
+int gameType;[notNull=false;minValue=0]//游戏类型 1 普通scatter 2 表示 大转盘玩法
+int ticketID;[notNull=false;minValue=0]//物品ID
+int count1;[notNull=false;minValue=0]//出现的次数
+int count2;[notNull=false;minValue=0]//摇的次数
+
+

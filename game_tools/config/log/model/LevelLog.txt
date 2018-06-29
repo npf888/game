@@ -1,0 +1,5 @@
+message com.logserver.model.LevelLog(
+	int addExp;// 获得的经验值
+	int totalExp;// 总和的经验值
+	long updateExpTime;// 升级时间
+)

@@ -1,0 +1,7 @@
+int shuffleTime;[notNull=false;minValue=0]//洗牌时间
+int betTime;[notNull=false;minValue=0]//押注时间
+int dealTime;[notNull=false;minValue=0]//发牌时间
+int fillTime;[notNull=false;minValue=0]//补牌时间
+int showTime;[notNull=false;minValue=0]//展示时间
+int jackpotRatio;[notNull=false;minValue=0]//彩金比例
+int jackpotTime;[notNull=false;minValue=0]//彩池时间

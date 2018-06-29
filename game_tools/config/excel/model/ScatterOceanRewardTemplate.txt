@@ -1,0 +1,7 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+int slotsNum;[notNull=false;minValue=0] //老虎机类型
+int rank;[notNull=false;minValue=0] //玩家所选乌龟的排名
+int rewardNum;[notNull=false;minValue=0] //翻开贝壳后的奖励，单线下注额的倍数，数值除以100使用
+int value;[notNull=false;minValue=0] //权值

@@ -1,0 +1,7 @@
+String langDesc;[notNull=false]  //描述
+int typeTreasury;[notNull=false]  //作者:购买次数   超过5次视为5次
+int originalChipTreasury;[notNull=false]  //初始金币
+int factorTreasury;[notNull=false]  //金币存储系数（万分比）
+int maxTreasury;[notNull=false]   //作者:存储上限 
+int vipPointTreasury;[notNull=false]   //作者:VIP点数奖励
+int pid;[notNull=false]   //pid对应recharge

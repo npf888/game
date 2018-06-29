@@ -1,0 +1,11 @@
+int nameId;[notNull=false;minValue=0] //名称ID
+int descrip;[notNull=false;minValue=0] //描述ID
+String langDesc; //描述（自己看）
+String icon; //图标ID
+int slotsNum;[notNull=false;minValue=0] //老虎机类型
+int bonusNum;[notNull=false;minValue=0] //bonus个数
+int samNum;[notNull=false;minValue=0] //翻符文游戏相同元素数量
+int appleGameNum;[notNull=false;minValue=0] //摘苹果游戏次数
+int appleReward;[notNull=false;minValue=0] //单线下注额倍数,(百分比，实际值除以100）
+int preyNum;[notNull=false;minValue=0] //狩猎游戏，夹子数量
+int preyReward;[notNull=false;minValue=0] //狩猎游戏单线下注额倍数

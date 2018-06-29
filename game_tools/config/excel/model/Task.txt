@@ -1,0 +1,12 @@
+int nameId;[notNull=false]//名字id
+int descrip;[notNull=false]//描述
+String langDesc;[notNull=false]//语言描述
+String icon;[notNull=false]// icon
+int category;[notNull=false] // 花费数量
+int smallCategory;[notNull=false] //钻石数量
+int condition;[notNull=false] // 条件
+int rewardId;[notNull=false] //奖励id
+int rewardNum;[notNull=false] //奖励数量
+int goTo;[notNull=false]//goto
+int smallCategoryLevel;[notNull=false]//任务顺序
+int sort;[notNull=false]//客户端显示用

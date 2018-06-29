@@ -1,0 +1,8 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int slotsNum;[notNull=false] //老虎机机器编号
+int type;[notNull=false] //1：单次bouns中奖,2；两次bouns中奖,3；三次bouns中奖
+int bounsNum;[notNull=false] //1：单次bouns中奖，2；两次bouns中奖，3；三次bouns中奖
+double rewardNum;[notNull=false] //拼图完成后奖励，为单线下注额的倍数，数值除以100使用

@@ -1,0 +1,7 @@
+int level;[notNull=false]  //达到等级
+int reward1Id;[notNull=false;] //奖励ID 3为金钱
+int reward1Num;[notNull=false] //金钱数1
+int reward2Id;[notNull=false] //奖励ID 3为金钱
+int reward2Num;[notNull=false] //金钱数2
+int reward3Id;[notNull=false] //奖励ID 3为金钱
+int reward3Num;[notNull=false] //金钱数3

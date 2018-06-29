@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd" module="signin">
+	
+	<!-- 签到数据-->
+	<message type="GC_SIGN_IN_INFO_DATA" comment="签到">
+		<field type="Integer" comment="签到天数" name="dayList" list="true"/>
+	</message>
+	<!-- 签到-->
+	<message type="CG_SIGN_IN" comment="签到">
+		<field type="Integer" comment="签到天数" name="day"/>
+	</message>
+	<message type="GC_SIGN_IN" comment="签到">
+		<field type="Integer" comment="签到天数" name="day"/>
+		<field type="com.gameserver.common.data.RandRewardData" 
+					name="randRewardList" comment="道具奖励" list="true" macro="RandRewardData"  clientType="com.gameserver.common.data.RandRewardData"></field>
+	</message>
+
+
+
+</messages>

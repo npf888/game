@@ -1,0 +1,3 @@
+message com.logserver.model.OnlineTimeRewardLog(
+	int reward_id;  //在线奖励id
+)

@@ -1,0 +1,4 @@
+message com.logserver.model.PromoCodeLog(
+   String promoId;//兑换码
+   String content;//兑换物品内容
+)

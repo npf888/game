@@ -1,0 +1,10 @@
+message com.logserver.model.TournamentLog(
+	long tournamentId;// 竞赛的ID 唯一
+	int tournamentType;// 竞赛的类型
+	int slotType; // 老虎机的类型
+    long totalReward; // 每个竞赛累计的 总金币
+    long userId; // 当前用户ID,如果没有就是0
+    long rewards; // 发奖时 奖池中的总金币
+    long reward; // 发奖时 每个人的比例
+    long obtainedReward; // 发奖时 用户最终获得的钱
+)

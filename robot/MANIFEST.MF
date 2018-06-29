@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Implementation-Title: robot
+Implementation-Version: 1.0.0
+Main-Class: com.robot.RobotBazooClassicalMain
+Class-Path: libs/game_core-1.0.0.jar
+ libs/game_db-1.0.0.jar
+ libs/game_log-1.0.0.jar
+ libs/game_server-1.0.0.jar
+ libs/game_webserver_interface-1.0.0.jar
+ libs/google-api-client-1.18.0-rc.jar
+ libs/google-api-services-androidpublisher-v1.1-rev22-1.18.0-rc.jar
+ libs/google-collect-snapshot-20071022.jar
+ libs/google-http-client-1.18.0-rc.jar
+ libs/google-http-client-jackson2-1.18.0-rc.jar
+ libs/google-oauth-client-1.18.0-rc.jar
+ libs/log4j-1.2.16.jar
+ libs/mina-core-1.1.7.jar
+ libs/slf4j-api-1.6.1.jar
+ libs/slf4j-log4j12-1.6.0.jar
+ libs/libthrift-0.9.2.jar
+ libs/commons-httpclient-3.1.jar
+
+

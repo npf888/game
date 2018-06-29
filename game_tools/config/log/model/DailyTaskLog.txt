@@ -1,0 +1,5 @@
+message com.logserver.model.DailyTaskLog(
+	int tId; //任务id
+	int finished; //完成度
+	int getNums; //领取次数
+)

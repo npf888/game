@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd" module="achievement">
+	
+	<message type="CG_ACH_INFO" comment="获取成就数据">
+	     <field type="Long" name="roleId" comment="角色ID"/>
+	</message>
+	
+	 <!--获取成就数据-->
+	<message type="GC_ACH_INFO" comment="获取成就数据返回">
+	<field type="com.gameserver.achievement.data.AchievementStateData" clientType="AchievementStateData" 
+					name="achievementStateData" comment="成就完成情况"  macro="AchievementStateData" list="true"></field>
+	<field type="com.gameserver.achievement.data.AchievementsProgressData" clientType="AchievementsProgressData" 
+					name="achievementsProgressData" comment="成就进度"  macro="AchievementsProgressData" list="true"></field>
+	</message>
+    
+    <message type="CG_RECEIVE_ACH" comment="领取成就奖励">
+      <field type="Integer" name="id" comment="成就ID"/>
+    </message>
+    
+    <message type="GC_RECEIVE_ACH" comment="领取成就奖励返回">
+      <field type="Integer" name="id" comment="成就ID"/>
+      <field type="Integer" name="result" comment="结果 0 失败 1 成功"/>
+    </message>
+
+</messages>

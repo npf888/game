@@ -1,0 +1,23 @@
+int clubLevel;[notNull=false] // 俱乐部等级
+int cluNum; [notNull=false;minValue=0]// 最大人数
+int donateMin; [notNull=false;minValue=0]//捐献数量min
+int donateMax; [notNull=false;minValue=0]//捐献数量max
+int donate; [notNull=false;minValue=0]//捐献数量max
+int donateTime; [notNull=false;minValue=0]//捐献间隔
+int inviteActive;[notNull=false;minValue=0] // 好友活跃度
+int signActive;[notNull=false;minValue=0] // 签到活跃度
+int signTime;[notNull=false;minValue=0] // 签到刷新时间
+int convert;[notNull=false;minValue=0] // 转化率
+int rankTime;[notNull=false]//赛季持续时间
+int clubFound;[notNull=false]//创建消耗
+int clubName;[notNull=false]//名字长度
+int clubDescribe;[notNull=false]//描述长度
+int clubBoard;[notNull=false]//留言板条数
+int clubapply;[notNull=false]//俱乐部申请上线
+int newtime;[notNull=false]//消息存放时间
+int deputy;[notNull=false]//副会长人数
+int newmax;[notNull=false]//消息存放上限
+int clubapplied;[notNull=false]//俱乐部被申请上限
+int	accusetime;[notNull=false]//弹劾失败冷却时间
+int	invitetime;[notNull=false]//申请冷却时间
+int	activelimit;[notNull=false]//赛季结算获得奖励最低活跃值

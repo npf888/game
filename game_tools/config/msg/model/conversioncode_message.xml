@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="conversioncode">
+	
+	<message type="CG_CONVERSION_CODE" comment="兑换码兑换礼包">
+	     <field type="String" name="code" comment="兑换码" />
+	</message>
+	
+	<message type="GC_CONVERSION_CODE" comment="兑换码兑换礼包返回">
+			<field type="com.gameserver.common.data.RandRewardData" 
+					name="randRewardList" comment="道具奖励" list="true" macro="RandRewardData"  clientType="com.gameserver.common.data.RandRewardData"></field>
+	
+	</message>
+</messages>

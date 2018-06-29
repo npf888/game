@@ -1,0 +1,11 @@
+int slotNum;[notNull=false;minValue=0] //老虎机编号
+int reel1;[notNull=false;minValue=0] //卷轴ID
+int value1;[notNull=false;minValue=0] //权重
+int reel2;[notNull=false;minValue=0] //卷轴ID
+int value2;[notNull=false;minValue=0] //权重
+int reel3;[notNull=false;minValue=0] //卷轴ID
+int value3;[notNull=false;minValue=0] //权重
+int reel4;[notNull=false;minValue=0] //卷轴ID
+int value4;[notNull=false;minValue=0] //权重
+int reel5;[notNull=false;minValue=0] //卷轴ID
+int value5;[notNull=false;minValue=0] //权重

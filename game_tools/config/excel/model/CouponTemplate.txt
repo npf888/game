@@ -1,0 +1,8 @@
+int nameId;[notNull=false]//名字id
+int descrip;[notNull=false]//描述
+String langDesc;[notNull=false]//描述
+String icon;[notNull=false]//第二大分类
+int couponDuration;[notNull=false]//优惠券有效期（秒）
+int couponExtraChip;[notNull=false]//优惠券额外筹码百分比  获得筹码数 = 首充翻倍、VIP翻倍后的筹码数 X （1+ 优惠券额外筹码百分比/100 )
+int weight;[notNull=false]//权重
+int itemID;[notNull=false]//对应item表里的id; 一一对应

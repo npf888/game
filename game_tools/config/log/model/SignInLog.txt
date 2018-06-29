@@ -1,0 +1,4 @@
+message com.logserver.model.SignInLog(
+    int days;   //签到天
+    int culumative; //总共签到天数
+)

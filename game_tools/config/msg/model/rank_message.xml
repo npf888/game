@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="rank">
+
+	<!-- 排行信息-->
+	<message type="CG_COMMON_RANK" comment="排行">
+		<field type="Integer" name="page" comment="页面"/>
+		<field type="Integer" name="rankType" comment="排行版类型"/>
+	</message>
+
+	<message type="GC_COMMON_RANK" comment="排行">
+		<field type="Long" name="selfRank" comment="自己排名"/>
+		<field type="Integer" name="page" comment="页面"/>
+		<field type="Integer" name="rankType" comment="排行版类型"/>
+		<field type="com.gameserver.rank.data.RankData" clientType="RankData" name="rankDataList" comment="排行数据" list="true" >
+			<field type="Long" name="uId" comment="用户id"/>
+			<field type="String" name="name" comment="名字"/>
+			<field type="String" name="img" comment="图片"/>
+			<field type="Long" name="score" comment="分数" />			
+		</field>
+	</message>
+	
+
+</messages>

@@ -1,0 +1,13 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+String icon;[notNull=false] //icon
+String langDesc; //多语言描述
+int type;[notNull=false] //1.（airtime）秒内，所有wild连线伤害降低百分之（） 2.恢复自身最大血量的百分之（） 3.（airtime）秒内，收到伤害降低百分之（） 4.（airtime）秒内，有（）概率免疫伤害。
+int airtime;[notNull=false] //技能开始后持续时间（秒）
+int wildreduce;[notNull=false] //wild中奖连线伤害降低百分数。（除以100）
+int recover1;[notNull=false] //恢复最大血量百分数（除以100）
+int damagereduce;[notNull=false] //伤害减免百分数
+int avoid;[notNull=false] //免伤概率，百分数（除以100）
+int blood;[notNull=false] //基础血量
+int rewardNum1;[notNull=false] //击杀成功后：奖励金币总数，按照伤害占比瓜分奖励百分比
+int rewardNum2;[notNull=false] //未击杀成功：奖励金币总数，按照伤害占比瓜分奖励百分比

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd" module="newbie">
+	
+	<message type="CG_SAVE_POINT" comment="新手存盘点">
+		<field type="Integer" name="step" comment="步骤id" />
+	</message>	
+	<message type="GC_SAVE_POINT" comment="新手存盘点">
+		<field type="Integer" name="ret" comment="0 成功 1失败" />
+	</message>
+	<message type="CG_GET_SAVE_POINT" comment="获取存盘点">
+	</message>
+	<message type="GC_GET_SAVE_POINT" comment="获取存盘点">
+		<field type="Integer" name="step" comment="步骤id" />
+	</message>
+	
+	<message type="CG_SLOT_NEWBIE" comment="新手存盘点">
+	</message>	
+	<message type="GC_SLOT_NEWBIE" comment="新手存盘点">
+		<field type="Integer" name="slotElementList"  list="true" comment="元素列表" />
+		<field type="com.gameserver.newbie.data.NewbieSlotConnectInfoData" name="slotConnectInfoDataList" comment="连线信息列表" list="true" macro="NewbieSlotConnectInfoData" ></field>
+		<field type="Long" name="rewardNum"  comment="收益" />
+		<field type="Long" name="rewardSum"  comment="累计奖金" />
+		<field type="com.gameserver.newbie.data.NewbieSpecialConnectInfoData" name="specialConnectInfoDataList" comment="特殊连线信息列表" list="true" macro="NewbieSpecialConnectInfoData" ></field>
+	</message>
+</messages>

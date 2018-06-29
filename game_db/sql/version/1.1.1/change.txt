@@ -1,0 +1,30 @@
+//每日任务 停掉
+
+//世界boss停掉
+
+//成就停掉
+
+
+//周卡 月卡 停掉
+
+
+1、GameServer  146行 --ScheduleBaccartRoom 注释掉了
+2、GameServer  148行 --ScheduleRandNew 注释掉了
+3、世界boss   停止了  11行
+4、human对象 里 好多 manager都注释掉了      可以仔细查看  ,   
+  LoadPlayerRoleOperation-92行 往后   , 
+  PlayerCacheInfo-219行 往后 ,   
+  human-387行  ,    
+  HumanService-100行-102行，
+  HumanInitManager-263行往后 --213，214
+  SlotRoomService outLong() 69行 往后
+  PlayerMessageHandler.handlePlayerCloseSession(PlayerMessageHandler.java:301)   297-307
+  ChatMessageHandler 336行
+  ClubService 47行   
+  #下面这条是俱乐部 在redis中 需要预先设置的值
+  set club:season_K '{"startTs":1504195200000,"endTs":1506787199990}'   后边没有分号
+  
+5、CGSlotSlot  已经停止了    73、74 行
+6、老虎机 竞赛 停掉了   TournamentService 152行  
+7、俱乐部 停止  28行
+8、chat聊天 有所改动，请求 和 返回 消息  加了两个字段 roomNumber 和 msgType

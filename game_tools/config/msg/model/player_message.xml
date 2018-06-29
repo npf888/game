@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd" module="player">
+	
+	<message type="CG_QUERY_PLAYER_INFO" comment="客户端请求用户信息">
+		<field type= "Long" name="userId" comment="用户id" />
+	</message>
+	
+	<message type="GC_QUERY_PLAYER_INFO" comment="客户端请求用户信息">
+		<field type="com.gameserver.player.data.PlayerInfoData"
+			clientType="com.gameserver.player.data.PlayerInfoData" name="playerInfoData" comment="玩家信息" macro="PlayerInfoData">
+		</field>
+		<field type="com.gameserver.bazoopersonal.data.BazooPersonalInfo"
+			clientType="com.gameserver.bazoopersonal.data.BazooPersonalInfo" name="bazooPersonalInfo" list="true" comment="玩家信息" macro="BazooPersonalInfo">
+		</field>
+	</message>
+	
+	<!-- 根据玩家名字查询玩家 -->
+	<message type="CG_QUERY_PLAYER_INFO_NAME" comment="客户端请求用户信息">
+		<field type= "String" name="userName" comment="用户名字" />
+	</message>
+	
+	<message type="GC_QUERY_PLAYER_INFO_NAME" comment="客户端请求用户信息">
+		<field type="com.gameserver.player.data.PlayerInfoData"
+			clientType="com.gameserver.player.data.PlayerInfoData" name="playerInfoData" comment="玩家信息" list="true" macro="PlayerInfoData">
+		</field>
+	</message>
+	
+	<!-- 校验登录 -->
+	<message type="CG_CHECK_PLAYER_LOGIN" comment="用户校验登录">
+		<field type="Long" name="userId" comment="玩家的账户Id"></field>
+		<field type="String" name="userCode" comment="玩家的随机码 "></field>
+		<field type="String" name="deviceId" comment="设备码 "></field>
+		<field type="String" name="deviceType" comment="设备的类型"></field>
+		<field type="String" name="deviceModel" comment="设备机型"></field>
+		<field type="String" name="osVersion" comment="操作系统版本号"></field>
+		<field type="Integer" name="channelType" comment="渠道类型 "></field>
+		<field type="String" name="clientVersion" comment="客户端版本"></field>
+		<field type="Integer" name="resourceVersion" comment="客户端资源版本"></field>
+		<field type="String" name="countries" comment="国家"></field>
+	</message>
+	
+	<!-- 服务端响应校验登录 -->
+	<message type="GC_CHECK_PLAYER_LOGIN" comment="响应用户校验登录">
+		<field type="Long" name="loginId" comment="玩家的登录id"></field>
+		<field type="String" name="facebookId" comment="facebookid"></field>
+		<field type="String" name="accountId" comment="账号id"></field>
+		<field type="String" name="img" comment="玩家图片"></field>
+		<field type="Long" name="utcOffset" comment="间距时间"></field>
+		<field type="Integer" name="playerRole" comment="账户类型"></field>
+	</message>
+	
+
+	<!-- 登录时的异常通知 -->
+	<message type="GC_NOTIFY_EXCEPTION" comment="通知客户端">
+		<field type="Integer" name="code" comment="错误码"></field>
+		<field type="String" name="msg" comment="错误信息，如果为空就显示默认的"></field>
+	</message>
+
+
+
+	
+
+
+	
+	<!-- 加载角色数据 实际就是选角色 -->
+	<message type="CG_PLAYER_ENTER" comment="加载角色">
+	</message>
+	
+
+	<!-- 客户端加载资源加载完毕:场景即城镇  -->
+	<message type="CG_ENTER_SCENE" comment="玩家可以进入场景" description="玩家可以进入场景">
+		<field type="Integer" name="sceneId" comment="场景Id" />
+	</message>
+	
+		<!-- 服务器进入gaming状态前,进入场景后,客户端收到消息 -->
+	<message type="GC_ENTER_SCENE" comment="玩家已经进入场景">
+	</message>
+	
+	<message type="CG_CLIENT_VERSION" comment="玩家现在使用版本">
+		<field type="String" name="version" comment="" />
+	</message>
+	<message type="GC_CLIENT_VERSION" comment="玩家现在使用版本">
+	</message>
+</messages>

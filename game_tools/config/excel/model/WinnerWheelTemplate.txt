@@ -1,0 +1,11 @@
+String descrip; //描述
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int itemId;[notNull=false]	//客户端类型
+int itemMul;[notNull=false]	//服务器类型
+int value1;[notNull=false]	//转盘1权值
+int value2;[notNull=false]	//转盘2权值
+int value3;[notNull=false]	//转盘3权值
+int value4;[notNull=false]	//转盘4权值
+int value5;[notNull=false]	//转盘5权值
+int value6;[notNull=false]	//转盘6权值

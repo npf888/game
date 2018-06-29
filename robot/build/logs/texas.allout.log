@@ -1,0 +1,5 @@
+[17/11/30 13:20:54,480] [INFO] ConfigHelper.buildConfig --> Load config [class com.robot.RobotServerConfig] from [jar:file:/C:/d_sortwire/eclipse_workspace/robot/build/robot.jar!/robot_server.cfg.js]
+[17/11/30 13:26:31,444] [INFO] ConfigHelper.buildConfig --> Load config [class com.robot.RobotServerConfig] from [jar:file:/C:/d_sortwire/eclipse_workspace/robot/build/robot.jar!/robot_server.cfg.js]
+[17/11/30 14:15:52,874] [INFO] ConfigHelper.buildConfig --> Load config [class com.robot.RobotServerConfig] from [jar:file:/C:/d_sortwire/eclipse_workspace/robot/build/robot.jar!/robot_server.cfg.js]
+[17/11/30 14:17:24,392] [INFO] ConfigHelper.buildConfig --> Load config [class com.robot.RobotServerConfig] from [jar:file:/C:/d_sortwire/eclipse_workspace/robot/build/robot.jar!/robot_server.cfg.js]
+[17/11/30 14:19:31,409] [INFO] ConfigHelper.buildConfig --> Load config [class com.robot.RobotServerConfig] from [jar:file:/C:/d_sortwire/eclipse_workspace/robot/build/robot.jar!/robot_server.cfg.js]

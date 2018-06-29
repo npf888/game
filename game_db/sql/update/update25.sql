@@ -1,0 +1,1 @@
+alter table t_human_info add column regularTime date COMMENT "用户开始 循环处理 周 月活动的 开始时间";

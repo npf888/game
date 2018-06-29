@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="task">
+
+	<!--任务-->
+	<message type="CG_DAILY_TASK_GET" comment="领取奖励">
+		<field type="Integer" name="tId" comment="任务id"/>
+	
+	</message>
+	
+	<message type="GC_DAILY_TASK_GET" comment="领取奖励">
+	<field type="Integer" name="tId" comment="任务id"/>
+			<field type="com.gameserver.common.data.RandRewardData" 
+					name="randRewardList" comment="道具奖励" list="true" macro="RandRewardData"  clientType="com.gameserver.common.data.RandRewardData"></field>
+	</message>
+	
+	<message type="GC_TASK_INFO_DATA" comment="任务">
+		<field type="com.gameserver.task.data.TaskData"
+			name="dailyTaskDataList" comment="任务信息" clientType="TaskData" macro="TaskData"  list="true"/>
+		
+	</message>
+
+	<message type="GC_TASK_INFO_DATA_CHANGE" comment="任务改变">
+		<field type="com.gameserver.task.data.TaskData"
+			name="dailyTaskData" comment="任务信息" clientType="TaskData" macro="TaskData" />
+		
+	</message>
+	
+	<message type="CG_TASK_PROGRESS" comment="领取任务进度奖励">
+	 <field type="Integer" name="boxId" comment="宝箱ID"/>
+	</message>
+	<message type="GC_TASK_PROGRESS" comment="领取任务进度奖励返回">
+	    <field type="Integer" name="boxId" comment="宝箱ID"/>
+	    <field type="Integer" name="taskNum" comment="已完成任务个数"/>
+	    <field type="String" name="taskProcges" comment="已经领取奖励ID逗号隔开"/>
+	</message>
+	
+</messages>

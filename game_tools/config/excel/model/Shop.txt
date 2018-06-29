@@ -1,0 +1,11 @@
+int nameId;[notNull=false]//名字id
+int descrip;[notNull=false]//描述
+String langDesc;[notNull=false]//语言描述
+String icon;[notNull=false]// icon
+int category;[notNull=false;minValue=1]	// 分类
+int currencyType;[notNull=false;minValue=1] // 金钱类型
+int smallCategory;[notNull=false;minValue=1] // 分类
+int num;[notNull=false;minValue=1] // 花费数量
+int itemId;[notNull=false;minValue=1] // 道具id
+int itemNum;[notNull=false;minValue=1] // 道具数量
+int upRate;[notNull=false;minValue=0] // 额外比例 万分比

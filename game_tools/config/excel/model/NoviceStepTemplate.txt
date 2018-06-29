@@ -1,0 +1,3 @@
+String stepDesc;[notNull=false] //描述
+int step;[notNull=false]	//步骤
+int substep;[notNull=false] //小步

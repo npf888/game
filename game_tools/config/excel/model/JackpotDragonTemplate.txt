@@ -1,0 +1,6 @@
+String langDesc; //多语言描述
+int slotIdNum;[notNull=false] //老虎机ID
+int jackpotNum;[notNull=false] //中jackpot数量
+int initial;[notNull=false]  //奖池初始值（单先下注额倍数，选取的数除以100）
+int increase;[notNull=false;] //每次转动奖池增加数（单线下注额的倍数，取值除以10000）
+int times;[notNull=false] //单次中奖金额（当前该奖金池的倍数，取值除以100）

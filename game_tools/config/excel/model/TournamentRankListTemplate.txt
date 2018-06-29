@@ -1,0 +1,7 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+int tournamentId;[notNull=false] //
+String langDesc; //多语言描述
+int rank1;[notNull=false] //rank1 到 rank2 是个范围 在这个范围内的人拿这个奖励
+int rank2;[notNull=false] //rank1 到 rank2 是个范围
+int reward;[notNull=false] //奖励比例（万分比）

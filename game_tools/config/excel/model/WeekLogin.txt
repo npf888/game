@@ -1,0 +1,2 @@
+int day;[notNull=false]		//礼品天数
+int dropId;[notNull=false]	//掉落id

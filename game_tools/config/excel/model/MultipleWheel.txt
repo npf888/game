@@ -1,0 +1,7 @@
+int type;[notNull=false] //
+String descrip;[notNull=false]	//多语言描述id
+String langDesc; //多语言描述
+String icon;[notNull=false] //icon
+int multiple;[notNull=false]//翻倍倍数
+int value;[notNull=false]//权重
+int pidID;[notNull=false]//PID

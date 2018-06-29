@@ -1,0 +1,6 @@
+message com.logserver.model.PlayerOnleLog(
+    int timeDian;//几点
+    int valueRole; //当前在线人数
+    String countries; //国家
+    String ipCountries; //用户IP对应的国家
+)

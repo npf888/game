@@ -1,0 +1,13 @@
+int nameId;[notNull=false] //名字id
+int descrip;[notNull=false]	//多语言描述id
+int modeType;[notNull=false]	//模式类型：1：经典吹牛模式，2：牛牛模式，3：梭哈模式，4:红黑单双模式，5：单机模式
+String langDesc; //多语言描述
+String icon; //icon
+int openUp;[notNull=false]	//是否开放：1开放，0不开放
+int smallBet;[notNull=false]	//底注
+int minCarry;[notNull=false]	//最小买入
+int extractValue;[notNull=false]	//抽水:获胜者赢取的筹码的比例（万分比）
+int roomNum;[notNull=false]	//房间人数
+int onOff;[notNull=false]	//重摇 开关
+int reroll;[notNull=false]	//重摇花费初始值
+int rerollNum;[notNull=false]	//重摇花费初始值

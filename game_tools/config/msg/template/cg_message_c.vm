@@ -1,0 +1,55 @@
+#macro( smallType $type)
+#if($type == "Byte")int#elseif( $type == "Boolean" )int#elseif( $type == "Short" )int#elseif( $type == "Integer" )int#elseif( $type == "Long" )long#elseif( $type == "Float" )Number#elseif( $type == "Double" )Number#elseif( $type == "String" )string#else$type#end
+#end
+#macro( bigType $type)
+#if( $type == "Integer" )Int#elseif( $type == "Boolean" )Byte#elseif( $type == "String" )String#elseif( $type == "Long" )Long#else$type#end
+#end
+#macro( upperFirstChar $type)$type.substring(0,1).toUpperCase()$type.substring(1)#end
+using System.Collections;
+#if($constants.size()>0)
+	/**
+	 * 常量定义：
+#foreach( $constant in $constants )
+	 *	【$constant.name】$constant.desc
+#end	
+	 */
+#end
+public class ${module}CGMessage{
+	
+ #foreach( $msg in $msgs )
+ 
+ 		/**
+		 * $msg.comment
+#foreach( $field in $msg.fields )
+		 * @param $field.smallName $field.comment
+#end
+		 */
+	public static void ${msg.type}(#foreach( $field in $msg.fields )#if ($field.list)ArrayList ${field.smallName}#else#smallType($field.type) ${field.smallName}#end#if($velocityCount != $msg.fields.size()),#end#end) {
+			OutputMessage msgBody= new OutputMessage(NetMessageType.${msg.type});
+#if($msg.hasListField)
+			int i;
+#end
+#foreach( $field in $msg.fields )
+#if ($field.list) 
+			msgBody.PutShort((short)${field.smallName}.Count);
+			for(i=0; i<${field.smallName}.Count; i++){
+#if( $field.isNewType )
+#foreach( $subfield in $field.subFields )
+	msgBody.Put#bigType($subfield.type)((${field.smallName}[i] as #bigType($field.type)).${subfield.smallName});
+#end
+#else
+#if ($field.type=="String")
+	msgBody.Put#bigType($field.type)(${field.smallName}[i].ToString());
+#else
+	msgBody.Put#bigType($field.type)((#smallType($field.type))${field.smallName}[i]);
+#end
+#end
+			}
+#else
+			msgBody.Put#bigType($field.type)($field.smallName);
+#end
+#end	
+			PlatformService.Send(msgBody);
+		}
+#end
+}

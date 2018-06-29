@@ -1,0 +1,11 @@
+int waitingTime;[notNull=false] //房间等待时间
+int actTime;[notNull=false]	//玩家行为时间
+int nextTime;[notNull=false] //下盘开始时间
+int preflopTime;[notNull=false] //preflop时间
+int flopTime;[notNull=false] //flop时间
+int turnTime;[notNull=false] //turn时间
+int riverTime;[notNull=false] //river时间
+int compareTime;[notNull=false] //比牌时间
+int settleTime;[notNull=false] //结算时间
+int vibrationTime;[notNull=false] //震动时间
+

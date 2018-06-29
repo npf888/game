@@ -1,0 +1,4 @@
+message com.logserver.model.LuckySpinLog(
+    int free; //是否免费
+    int spinId; //spin档次
+)

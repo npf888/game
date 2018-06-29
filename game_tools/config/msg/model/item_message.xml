@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="item">
+
+	<!-- 背包信息-->
+	<message type="GC_HUMAN_BAG_INFO_DATA" comment="客户端请求商品信息">
+		<field type="com.gameserver.item.data.ItemInfoData"
+			name="itemList" comment="商品信息" macro="ItemInfoData"  list="true"/>
+	</message>
+	
+
+	
+	<!-- 发送互动道具-->
+	<message type="CG_SEND_INTERACTIVE_ITEM" comment="发送互动道具">
+		<field type="Integer" name="itemId" comment="互动道具id"/>
+		<field type="Long" name="playerId" comment="玩家id"/>
+	</message>
+	
+	<message type="GC_SEND_INTERACTIVE_ITEM" comment="发送互动道具">
+		<field type="Long" name="fromId" comment="发送玩家id"/>
+		<field type="Integer" name="itemId" comment="互动道具id"/>
+		<field type="Long" name="toId" comment="玩家id"/>
+	</message>
+	<!-- 群发发送互动道具-->
+		<message type="CG_GROUP_SEND_INTERACTIVE_ITEM" comment="群体发送互动道具">
+		<field type="Integer" name="itemId" comment="互动道具id"/>
+	</message>
+	
+	<message type="GC_GROUP_SEND_INTERACTIVE_ITEM" comment="群体发送互动道具">
+		<field type="Long" name="fromId" comment="发送玩家id"/>
+		<field type="Integer" name="itemId" comment="互动道具id"/>
+
+	</message>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- 商城的道具列表 -->
+	<message type="CG_BAZOO_MALL_REQUEST" comment="请求商城的道具列表">
+	</message>
+	<message type="GC_BAZOO_MALL_REQUEST" comment="商城的道具列表">
+		<field type="com.gameserver.item.data.ItemInfoDataNew"
+				name="itemInfoDataNew" comment="商城的道具列表" macro="ItemInfoDataNew"  list="true"/>
+	</message>
+	
+	<!-- 请求背包 -->
+	<message type="CG_BAZOO_ITEM_REQUEST" comment="请求背包">
+		<field type="Integer" name="itemType" comment="请求哪种类型的 1:所有,2:色钟，3：红包，4：礼物"/>
+	</message>
+	<!-- 返回背包 (还需要主动推送)-->
+	<message type="GC_BAZOO_ITEM_REQUEST" comment="请求背包 返回">
+		<field type="com.gameserver.item.data.ItemInfoDataNew"
+				name="itemInfoDataNew" comment="新的背包信息" macro="ItemInfoDataNew"  list="true"/>
+	</message>
+	
+	
+	<!-- 更换色钟 -->
+	<message type="CG_BAZOO_ITEM_CLOCK_CHANGE" comment="更换色钟">
+		<field type="Integer" name="itemId" comment="目标色钟的itemId"/>
+	</message>
+	<!-- 更换色钟返回 -->
+	<message type="GC_BAZOO_ITEM_CLOCK_CHANGE" comment="更换色钟返回">
+		<field type="Integer" name="itemId" comment="目标色钟的itemId"/>
+	</message>
+	<!-- 更换色钟 通知房间内所有人 自己更换了色钟 -->
+	<message type="GC_BAZOO_ITEM_CLOCK_CHANGE_TO_ALL" comment="更换色钟 通知房间内所有人 自己更换了色钟">
+		<field type="Long" name="playerId" comment="更换色钟图片的玩家ID"/>
+		<field type="Integer" name="itemId" comment="目标色钟的itemId"/>
+		<field type="String" name="img" comment="道具图片" />
+	</message>
+	
+	<!-- 购买道具（用金币购买） -->
+	<message type="CG_BAZOO_ITEM_BUY_BY_GOLD" comment="用金币购买道具">
+		<field type="Integer" name="itemId" comment="目标色钟的itemId"/>
+	</message>
+	
+	<!-- 购买道具（用金币购买） 返回 -->
+	<message type="GC_BAZOO_ITEM_BUY_BY_GOLD" comment="用金币购买道具">
+		<field type="Integer" name="isSucess" comment="是否成功0：成功，1：失败"/>
+		<field type="Integer" name="langId" comment="失败后 多语言ID"/>
+		<field type="String" name="paramsList" list="true" comment="参数列表"/>
+	</message>
+	
+	
+	
+	
+	
+	
+	
+</messages>

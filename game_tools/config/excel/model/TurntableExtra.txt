@@ -1,0 +1,10 @@
+int nameId;[notNull=false]//名字id
+int descrip;[notNull=false]//描述
+String langDesc;[notNull=false]//语言描述
+String icon;[notNull=false]// icon
+int itemId;[notNull=false]//
+int friendreward;[notNull=false]//朋友加成
+int levelreward;[notNull=false]//等级加成
+int vipDescrip;[notNull=false]// vip奖励描述id
+int friendDescrip;[notNull=false]// 好友奖励描述id
+int levelDescrip;[notNull=false]//等级奖励描述id

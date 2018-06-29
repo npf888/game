@@ -1,0 +1,5 @@
+int lv;[notNull=false] //名字id
+int fieldId;[notNull=false]	//sng id
+int smallBlind; //起始小盲注
+int blindTime;[notNull=false] //升盲时间
+

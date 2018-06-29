@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="bazoosignin">
+
+
+	<!-- 签到 -->
+	<message type="CG_BAZOO_SIGNIN" comment="签到">
+	</message>
+	<message type="GC_BAZOO_SIGNIN" comment="签到返回">
+		<field type="Long" name="gold" comment="签到获得的金币" />
+		<field type="Integer" name="nameInt" comment="色子 int类型 的代号  豹子:7, 顺子:6, 炸弹:5, 葫芦:4, 三条:3, 两对:2, 两对:1, 散点:0" />
+		<field type="Integer" name="diceValues"  list="true" comment="色子的值" />
+	</message>
+
+	
+	
+	
+	
+</messages>
+
+
+
+
+
+
+

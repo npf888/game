@@ -1,0 +1,5 @@
+message com.logserver.model.SlotLog(
+    long slotId; 
+    int slotType;
+    int bet;
+)

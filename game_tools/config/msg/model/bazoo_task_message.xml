@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<messages xmlns="http://com.message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.message message.xsd"
+	module="bazootask">
+
+
+	<!-- 签到 -->
+	<message type="CG_BAZOO_TASK" comment="获取 任务">
+	</message>
+	<message type="GC_BAZOO_TASK" comment="签到返回">
+		<field type="com.gameserver.bazootask.data.BazooTaskInfo" name="bazooTaskInfo" comment="任务列表" list="true" macro="BazooTaskInfo" ></field>
+	</message>
+	
+	<message type="CG_BAZOO_ACHIEVE_TASK" comment="获取 所有的成就任务">
+	</message>
+	<message type="GC_BAZOO_ACHIEVE_TASK" comment="签到返回  所有的成就任务">
+		<field type="com.gameserver.bazootask.data.BazooTaskInfo" name="bazooTaskInfo" comment="任务列表" list="true" macro="BazooTaskInfo" ></field>
+	</message>
+	
+	
+	<message type="CG_BAZOO_GET_REWARD" comment="获取 金币">
+		<field type="Integer" name="taskId" comment="相应的ID"/>
+	</message>
+	
+	<message type="GC_BAZOO_GET_REWARD" comment="刷新所有的 task列表">
+		<field type="com.gameserver.bazootask.data.BazooTaskInfo" name="bazooTaskInfo" comment="任务列表" list="true" macro="BazooTaskInfo" ></field>
+	</message>
+	
+	
+</messages>
+
+
+
+
+
+
+

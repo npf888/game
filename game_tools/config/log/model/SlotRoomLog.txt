@@ -1,0 +1,3 @@
+message com.logserver.model.SlotRoomLog(
+    long room_id;//老虎机ID
+)

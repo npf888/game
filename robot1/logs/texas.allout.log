@@ -1,0 +1,34 @@
+[17/11/30 18:24:18,960] [INFO] ConfigHelper.buildConfig --> Load config [class com.robot.RobotServerConfig] from [file:/C:/d_sortwire/eclipse_workspace/robot1/target/classes/robot_server.cfg.js]
+[17/11/30 18:24:19,491] [INFO] Slf4jRecord.recordInfo --> #IMOP.LOCAL.LOGGER.INITLIZE...
+[17/11/30 18:24:19,491] [INFO] Slf4jRecord.recordInfo --> #IMOP.LOCAL.INIT.THREADPOOL.OK:SIZE:2
+[17/11/30 18:24:19,491] [INFO] Slf4jRecord.recordInfo --> #IMOP.LOCAL.START:AREAID:1
+[17/11/30 18:24:21,736] [INFO] BazooMessageHandler.executeGCModeChose --> [无双吹牛]---[模式场次]---[当前bet::50]---[当前总人数::0]
+[17/11/30 18:24:21,737] [INFO] BazooMessageHandler.executeGCModeChose --> [无双吹牛]---[模式场次]---[当前bet::500]---[当前总人数::0]
+[17/11/30 18:24:21,738] [INFO] BazooMessageHandler.executeGCModeChose --> [无双吹牛]---[模式场次]---[当前bet::5000]---[当前总人数::0]
+[17/11/30 18:24:21,738] [INFO] BazooMessageHandler.executeGCModeChose --> [无双吹牛]---[模式场次]---[当前bet::50000]---[当前总人数::0]
+[17/11/30 18:24:22,144] [INFO] BazooMessageHandler.executeGCRoomInit --> [无双吹牛]---[进入房间]---[当前房间号:1_0_500_1]---[用户ID::14854 的人进入房间]
+[17/11/30 18:24:22,144] [INFO] BazooMessageHandler.executeGCRoomInit --> [无双吹牛]---[房间参数1]---[PubOrPri::0]
+[17/11/30 18:24:22,144] [INFO] BazooMessageHandler.executeGCRoomInit --> [无双吹牛]---[房间参数2]---[LastPassportId::0]
+[17/11/30 18:24:22,144] [INFO] BazooMessageHandler.executeGCRoomInit --> [无双吹牛]---[房间参数3]---[OnePoint::0]
+[17/11/30 18:24:22,144] [INFO] BazooMessageHandler.executeGCRoomInit --> [无双吹牛]---[房间参数4]---[GuessWait::6]
+[17/11/30 18:24:22,144] [INFO] BazooMessageHandler.executeGCRoomInit --> [无双吹牛]---[房间参数5]---[WaitTime::5]
+[17/11/30 18:24:22,144] [INFO] BazooMessageHandler.executeGCRoomInit --> [无双吹牛]---[房间参数6]---[TurnWait::10]
+[17/11/30 18:24:22,144] [INFO] BazooMessageHandler.executeGCRoomInit --> [无双吹牛]---当前其他用户的ID:14854---当前其他用户的名称:Guest14854---100600-head_1.png-
+[17/11/30 18:24:22,144] [INFO] BazooMessageHandler.executeGCRoomOut --> [无双吹牛]---当前用户的ID:14854---那个谁：：[J@210efb00---退出了
+[17/11/30 19:36:18,907] [INFO] ConfigHelper.buildConfig --> Load config [class com.robot.RobotServerConfig] from [file:/C:/d_sortwire/eclipse_workspace/robot1/target/classes/robot_server.cfg.js]
+[17/11/30 19:36:19,426] [INFO] Slf4jRecord.recordInfo --> #IMOP.LOCAL.LOGGER.INITLIZE...
+[17/11/30 19:36:19,427] [INFO] Slf4jRecord.recordInfo --> #IMOP.LOCAL.INIT.THREADPOOL.OK:SIZE:2
+[17/11/30 19:36:19,428] [INFO] Slf4jRecord.recordInfo --> #IMOP.LOCAL.START:AREAID:1
+[17/11/30 19:36:25,042] [INFO] BazooMessageHandler.executeGCModeChose --> [无双吹牛]---[模式场次]---[当前bet::50]---[当前总人数::0]
+[17/11/30 19:36:25,042] [INFO] BazooMessageHandler.executeGCModeChose --> [无双吹牛]---[模式场次]---[当前bet::500]---[当前总人数::0]
+[17/11/30 19:36:25,042] [INFO] BazooMessageHandler.executeGCModeChose --> [无双吹牛]---[模式场次]---[当前bet::5000]---[当前总人数::0]
+[17/11/30 19:36:25,043] [INFO] BazooMessageHandler.executeGCModeChose --> [无双吹牛]---[模式场次]---[当前bet::50000]---[当前总人数::0]
+[17/11/30 19:36:25,848] [INFO] BazooMessageHandler.executeGCRoomInit --> [无双吹牛]---[进入房间]---[当前房间号:1_0_500_1]---[用户ID::14854 的人进入房间]
+[17/11/30 19:36:25,849] [INFO] BazooMessageHandler.executeGCRoomInit --> [无双吹牛]---[房间参数1]---[PubOrPri::0]
+[17/11/30 19:36:25,850] [INFO] BazooMessageHandler.executeGCRoomInit --> [无双吹牛]---[房间参数2]---[LastPassportId::0]
+[17/11/30 19:36:25,851] [INFO] BazooMessageHandler.executeGCRoomInit --> [无双吹牛]---[房间参数3]---[OnePoint::0]
+[17/11/30 19:36:25,851] [INFO] BazooMessageHandler.executeGCRoomInit --> [无双吹牛]---[房间参数4]---[GuessWait::6]
+[17/11/30 19:36:25,852] [INFO] BazooMessageHandler.executeGCRoomInit --> [无双吹牛]---[房间参数5]---[WaitTime::5]
+[17/11/30 19:36:25,852] [INFO] BazooMessageHandler.executeGCRoomInit --> [无双吹牛]---[房间参数6]---[TurnWait::10]
+[17/11/30 19:36:25,853] [INFO] BazooMessageHandler.executeGCRoomInit --> [无双吹牛]---当前其他用户的ID:14854---当前其他用户的名称:Guest14854---100600-head_1.png-
+[17/11/30 19:36:25,854] [INFO] BazooMessageHandler.executeGCRoomOut --> [无双吹牛]---当前用户的ID:14854---那个谁：：[J@45ad974---退出了
